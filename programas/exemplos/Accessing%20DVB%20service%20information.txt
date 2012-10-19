@@ -1,0 +1,325 @@
+/***********************************************************************************
+ *
+ * THIS SOFTWARE IS COPYRIGHT STEVEN MORRIS 2002. ALL RIGHTS RESERVED
+ *
+ * THIS SOFTWARE IS FREE FOR NON COMMERCIAL USE FOR THE PURPOSE OF LEARNING MHP.  ANY
+ * USE FOR OTHER PURPOSES IS PROHIBITED UNLESS WRITTEN AGREEMENT IS OBTAINED.
+ *
+ * DISTRIBUTION OF THIS CODE IS PROHIBITED
+ */
+
+// Import the standard package that we need to be an Xlet
+import javax.tv.xlet.*;
+
+// The DVB service information API is in the org.dvb.si.* package
+import org.dvb.si.*;
+
+
+// We will need to find out the locator of the current service in
+// order to know what service to get SI for.  To do this, we need
+// the DvbLocator class from the DAVIC packages and the JavaTV
+// service selection API
+import org.davic.net.dvb.DvbLocator;
+import javax.tv.service.selection.*;
+
+/**
+ * This Xlet retrieves service information for the current service.  It first
+ * gets the list of elementary streams in the current service from the
+ * Program Map Table (PMT), and then gets the details of each of those
+ * elementary streams.  This may not be terribly useful in its own right,
+ * but it shows the all of the concepts that are needed to access SI in other
+ * cases.
+ *
+ * Since this is quite a complex Xlet that may take a while to get an answer to
+ * its query, we do most of the work in a separate thread.  For this reason,
+ * the Xlet implements the Runnable interface.  It also implements the
+ * SIRetrievalListener interface from org.dvb.si.*, because it needs this
+ * interface to get the results of an SI query.
+ */
+public class SIExample implements Xlet, Runnable, SIRetrievalListener
+{
+	// A private variable to store our Xlet context.  In this case, we do actually
+	// use this, showing why it's a good idea to keep a reference to the Xlet context.
+	private XletContext context;
+
+	// A private variable that keeps a reference to the thread that
+	// will do all of the work.
+	private Thread myWorkerThread;
+
+	/**************************************************************************
+	 *
+	 * The methods below this line are the standard Xlet methods.  These mostly do
+	 * nothing surprising,since we do most of the work in a separate thread.
+	 */
+
+	/**
+	 * A default constructor, included for completeness.
+	 */
+	public SIExample()
+	{
+	}
+
+	/**
+	 * Initialise the Xlet.  In this case, we have no special initialisation
+	 * that we need to do.
+	 */
+	public void initXlet(javax.tv.xlet.XletContext context) throws javax.tv.xlet.XletStateChangeException
+	{
+		// We keep a reference to our Xlet context because we will need it later.
+		this.context = context;
+	}
+
+	/**
+	 * Start the Xlet.  This is where we actually start doing useful work.
+	 */
+	public void startXlet() throws javax.tv.xlet.XletStateChangeException
+	{
+		// startXlet() should not block for too long, and waiting for the SI queries
+		// to complete is definitely too long.  To solve this, we start another
+		// thread to do the work for this.
+		myWorkerThread = new Thread(this);
+		myWorkerThread.start();
+	}
+
+	/**
+	 * Pause the Xlet.
+	 */
+	public void pauseXlet()
+	{
+		// We do nothing, which is not exactly a good idea, but processing our SI
+		// request won't take many resources and one thread should be OK.
+
+	}
+
+	/**
+	 * Destroy the Xlet.
+	 */
+	public void destroyXlet(boolean unconditional) throws javax.tv.xlet.XletStateChangeException
+	{
+		//tell the user that the method has been called
+		System.out.println("destroyXlet() called");
+
+		if (unconditional) {
+			// We have been ordered to terminate, so we obey the order politely and release any
+			//scarce resources that we are holding.
+		}
+		else {
+			// We have had a polite request to die, so we can refuse this request if we want.
+			throw new XletStateChangeException("Please don't let me die!");
+		}
+	}
+
+
+	/**************************************************************************
+	 *
+	 * The methods below this point are the ones which actually do all of the work
+	 * related to the SI query.  These get the data and display it.
+	 */
+
+	// Since the SI API is asynchronous, the API (and the application) needs some way of
+	// identifying which SI request a result belongs to.  An application-defined object
+	// is attached to each request to identify it - we will use strings to make it
+	// easier to read.
+	public String pmtRequest = "PMT";
+	public String pmtElementaryStreamsRequest = "ES";
+	public String sdtRequest = "SDT";
+
+	// This will hold the locator for the current service
+	DvbLocator locator;
+
+	// This will hold a reference to the SI database.
+	SIDatabase siDatabase;
+
+	/**
+	 * The main method for the worker thread.  This is where most of the work is done.
+	 */
+	public void run()
+	{
+
+		// First, we have to get the locator for the current service.  We need this so that
+		// we know which service to get the PMT data for.  This is harder than it should be,
+		// but still not too hard.
+
+		// We get a reference to the JavaTV service context that we are running in.
+		// To do this, we request the service context that contains our Xlet context.
+		// The relationship between services, service contexts and Xlet contexts is
+		// easy to misunderstand, and so I strongly suggest that you read annex Z of
+		// the MHP 1.1 specification.
+		//
+		// This can throw a ServiceContextException, so we have to enclose it in a 'try' block
+		try {
+			ServiceContext sc = ServiceContextFactory.getInstance().getServiceContext(context);
+
+			// Now that we've got a reference to the service context that we're executing in,
+			// we can get the locator of the service that's being presented in that service
+			// context.  First we have to get the JavaTV Service object representing the
+			// service, then we can get the locator from that.
+			locator = (DvbLocator) sc.getService().getLocator();
+		}
+		catch (ServiceContextException e) {
+			// There's nothing we can do, so print an error message and exit.
+			System.out.println("Error getting our service context!");
+			e.printStackTrace();
+			return;
+		}
+
+		// OK, now we've got the locator for the current service, we can start with our SI requests.
+
+
+		//  Get a reference to the SI database that we will query.  The MHP middleware will
+		// maintain a separate SI database for every network interface in the STB (remember
+		// that 'network interface' is an interface to the broadcast network, not to an IP
+		// network). Most receivers will only have one network interface, and so we can
+		// just use the first one because we know that we'll be receiving the current service
+		// over this network interface.
+		siDatabase = SIDatabase.getSIDatabase()[0];
+
+		// Now we can do the SI request.
+
+		// We will use this variable to hold the object we get back from the SI API
+		// to identify the request.  We don't actually need this, since we can
+		// identify the request in another way that we will see later.
+		SIRequest req;
+
+		// Since the request can throw an exception, we need to enclose it in a try/catch block
+		try {
+			// do the request
+			req = siDatabase.retrievePMTServices(
+				SIInformation.FROM_STREAM_ONLY, // We can specify whether we want to get the information from the cache only ,from the stream only, or whether we want to check the stream only if the data is not in the cache.  In this case we will get the most up-to-date data by checking the stream.
+				pmtRequest,						// As we said earlier, we can associate an object with the request to make it easier for the application to identify which request a result if for.  We will attach a String object to the request that identifies this as a request for the PMT data.
+				this,							// the event listener to notify when the request completes.  In this case, this object is the event listener
+				locator.getServiceId(),			// the ID of the service that we want to find the
+												// PMT for.  In this case, that is the ID of the current service, which we get from the locator for the current service.
+				null							// We can give the SI database some hints about which descriptors we're interested in.  We don't care about any special descriptors, so we just get the default ones.
+			);
+		} catch (SIIllegalArgumentException e) {
+			// catch any exceptions that get thrown.  We will just print the exception to the debug output.
+			System.out.println("Exception fetching the PMT service list");
+			System.out.println(e);
+		}
+
+		// Now we just wait.  When the result is available, the SI API will notify the
+		// event listener that we specified (this object, in this case)  by calling
+		// the postRetrievalEvent() method on that object.
+	}
+
+
+	/**
+	 * This method is inherited from the SIRetrievalListener interface, and is called when
+	 * the SI API has a result from an SI query for us.
+   */
+	public void postRetrievalEvent(SIRetrievalEvent event)
+	{
+		// Before we do anything else, make sure that we have a successful result.
+		// After all, the SI information in the stream could be wrong or missing.
+		if (event instanceof SISuccessfulRetrieveEvent) {
+			// We have successfully got some SI data.  However, we still don't know
+			// which SI data we have, since this application issues several requests.
+			// the object that we associated with the request (which is also returned
+			// in the result), we can verify which request this result is from.
+			// The getAppData() method on the event will tell us which object is
+			// associated with this event.
+			
+			// First we need to cast the event to the correct type so that we can 
+			// access all of the methods that we need.
+			SISuccessfulRetrieveEvent ev = (SISuccessfulRetrieveEvent) event;
+			
+			if (event.getAppData() == pmtRequest) {
+				// The result we have is from our first request, for the PMT data.
+				// Now that we know which request we have the results for, we can actually
+				// do something with them.  First we get them from the event - since there
+				// can be more than one result, they are returned in an SIIterator object.
+				SIIterator results = ev.getResult();
+
+				// We can process the results by using a loop to process the iterator.
+				while (results.hasMoreElements()) {
+					// Get the next result
+					SIInformation information = (SIInformation) results.nextElement();
+
+					// What we get from the iterator is an SIInformation object.  All our
+					// results will be a subclass of this, but we have to cast it to the
+					// right type to do anything useful with it.  Luckily, we know what
+					// type of object we will get back from the request (check the API
+					// specification to find this out). and so we can cast the object
+					// to its real type.
+					PMTService service = (PMTService) information;
+
+					// now that we've got our PMT data, we can find out more
+					// information about the elementary streams.
+
+					// This variable will hold the request object that we get back from
+					// the SI API.  We don't need to keep this, since we use the object
+					// that we associate with the request in order to identify it.
+					SIRequest req;
+
+					try {
+						// Since the request can throw an exception, we need to enclose it in a try/catch block
+						req = service.retrievePMTElementaryStreams(
+                		  SIInformation.FROM_STREAM_ONLY, // Retrieve the information from the stream, just like the previous request.
+
+						  pmtElementaryStreamsRequest,	// The object that we use to identify the request.  This time, of course, we use a different object.
+						  this,							// The listener to notify when we have a result.  We could use a different listener, but we will use the same one to reduce the number of classes we need.
+
+						  null							// Again, we can give the SI database some hints about which descriptors we're interested in, if we want to .  We just get the default ones again.
+						);
+					} catch (SIIllegalArgumentException e) {
+						// Print a message on the debug output if an exception gets thrown
+						System.out.println("Exception fetching information about the elementary streams");
+						System.out.println(e);
+					}
+				}
+			}
+		}
+
+		// Since we're performing two requests, the result we get may not be for
+		// the first request.  This checks whether the result is from the second
+		// request that we issue, for the information about the elementary streams.
+		if (event.getAppData() == pmtElementaryStreamsRequest) {
+
+			// As with every other SI query, the results are returned in an
+			// SIIterator object
+			SIIterator results = ev.getResult();
+
+			// As with the request for the PMT data, we loop through the results that
+			// we have in the iterator
+			while (results.hasMoreElements()) {
+				// Get the next result
+				SIInformation information = (SIInformation) results.nextElement();
+
+				// Cast the results to their correct type, as we did before.  This
+				// time, we know that the results are instances of the
+				// PMTElementaryStream class.
+				PMTElementaryStream stream = (PMTElementaryStream) information;
+
+				// Since we finally have the information we want, we can use it
+				// for whatever purpose we need, such as checking the number
+				// and type of audio tracks.  This is just an example, so we will
+				// print out the results of the query on the debug output.
+				printPMTElementaryStream(stream);
+			}
+		}
+
+		// This 'else' clause is for our main 'if' statement, where we check whether we
+		// got an SISuccessfulRetrieveEvent.  If we didn't get that, the request failed.
+		else {
+			System.out.println(event.getAppData() + " failed!");
+		}
+
+	}
+
+
+	/**
+	 * Print out the details of an elementary elementary stream
+	 * that we've got from the PMT.
+	 */
+	public synchronized static void printPMTElementaryStream(PMTElementaryStream es)
+	{
+		System.out.println("Elementary stream: ");
+		// See the SI API specification for the different values we can get
+		// from each of the query results.
+		System.out.println("    component tag = " + es.getComponentTag());
+		System.out.println("    stream type= " + es.getStreamType());
+		System.out.println("    pid= " + es.getElementaryPID());
+	}
+
+}

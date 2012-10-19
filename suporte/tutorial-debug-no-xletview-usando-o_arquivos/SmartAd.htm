@@ -1,0 +1,76 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head><body leftmargin="0" topmargin="0" bgcolor="white" marginheight="0" marginwidth="0">
+<!--
+SGWTV DIGITAL
+SGWCELULAR
+SGWRECEPTOR TV
+SG[i121656640]
+-->
+<style type="text/css">
+<!--
+a,table {font-family:Arial;font-size:11px;color:006600;}
+a {color:3366FF;}
+a:hover {color:FF0000}
+.brand {
+	position:absolute;
+	width:165px;
+	top:148px;
+	left: 418px;
+}
+.brand a {font-size:10px;}
+-->
+</style>
+<script>
+function QueryString(variavel){
+var variaveis=location.search.replace(/\x3F/,"").replace(/\x2B/g," ").split("&");
+var nvar;
+     if(variaveis!=""){
+     var qs=[];
+        for(var i=0;i<variaveis.length;i++){
+        nvar=variaveis[i].split("=")
+        qs[nvar[0]]=unescape(nvar[1])
+        }
+		if(qs[variavel] == undefined){
+			return '';
+		}else{
+    		return qs[variavel];
+		}
+    }
+return '';
+}
+var wordSmart = QueryString("wordSmart");
+function word_links(){
+	var conteudo = document.getElementById('conteudo').innerHTML;
+	if(wordSmart){conteudo = conteudo.replace(/word=/g,'word='+wordSmart+'_');}
+	document.getElementById('conteudo').innerHTML = conteudo;
+}
+</script>
+<div id="conteudo">
+<table style="border-collapse: collapse;" width="180" align="center" bgcolor="#ffffff" border="1" bordercolor="#000000" cellpadding="0" cellspacing="0" height="150">
+<tbody><tr>
+<td align="center"><table width="157" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td class="title" align="left" height="15"><b>Buscas Recentes:</b></td>
+</tr>
+<tr>
+<td><div style="margin-bottom: 5px; margin-top: 3px;">
+- <a href="http://pmstrk.mercadolivre.com.br/jm/PmsTrk?tool=5204488&amp;go=http://lista.mercadolivre.com.br/tv-digital_DisplayType_G_NoQCat_&amp;word=busca" target="_top">Tv Digital</a><br>
+- <a href="http://pmstrk.mercadolivre.com.br/jm/PmsTrk?tool=5204488&amp;go=http://lista.mercadolivre.com.br/celular_DisplayType_G_NoQCat_&amp;word=busca" target="_top">Celular</a><br>
+- <a href="http://pmstrk.mercadolivre.com.br/jm/PmsTrk?tool=5204488&amp;go=http://lista.mercadolivre.com.br/receptor-tv_DisplayType_G_NoQCat_&amp;word=busca" target="_top">Receptor Tv</a></div></td>
+</tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td align="center"><a href="http://pmstrk.mercadolivre.com.br/jm/PmsTrk?tool=5204488&amp;go=http://www.mercadolivre.com.br/jm/item?site=MLB$$id=121656640&amp;word=prod1" target="_top"><img src="SmartAd_data/img.gif" vspace="5" width="55" border="0" height="55" hspace="5"></a></td>
+<td style="color: rgb(255, 102, 0);"><a href="http://pmstrk.mercadolivre.com.br/jm/PmsTrk?tool=5204488&amp;go=http://www.mercadolivre.com.br/jm/item?site=MLB$$id=121656640&amp;word=prod1" target="_top">Playtv Usb Pixelview Full-Seg ...</a> <b>R$163.99</b></td>
+</tr>
+</tbody></table>
+<table width="172" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+  <td align="right"><a href="http://pmstrk.mercadolivre.com.br/jm/PmsTrk?tool=5204488&amp;go=http://www.mercadolivre.com.br/afiliadosmercadolivre&amp;word=smart" target="_top">SmartAd</a></td>
+</tr></tbody></table></td>
+</tr></tbody></table>
+</div>
+<script>word_links();</script>
+<!--Gen:2-->
+</body></html>

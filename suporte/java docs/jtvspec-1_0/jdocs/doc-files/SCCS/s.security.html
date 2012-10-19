@@ -1,0 +1,757 @@
+h06301
+s 00001/00005/00256
+d D 1.6 00/09/22 16:03:44 courtney 7 6
+c Moved assertion concerning security checks to overview.
+c 
+e
+s 00009/00008/00252
+d D 1.5 00/09/16 17:08:09 courtney 6 5
+c [4366884] Clarifed that SecurityManager.checkPermission is used, unless
+c otherwise specified.
+c 
+e
+s 00024/00015/00236
+d D 1.4 00/07/27 19:25:50 courtney 5 4
+c Fixed errors in example code.
+c 
+e
+s 00025/00027/00226
+d D 1.3 00/07/26 17:34:16 courtney 4 3
+c Added assertion that Java TV API methods that check security permissions
+c always do so through SecurityManager.checkPermission(Permission).
+c 
+c Changed code example to check permissions appropriately.
+c 
+c 
+e
+s 00212/00210/00041
+d D 1.2 00/02/07 17:55:38 billf 3 1
+c Typographical fixes.
+e
+s 00000/00000/00000
+d R 1.2 70/01/01 00:00:02 Codemgr 2 1
+c SunPro Code Manager data about conflicts, renames, etc...
+c Name history : 2 1 src/doc-files/security.html
+c Name history : 1 0 src/security.html
+e
+s 00251/00000/00000
+d D 1.1 00/01/14 03:06:43 billf 1 0
+c Added security document
+e
+u
+U
+f e 0
+t
+T
+I 1
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+I 3
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+I 4
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (X11; U; SunOS 5.6 sun4u) [Netscape]">
+E 4
+   <title>Java TV Security</title>
+E 3
+<!
+  %W% %E%
+ 
+  Copyright 1998-2000 by Sun Microsystems, Inc.,
+  901 San Antonio Road, Palo Alto, California, 94303, U.S.A.
+  All rights reserved.
+ 
+  This software is the confidential and proprietary information
+  of Sun Microsystems, Inc. ("Confidential Information").  You
+  shall not disclose such Confidential Information and shall use
+  it only in accordance with the terms of the license agreement
+  you entered into with Sun.
+>
+D 3
+<head>
+   <title>Java TV Security</title>
+E 3
+</head>
+<body>
+D 3
+<center>
+E 3
+I 3
+
+E 3
+<h1>
+D 3
+Security in Java TV</h1></center>
+E 3
+I 3
+<font color="#000000">Security in the Java TV<sup><font size=-1>TM</font></sup>
+API</font></h1>
+E 3
+
+D 3
+<center>
+<i>Sun Microsystems</i></center>
+E 3
+I 3
+<h3>
+E 3
+
+D 3
+<h3>Overview</h3>
+
+<p>
+Java's security model addresses permitting or denying access to
+resoruces, based on the source of the code requesting access.  It
+is a tried and proven architecture that has benefited from years
+of experience.  In computer workstations and personal computers,
+the &quot;source&quot; from which code comes is, generally speaking, determined
+by the site from which the code is downloaded (often a URL), or by
+a trusted signer who has signed the code.
+</p><p>
+The Java security model is readily applicable to interactive television,
+and provides clear benefits.  It allows a responsible party to reliably
+prevent classes of code from accessing resources that the code shouldn't
+need access to.  For example, an advertising application can be pervented
+from changing the channel to a network owned by the advertiser, an
+application can be granted access to select only certain services (such
+as those within a bouquet), an
+application can be prevented from accessing the return channel, or
+it can be denied access to a users' in-home network.  Providing a simple,
+reliable mechanism to deny such access provides important benefits,
+including cost reductions, particularly in a horizontal market.
+</p><p>
+It can be argued that applications could be exhaustively tested to ensure
+that they don't misbehave.  We believe that such testing is expensive
+and difficult.  The Java security model frees the broadcaster from 
+some of this kind of testing, by allowing it to establish 
+a &quot;sandbox&quot; that constrains
+the actions of applications; the Java 2 security model allows that sandbox
+to be easily configurable, so that it can be expanded to fit the needs
+of a given application.
+</p><p>
+In the Java 2 security model, permissions are expressed as subclasses
+of java.security.Permission.  A method that detects the violation of
+a security constraint does so by throwing a java.lang.SecurityException.
+This is a subclass of java.lang.RuntimeException, but despite this,
+it is required that any method of the Java TV
+extension that can exit due to a SecurityException document this fact by:
+</p>
+E 3
+I 3
+<hr WIDTH="100%"></h3>
+<font color="#000000">This document describes the security model used in
+the Java TV<sup><font size=-2>TM</font></sup> API, including an <a href="#Overview">overview</a>
+of security in the Java<sup><font size=-2>TM</font></sup> language, who
+<a href="#Who Assigns">assigns
+permissions</a> in the Java TV API, and the <a href="#PermissionsArch">permissions
+architecture</a>.</font>
+<h3>
+<a NAME="Overview"></a><font color="#000000">Overview</font></h3>
+<font color="#000000">The Java language's security model addresses permitting
+or denying access to resources, based on the source of the code requesting
+access. It is a tried and proven architecture that has benefited from years
+of experience. In computer workstations and personal computers, the "source"
+from which code comes is primarily determined by the site from which the
+code is downloaded (often a URL), or by a trusted signer who has signed
+D 4
+the code.</font><font color="#000000"></font>
+E 4
+I 4
+the code.</font>
+E 4
+<p><font color="#000000">The Java language's security model is readily
+applicable to interactive television and provides clear benefits. It allows
+a responsible party to reliably prevent classes of code from accessing
+resources that the code shouldn't need access to. For example, an advertising
+application can be prevented from changing the channel to a network owned
+by the advertiser, an application can be granted access to select only
+certain services (such as those within a bouquet), an application can be
+prevented from accessing the return channel, or it can be denied access
+to a users' in-home network. Providing a simple, reliable mechanism to
+deny such access provides important benefits, including cost reductions,
+D 4
+particularly in a horizontal market.</font><font color="#000000"></font>
+E 4
+I 4
+particularly in a horizontal market.</font>
+E 4
+<p><font color="#000000">It can be argued that applications could be exhaustively
+tested to ensure that they don't misbehave. However, such testing is expensive
+and difficult. The Java language's security model frees the broadcaster
+from some of this testing, by allowing it to establish a "sandbox," which
+constrains the actions of applications; the Java 2 Platform, Standard Edition
+(J2SE), security model allows that sandbox to be easily configurable so
+D 4
+it can be expanded to fit the needs of a given application.</font><font color="#000000"></font>
+E 4
+I 4
+it can be expanded to fit the needs of a given application.</font>
+E 4
+<p><font color="#000000">In the J2SE security model, permissions are expressed
+as subclasses of <tt>java.security.Permission</tt>. A method that detects
+the violation of a security constraint does so by throwing a <tt>java.lang.SecurityException</tt>.
+This is a subclass of <tt>java.lang.RuntimeException</tt>, but despite
+D 4
+this, any method of the Java TV
+API that can exit due to a SecurityException
+must
+document this fact by:</font>
+E 4
+I 4
+this, any method of the Java TV API that can exit due to a SecurityException
+must document this fact by:</font>
+E 4
+E 3
+<ul>
+D 3
+    <li>Declaring &quot;throws SecurityException&quot; in the method
+        signature.
+    <li>Containing &quot;@throws SecurityException&quot; in the method's
+        documentation.
+    <li>Describing the permission required in the method's documentation.
+</ul>
+<p>
+The Java 2 security model is described in depth in 
+the book &quot;Inside Java 2 Platform Security&quot;
+by Li Gong, ISBN 0-201-31000-7.
+</p><p>
+For a horizontal market, we recommend that the underlying platform
+security be based on the Java 2 security model.  The Java TV extension
+API might, however, be applied in certain vertical markets that have
+modest security requirements.  For platforms such as this, the permission
+classes described below will be considered optional if the underlying
+platform does not support the Java 2 security architecture.  For all
+platforms that support Java 2 security, the permission classes are
+a required part of the Java TV extension.
+</p>
+E 3
+I 3
+<li>
+<font color="#000000">Declaring "throws SecurityException" in the method
+signature.</font></li>
+E 3
+
+D 3
+<h3>How Permissions are Granted</h3>
+E 3
+I 3
+<li>
+<font color="#000000">Containing "@throws SecurityException" in the method's
+documentation.</font></li>
+E 3
+
+D 3
+<p>
+A natural question that arises is &quot;who is the responsible party that is
+allowed to assign permissions?&quot;  The Java TV vertical extension API does
+not demand one single answer to this question, because the answer depends
+on the business model underlying each individual interactive
+television platform.  In a closed network where the set top box is owned
+E 3
+I 3
+<li>
+<font color="#000000">Describing the permission required in the method's
+documentation.</font></li>
+</ul>
+<font color="#000000">The J2SE security model is described in depth in
+the book&nbsp;<a NAME="Inside Java 2 Platform"></a><i>Inside Java 2 Platform
+D 4
+Security</i> by Li Gong, ISBN 0-201-31000-7.</font><font color="#000000"></font>
+E 4
+I 4
+Security</i> by Li Gong, ISBN 0-201-31000-7.</font>
+E 4
+<p><font color="#000000">For a horizontal market, the underlying platform
+D 4
+security should
+be based on the J2SE security model. The Java TV API might,
+E 4
+I 4
+security should be based on the J2SE security model. The Java TV API might,
+E 4
+however, be applied in certain vertical markets that have modest security
+requirements. For platforms such as this, the permission classes described
+below will be considered optional if the underlying platform does not support
+the J2SE security architecture. For all platforms that support the J2SE
+security model, the permission classes are a required part of the Java
+TV API.</font>
+<h3>
+<a NAME="Who Assigns"></a><font color="#000000">Who Assigns Permissions</font></h3>
+<font color="#000000">Who is allowed to assign permissions is a critical
+issue. The Java TV API does not dictate the policy underlying permission
+setting. The model for who is trusted and who assigns permissions is an
+important part of the business model underlying a complete platform for
+interactive television. The Java technologies provide support for a variety
+of signing models, but it is ultimately up to the entity that specifies
+D 4
+the complete platform to determine the model for granting permissions.</font><font color="#000000"></font>
+E 4
+I 4
+the complete platform to determine the model for granting permissions.</font>
+E 4
+<p><font color="#000000">In a closed network where the set-top box is owned
+E 3
+by the network operator, the responsible party would likely be the network
+D 3
+operator.  In a horizontal market, the answer is less clear; we make the
+following observations and recommendations:
+</p>
+E 3
+I 3
+operator. In a horizontal market, the answer is less clear, given the following
+considerations:</font>
+E 3
+<ul>
+D 3
+  <li> It is possible to establish a &quot;minimum sandbox&quot; that allows
+       applications to do interesting things, but does not allow them
+       to do anything damaging.  This minimum sandbox will include at least
+       all methods that are not declared as throwing SecurityException.
+       A given platform may guarantee
+       that a security exception is <strong>not</strong> thrown under
+       certain circumstances, thereby enlarging the minimum sandbox, but
+       it may not allow a security exception to be thrown where one is not
+       declared.
+       <p>
+    
+  <li> In a horizontal market, it is very useful if the broadcaster can
+       signal the set of permissions that they would like a given
+       application to have.  In no case should the box give an application
+       permissions that the broadcaster didn't ask for.  This relieves the
+       broadcaster from the responsibility of testing for access to
+       these resources.
+       <p>
+E 3
+I 3
+<li>
+<font color="#000000">It is possible to establish a "minimum sandbox" that
+allows applications to do interesting things, but does not allow them to
+do anything damaging. This minimum sandbox will include at least all methods
+that are not declared as throwing SecurityException. A given platform may
+guarantee that a security exception is <b>not</b> thrown under certain
+circumstances, thereby enlarging the minimum sandbox, but it may not allow
+a security exception to be thrown where one is not declared.</font></li>
+E 3
+
+D 3
+  <li> If an application is signalled as wanting access to a resource,
+       that access might not be granted.  Specifically, the owner of
+       the set-top box (i.e. the user at home, or a network operator
+       who subsidzes the box) might want to configure who is
+       and isn't trusted to grant varioius resources.
+       <p>
+E 3
+I 3
+<li>
+<font color="#000000">In a horizontal market, it is very useful if the
+broadcaster can signal the set of permissions that they would like a given
+application to have. In no case should the box give an application permissions
+that the broadcaster didn't ask for. This relieves the broadcaster from
+the responsibility of testing for access to these resources.</font></li>
+E 3
+
+D 3
+  <li> In any given standards environment, it is possible for the stadards
+       organization to define a set of permissions that must be granted,
+       if requested in the application signalling.  For example, service
+       selection is a feature that probably should be granted to any
+       application that requests it, because a broadcaster can only
+       use this feature to tune <i>away</i> from their service.
+       <p>
+E 3
+I 3
+<li>
+<font color="#000000">If an application is signaled as wanting access to
+a resource, that access might not be granted. Specifically, the owner of
+the set-top box (i.e., the user at home, or a network operator who subsidizes
+the box) might want to configure who is and isn't trusted to grant various
+resources.</font></li>
+E 3
+
+D 3
+    
+  <li> For more sensitive resources, the application and the list of
+       permissions should be signed by the broadcaster.  This avoids
+       attacks where an attacker spoofs a broadcaster, or otherwise
+       illegally inserts content.  This signing requires legal and
+       technical infrastructure for each broadcaster to obtain a
+       unique certificate from a trusted party, and for the box to 
+       validate these certificates.<p>
+E 3
+I 3
+<li>
+<font color="#000000">In any given standards environment, it is possible
+for the standards organization to define a set of permissions that must
+be granted, if requested in the application signaling. For example, service
+selection is a feature that probably should be granted to any application
+that requests it, because a broadcaster can only use this feature to tune
+D 4
+<i>away</i> from their service.</font></li>
+E 4
+I 4
+<i>away</i>
+from their service.</font></li>
+E 4
+E 3
+
+I 3
+<li>
+<font color="#000000">For more sensitive resources, the application and
+the list of permissions should be signed by the broadcaster. This avoids
+attacks where an attacker spoofs a broadcaster, or otherwise illegally
+inserts content. This signing requires legal and technical infrastructure
+for each broadcaster to obtain a unique certificate from a trusted party,
+and for the box to validate these certificates.</font></li>
+E 3
+</ul>
+D 3
+<p>
+The Java TV extension does not dictate any one answer to the polciy
+underlying permission setting.  The model for who 
+is trusted and who assigns permissions is
+an important part of the business model underlying a complete platform
+for interactive television.  The Java technologies provide support for
+a variety of signing models, but it is ultimately up to the body that
+specifies the complete platform to determine the model for granting
+permissions.
+</p>
+E 3
+
+D 3
+<h3>Java TV Permissions Architecture</h3>
+
+<p>
+In this section, we discuss the permissions that exist for the
+Java TV vertical extension APIs.  In addition to these permissions, 
+there are the permissions that exist in the underlying Java 
+platform, and permissions for any other APIs that are defined as 
+part of a complete platform.
+</p><p>
+In Java TV, many resources are accessed with a Locator.  Locators are used
+to:
+</p>
+E 3
+I 3
+<h3>
+<a NAME="PermissionsArch"></a><font color="#000000">Java TV API Permissions
+Architecture</font></h3>
+D 4
+<font color="#000000">This section describes
+the permissions that exist
+E 4
+I 4
+<font color="#000000">This section describes the permissions that exist
+E 4
+for the Java TV APIs. In addition to these permissions, there are the permissions
+that exist in the underlying Java platform, and permissions for any other
+D 4
+APIs that are defined as part of a complete platform.</font><font color="#000000"></font>
+E 4
+I 4
+APIs that are defined as part of a complete platform.</font>
+E 4
+<p><font color="#000000">In the Java TV API, many resources are accessed
+with a Locator. Locators are used to:</font>
+E 3
+<ul>
+D 3
+  <li>Access data from an object carousel
+  <li>Access SI data
+  <li>Select a different service (i.e. tune to a different channel)
+  <li>Retrieve program guide data
+  <li>Play a Media Stream
+E 3
+I 3
+<li>
+<font color="#000000">Access data from an object carousel</font></li>
+
+<li>
+<font color="#000000">Access SI data</font></li>
+
+<li>
+<font color="#000000">Select a different service (i.e., tune to a different
+channel)</font></li>
+
+<li>
+<font color="#000000">Retrieve program guide data</font></li>
+
+<li>
+<font color="#000000">Play a Media Stream</font></li>
+E 3
+</ul>
+D 3
+<p>
+In many ways, a Locator is analagous to a filename in a computer 
+filesystem.  In computers, a filename is often associated with a hardware
+device, such as a printer and the screen (&quot;prn:&quot; 
+and &quot;con:&quot; in DOS-based 
+systems, and /dev/lp* and /dev/tty in Unix systems).  Associating 
+permissions with files is a well-established mechanism for restricting 
+E 3
+I 3
+<font color="#000000">In many ways, a Locator is analogous to a file name
+in a computer file system. In computers, a file name is often associated
+with a hardware device, such as a printer and the screen ("prn:" and "con:"
+in DOS-based systems, and /dev/lp* and /dev/tty in UNIX systems). Associating
+permissions with files is a well established mechanism for restricting
+E 3
+access to data files, hardware devices, and other resources in computer
+D 3
+systems.
+</p><p>
+The Java model for access to a filesystem is twofold:  There is a
+file object (java.io.File), which represents the path to an object
+in the filesystem, and there is a security check based on that name.
+In the Java 2 security model, that security check is reified in the
+class java.io.FilePermission.  A FilePermission contans a path (or
+a regular expression denoting a set of paths), and an <i>action string</i>.
+The action string can be <i>read</i>, <i>write</i>, <i>execute</i>
+or <i>delete</i>.  In the 1.1 security model, the same
+facility is exposed through a small number of check methods on
+java.lang.SecrityManager (checkRead(String), etc.).
+</p><p>
+The FilePermission object allows access to a set of files based on a
+wildcarding mechanism.  A set of FilePermission objects may be
+combined to give any desired degree of access.  For example, it is
+straightforward to construct a set of two permissions that gives
+code read-write access to one directory, and read-only access to
+a different directory.  FilePermission is described in detail in
+&quot;Inside Java 2 Platoform Security&quot; section 3.6.4.
+</p><p>
+A mechanism similar to FilePermission is ideally suited to the needs of 
+recources that are accessed via locators.  For
+example, consider the following set of permissions for an application:
+</p>
+E 3
+I 3
+D 4
+systems.</font><font color="#000000"></font>
+E 4
+I 4
+systems.</font>
+E 4
+<p><font color="#000000">The Java language model for access to a file system
+is twofold: There is a file object (<tt>java.io.File</tt>), which represents
+the path to an object in the file system, and there is a security check
+D 4
+based on that name. In the J2SE
+security model, that security check is
+E 4
+I 4
+based on that name. In the J2SE security model, that security check is
+E 4
+reified in the class <tt>java.io.FilePermission</tt>. A FilePermission
+contains a path (or a regular expression denoting a set of paths), and
+an <i>action string</i>. The action string can be <i>read</i>,
+<i>write</i>,
+<i>execute</i>
+or <i>delete</i>. In the JDK 1.1 security model, the same facility is exposed
+through a small number of check methods on <tt>java.lang.SecrityManager
+</tt>(<tt>checkRead(String)</tt>,
+D 4
+etc.).</font><font color="#000000"></font>
+E 4
+I 4
+etc.).</font>
+E 4
+<p><font color="#000000">The FilePermission object allows access to a set
+of files based on a wildcarding mechanism. A set of FilePermission objects
+may be combined to give any desired degree of access. For example, it is
+straightforward to construct a set of two permissions that gives code read-write
+access to one directory, and read-only access to a different directory.
+FilePermission is described in detail in <i><a href="#Inside Java 2 Platform">Inside
+D 4
+Java 2 Platform Security</a></i>, section 3.6.4.</font><font color="#000000"></font>
+E 4
+I 4
+Java 2 Platform Security</a></i>, section 3.6.4.</font>
+E 4
+<p><font color="#000000">A mechanism similar to FilePermission is ideally
+suited to the needs of resources that are accessed via Locators. For example,
+consider the following set of permissions for an application:</font>
+E 3
+<ul>
+I 3
+<li>
+<font color="#000000">An application may select services corresponding
+to "channel" 3, 7, or 9 through 11</font></li>
+E 3
+
+D 3
+ <li>Application may select services corresponding to 
+     &quot;channel&quot; 3, 7, or 9 through 11
+ <li>Application may receive program events for some program X
+E 3
+I 3
+<li>
+<font color="#000000">An application may receive program events for "program
+X"</font></li>
+E 3
+</ul>
+D 3
+<p>
+This is analagous to the kinds of access that FilePermission grants.
+For this reason, important permissions in the Java TV extension have
+a Locator in their constructor.  Using a Locator in this way does not
+place any requirements on the internal representation an implementation
+maintains for a locator.  It does, however, imply a requirement on the
+<i>signalling</i> of permissions.  Namely, a permission that relates to
+a given locator needs to be signalled in such a way that the permission
+object can determine if it grants access for a given locator.  A signalling
+specification would probably define some kind of wildcarding scheme
+based on paths for locators, to facilitate the natural expression of a set
+of permissions.  For example, the locator for a service might have
+a representation equivalent to &quot;/service/physical/channel007&quot;
+or &quot;/service/logical/ESPN/TheDeuce&quot;.  Doing so would allow
+logical wildcarding in the signalling of permissions.
+</p><p>
+The JavaTV API does not mandate any particular format for 
+locators.  This is something that must be specified as part of a
+complete platform.  Despite this, an application running on a platform
+that implements the Java 2 security model can test whether or 
+not it has access to the resource
+corresponding to a given locator, with code like the following:
+</p>
+E 3
+I 3
+<font color="#000000">This is analogous to the kinds of access that FilePermission
+grants. For this reason, important permissions in the Java TV API have
+a Locator in their constructor. Using a Locator in this way does not place
+any requirements on the internal representation an implementation maintains
+for a Locator. It does, however, imply a requirement on the <i>signaling</i>
+of permissions. Namely, a permission that relates to a given Locator needs
+to be signaled in such a way that the permission object can determine if
+it grants access for a given Locator. A signaling specification would probably
+D 4
+define some kind of wildcarding scheme based on paths for
+Locators, to
+E 4
+I 4
+define some kind of wildcarding scheme based on paths for Locators, to
+E 4
+facilitate the natural expression of a set of permissions. For example,
+the Locator for a service might have a representation equivalent to "/service/physical/channel007"
+or "/service/logical/ESPN/TheDeuce". Doing so would allow logical wildcarding
+D 4
+in the signaling of permissions.</font><font color="#000000"></font>
+E 4
+I 4
+in the signaling of permissions.</font>
+E 4
+<p><font color="#000000">The Java TV API does not mandate a particular
+D 4
+format for Locators. This
+format must be specified as part of a complete
+E 4
+I 4
+format for Locators. This format must be specified as part of a complete
+E 4
+platform. Despite this, an application running on a platform that implements
+the J2SE security model can test whether or not it has access to the resource
+D 5
+corresponding to a given Locator using code similar to the following:</font>
+<pre><font color="#000000">&nbsp;&nbsp;&nbsp; boolean hasAccessTo(Locator l) {&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Permission p = new javax.tv.mumble.MumblePermission(l);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean allowed = true;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {
+D 4
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.security.AccessController.checkPermission(p);
+E 4
+I 4
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.getSecurityManager.checkPermission(p);
+E 4
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (java.security.AccessControlException ex) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; allowed = false;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return allowed;
+&nbsp;&nbsp;&nbsp; }</font></pre>
+D 4
+
+E 4
+I 4
+<font color="#000000"></font>
+<p><br><font color="#000000">Note that methods in the&nbsp; Java TV API
+that check security permissions always do so by calling <tt>SecurityManager.checkPermission(Permission
+perm)</tt>.</font>
+E 5
+I 5
+corresponding to a given Locator using code similar to the following:<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; boolean hasAccessTo(Locator l) {<br>
+D 6
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean allowed = true;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SecurityManager m = System.getSecurityManager();<br>
+E 6
+I 6
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean allowed =
+true;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SecurityManager m = System.getSecurityManager();<br>
+E 6
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (m != null) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Permission p = new javax.tv.mumble.MumblePermission(l);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+try {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+m.checkPermission(p);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+} catch (SecurityException ex) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+allowed = false;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+D 6
+}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+E 6
+I 6
+}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+E 6
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return allowed;<br>
+D 6
+&nbsp;&nbsp;&nbsp;&nbsp; }</font>
+<br><font color="#000000">Note that methods in the&nbsp; Java TV API that
+check security permissions always do so by calling <tt>SecurityManager.checkPermission(Permission
+p)</tt>.</font>
+E 6
+I 6
+&nbsp;&nbsp;&nbsp;&nbsp; }</font> <br>
+D 7
+<font color="#000000">Note that,
+unless otherwise specified, methods in the Java TV API that check
+security permissions do so by calling
+<tt>SecurityManager.checkPermission(Permission p)</tt>.</font>
+E 7
+I 7
+
+E 7
+E 6
+E 5
+E 4
+E 3
+<pre>
+D 3
+    boolean hasAccessTo(Locator l) {  
+	Permission p = new javax.tv.mumble.MumblePermission(l);
+	boolean allowed = true;
+	try {
+	    java.security.AccessController.checkPermission(p);
+	} catch (java.security.AccessControlException ex) {
+	    allowed = false;
+	}
+	return allowed;
+    }
+</pre>
+E 3
+I 3
+<hr WIDTH="100%"></pre>
+E 3
+D 7
+
+E 7
+I 3
+<pre><font color="#000000">Copyright &copy; 2000 Sun Microsystems, Inc.</font></pre>
+
+E 3
+</body>
+</html>
+E 1

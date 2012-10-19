@@ -1,0 +1,433 @@
+/***********************************************************************************
+ *
+ * THIS SOFTWARE IS COPYRIGHT STEVEN MORRIS 2002. ALL RIGHTS RESERVED
+ *
+ * THIS SOFTWARE IS FREE FOR NON COMMERCIAL USE FOR THE PURPOSE OF LEARNING MHP.  ANY
+ * USE FOR OTHER PURPOSES IS PROHIBITED UNLESS WRITTEN AGREEMENT IS OBTAINED.
+ *
+ * DISTRIBUTION OF THIS CODE IS PROHIBITED
+ */
+
+// Import the standard package that we need to be an Xlet
+import javax.tv.xlet.*;
+
+// The tuning API is located in the org.davic.tuning.* package.  As with
+// so many other media-related operations, we also need the DvbLocator
+// class.
+import org.davic.net.tuning.*;
+import org.davic.net.dvb.DvbLocator;
+
+// The tuning API is one of the APIs that uses the resource notification API.
+import org.davic.resources.*;
+
+
+/**
+ * This class tunes to a different transport stream using the tuning API.
+ * This may be useful in the case where a private data stream is being
+ * broadcast on a different transport stream, and you need to tune to it
+ * in order to access the private data.
+ *
+ * Since this is quite a complex Xlet that may take a while to finish
+ * tuning, we do most of the work in a separate thread.  For this reason,
+ * the Xlet implements the Runnable interface.  It also implements the
+ * org.davic.net.tuning.NetworkInterfaceListener interface to receive
+ * tuning-related events, and the org.davic.resources.ResourceClient
+ * interface to deal with resource management issues.
+ */
+public class TuningExample
+	implements Xlet,
+	           Runnable,
+	           NetworkInterfaceListener,
+	           ResourceClient {
+
+	// A private variable to store our Xlet context.  In this case, we do actually
+	// use this, showing why it's a good idea to keep a reference to the Xlet context.
+	private XletContext context;
+
+	// A private variable that keeps a reference to the thread that
+	// will do all of the work.
+	private Thread myWorkerThread;
+
+		// A private field to hold the current state.  This is needed because the startXlet()
+	// method is called both to start the Xlet for the first time and also to make the
+	// Xlet resume from the paused state.  This filed lets us keep track of whether we're
+	// starting for the first time.
+	private boolean hasBeenStarted;
+
+
+	/**************************************************************************
+	 *
+	 * The methods below this line are the standard Xlet methods.  These mostly do
+	 * nothing surprising,since we do most of the work in a separate thread.
+	 */
+
+	/**
+	 * A default constructor, included for completeness.
+	 */
+	public TuningExample()
+	{
+	}
+
+	/**
+	 * Initialise the Xlet.  In this case, we have no special initialisation
+	 * that we need to do.
+	 */
+	public void initXlet(XletContext context)
+		throws XletStateChangeException
+	{
+		// We keep a reference to our Xlet context because we will need it later.
+		this.context = context;
+	}
+
+	/**
+	 * Start the Xlet.  This is where we actually start doing useful work.
+	 */
+	public void startXlet()
+		throws XletStateChangeException
+	{
+		// Check if the Xlet has been started and resuming from the paused state,
+		// or whether it's being started for the first time.  If it's being
+		// started for the first time, we reate a new thread to do the work
+		if (!hasBeenStarted) {
+			// startXlet() should not block for too long, and waiting for sections
+			// to be filtered is definitely too long.  To solve this, we start
+			// another thread to do the work.
+			myWorkerThread = new Thread(this);
+			myWorkerThread.start();
+		}
+		else {
+			// If we're resuming from the paused state, we don't need to set
+			// up the thread.
+			doResume();
+		}
+	}
+
+	/**
+	 * Pause the Xlet.
+	 */
+	public void pauseXlet()
+	{
+		// The doPause() method does everything we need to pause
+		// the Xlet
+		doPause();
+	}
+
+	/**
+	 * Destroy the Xlet.
+	 */
+	public void destroyXlet(boolean unconditional)
+		throws XletStateChangeException
+	{
+		//tell the user that the method has been called
+		System.out.println("destroyXlet() called");
+
+		if (unconditional) {
+			// We have been ordered to terminate, so we obey the
+			// order politely and release any  scarce resources
+			// that we are holding.
+		}
+		else {
+			// We have had a polite request to die, so we can
+			// refuse this request if we want.
+			throw new XletStateChangeException("Please don't let me die!");
+		}
+	}
+
+
+	/**************************************************************************
+	 *
+	 * The methods below this point are the ones which actually do all of the work
+	 * related to the tuning operation.
+	 */
+
+	// These fields are used to hold the various objects form the tuning
+	// API that we use to do the tuning.
+	NetworkInterfaceManager manager;
+	NetworkInterfaceController controller;
+	NetworkInterface networkInterface;
+
+	// This variable will hold the locator referring to the transport
+	// stream that we will tune to.  If we're using the tuning API,
+	// we use the DvbLocator that's defined in the DAVIC APIs.
+	DvbLocator targetTransportStream;
+
+	// Since tuning can take a little time, we need some way of synchronizing
+	// so that we know when tuning has finished.  This object is used to
+	// provide that synchronization.
+	Object tuningFinished = new Object();
+
+	// A boolean variable to tell us when tuning has finished.
+	// We use this to avoid tuning again if the Xlet is
+	//paused and restarted after tuning has completed.  Using the
+	// synchronization object above would get messy, so we'll
+	// use a separate variable
+	boolean tuningHasFinished;
+
+	/**
+	 * Tune to a new transport stream, using the DAVIC tuning API.
+	 */
+	public void run() {
+
+		// Check if we've already been started.  If we have been started, we don't
+		// need to set up the network interface and associated objects.
+		if (!hasBeenStarted) {
+
+			hasBeenStarted = true;
+
+			// We haven't started tuning yet, so it can't have finished.
+			tuningHasFinished = false;
+
+			// Set up the network interface and network interface controller
+			// that we need for the tuning operation.
+			setupNetworkInterface();
+
+			// Set the flag to tell us we've been started.  We do this here, instead
+			// of in startXlet() as in some other examples, because doing the check
+			// here makes the thread handling code simpler
+			hasBeenStarted = true;
+		}
+
+		// Now we're ready to perform the tuning operation
+
+		// We need to reserve the network interface controller before
+		// we can use it.  This reserves all the resources that we
+		// need to be able to tune to a new transport stream.  Since
+		// this (and ther tuning operation itself) can throw an exception,
+		// we enclose it in a 'try' block.
+		try {
+			controller.reserve(networkInterface,null);
+
+			// Now we can tune to the transport stream we want.  This is an
+			// asynchronous request, so calling this method doesn't mean we've
+			// actually finished tuning
+			controller.tune(targetTransportStream);
+
+			// We've started the tuning action, so we could release the resource
+			// and let other applications access it if we wanted to. In this
+			// case, we will do it when the tuning action has completed in
+			// order to make sure there are no problems.
+
+			// The important thing is to make sure that we do release the
+			// resources when we can, and that we do co-operate nicely with other
+			// applications.  Good citizenship is an important feature in an
+			// MHP application.
+		}
+		catch (NetworkInterfaceException nie) {
+			// There's not much we can do if an exception is thrown, so we will
+			// just print an error message and exit.
+			System.out.println("Problem with tuning:");
+			nie.printStackTrace();
+			return;
+		}
+
+		// The other work is done in the event handler below, after the tuning
+		// operation completes.
+
+		// Before this method exits, we wait for the tuning operation to complete.  We
+		// do this by using the synchronisation object that we have.
+		synchronized(tuningFinished) {
+			try {
+				// The 'notify' that corresponds to this 'wait' takes place in
+				// the event handler method below.
+				tuningFinished.wait();
+			}
+			catch (InterruptedException ie) {
+				// Ignore the exception, since there's not much we can do about it.
+			}
+		}
+	}
+
+	private void setupNetworkInterface() {
+		// First, we create a locator that refers to the transport stream
+		// that we will tune to.
+		// This can throw an exception so we need to enclose it in a
+		// 'try' block.
+		try {
+			targetTransportStream = new DvbLocator("dvb://122.100.3");
+		}
+		catch (org.davic.net.InvalidLocatorException ile) {
+			// We should never have to catch this, because we know
+			// that our locator is well-formed.
+			ile.printStackTrace();
+		}
+
+		// Before we can do any tuning, we need to get the resources that we need.
+		// We need to get a network interface that can tune to the correct
+		// transport stream (because if we have a box with two different network
+		// interfaces, e.g. cable and satellite, different transport streams may
+		// be available on the two interfaces).  Remember that a network
+		// interface is an interface to the broadcast network, NOT an IP network.
+
+		// First, we get a reference to the network interface manager
+		manager = NetworkInterfaceManager.getInstance();
+		//  Now that we have that, we can get a reference to a network interface.
+		// In this case, we can be pretty sure we only have one, so we will choose
+		// the first network interface in the array.  Real applications should
+		// check to see that the network interface can receive the transport
+		// stream they want, and choose another network interface if it can't.
+		networkInterface = manager.getNetworkInterfaces()[0];
+
+		// We need to keep track of what the network interface is doing, so we
+		// add ourselves as an event listener for it.
+		networkInterface.addNetworkInterfaceListener(this);
+
+		// A NetworkInterface object gives read-only access to the network
+		// interface.  To actually control it, we need a
+		// NetworkInterfaceController.  We pass a reference to ourselves
+		// as the resource client for the controller.
+		controller = new NetworkInterfaceController(this);
+
+		// Creating it does nothing - we have to use it to reserve the network
+		// interface before we can do anything useful.  This action, and the
+		// tuning operation itself, can throw an exception, so we enclose
+		// all of this in a 'try' block.
+	}
+
+	/**
+	 * Take the actions needed to pause the Xlet.  In this case, that means
+	 * stopping the section filters and releasing them, since they are
+	 * scarce resources.  We also kill the filtering thread, since this
+	 * isn't needed once the Xlet is paused and we should kill unnecessary
+	 * threads when we pause ourselves.
+	 */
+	private void doPause() {
+
+		// Release the resources that we're holding for the tuning operation.
+		// This can throw an exception, so we have to enclose it in a
+		// 'try' block.
+		try {
+			controller.release();
+		}
+		catch (NetworkInterfaceException nie) {
+			// Ignore the exception
+			nie.printStackTrace();
+		}
+
+		// We also need to notify the main method (and anything else that is
+		// waiting for tuning to finish) that tuning has finished.
+		synchronized(tuningFinished) {
+				tuningFinished.notify();
+		}
+		// Now kill the thread
+		myWorkerThread.stop();
+	}
+
+	/**
+	 * Take the actions needed to resume the Xlet from the paused state.
+	 * In our case, that means restarting the thread that does the
+	 * section filtering.
+	 */
+	private void doResume() {
+
+		if (tuningHasFinished) {
+			// We've done everything we wanted to, so there's no
+			// point doing anything here
+			return;
+		}
+		else {
+			// Start the thread and retry the tuning
+			// operation
+			myWorkerThread.start();
+		}
+	}
+
+	/**
+	 * This method is inherited from org.davic.net.tuning.NetworkInterfaceListener,
+	 * and gets called when the tuning API generates an event for the
+	 * NetworkInterface object that we have registered ourselves as a listener for.
+	 */
+	public void receiveNIEvent(NetworkInterfaceEvent event) {
+		// If the event indicates that the tuning operation is over, we
+		// release the resources that we claimed.
+
+
+		if (event instanceof NetworkInterfaceTuningOverEvent) {
+
+			// This can throw an exception, so we have to enclose it in a
+			// 'try' block.
+			try {
+				controller.release();
+			}
+			catch (NetworkInterfaceException nie) {
+				// Ignore the exception
+				nie.printStackTrace();
+			}
+
+		// Set the flag that says tuning has finished.
+		tuningHasFinished = true;
+
+		// We also need to notify the main method (and anything else that is
+		// waiting for tuning to finish) that tuning has finished.
+			synchronized(tuningFinished) {
+				tuningFinished.notify();
+			}
+		}
+	}
+
+
+	/**************************************************************************
+	 *
+	 * These methods are inherited from the ResourceClient interface and are used
+	 * to tell the application when it has lost access to its resources (or
+	 * when it is about to lose access to them).  This gives the application a
+	 * chance to clean up when it loses access to a resource, and gives it a
+	 * chance to handle things gracefully.
+	 */
+
+
+	/**
+	 * This method gets called when the resource manager requests that we give
+	 * up a resource.  We can refuse to do so, and that's what we do in this
+	 * case (even though we shouldn't).
+	 */
+	public boolean requestRelease(ResourceProxy proxy, Object requestData) {
+		return false;
+	}
+
+	/**
+	 * This method gets called when the resource manager informs us that we must
+	 * release a resource
+	 */
+	public void release(ResourceProxy proxy) {
+		// Release the network interface that we have reserved for this Xlet.
+		// This can throw an exception, so we have to enclose it in a 'try' block.
+		try {
+			controller.release();
+		}
+		catch (NetworkInterfaceException nie) {
+			// Ignore the exception
+			nie.printStackTrace();
+		}
+
+		// We also need to notify the main method (and anything else that is
+		// waiting for tuning to finish) that tuning has finished.
+		synchronized(tuningFinished) {
+			tuningFinished.notify();
+		}
+	}
+
+	/**
+	 * This method gets called when the resource manager tells us we've
+	 * lost access to a resource and we should clean up after ourselves.
+	 */
+	public void notifyRelease(ResourceProxy proxy) {
+		// Release the network interface that we have reserved for this Xlet.
+		// This can throw an exception, so we have to enclose it in a 'try' block.
+		// We've lost the resource, so whether we actually release it is really
+		// academic, but it's good practise
+		try {
+			controller.release();
+		}
+		catch (NetworkInterfaceException nie) {
+			nie.printStackTrace();
+		}
+
+		// Tell everything that tuning has finished, even though it didn't.  This
+		// avoids any chance of deadlocks.
+		synchronized(tuningFinished) {
+			tuningFinished.notify();
+		}
+	}
+
+
+}

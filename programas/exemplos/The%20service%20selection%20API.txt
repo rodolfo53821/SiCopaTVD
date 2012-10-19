@@ -1,0 +1,196 @@
+/***********************************************************************************
+ *
+ * THIS SOFTWARE IS COPYRIGHT STEVEN MORRIS 2002. ALL RIGHTS RESERVED
+ *
+ * THIS SOFTWARE IS FREE FOR NON COMMERCIAL USE FOR THE PURPOSE OF LEARNING MHP.  ANY
+ * USE FOR OTHER PURPOSES IS PROHIBITED UNLESS WRITTEN AGREEMENT IS OBTAINED.
+ *
+ * DISTRIBUTION OF THIS CODE IS PROHIBITED
+ */
+
+// Import the standard package that we need to be an Xlet
+import javax.tv.xlet.*;
+
+// The service selection API is contained in the
+// javax.tv.service.selection.* package.  We also need the JavaTV locators
+// in order to use it.
+import javax.tv.locator.*;
+import javax.tv.service.selection.*;
+
+/**
+ * This Xlet uses the JavaTV service selection API to select different
+ * services and control them.
+ *
+ * Since this is quite a complex Xlet that may take a while to finish
+ * doing its work, we do most of the work in a separate thread.  For
+ * this reason, the Xlet implements the Runnable interface.  It also
+ * implements the javax.tv.service.selection.ServiceContextListener
+ * interface to receive events related to the service context that
+ * it's manipulating.
+ */
+public class ServiceSelectionExample implements Xlet, Runnable, ServiceContextListener {
+
+	// A private variable to store our Xlet context.  In this case, we do actually
+	// use this, showing why it's a good idea to keep a reference to the Xlet context.
+	private XletContext context;
+
+	// A private variable that keeps a reference to the thread that
+	// will do all of the work.
+	private Thread myWorkerThread;
+
+	/**************************************************************************
+	 *
+	 * The methods below this line are the standard Xlet methods.  These mostly do
+	 * nothing surprising,since we do most of the work in a separate thread.
+	 */
+
+	/**
+	 * A default constructor, included for completeness.
+	 */
+	public ServiceSelectionExample()
+	{
+	}
+
+	/**
+	 * Initialise the Xlet.  In this case, we have no special initialisation
+	 * that we need to do.
+	 */
+	public void initXlet(javax.tv.xlet.XletContext context) throws javax.tv.xlet.XletStateChangeException
+	{
+		// We keep a reference to our Xlet context because we will need it later.
+		this.context = context;
+	}
+
+	/**
+	 * Start the Xlet.  This is where we actually start doing useful work.
+	 */
+	public void startXlet() throws javax.tv.xlet.XletStateChangeException
+	{
+		// startXlet() should not block for too long, and waiting for the SI queries
+		// to complete is definitely too long.  To solve this, we start another
+		// thread to do the work for this.
+		myWorkerThread = new Thread(this);
+		myWorkerThread.start();
+	}
+
+	/**
+	 * Pause the Xlet.
+	 */
+	public void pauseXlet()
+	{
+		// We do nothing, which is not exactly a good idea, but we won't
+		// use many resources and so this should be OK.
+
+	}
+
+	/**
+	 * Destroy the Xlet.
+	 */
+	public void destroyXlet(boolean unconditional) throws javax.tv.xlet.XletStateChangeException
+	{
+		//tell the user that the method has been called
+		System.out.println("destroyXlet() called");
+
+		if (unconditional) {
+			// We have been ordered to terminate, so we obey the order politely and release any
+			//scarce resources that we are holding.
+		}
+		else {
+			// We have had a polite request to die, so we can refuse this request if we want.
+			throw new XletStateChangeException("Please don't let me die!");
+		}
+	}
+
+
+	/**************************************************************************
+	 *
+	 * The methods below this point are the ones which actually do all of the work
+	 * selecting the new service
+	 */
+
+	/**
+	 * Select a new service, which may or may not be on the same transport
+	 * stream.
+	 */
+	public void run() {
+		// Before we can do anything, we need to create a service context.
+		// We don't use our own service context, because it we selected a
+		// new service in our own service context, this application would get
+		// killed unless it was also signalled on the new service.  See annex
+		// Z of the MHP 1.1 specification for a detailed discussion of the
+		// relationship between services, service contexts and the application
+		// lifecycle.
+
+		// Get a reference to the service context factory.
+		ServiceContextFactory factory = ServiceContextFactory.getInstance();
+
+		// Create a new service context.
+		ServiceContext sc;
+		try {
+			sc = factory.createServiceContext();
+		}
+		catch (InsufficientResourcesException ire) {
+			// We don't have enough free resources to create a new service
+			// context.  This may not mean exactly what you think.  See
+			// Annex Z of the MHP 1.1 specification for more information
+			System.out.println("Not enough resources to create a new service context.  Exiting...");
+			return;
+		}
+
+		// We add ourselves as an event listener for the service context,
+		// so that we can be notified of state changes.
+		sc.addListener(this);
+
+
+		// Now that we have a service context we're ready to select a
+		// new service.  First, we create a javax.tv.locator.Locator
+		// for the service that we want to select
+		Locator locator = null;
+
+		// JavaTV Locators are created by a LocatorFactory
+		LocatorFactory locatorFactory = LocatorFactory.getInstance();
+		// Now create the Locator.  This can throw an exception,
+		// so we enclose it in a 'try' block.
+		try {
+			locator = locatorFactory.createLocator("dvb://122.100.3");
+		}
+		catch (MalformedLocatorException mle) {
+			// This should never happen, because the locator above is well-formed
+			System.out.println("Can't create the locator object - malformed locator");
+			mle.printStackTrace();
+		}
+
+		// We need to pass the select() method either an array of Locators or a
+		// Service object.  In this case, we will use the array of locators
+		Locator[] locators = new Locator[1];
+		locators[0] = locator;
+
+		// After creating the locator, we can use it to select the service.
+		// This can also fail in a number of ways, so again we enclose it
+		// in a 'try' block.
+		try {
+			sc.select(locators);
+		}
+		catch (javax.tv.locator.InvalidLocatorException ile) {
+			// Print an error message
+			System.out.println("Invalid Locator when selecting the new service");
+			ile.printStackTrace();
+		}
+		catch (InvalidServiceComponentException isce) {
+			// Print an error message
+			System.out.println("Invalid service component when selecting the new service");
+			isce.printStackTrace();
+		}
+	}
+
+	/**
+	 * This method is inherited from javax.tv.service.selection.ServiceContextListener.
+	 * It gets called whenever a service context that we're registered as a listener
+	 * for generates an event.
+	 */
+	public void receiveServiceContextEvent(ServiceContextEvent event) {
+		// In this case, we just print the event on the debug output
+		System.out.println("Service context has generated an event - " + event);
+	}
+
+}

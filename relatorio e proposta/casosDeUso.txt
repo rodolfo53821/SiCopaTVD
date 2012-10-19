@@ -1,0 +1,82 @@
+Caso de uso
+
+
+Consulta de jogadores
+Pre condicoes: O usuario deve estar na tela de consulta de jogadores
+Fluxo principal
+O usuario escolhe a seleção que queira ver um determinado jogador
+O usuario escolhe o jogador
+Vê as caracteristicas deste
+
+Consulta de seleção
+Pre condicoes: O usuario deve estar na tela de consulta de seleção(equipe)
+Fluxo principal
+O usuario escolhe a seleção
+Vê as caracteristicas da mesma
+
+
+Consulta de tabela/Classificação
+Pre condicoes: O usuario deve estar na tela de consulta de tabela/Classificação
+Fluxo principal
+Vê as informações desejadas
+
+
+Consulta de Laires
+Pre condicoes: O usuario deve estar na tela de consulta de Laires e estar logado
+Fluxo principal
+Vê as informações desejadas
+
+Consulta de Estadio
+Pre condicoes: O usuario deve estar na tela de consulta de estadios
+Fluxo principal
+O usuario escolhe o estadio
+Vê as informações desejadas
+
+Compra de pacotes de figurinhas
+Pre condicoes: O usuario deve estar na tela de de compra de figurinhas e estar logado
+Fluxo principal
+O usuario define a quantidade de pacotes na compra
+O usuario requisita a compra de pacote de figurinha
+O sistema mostra as figurinhas adquiridas
+Fluxo alternativo
+Se o usuario nao tiver laires suficiente: O sistema aborta compra 
+Retorna uma msg de erro
+Volta a tela de compra de figurinhas
+
+
+Assistir jogos
+Pre condição estar na tela principal do programa
+Fluxo principal
+Atraves da lista de rapida de jogos o usuario escolhe um jogo a assistir
+O usuario escolhe a emissora a qual deseja assistir
+Fluxo alternativo
+O jogo ainda nao comecou: O sistema retorna ao menu principal com uma mensagem de erro.
+
+
+Compra de uniforme
+Pre condição O usuario deve estar na tela de compra de uniforme
+O usuario loga, se nao estiver logado
+O usuario define qual equipe deseja compra um certo equipamento
+O usuario verifica qual o(s) produtos deseja comprar
+O usuario define qual a loja sobre cada produto deseja comprar
+O usuario confirma a compra
+O sistema retorna a tela principal
+Fluxo alternativo
+1-O usuario nao tem login: O usuario deve cadastrar as suas informações
+Retorna a tela de compra
+2-Nao a loja com o produto requerido
+Sistema retorna mensagem
+Retorna a tela de compra
+
+
+Importar/exportar figurinhas
+Pre condição deve estar na tela de exportar/importar
+O usuario escolhe a opção importar ou exportar
+O usuario escolhe quais figurinhas deseja fazer o processo
+Sistema confirma o processo
+Fluxo alternativo
+Nao ha figurinhas:  os sistema retorna msg de erro
+Volta a tela de importar/exportar figurinhas
+
+
+

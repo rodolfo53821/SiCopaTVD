@@ -1,0 +1,1859 @@
+
+@media Screen    
+{
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: 69% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif; COLOR: black; PADDING-TOP: 0px; BACKGROUND-COLOR: white
+}
+TABLE {
+	FONT-SIZE: 100%
+}
+A {
+	COLOR: #436976; BACKGROUND-COLOR: transparent
+}
+IMG {
+	VERTICAL-ALIGN: middle; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+P {
+	MARGIN: 0px 0px 0.75em; LINE-HEIGHT: 1.5em
+}
+P IMG {
+	MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+HR {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0.5em 0px 1em; COLOR: #8cacbb; HEIGHT: 1px; BACKGROUND-COLOR: #8cacbb; BORDER-RIGHT-WIDTH: 0px
+}
+H1 {
+	MARGIN: 0.75em 0px 0.25em; COLOR: black; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+H2 {
+	MARGIN: 0.75em 0px 0.25em; COLOR: black; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+H3 {
+	MARGIN: 0.75em 0px 0.25em; COLOR: black; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+H4 {
+	MARGIN: 0.75em 0px 0.25em; COLOR: black; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+H5 {
+	MARGIN: 0.75em 0px 0.25em; COLOR: black; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+H6 {
+	MARGIN: 0.75em 0px 0.25em; COLOR: black; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+H1 A {
+	COLOR: black! important; TEXT-DECORATION: none
+}
+H2 A {
+	COLOR: black! important; TEXT-DECORATION: none
+}
+H3 A {
+	COLOR: black! important; TEXT-DECORATION: none
+}
+H4 A {
+	COLOR: black! important; TEXT-DECORATION: none
+}
+H5 A {
+	COLOR: black! important; TEXT-DECORATION: none
+}
+H6 A {
+	COLOR: black! important; TEXT-DECORATION: none
+}
+H1 {
+	FONT-SIZE: 160%
+}
+H2 {
+	FONT-SIZE: 150%
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 125%; BORDER-BOTTOM-STYLE: none
+}
+H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 110%; BORDER-BOTTOM-STYLE: none
+}
+H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 100%; BORDER-BOTTOM-STYLE: none
+}
+H6 {
+	FONT-WEIGHT: bold; FONT-SIZE: 90%; BORDER-BOTTOM-STYLE: none
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.5em; PADDING-TOP: 0px
+}
+OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.5em; PADDING-TOP: 0px
+}
+LI {
+	MARGIN-BOTTOM: 0.5em
+}
+DT {
+	FONT-WEIGHT: bold
+}
+DD {
+	MARGIN-BOTTOM: 1em; LINE-HEIGHT: 1.5em
+}
+abbr {
+	CURSOR: help; COLOR: black; BORDER-BOTTOM: black 1px dotted; BACKGROUND-COLOR: transparent
+}
+ACRONYM {
+	CURSOR: help; COLOR: black; BORDER-BOTTOM: black 1px dotted; BACKGROUND-COLOR: transparent
+}
+.explain {
+	CURSOR: help; COLOR: black; BORDER-BOTTOM: black 1px dotted; BACKGROUND-COLOR: transparent
+}
+abbr .explain {
+	BORDER-BOTTOM-STYLE: none
+}
+Q {
+	FONT-SIZE: 120%; FONT-STYLE: italic; FONT-FAMILY: Baskerville, Georgia, serif
+}
+BLOCKQUOTE {
+	PADDING-LEFT: 0.5em; MARGIN-LEFT: 0px; BORDER-LEFT: #8cacbb 4px solid; COLOR: #76797c
+}
+CODE {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.1em; FONT-SIZE: 120%; PADDING-BOTTOM: 0px; COLOR: black; PADDING-TOP: 0px; FONT-FAMILY: Monaco, "Courier New", Courier, monospace; BACKGROUND-COLOR: #dee7ec
+}
+TT {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.1em; FONT-SIZE: 120%; PADDING-BOTTOM: 0px; COLOR: black; PADDING-TOP: 0px; FONT-FAMILY: Monaco, "Courier New", Courier, monospace; BACKGROUND-COLOR: #dee7ec
+}
+PRE {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 1em; FONT-SIZE: 100%; PADDING-BOTTOM: 1em; OVERFLOW: auto; BORDER-LEFT: #8cacbb 1px solid; COLOR: black; PADDING-TOP: 1em; BORDER-BOTTOM: #8cacbb 1px solid; FONT-FAMILY: Monaco, "Courier New", Courier, monospace; BACKGROUND-COLOR: #dee7ec
+}
+INS {
+	COLOR: green; TEXT-DECORATION: none
+}
+DEL {
+	COLOR: red; TEXT-DECORATION: line-through
+}
+BODY.largeText {
+	FONT-SIZE: 95%
+}
+BODY.smallText {
+	FONT-SIZE: 60%
+}
+#portal-column-one .visualPadding {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 2em; PADDING-BOTTOM: 1em; PADDING-TOP: 2em
+}
+#portal-column-two .visualPadding {
+	PADDING-RIGHT: 2em; PADDING-LEFT: 0em; PADDING-BOTTOM: 1em; PADDING-TOP: 2em
+}
+H1 {
+	FONT-WEIGHT: normal; BORDER-BOTTOM: #8cacbb 1px solid
+}
+H2 {
+	FONT-WEIGHT: normal; BORDER-BOTTOM: #8cacbb 1px solid
+}
+BODY.kssActive H2.inlineEditable:hover {
+	PADDING-BOTTOM: 1px
+}
+BODY.kssActive H1.inlineEditable:hover {
+	PADDING-BOTTOM: 1px
+}
+BODY.kssActive H2.formlibInlineEditable:hover {
+	PADDING-BOTTOM: 1px
+}
+BODY.kssActive H1.formlibInlineEditable:hover {
+	PADDING-BOTTOM: 1px
+}
+H3 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H4 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H5 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H6 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+.documentFirstHeading {
+	MARGIN-TOP: 0px
+}
+.documentContent {
+	PADDING-RIGHT: 1em! important; PADDING-LEFT: 1em! important; FONT-SIZE: 110%; BACKGROUND: white; PADDING-BOTTOM: 2em! important; PADDING-TOP: 1em! important
+}
+.documentContent UL {
+	LIST-STYLE-IMAGE: url(http://lince.dc.ufscar.br/home/bullet.gif); MARGIN: 0.5em 0px 0px 1.5em; LIST-STYLE-TYPE: square
+}
+.documentContent OL {
+	MARGIN: 0.5em 0px 0px 2.5em
+}
+.documentContent P A {
+	BORDER-BOTTOM: #ccc 1px solid; TEXT-DECORATION: none
+}
+.documentContent P A:visited {
+	COLOR: purple; BACKGROUND-COLOR: transparent
+}
+.documentContent P A:active {
+	COLOR: red; BACKGROUND-COLOR: transparent
+}
+#content A:unknown {
+	BACKGROUND-COLOR: #fd7! important
+}
+.documentContent LI A {
+	BORDER-BOTTOM: #cccccc 1px solid; TEXT-DECORATION: none
+}
+.documentContent LI A:visited {
+	COLOR: purple
+}
+.documentContent LI A:active {
+	COLOR: red
+}
+.documentContent DD A {
+	BORDER-BOTTOM: #cccccc 1px solid; TEXT-DECORATION: none
+}
+.documentContent DD A:visited {
+	COLOR: purple; BACKGROUND-COLOR: transparent
+}
+.documentContent DD A:active {
+	COLOR: red; BACKGROUND-COLOR: transparent
+}
+#visual-portal-wrapper {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#portal-logo IMG {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 1em 0em 1em 2em; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#portal-skinswitcher {
+	
+}
+#portal-skinswitcher A {
+	DISPLAY: block; FLOAT: left
+}
+#portal-top {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BACKGROUND-COLOR: transparent
+}
+#portal-siteactions {
+	PADDING-RIGHT: 2em; PADDING-LEFT: 0px; FLOAT: right; LIST-STYLE-IMAGE: none; PADDING-BOTTOM: 3px; MARGIN: 1px 0px 0px; LINE-HEIGHT: normal; PADDING-TOP: 3px; WHITE-SPACE: nowrap; LIST-STYLE-TYPE: none; HEIGHT: auto; BACKGROUND-COLOR: transparent
+}
+#portal-siteactions LI {
+	DISPLAY: inline
+}
+#portal-siteactions LI A {
+	BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 0.2em; BORDER-TOP: white 1px solid; PADDING-LEFT: 0.2em; PADDING-BOTTOM: 0.2em; TEXT-TRANSFORM: none; BORDER-LEFT: white 1px solid; COLOR: #76797c; MARGIN-RIGHT: 0.2em; PADDING-TOP: 0.2em; BORDER-BOTTOM: white 1px solid; HEIGHT: auto; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none
+}
+#portal-siteactions LI.selected A {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; COLOR: #436976; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+#portal-siteactions LI A:hover {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; COLOR: #436976; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+#portal-searchbox {
+	CLEAR: right; PADDING-RIGHT: 2em; PADDING-LEFT: 0px; Z-INDEX: 2; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 1.5em 0px 0px; TEXT-TRANSFORM: none; PADDING-TOP: 0px; WHITE-SPACE: nowrap; BACKGROUND-COLOR: transparent; TEXT-ALIGN: right
+}
+#portal-advanced-search {
+	CLEAR: both; MARGIN-TOP: 0.2em
+}
+#portal-advanced-search A {
+	TEXT-TRANSFORM: none; COLOR: #76797c; TEXT-DECORATION: none
+}
+DL.searchResults DT {
+	FONT-WEIGHT: normal; FONT-SIZE: 140%
+}
+FORM.searchPage {
+	TEXT-ALIGN: center
+}
+INPUT.searchPage {
+	FONT-SIZE: 200%! important
+}
+FORM.searchPage INPUT.searchButton {
+	PADDING-RIGHT: 10px; BACKGROUND-POSITION: 5px 7px; PADDING-LEFT: 25px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+.LSRes {
+	DISPLAY: block; LIST-STYLE-IMAGE: none; VISIBILITY: visible; MARGIN-LEFT: 0px; VERTICAL-ALIGN: middle; TEXT-TRANSFORM: none; COLOR: #436976; LINE-HEIGHT: 1.1em; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif; LIST-STYLE-TYPE: none; BACKGROUND-COLOR: white; TEXT-ALIGN: left; min-width: 16.5em
+}
+#LSHighlight {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; COLOR: #436976; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+.LSHighlight {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; COLOR: #436976; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+.LSTable {
+	MARGIN: 1em 0px
+}
+.LSRow {
+	BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: white 1px solid; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: white 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: white 1px solid; WHITE-SPACE: normal; LIST-STYLE-TYPE: none
+}
+.LSRow A {
+	FONT-WEIGHT: bold; WHITE-SPACE: nowrap; TEXT-DECORATION: none
+}
+.LSDescr {
+	MARGIN-TOP: -0.1em; PADDING-LEFT: 2.1em; TEXT-TRANSFORM: none; COLOR: #76797c
+}
+.LSResult {
+	DISPLAY: block; Z-INDEX: 3; LEFT: 3px; MARGIN: 0px; PADDING-TOP: 5px; POSITION: relative; TEXT-ALIGN: right
+}
+.LSShadow {
+	POSITION: relative; TEXT-ALIGN: right
+}
+.livesearchContainer {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 0px! important; BORDER-TOP: #8cacbb 1px solid; MARGIN-TOP: 0px; PADDING-LEFT: 0px! important; RIGHT: 0px; VISIBILITY: visible; PADDING-BOTTOM: 0px! important; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; WIDTH: 30em; COLOR: #436976; PADDING-TOP: 0px! important; BORDER-BOTTOM: #8cacbb 1px solid; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif; WHITE-SPACE: normal; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: white; TEXT-ALIGN: left
+}
+ HTML .livesearchContainer {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 1px! important; PADDING-LEFT: 1px! important; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 1px! important; PADDING-TOP: 0px! important; BACKGROUND-COLOR: #8cacbb; BORDER-RIGHT-WIDTH: 0px
+}
+#livesearchLegend {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; MARGIN-TOP: -2em; MARGIN-LEFT: -0.1em; BORDER-LEFT: #8cacbb 1px solid; LINE-HEIGHT: 1em; BORDER-BOTTOM: #8cacbb 0px solid
+}
+ HTML #livesearchLegend {
+	MARGIN-TOP: -1.9em; MARGIN-LEFT: -8px; POSITION: relative
+}
+.LSIEFix {
+	PADDING-RIGHT: 0.5em! important; PADDING-LEFT: 0.5em! important; Z-INDEX: 20; PADDING-BOTTOM: 0.5em! important; PADDING-TOP: 0.5em! important; BACKGROUND-COLOR: white
+}
+.LSBox {
+	CLEAR: left; PADDING-RIGHT: 1px; DISPLAY: block; FLOAT: left; TEXT-ALIGN: right
+}
+#LSNothingFound {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; TEXT-ALIGN: center
+}
+.LSBox LABEL {
+	FONT-WEIGHT: normal
+}
+#portal-globalnav {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 2em; PADDING-BOTTOM: 0em; MARGIN: 0px; LINE-HEIGHT: normal; PADDING-TOP: 0em; WHITE-SPACE: nowrap; LIST-STYLE-TYPE: none; HEIGHT: auto; BACKGROUND-COLOR: transparent
+}
+#portal-globalnav LI {
+	DISPLAY: inline
+}
+#portal-globalnav LI A {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1.25em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 1.25em; PADDING-BOTTOM: 0em; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; COLOR: #436976; MARGIN-RIGHT: 0.5em; PADDING-TOP: 0em; BORDER-BOTTOM: #8cacbb 1px; HEIGHT: auto; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none
+}
+#portal-globalnav LI.selected A {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; COLOR: #436976; BORDER-BOTTOM: #dee7ec 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+#portal-globalnav LI A:hover {
+	BORDER-LEFT-COLOR: #8cacbb; BORDER-BOTTOM-COLOR: #dee7ec; COLOR: #436976; BORDER-TOP-COLOR: #8cacbb; BACKGROUND-COLOR: #dee7ec; BORDER-RIGHT-COLOR: #8cacbb
+}
+#portal-personaltools {
+	PADDING-RIGHT: 3em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 3em; PADDING-BOTTOM: 0em; MARGIN: 0px; TEXT-TRANSFORM: none; COLOR: black; LINE-HEIGHT: 1.6em; PADDING-TOP: 0em; BORDER-BOTTOM: #8cacbb 1px solid; LIST-STYLE-TYPE: none; BACKGROUND-COLOR: #dee7ec; TEXT-ALIGN: right
+}
+#portal-personaltools .portalUser {
+	PADDING-LEFT: 18px; BACKGROUND: url(http://lince.dc.ufscar.br/home/user.gif) no-repeat left center
+}
+#portal-personaltools .portalNotLoggedIn {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; COLOR: black; PADDING-TOP: 0px
+}
+#portal-personaltools LI {
+	DISPLAY: inline; MARGIN-LEFT: 1em; COLOR: #436976
+}
+#portal-personaltools LI A {
+	COLOR: #436976; TEXT-DECORATION: none
+}
+#portal-personaltools .visualIconPadding {
+	PADDING-LEFT: 10px
+}
+.visualCaseSensitive {
+	TEXT-TRANSFORM: none
+}
+#portal-languageselector {
+	FLOAT: right; MARGIN: 0px 1em
+}
+#portal-languageselector LI {
+	DISPLAY: inline
+}
+#portal-breadcrumbs {
+	PADDING-RIGHT: 2em; PADDING-LEFT: 2em; TEXT-TRANSFORM: none; LINE-HEIGHT: 1.6em; BORDER-BOTTOM: #8cacbb 1px solid
+}
+#portal-breadcrumbs A {
+	TEXT-DECORATION: none
+}
+.breadcrumbSeparator {
+	FONT-SIZE: 120%
+}
+.addFavorite {
+	VERTICAL-ALIGN: bottom
+}
+.documentEditable {
+	PADDING-RIGHT: 1em! important; PADDING-LEFT: 1em! important; PADDING-BOTTOM: 1em! important; MARGIN: 0px -1em; PADDING-TOP: 0em! important
+}
+#content-news H1 {
+	MARGIN-BOTTOM: 1em
+}
+#content H5 {
+	COLOR: #76797c
+}
+#content H6 {
+	COLOR: #76797c
+}
+.newsItem {
+	MARGIN-BOTTOM: 1em; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.newsImage {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+.newsImageContainer {
+	FLOAT: right; MARGIN: 0px 0px 0.5em 1em; WIDTH: 202px
+}
+.newsContent {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; PADDING-TOP: 0px
+}
+.newsContent UL {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.newsContent LI {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.newsAbout {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 90%; FLOAT: right; LIST-STYLE-IMAGE: none; PADDING-BOTTOM: 0px; COLOR: #76797c; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; TEXT-ALIGN: right
+}
+.newsAbout LI {
+	DISPLAY: inline
+}
+.newsFooter {
+	
+}
+.newsFooter LI {
+	DISPLAY: inline; MARGIN: 0px 1em 0px 0px
+}
+.documentActions {
+	PADDING-RIGHT: 0px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 1em 0px; PADDING-TOP: 0px; TEXT-ALIGN: right
+}
+.documentActions UL {
+	PADDING-RIGHT: 0.5em; DISPLAY: block; PADDING-LEFT: 0.5em; LIST-STYLE-IMAGE: none; PADDING-BOTTOM: 0px; MARGIN: -0.9em 0px 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.documentActions LI {
+	PADDING-RIGHT: 0.25em; DISPLAY: inline; PADDING-LEFT: 0.25em; FONT-SIZE: 90%; PADDING-BOTTOM: 0px; MARGIN: 0px 0.5em; PADDING-TOP: 0px; BACKGROUND-COLOR: white
+}
+.documentActions A {
+	BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; BORDER-LEFT-STYLE: none! important; TEXT-DECORATION: none; BORDER-BOTTOM-STYLE: none! important
+}
+DL.portalMessage {
+	BORDER-RIGHT: #996 1px solid; BORDER-TOP: #996 1px solid; FONT-SIZE: 90%; BORDER-LEFT: #996 1px solid; BORDER-BOTTOM: #996 1px solid; BACKGROUND-COLOR: #ffffe3
+}
+DL.portalMessage A {
+	COLOR: black; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; TEXT-DECORATION: underline; BORDER-BOTTOM-STYLE: none
+}
+DL.portalMessage DT {
+	PADDING-RIGHT: 0.75em; PADDING-LEFT: 0.75em; FONT-WEIGHT: bold; FLOAT: left; PADDING-BOTTOM: 0.5em; MARGIN: 0px 0.5em 0px 0px; COLOR: white; LINE-HEIGHT: 1.25em; PADDING-TOP: 0.5em; BACKGROUND-COLOR: #996
+}
+DL.portalMessage DD {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; MARGIN: 0px; LINE-HEIGHT: 1.25em; PADDING-TOP: 0.5em
+}
+DL.warning {
+	BORDER-LEFT-COLOR: #d80; BORDER-BOTTOM-COLOR: #d80; BORDER-TOP-COLOR: #d80; BORDER-RIGHT-COLOR: #d80
+}
+DL.warning DT {
+	BACKGROUND-COLOR: #d80
+}
+DL.error {
+	BORDER-LEFT-COLOR: #d00; BORDER-BOTTOM-COLOR: #d00; BORDER-TOP-COLOR: #d00; BORDER-RIGHT-COLOR: #d00
+}
+DL.error DT {
+	BACKGROUND-COLOR: #d00
+}
+DL.warning {
+	BORDER-LEFT-COLOR: #d80; BORDER-BOTTOM-COLOR: #d80; BORDER-TOP-COLOR: #d80; BORDER-RIGHT-COLOR: #d80
+}
+DL.warning DD {
+	BACKGROUND-COLOR: #fd7
+}
+DL.error {
+	BORDER-LEFT-COLOR: #d80; BORDER-BOTTOM-COLOR: #d80; BORDER-TOP-COLOR: #d80; BORDER-RIGHT-COLOR: #d80
+}
+DL.error DD {
+	BACKGROUND-COLOR: #fd7
+}
+.documentDescription {
+	DISPLAY: block; FONT-WEIGHT: bold; MARGIN: 0em 0em 0.5em; LINE-HEIGHT: 1.5em
+}
+.documentByLine {
+	FONT-WEIGHT: normal; FONT-SIZE: 90%; MARGIN-BOTTOM: 0.5em; COLOR: #76797c
+}
+DL.searchResults SPAN.documentByLine {
+	DISPLAY: block
+}
+#category UL {
+	DISPLAY: inline; LIST-STYLE-IMAGE: none; MARGIN: 0px; LIST-STYLE-TYPE: none
+}
+#category UL LI {
+	DISPLAY: inline
+}
+.discussion {
+	MARGIN-TOP: 1em
+}
+.even {
+	BACKGROUND-COLOR: #eef3f5
+}
+.odd {
+	BACKGROUND-COLOR: transparent
+}
+.visualHighlight {
+	BACKGROUND-COLOR: #ffc
+}
+.discreet {
+	FONT-WEIGHT: normal; FONT-SIZE: 90%; COLOR: #76797c
+}
+.pullquote {
+	CLEAR: right; PADDING-RIGHT: 1em; PADDING-LEFT: 1em; FONT-WEIGHT: bold; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 1em 1em; BORDER-LEFT: #8cacbb 4px solid; WIDTH: 35%; COLOR: #cc9933; PADDING-TOP: 0px; BACKGROUND-COLOR: white
+}
+.callout {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; FONT-WEIGHT: bold; PADDING-BOTTOM: 0px; COLOR: #cc9933; PADDING-TOP: 0px
+}
+.notify {
+	BORDER-RIGHT: #ffa500 1px solid; BORDER-TOP: #ffa500 1px solid; BORDER-LEFT: #ffa500 1px solid; BORDER-BOTTOM: #ffa500 1px solid
+}
+.documentEditable  .notify {
+	BORDER-RIGHT: #ffa500 1px solid; BORDER-TOP: #ffa500 1px solid; BORDER-LEFT: #ffa500 1px solid; BORDER-BOTTOM: #ffa500 1px solid
+}
+.card {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 1em; MARGIN: 1em; BORDER-LEFT: #8cacbb 1px solid; WIDTH: 110px; PADDING-TOP: 1em; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec; TEXT-ALIGN: center
+}
+.card A {
+	TEXT-DECORATION: none
+}
+.portrait {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 90%; PADDING-BOTTOM: 0.5em; MARGIN: 0.5em; BORDER-LEFT: #8cacbb 1px solid; WIDTH: 100px; PADDING-TOP: 1em; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec; TEXT-ALIGN: center
+}
+.portraitPhoto {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid
+}
+TABLE.listing {
+	FONT-SIZE: 90%; MARGIN: 1em 0em; BORDER-LEFT: #8cacbb 1px solid; BORDER-BOTTOM: #8cacbb 1px solid; BORDER-COLLAPSE: collapse
+}
+.stx TABLE {
+	FONT-SIZE: 90%; MARGIN: 1em 0em; BORDER-LEFT: #8cacbb 1px solid; BORDER-BOTTOM: #8cacbb 1px solid; BORDER-COLLAPSE: collapse
+}
+TABLE.listing TH {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0.5em; FONT-WEIGHT: normal; BACKGROUND: #dee7ec; PADDING-BOTTOM: 0.25em; TEXT-TRANSFORM: none; PADDING-TOP: 0.25em; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.stx TABLE TH {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0.5em; FONT-WEIGHT: normal; BACKGROUND: #dee7ec; PADDING-BOTTOM: 0.25em; TEXT-TRANSFORM: none; PADDING-TOP: 0.25em; BORDER-BOTTOM: #8cacbb 1px solid
+}
+TABLE.listing .top {
+	BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 0em; BORDER-TOP: white 1px solid; PADDING-LEFT: 0em; PADDING-BOTTOM: 1em; BORDER-LEFT: white 1px solid; PADDING-TOP: 0em; TEXT-ALIGN: right! important
+}
+TABLE.listing .listingCheckbox {
+	TEXT-ALIGN: center
+}
+TABLE.listing TD {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.25em; PADDING-TOP: 0.25em
+}
+.stx TABLE TD {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.25em; PADDING-TOP: 0.25em
+}
+TABLE.listing A {
+	TEXT-DECORATION: none
+}
+TABLE.listing A:hover {
+	TEXT-DECORATION: underline
+}
+TABLE.listing IMG {
+	VERTICAL-ALIGN: middle
+}
+TABLE.listing TD A LABEL {
+	CURSOR: pointer
+}
+.stx TABLE TD A LABEL {
+	CURSOR: pointer
+}
+TABLE.vertical {
+	BACKGROUND-COLOR: white
+}
+TABLE.vertical TH {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em
+}
+TABLE.vertical TD {
+	PADDING-RIGHT: 0.5em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em
+}
+TABLE.grid TD {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #8cacbb 1px solid; PADDING-TOP: 0.5em; BORDER-BOTTOM: #8cacbb 1px solid
+}
+TABLE.plain {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #ccc 1px solid; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ccc 1px solid; BORDER-COLLAPSE: collapse
+}
+TABLE.plain TD {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #ccc 1px solid; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ccc 1px solid; BORDER-COLLAPSE: collapse
+}
+TABLE.plain TH {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #ccc 1px solid; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ccc 1px solid; BORDER-COLLAPSE: collapse
+}
+.listingBar {
+	CLEAR: both; BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 1em; FONT-SIZE: 94%; PADDING-BOTTOM: 0em; MARGIN: 1em 0em; VERTICAL-ALIGN: top; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; PADDING-TOP: 0em; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec; TEXT-ALIGN: center
+}
+.listingBar SPAN.previous {
+	FLOAT: left; MARGIN-RIGHT: 1em; TEXT-ALIGN: left
+}
+.listingPrevious {
+	FLOAT: left; MARGIN-RIGHT: 1em; TEXT-ALIGN: left
+}
+.listingBar SPAN.next {
+	FLOAT: right; MARGIN-LEFT: 1em; TEXT-ALIGN: right
+}
+.listingNext {
+	FLOAT: right; MARGIN-LEFT: 1em; TEXT-ALIGN: right
+}
+.listingBar IMG {
+	VERTICAL-ALIGN: middle
+}
+.listingBar A {
+	TEXT-DECORATION: none
+}
+.tileItem {
+	BORDER-TOP: #8cacbb 1px solid; MARGIN-TOP: 0.5em; PADDING-TOP: 0.5em
+}
+.tileHeadline {
+	FONT-WEIGHT: bold; FONT-SIZE: 110%; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.tileHeadline A {
+	TEXT-DECORATION: none
+}
+.tileBody {
+	MARGIN-BOTTOM: 0.5em
+}
+.tileImage {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FLOAT: right; MARGIN: 0px 0px 0.5em 0.5em; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid
+}
+.eventDetails {
+	CLEAR: right; FLOAT: right; MARGIN: 0px 0px 0.5em 1em; WIDTH: 20em
+}
+UL.visualNoMarker {
+	LIST-STYLE-IMAGE: none; MARGIN: 0.5em 0px 0px; LINE-HEIGHT: 1em; LIST-STYLE-TYPE: none
+}
+OL.visualNoMarker {
+	LIST-STYLE-IMAGE: none; MARGIN: 0.5em 0px 0px; LINE-HEIGHT: 1em; LIST-STYLE-TYPE: none
+}
+UL.discreet {
+	LIST-STYLE-IMAGE: none; LIST-STYLE-TYPE: disc
+}
+TEXTAREA.proportional {
+	FONT: 100% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+.productCredits {
+	CLEAR: both; FONT-WEIGHT: normal; FONT-SIZE: 90%; COLOR: #76797c; TEXT-ALIGN: right
+}
+#portal-footer {
+	PADDING-RIGHT: 0em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0em; FLOAT: none; PADDING-BOTTOM: 1em; MARGIN: 2em 0em 1em; LINE-HEIGHT: 1.2em; PADDING-TOP: 0.5em; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec; TEXT-ALIGN: center
+}
+#portal-footer P {
+	MARGIN: 0.25em 0px
+}
+#portal-footer A {
+	COLOR: #436976; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none; BORDER-BOTTOM-STYLE: none
+}
+#portal-footer A:visited {
+	COLOR: #436976
+}
+#portal-footer A:hover {
+	TEXT-DECORATION: underline
+}
+#portal-colophon {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: none; PADDING-BOTTOM: 1em; MARGIN: 0px 0px 1em; COLOR: #666; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+#portal-colophon UL {
+	LIST-STYLE-IMAGE: none; LIST-STYLE-TYPE: none
+}
+#portal-colophon UL LI {
+	PADDING-RIGHT: 0.75em; DISPLAY: inline! important; PADDING-LEFT: 0.75em; FONT-SIZE: 90%; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#portal-colophon UL LI A {
+	COLOR: #666; BORDER-BOTTOM: #ccc 1px solid; TEXT-DECORATION: none
+}
+.feedButton {
+	MARGIN-TOP: 1px; DISPLAY: block; FLOAT: right
+}
+.poweredBy {
+	CLEAR: both; DISPLAY: block; FONT-WEIGHT: normal; FONT-SIZE: 90%; COLOR: #76797c; TEXT-ALIGN: right
+}
+#portal-sitemap {
+	FONT-SIZE: 90%; LIST-STYLE-IMAGE: none; MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; LIST-STYLE-TYPE: none; BORDER-BOTTOM-STYLE: none
+}
+#portal-sitemap A {
+	BORDER-RIGHT: white 1px solid; BORDER-TOP: white 1px solid; BORDER-LEFT: white 1px solid; BORDER-BOTTOM: white 1px solid
+}
+#portal-sitemap A:hover {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; BORDER-BOTTOM: #8cacbb 1px solid
+}
+#portal-sitemap .navTreeLevel1 {
+	PADDING-LEFT: 1em; MARGIN: 0px 0px 0px 0.5em; BORDER-LEFT: #8cacbb 0.5em solid
+}
+#portal-sitemap .navTreeLevel2 {
+	PADDING-LEFT: 1em; MARGIN: 0px 0px 0px 0.6em; BORDER-LEFT: #dee7ec 0.5em solid
+}
+.photoAlbumEntry {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 9px; FLOAT: left; BACKGROUND-IMAGE: url(http://lince.dc.ufscar.br/home/polaroid-single.png); PADDING-BOTTOM: 0px; MARGIN: 0em; WIDTH: 143px; PADDING-TOP: 0px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 185px; TEXT-ALIGN: center
+}
+.photoAlbumEntry IMG {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; DISPLAY: block; MARGIN: 0px auto; BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+.photoAlbumEntryWrapper {
+	MARGIN-BOTTOM: 7px; WIDTH: 128px; HEIGHT: 130px
+}
+.photoAlbumEntry A {
+	DISPLAY: block; FONT-SIZE: 90%; MARGIN: 16px auto 0px; WIDTH: 130px; HEIGHT: 169px; TEXT-DECORATION: none
+}
+.photoAlbumFolder {
+	BACKGROUND-IMAGE: url(http://lince.dc.ufscar.br/home/polaroid-multi.png); BACKGROUND-REPEAT: no-repeat
+}
+.photoAlbumEntryTitle {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 128px; COLOR: #76797c; HEIGHT: 3.6em
+}
+A.link-parent {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 16px; FONT-SIZE: 90%; BACKGROUND: url(http://lince.dc.ufscar.br/home/arrowUp.gif) no-repeat 4px 5px; PADDING-BOTTOM: 10px; PADDING-TOP: 1px; TEXT-DECORATION: none
+}
+#content .link-category {
+	COLOR: #74ae0b! important
+}
+#content .link-user {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: url(http://lince.dc.ufscar.br/home/user.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+#content .link-comment {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 16px! important; BACKGROUND: url(http://lince.dc.ufscar.br/home/discussionitem_icon.gif) no-repeat left center; PADDING-BOTTOM: 1px! important; PADDING-TOP: 1px! important
+}
+#content .link-anchor {
+	FONT-WEIGHT: normal; COLOR: #76797c; TEXT-DECORATION: none
+}
+#content .link-presentation {
+	FONT-SIZE: 90%; TEXT-ALIGN: center
+}
+#content .link-wiki-add {
+	COLOR: red
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: url(http://lince.dc.ufscar.br/home/link_icon.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: url(http://lince.dc.ufscar.br/home/lock_icon.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: url(http://lince.dc.ufscar.br/home/mail_icon.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: url(http://lince.dc.ufscar.br/home/topic_icon.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: url(http://lince.dc.ufscar.br/home/file_icon.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: url(http://lince.dc.ufscar.br/home/discussionitem_icon.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: url(http://lince.dc.ufscar.br/home/phone_icon.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 16px; BACKGROUND: url(http://lince.dc.ufscar.br/home/event_icon.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 18px; BACKGROUND: url(http://lince.dc.ufscar.br/home/rss.gif) no-repeat 0px 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+#content .link-plain {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 0px! important; BACKGROUND-IMAGE: none! important; PADDING-BOTTOM: 0px! important; PADDING-TOP: 0px! important
+}
+.visualGhosted {
+	opacity: 0.2
+}
+BODY.fullscreen #portal-logo {
+	DISPLAY: none
+}
+BODY.fullscreen #portal-siteactions {
+	DISPLAY: none
+}
+BODY.fullscreen #portal-globalnav {
+	MARGIN-TOP: 4em
+}
+BODY.fullscreen #portal-searchbox {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; Z-INDEX: 3; PADDING-BOTTOM: 0px; MARGIN: 0.5em 2em 0px 0.5em; PADDING-TOP: 0px; POSITION: relative
+}
+.image-left {
+	CLEAR: both; BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FLOAT: left; MARGIN: 0.5em 1em 0.5em 0px; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid
+}
+.image-inline {
+	FLOAT: none
+}
+.image-right {
+	CLEAR: both; BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FLOAT: right; MARGIN: 0.5em; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid
+}
+DD.image-caption {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+DL.captioned {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+#dashboard-info-message {
+	PADDING-TOP: 0.5em
+}
+#dashboard {
+	WIDTH: 68em
+}
+#dashboard-portlets1 {
+	PADDING-RIGHT: 1.3em; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 16em; PADDING-TOP: 0.7em
+}
+#dashboard-portlets2 {
+	PADDING-RIGHT: 1.3em; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 16em; PADDING-TOP: 0.7em
+}
+#dashboard-portlets3 {
+	PADDING-RIGHT: 1.3em; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 16em; PADDING-TOP: 0.7em
+}
+#dashboard-portlets4 {
+	FLOAT: left; WIDTH: 16em; PADDING-TOP: 0.7em
+}
+#dashboard-portlets1 A {
+	BORDER-BOTTOM: medium none
+}
+#dashboard-portlets2 A {
+	BORDER-BOTTOM: medium none
+}
+#dashboard-portlets3 A {
+	BORDER-BOTTOM: medium none
+}
+#dashboard-portlets4 A {
+	BORDER-BOTTOM: medium none
+}
+#dashboard-portlets1 DL.portlet {
+	MARGIN-BOTTOM: 1.5em
+}
+#dashboard-portlets2 DL.portlet {
+	MARGIN-BOTTOM: 1.5em
+}
+#dashboard-portlets3 DL.portlet {
+	MARGIN-BOTTOM: 1.5em
+}
+#dashboard-portlets4 DL.portlet {
+	MARGIN-BOTTOM: 1.5em
+}
+DIV.portlet {
+	BORDER-BOTTOM-STYLE: none
+}
+#dashboard SELECT {
+	WIDTH: 100%
+}
+.portletAssignments {
+	MARGIN-TOP: 1.5em
+}
+#dashboard-portlets1 DIV.managedPortlet A {
+	COLOR: #436976; BORDER-BOTTOM: #436976 1px solid; TEXT-DECORATION: none
+}
+#dashboard-portlets2 DIV.managedPortlet A {
+	COLOR: #436976; BORDER-BOTTOM: #436976 1px solid; TEXT-DECORATION: none
+}
+#dashboard-portlets3 DIV.managedPortlet A {
+	COLOR: #436976; BORDER-BOTTOM: #436976 1px solid; TEXT-DECORATION: none
+}
+#dashboard-portlets4 DIV.managedPortlet A {
+	COLOR: #436976; BORDER-BOTTOM: #436976 1px solid; TEXT-DECORATION: none
+}
+#dashboard-portlets1 DIV.managedPortlet SPAN A {
+	BORDER-BOTTOM-STYLE: none
+}
+#dashboard-portlets2 DIV.managedPortlet SPAN A {
+	BORDER-BOTTOM-STYLE: none
+}
+#dashboard-portlets3 DIV.managedPortlet SPAN A {
+	BORDER-BOTTOM-STYLE: none
+}
+#dashboard-portlets4 DIV.managedPortlet SPAN A {
+	BORDER-BOTTOM-STYLE: none
+}
+#dashboard-actions {
+	FLOAT: right
+}
+#dashboard-actions UL {
+	LIST-STYLE: none none outside; MARGIN-TOP: 0px
+}
+#dashboard-actions UL LI {
+	DISPLAY: inline; PADDING-LEFT: 0.7em
+}
+#dashboard-actions UL LI.portalUser {
+	PADDING-LEFT: 18px; BACKGROUND: url(http://lince.dc.ufscar.br/home/user.gif) no-repeat left center
+}
+.section DIV {
+	PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em
+}
+#portal-columns {
+	WIDTH: 100%! important; BORDER-COLLAPSE: collapse; border-spacing: 0
+}
+#portal-column-one {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; WIDTH: 16em; PADDING-TOP: 0px; BORDER-COLLAPSE: collapse
+}
+#portal-column-content {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0px; MARGIN: 0em 0em 2em; VERTICAL-ALIGN: top; PADDING-TOP: 1em; BORDER-COLLAPSE: collapse
+}
+#portal-column-two {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; WIDTH: 16em; PADDING-TOP: 0px; BORDER-COLLAPSE: collapse
+}
+BODY.fullscreen #portal-column-one {
+	DISPLAY: none
+}
+BODY.fullscreen #portal-column-two {
+	DISPLAY: none
+}
+BODY.fullscreen #portal-column-content {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px
+}
+.contentViews {
+	BORDER-RIGHT: #74ae0b 0px solid; BORDER-TOP: #74ae0b 0px solid; PADDING-LEFT: 1em; MARGIN: 0px; BORDER-LEFT: #74ae0b 0px solid; LINE-HEIGHT: normal; BORDER-BOTTOM: #74ae0b 1px solid; LIST-STYLE-TYPE: none; BACKGROUND-COLOR: transparent
+}
+.contentViews LI {
+	DISPLAY: inline; PADDING-TOP: 0.5em
+}
+.contentViews LI A {
+	BORDER-RIGHT: #74ae0b 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #74ae0b 1px solid; PADDING-LEFT: 1em; Z-INDEX: 1; PADDING-BOTTOM: 0em; TEXT-TRANSFORM: none; BORDER-LEFT: #74ae0b 1px solid; COLOR: #578308; LINE-HEIGHT: normal; MARGIN-RIGHT: 0.5em; PADDING-TOP: 0em; BORDER-BOTTOM: #74ae0b 1px solid; HEIGHT: auto; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none
+}
+.contentViews .selected A {
+	COLOR: #578308; BORDER-BOTTOM: #cde2a7 1px solid; BACKGROUND-COLOR: #cde2a7
+}
+.contentViews LI A:hover {
+	COLOR: #578308; BACKGROUND-COLOR: #cde2a7
+}
+.configlet .contentViews {
+	FONT-SIZE: 90%
+}
+.contentActions {
+	BORDER-RIGHT: #74ae0b 1px solid; PADDING-RIGHT: 0px; PADDING-LEFT: 1em; Z-INDEX: 2; PADDING-BOTTOM: 0px; TEXT-TRANSFORM: none; BORDER-LEFT: #74ae0b 1px solid; COLOR: #578308; PADDING-TOP: 0px; POSITION: relative; HEIGHT: 1.6em; BACKGROUND-COLOR: #cde2a7; TEXT-ALIGN: right
+}
+.contentActions UL {
+	LIST-STYLE-IMAGE: none; MARGIN: 0px; COLOR: black; LINE-HEIGHT: 1.6em; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+.contentActions LI {
+	LIST-STYLE-IMAGE: none; MARGIN: 0px; COLOR: black; LINE-HEIGHT: 1.6em; LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+.contentActions LI {
+	Z-INDEX: 4; FLOAT: right; BORDER-LEFT: #74ae0b 1px solid
+}
+.contentActions A {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0px; CURSOR: pointer; COLOR: #578308; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+.contentActions SPAN.subMenuTitle {
+	PADDING-RIGHT: 0.5em; DISPLAY: inline; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0em; PADDING-TOP: 0em; WHITE-SPACE: nowrap; POSITION: relative
+}
+.contentActions A SPAN.subMenuTitle {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.actionMenu {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; POSITION: relative
+}
+.actionMenu .actionMenuHeader {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.activated .actionMenuHeader {
+	Z-INDEX: 10; POSITION: relative
+}
+.actionMenu .actionMenuHeader A {
+	DISPLAY: block
+}
+.arrowDownAlternative {
+	FONT-SIZE: 0.85em
+}
+.actionMenu .actionMenuContent {
+	PADDING-RIGHT: 0px; DISPLAY: none; PADDING-LEFT: 0px; Z-INDEX: 5; RIGHT: -1px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; POSITION: absolute; TOP: 1.6em; HEIGHT: auto
+}
+.activated .actionMenuContent {
+	DISPLAY: block! important
+}
+.activated .actionMenuContent {
+	BORDER-COLLAPSE: collapse; border-spacing: 0
+}
+.deactivated .actionMenuContent {
+	DISPLAY: none! important
+}
+.actionMenu .actionMenuContent UL {
+	BORDER-RIGHT: #74ae0b 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #74ae0b 1px; DISPLAY: block; PADDING-LEFT: 0px; BACKGROUND: #cde2a7; PADDING-BOTTOM: 0px; MARGIN: -2px 0px 0px; BORDER-LEFT: #74ae0b 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #74ae0b 1px solid
+}
+.actionMenu .actionMenuContent LI {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; FLOAT: none; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BACKGROUND-COLOR: transparent; BORDER-RIGHT-WIDTH: 0px
+}
+.actionMenu .actionMenuContent LI A {
+	DISPLAY: block; MARGIN: 0.2em 0px; WHITE-SPACE: nowrap
+}
+.actionMenu .actionMenuContent .selected {
+	PADDING-RIGHT: 0.5em; DISPLAY: block; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0px; MARGIN: 0.2em 0px; PADDING-TOP: 0px; WHITE-SPACE: nowrap
+}
+.actionMenu .actionMenuContent LI A:hover {
+	COLOR: white; BACKGROUND-COLOR: #74ae0b
+}
+.actionMenu .actionMenuContent .actionSeparator A {
+	BORDER-TOP: #74ae0b 1px solid; PADDING-TOP: 0.2em
+}
+#templateMenu LI A {
+	PADDING-LEFT: 16px
+}
+UL.configlets {
+	LIST-STYLE-IMAGE: none; MARGIN: 1em 0px; LIST-STYLE-TYPE: none
+}
+UL.configlets LI {
+	MARGIN-BOTTOM: 1em
+}
+UL.configlets LI A {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; TEXT-DECORATION: none; BORDER-BOTTOM-STYLE: none
+}
+UL.configlets LI A:visited {
+	COLOR: #436976; BACKGROUND-COLOR: transparent
+}
+UL.configlets LI A:active {
+	COLOR: #436976; BACKGROUND-COLOR: transparent
+}
+UL.configlets LI LABEL {
+	FONT-WEIGHT: bold
+}
+UL.configletDetails {
+	LIST-STYLE-IMAGE: none; MARGIN: 0em 1em 1em 4em; LIST-STYLE-TYPE: none
+}
+UL.configletDetails LI {
+	DISPLAY: inline; MARGIN-BOTTOM: 1em
+}
+UL.configletDetails LI A {
+	TEXT-DECORATION: none
+}
+UL.configletDetails LI LABEL {
+	FONT-WEIGHT: bold
+}
+UL.configletDetails LI.configletDescription {
+	DISPLAY: block; FONT-SIZE: 90%; MARGIN: 0px; COLOR: #76797c
+}
+.stx TABLE P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.stx TABLE {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.stx TABLE TD {
+	BORDER-BOTTOM: #8cacbb 1px solid
+}
+.reviewHistory {
+	DISPLAY: inline; FONT-SIZE: 110%! important; COLOR: black
+}
+.contentHistory {
+	DISPLAY: inline; FONT-SIZE: 110%! important; COLOR: black
+}
+.comment {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 1em; BACKGROUND: #eef3f5; MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #8cacbb 1px solid; PADDING-TOP: 0.25em; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.comment H1 {
+	FONT-WEIGHT: normal; BORDER-BOTTOM: #76797c 1px solid
+}
+.comment H2 {
+	FONT-WEIGHT: normal; BORDER-BOTTOM: #76797c 1px solid
+}
+.comment H3 {
+	FONT-WEIGHT: normal; BORDER-BOTTOM: #76797c 1px solid
+}
+.comment H4 {
+	FONT-WEIGHT: normal; BORDER-BOTTOM: #76797c 1px solid
+}
+.comment H5 {
+	FONT-WEIGHT: normal; BORDER-BOTTOM: #76797c 1px solid
+}
+.comment H6 {
+	FONT-WEIGHT: normal; BORDER-BOTTOM: #76797c 1px solid
+}
+.comment H3 A {
+	PADDING-LEFT: 18px; MIN-HEIGHT: 1.6em; BACKGROUND-IMAGE: url(http://lince.dc.ufscar.br/home/discussionitem_icon.gif); MARGIN-BOTTOM: 1px; MARGIN-LEFT: -1px; LINE-HEIGHT: 1.6em; BACKGROUND-REPEAT: no-repeat; HEIGHT: auto
+}
+.commentBody {
+	MARGIN: 0px 1em 1em
+}
+.spacer {
+	MARGIN: 1em
+}
+DL.collapsible {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 1em 0px 0px; BORDER-LEFT: #8cacbb 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #8cacbb 1px solid
+}
+DL.collapsible DT.collapsibleHeader {
+	PADDING-RIGHT: 0.5em; DISPLAY: block; PADDING-LEFT: 0.5em; FONT-SIZE: 90%; BACKGROUND: white; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 0px -0.6em 1em; VERTICAL-ALIGN: middle; WIDTH: auto; LINE-HEIGHT: 1.2em; PADDING-TOP: 0px; POSITION: relative; TOP: -0.6em
+}
+DL.collapsible DD.collapsibleContent {
+	CLEAR: left; PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DL.expandedInlineCollapsible DT.collapsibleHeader {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 22px; BACKGROUND: url(treeExpanded.gif) white no-repeat 6px 50%; PADDING-BOTTOM: 0px; CURSOR: pointer; PADDING-TOP: 0px
+}
+DL.expandedBlockCollapsible DT.collapsibleHeader {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 22px; BACKGROUND: url(treeExpanded.gif) white no-repeat 6px 50%; PADDING-BOTTOM: 0px; CURSOR: pointer; PADDING-TOP: 0px
+}
+DL.collapsedBlockCollapsible {
+	WIDTH: auto; BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; BORDER-LEFT-STYLE: none! important; HEIGHT: 1em; BORDER-BOTTOM-STYLE: none! important
+}
+DL.collapsedBlockCollapsible DT.collapsibleHeader {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 22px; BACKGROUND: url(treeCollapsed.gif) no-repeat 6px 50%; FLOAT: none; PADDING-BOTTOM: 0px; MARGIN: 0px; CURSOR: pointer; LINE-HEIGHT: 1em; PADDING-TOP: 0px; POSITION: static
+}
+DL.collapsedInlineCollapsible DD.collapsibleContent {
+	DISPLAY: none
+}
+DL.collapsedBlockCollapsible DD.collapsibleContent {
+	DISPLAY: none
+}
+DL.collapsedInlineCollapsible {
+	DISPLAY: inline; WIDTH: auto; BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; BORDER-LEFT-STYLE: none! important; HEIGHT: 1em; BORDER-BOTTOM-STYLE: none! important
+}
+DL.collapsedInlineCollapsible DT.collapsibleHeader {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 22px; BACKGROUND: url(treeCollapsed.gif) no-repeat 6px 50%; FLOAT: none; PADDING-BOTTOM: 0px; MARGIN: 0px; CURSOR: pointer; LINE-HEIGHT: 1em; PADDING-TOP: 0px; POSITION: static
+}
+.configlet .documentEditable {
+	PADDING-RIGHT: 0em! important; PADDING-LEFT: 0em! important; PADDING-BOTTOM: 0em! important; PADDING-TOP: 0em! important
+}
+.documentEditable .documentContent {
+	BORDER-RIGHT: #74ae0b 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #74ae0b 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: #74ae0b 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #74ae0b 1px solid
+}
+.label {
+	PADDING-RIGHT: 0.5em; DISPLAY: inline; FONT-WEIGHT: bold
+}
+.optionsToggle {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; FONT-WEIGHT: normal! important; FONT-SIZE: 90%; BORDER-LEFT: #8cacbb 1px solid; COLOR: black; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+.portalNotLoggedIn {
+	
+}
+UNKNOWN {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; BORDER-LEFT-COLOR: #ffa500; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #ffa500; BORDER-TOP-COLOR: #ffa500; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #ffa500
+}
+.highlightedSearchTerm {
+	BACKGROUND-COLOR: #ffa
+}
+DL.searchResults .highlightedSearchTerm {
+	FONT-WEIGHT: bold; BACKGROUND-COLOR: transparent
+}
+.noInheritedRoles {
+	COLOR: #a0a0a0
+}
+.currentItem {
+	BORDER-RIGHT: #ffa500 2px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffa500 2px solid; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; BORDER-LEFT: #ffa500 2px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #ffa500 2px solid; BORDER-COLLAPSE: collapse
+}
+TR.dragging TD {
+	BACKGROUND-COLOR: #ff6
+}
+.draggingHook {
+	CURSOR: move
+}
+.notDraggable {
+	
+}
+.managePortletsLink {
+	DISPLAY: block; FONT-WEIGHT: normal; FONT-SIZE: 90%; COLOR: #76797c
+}
+UL.formTabs {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px -2em; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; POSITION: relative; TEXT-ALIGN: center
+}
+LI.formTab {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LI.formTab A {
+	DISPLAY: inline-block
+}
+LI.formTab A {
+	PADDING-RIGHT: 0.75em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 0.75em; BACKGROUND: white; PADDING-BOTTOM: 0.12em; MARGIN: 0px; BORDER-LEFT: #8cacbb 1px dotted; PADDING-TOP: 0.12em; BORDER-BOTTOM: #8cacbb 1px solid; TEXT-DECORATION: none
+}
+LI.firstFormTab A {
+	BORDER-LEFT: #8cacbb 1px solid
+}
+LI.lastFormTab A {
+	BORDER-RIGHT: #8cacbb 1px solid
+}
+LI.formTab A.selected {
+	BACKGROUND: #dee7ec
+}
+LI.formTab A:hover {
+	BACKGROUND: #dee7ec
+}
+LI.formTab A.notify {
+	COLOR: black; BACKGROUND-COLOR: #ffce7b
+}
+LI.formTab A.required SPAN {
+	PADDING-RIGHT: 8px; BACKGROUND-POSITION: right center; BACKGROUND-IMAGE: url(http://lince.dc.ufscar.br/home/required.gif); BACKGROUND-REPEAT: no-repeat
+}
+LI.formTab A.notify:hover {
+	BACKGROUND-COLOR: #ffa500
+}
+.formPanel {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; BORDER-LEFT: #8cacbb 1px solid; PADDING-TOP: 1em; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.hidden {
+	DISPLAY: none
+}
+DIV.formControls INPUT.hidden {
+	DISPLAY: none
+}
+.managePortletsFallback {
+	MARGIN: 0px 0px 0px 1em
+}
+.portlet {
+	MARGIN: 1px 0px 1em; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: white
+}
+.portlet A {
+	TEXT-DECORATION: none
+}
+.portlet A.tile {
+	DISPLAY: block
+}
+.portletItem UL {
+	LIST-STYLE-TYPE: none
+}
+.portletItem A {
+	BORDER-BOTTOM-STYLE: none
+}
+.portletFooter A {
+	BORDER-BOTTOM-STYLE: none
+}
+.portletItem A:visited {
+	COLOR: #436976
+}
+.portletFooter A:visited {
+	COLOR: #436976
+}
+.portletHeader {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 1em; FONT-WEIGHT: normal; PADDING-BOTTOM: 0em; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; LINE-HEIGHT: 1.6em; PADDING-TOP: 0em; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+.portletHeader A {
+	COLOR: black
+}
+.portletItem {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; MARGIN: 0px; BORDER-LEFT: #8cacbb 1px solid; PADDING-TOP: 1em
+}
+.portletItem OL {
+	MARGIN: 0px 0px 0px 1em
+}
+.portletItemDetails {
+	DISPLAY: block; COLOR: black; TEXT-ALIGN: right
+}
+.portletFooter {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #8cacbb 1px dotted; PADDING-LEFT: 1em; PADDING-BOTTOM: 0.25em; MARGIN: 0px; BORDER-LEFT: #8cacbb 1px solid; PADDING-TOP: 0.25em; BORDER-BOTTOM: #8cacbb 1px; BACKGROUND-COLOR: #eef3f5; TEXT-ALIGN: right
+}
+.portletTopLeft {
+	
+}
+.portletTopRight {
+	
+}
+.portletBottomLeft {
+	
+}
+.portletBottomRight {
+	
+}
+.dayPopup {
+	BORDER-RIGHT: black 1px solid; PADDING-RIGHT: 0.2em; BORDER-TOP: black 1px solid; PADDING-LEFT: 0.2em; Z-INDEX: 2; VISIBILITY: hidden; PADDING-BOTTOM: 0.2em; BORDER-LEFT: black 1px solid; WIDTH: 12em; PADDING-TOP: 0.2em; BORDER-BOTTOM: black 1px solid; POSITION: absolute; BACKGROUND-COLOR: #ffffe1
+}
+.date {
+	FONT-WEIGHT: bold
+}
+.portletCalendar {
+	MARGIN: 1px 0px 1em; WIDTH: 100%
+}
+.portletCalendar DT {
+	FONT-WEIGHT: normal; LINE-HEIGHT: 1.6em; BACKGROUND-COLOR: #dee7ec; TEXT-ALIGN: center; BORDER-BOTTOM-STYLE: none
+}
+.portletCalendar DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.portletCalendar A {
+	TEXT-DECORATION: none
+}
+.portletCalendar A:hover {
+	TEXT-DECORATION: none
+}
+.ploneCalendar {
+	WIDTH: 100%; BORDER-COLLAPSE: collapse; border-spacing: 0
+}
+.ploneCalendar TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; WIDTH: 14%; PADDING-TOP: 2px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: center
+}
+.ploneCalendar .weekdays TH {
+	BORDER-RIGHT: #8cacbb 1px; PADDING-RIGHT: 2px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 2px; FONT-WEIGHT: normal; PADDING-BOTTOM: 2px; BORDER-LEFT: #8cacbb 1px; PADDING-TOP: 2px; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec; TEXT-ALIGN: center
+}
+.ploneCalendar .event {
+	FONT-WEIGHT: bold; BACKGROUND-COLOR: #dee7ec
+}
+.ploneCalendar .todayevent {
+	BORDER-RIGHT: #ffa500 2px solid; BORDER-TOP: #ffa500 2px solid; FONT-WEIGHT: bold; BORDER-LEFT: #ffa500 2px solid; BORDER-BOTTOM: #ffa500 2px solid; BACKGROUND-COLOR: #dee7ec
+}
+.ploneCalendar .todaynoevent {
+	BORDER-RIGHT: #ffa500 2px solid; BORDER-TOP: #ffa500 2px solid; BORDER-LEFT: #ffa500 2px solid; BORDER-BOTTOM: #ffa500 2px solid; BORDER-COLLAPSE: collapse
+}
+.managePortletsLink {
+	TEXT-ALIGN: center
+}
+DIV.portlets-manager DIV.section {
+	PADDING-TOP: 1em! important
+}
+DIV.managedPortlet {
+	PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em
+}
+.managedPortlet .portletHeader {
+	MIN-HEIGHT: 3em! important
+}
+.managedPortlet A {
+	TEXT-DECORATION: underline
+}
+.managedPortletActions {
+	DISPLAY: block; FLOAT: right
+}
+.managedPortletActions A {
+	TEXT-DECORATION: none
+}
+.managedPortletActions A.up {
+	COLOR: blue! important
+}
+.managedPortletActions A.down {
+	COLOR: blue! important
+}
+.managedPortletActions A.delete {
+	COLOR: red! important
+}
+.toc {
+	FONT-SIZE: 90%; FLOAT: right; MARGIN: 0px 0px 0.5em 0.5em; WIDTH: 30%
+}
+.portletStaticText UL {
+	LIST-STYLE-IMAGE: url(http://lince.dc.ufscar.br/home/bullet.gif); MARGIN: 0.5em 0px 0px 1.5em; LIST-STYLE-TYPE: square
+}
+.portletStaticText OL {
+	MARGIN: 0.5em 0px 0px 2em
+}
+.inlineDisplay {
+	DISPLAY: inline
+}
+TABLE.controlpanel-listing {
+	WIDTH: 100%
+}
+TABLE.controlpanel-listing TD {
+	FONT-SIZE: 120%
+}
+TABLE.controlpanel-listing TH {
+	FONT-SIZE: 120%
+}
+TABLE.controlpanel-listing DL {
+	MARGIN-TOP: 0px
+}
+TABLE.controlpanel-listing DD {
+	MARGIN-LEFT: 1em
+}
+TABLE.controlpanel-listing DL DT A .trigger {
+	FONT-WEIGHT: normal
+}
+TABLE .controlpanel-listing TD {
+	VERTICAL-ALIGN: top
+}
+TABLE.controlpanel-listing TD.checker {
+	TEXT-ALIGN: center
+}
+TABLE.controlpanel-listing TH.smallcolumn {
+	WIDTH: 1.5em
+}
+.chooser-right {
+	FLOAT: right; MARGIN-BOTTOM: 0px! important; MARGIN-RIGHT: 0px! important
+}
+.rule-element {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0.3em; MARGIN: 0.5em 0pt; WIDTH: auto; PADDING-TOP: 0.3em; BACKGROUND-COLOR: #eef3f5
+}
+.rule-element DL {
+	
+}
+.rule-element DL DD {
+	MARGIN-LEFT: 1em
+}
+.rule-updown {
+	FLOAT: right; PADDING-TOP: 0.8em
+}
+.rule-operations {
+	FLOAT: right; PADDING-TOP: 0.8em
+}
+
+}
+
+@media Print    
+{
+BODY {
+	FONT-SIZE: 11pt! important; FONT-FAMILY: Baskerville, Georgia, Garamond, Times, serif
+}
+H1 {
+	BORDER-TOP-STYLE: none; FONT-FAMILY: Baskerville, Georgia, Garamond, Times, serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+H2 {
+	BORDER-TOP-STYLE: none; FONT-FAMILY: Baskerville, Georgia, Garamond, Times, serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+H3 {
+	BORDER-TOP-STYLE: none; FONT-FAMILY: Baskerville, Georgia, Garamond, Times, serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+H4 {
+	BORDER-TOP-STYLE: none; FONT-FAMILY: Baskerville, Georgia, Garamond, Times, serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+H5 {
+	BORDER-TOP-STYLE: none; FONT-FAMILY: Baskerville, Georgia, Garamond, Times, serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+H6 {
+	BORDER-TOP-STYLE: none; FONT-FAMILY: Baskerville, Georgia, Garamond, Times, serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+DIV {
+	WIDTH: auto
+}
+P {
+	WIDTH: auto
+}
+UL {
+	WIDTH: auto
+}
+DL {
+	WIDTH: auto
+}
+OL {
+	WIDTH: auto
+}
+UL {
+	PADDING-RIGHT: 0.5em
+}
+OL {
+	PADDING-RIGHT: 0.5em
+}
+DL {
+	PADDING-RIGHT: 0.5em
+}
+UL {
+	LIST-STYLE-TYPE: square
+}
+.documentDescription {
+	FONT-WEIGHT: bold
+}
+PRE {
+	BORDER-RIGHT: black 1pt dotted; PADDING-RIGHT: 0px; BORDER-TOP: black 1pt dotted; PADDING-LEFT: 0px; FONT-SIZE: 8pt; PADDING-BOTTOM: 1em; OVERFLOW: auto; BORDER-LEFT: black 1pt dotted; PADDING-TOP: 1em; BORDER-BOTTOM: black 1pt dotted; WHITE-SPACE: pre
+}
+TABLE.listing {
+	BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; BORDER-COLLAPSE: collapse
+}
+TABLE.listing TD {
+	BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; BORDER-COLLAPSE: collapse
+}
+A {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 0px! important; PADDING-BOTTOM: 0px! important; COLOR: black! important; PADDING-TOP: 0px! important; TEXT-DECORATION: none! important
+}
+A:link {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #520
+}
+A:visited {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #520
+}
+DIV.pageBreak {
+	PAGE-BREAK-BEFORE: always
+}
+DIV.top {
+	DISPLAY: none
+}
+#portal-logo {
+	DISPLAY: none
+}
+#portal-siteactions {
+	DISPLAY: none
+}
+.hiddenStructure {
+	DISPLAY: none
+}
+#portal-searchbox {
+	DISPLAY: none
+}
+#portal-globalnav {
+	DISPLAY: none
+}
+#portal-personaltools {
+	DISPLAY: none
+}
+#portal-breadcrumbs {
+	DISPLAY: none
+}
+#portal-column-one {
+	DISPLAY: none
+}
+#portal-column-two {
+	DISPLAY: none
+}
+.contentViews {
+	DISPLAY: none
+}
+.contentActions {
+	DISPLAY: none
+}
+.help {
+	DISPLAY: none
+}
+.legend {
+	DISPLAY: none
+}
+.portalMessage {
+	DISPLAY: none
+}
+.documentActions {
+	DISPLAY: none
+}
+.documentByLine {
+	DISPLAY: none
+}
+.netscape4 {
+	DISPLAY: none
+}
+#portal-footer {
+	DISPLAY: none
+}
+#portal-colophon {
+	DISPLAY: none
+}
+.skipnav {
+	DISPLAY: none
+}
+#kss-spinner {
+	DISPLAY: none
+}
+#review-history {
+	DISPLAY: none
+}
+#content-history {
+	DISPLAY: none
+}
+.listingBar {
+	DISPLAY: none
+}
+.visualNoPrint {
+	DISPLAY: none
+}
+
+}
+
+@media Screen    
+{
+DIV.portalMessage {
+	BORDER-RIGHT: #ffa500 1px solid; PADDING-RIGHT: 1em; BACKGROUND-POSITION: 5px 50%; BORDER-TOP: #ffa500 1px solid; PADDING-LEFT: 3em; FONT-SIZE: 90%; BACKGROUND-IMAGE: url(http://lince.dc.ufscar.br/home/info_icon.gif); PADDING-BOTTOM: 0.5em; MARGIN: 1em 0em; VERTICAL-ALIGN: middle; BORDER-LEFT: #ffa500 1px solid; COLOR: black; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ffa500 1px solid; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #ffce7b
+}
+P.portalMessage {
+	BORDER-RIGHT: #ffa500 1px solid; PADDING-RIGHT: 1em; BACKGROUND-POSITION: 5px 50%; BORDER-TOP: #ffa500 1px solid; PADDING-LEFT: 3em; FONT-SIZE: 90%; BACKGROUND-IMAGE: url(http://lince.dc.ufscar.br/home/info_icon.gif); PADDING-BOTTOM: 0.5em; MARGIN: 1em 0em; VERTICAL-ALIGN: middle; BORDER-LEFT: #ffa500 1px solid; COLOR: black; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ffa500 1px solid; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #ffce7b
+}
+.system-message {
+	BORDER-RIGHT: #ffa500 1px solid; PADDING-RIGHT: 1em; BACKGROUND-POSITION: 5px 50%; BORDER-TOP: #ffa500 1px solid; PADDING-LEFT: 3em; FONT-SIZE: 90%; BACKGROUND-IMAGE: url(http://lince.dc.ufscar.br/home/info_icon.gif); PADDING-BOTTOM: 0.5em; MARGIN: 1em 0em; VERTICAL-ALIGN: middle; BORDER-LEFT: #ffa500 1px solid; COLOR: black; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ffa500 1px solid; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #ffce7b
+}
+#error-handling {
+	BORDER-RIGHT: #ffa500 1px solid; PADDING-RIGHT: 1em; BACKGROUND-POSITION: 5px 50%; BORDER-TOP: #ffa500 1px solid; PADDING-LEFT: 3em; FONT-SIZE: 90%; BACKGROUND-IMAGE: url(http://lince.dc.ufscar.br/home/info_icon.gif); PADDING-BOTTOM: 0.5em; MARGIN: 1em 0em; VERTICAL-ALIGN: middle; BORDER-LEFT: #ffa500 1px solid; COLOR: black; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ffa500 1px solid; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #ffce7b
+}
+.portletNavigationTree {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none! important; PADDING-BOTTOM: 0px; LINE-HEIGHT: 1em; PADDING-TOP: 0px; LIST-STYLE-TYPE: none! important
+}
+.navTree {
+	MARGIN-TOP: 1px; LIST-STYLE-IMAGE: none; LIST-STYLE-TYPE: none
+}
+.navTree LI {
+	MARGIN-BOTTOM: 1px
+}
+.navTreeItem {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.navTreeItem A {
+	BORDER-RIGHT: white 1px solid; BORDER-TOP: white 1px solid; DISPLAY: block; PADDING-BOTTOM: 0.25em; BORDER-LEFT: white 1px solid; PADDING-TOP: 0.2em; BORDER-BOTTOM: white 1px solid; TEXT-DECORATION: none
+}
+DD.portletItem .navTreeItem A {
+	BORDER-RIGHT: white 1px solid; BORDER-TOP: white 1px solid; DISPLAY: block; PADDING-BOTTOM: 0.25em; BORDER-LEFT: white 1px solid; PADDING-TOP: 0.2em; BORDER-BOTTOM: white 1px solid; TEXT-DECORATION: none
+}
+.navTreeItem A:hover {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; COLOR: #436976; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+DD.portletItem .navTreeItem A:hover {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; COLOR: #436976; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+.navTreeCurrentItem {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; COLOR: #436976; BORDER-BOTTOM: #8cacbb 1px solid; BACKGROUND-COLOR: #dee7ec
+}
+LI.navTreeCurrentItem {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 1px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 2px -1px; PADDING-TOP: 0px
+}
+LI.navTreeCurrentItem A {
+	BORDER-RIGHT: #dee7ec 1px solid; BORDER-TOP: #dee7ec 1px solid; DISPLAY: block; MIN-HEIGHT: 1.6em; BORDER-LEFT: #dee7ec 1px solid; LINE-HEIGHT: 1.6em; BORDER-BOTTOM: #dee7ec 1px solid; HEIGHT: auto
+}
+LI.navTreeCurrentItem A:hover {
+	BORDER-RIGHT: #dee7ec 1px solid; BORDER-TOP: #dee7ec 1px solid; DISPLAY: block; MIN-HEIGHT: 1.6em; BORDER-LEFT: #dee7ec 1px solid; LINE-HEIGHT: 1.6em; BORDER-BOTTOM: #dee7ec 1px solid; HEIGHT: auto
+}
+ HTML LI.navTreeCurrentItem A {
+	HEIGHT: 1.6em
+}
+ HTML LI.navTreeCurrentItem A:hover {
+	HEIGHT: 1.6em
+}
+.navTreeLevel0 {
+	MARGIN: 0px
+}
+.navTreeLevel1 {
+	MARGIN-LEFT: 1em
+}
+.navTreeLevel2 {
+	MARGIN-LEFT: 0.75em
+}
+.navTreeLevel3 {
+	MARGIN-LEFT: 0.75em
+}
+.navTreeLevel4 {
+	MARGIN-LEFT: 0.75em
+}
+.navTreeLevel5 {
+	MARGIN-LEFT: 0.75em
+}
+UL.visualNoMarker {
+	LIST-STYLE-IMAGE: none; MARGIN: 0.5em 0px 0px; LIST-STYLE-TYPE: none
+}
+OL.visualNoMarker {
+	LIST-STYLE-IMAGE: none; MARGIN: 0.5em 0px 0px; LIST-STYLE-TYPE: none
+}
+.visualOverflow {
+	MARGIN: 0px 0px 1em; OVERFLOW: auto
+}
+.visualOverflow PRE {
+	MARGIN: 0px
+}
+.visualOverflow TABLE {
+	MARGIN: 0px
+}
+.visualOverflow IMG {
+	MARGIN: 0px
+}
+.hiddenStructure {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: -1px 0px 0px -1px; OVERFLOW: hidden; WIDTH: 1px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 1px; BORDER-BOTTOM-STYLE: none
+}
+.contentViews .hiddenStructure {
+	LEFT: -200px; POSITION: absolute; TOP: -200px
+}
+.contentActions .hiddenStructure {
+	LEFT: -200px; POSITION: absolute; TOP: -200px
+}
+.hiddenLabel {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: -1px 0px 0px -1px; OVERFLOW: hidden; WIDTH: 1px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 1px; BORDER-BOTTOM-STYLE: none
+}
+.visualClear {
+	CLEAR: both; DISPLAY: block
+}
+.netscape4 {
+	DISPLAY: none
+}
+TEXTAREA {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #666 1px solid; BACKGROUND: url(http://lince.dc.ufscar.br/home/input_background.gif) white repeat-x; FONT: 100% Monaco, "Courier New", Courier, monospace; BORDER-LEFT: #666 1px solid; WIDTH: 100%; COLOR: black; BORDER-BOTTOM: #ddd 1px solid
+}
+INPUT {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #666 1px solid; BACKGROUND: url(http://lince.dc.ufscar.br/home/input_background.gif) white repeat-x; VISIBILITY: visible; VERTICAL-ALIGN: middle; BORDER-LEFT: #666 1px solid; COLOR: black; BORDER-BOTTOM: #ddd 1px solid; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+.noborder {
+	BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.documentEditable  .noborder {
+	BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+UNKNOWN {
+	BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#searchGadget {
+	BORDER-RIGHT: #8cacbb 1px solid; BORDER-TOP: #8cacbb 1px solid; BORDER-LEFT: #8cacbb 1px solid; BORDER-BOTTOM: #8cacbb 1px solid
+}
+BUTTON {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 90%; VISIBILITY: visible; PADDING-BOTTOM: 1px; VERTICAL-ALIGN: middle; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; CURSOR: pointer; COLOR: black; PADDING-TOP: 1px; BORDER-BOTTOM: #8cacbb 1px solid; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif; BACKGROUND-COLOR: #dee7ec
+}
+SELECT {
+	VERTICAL-ALIGN: top
+}
+FORM {
+	MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+FIELDSET {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; MARGIN: 1em 0em; BORDER-LEFT: #8cacbb 1px solid; WIDTH: auto; LINE-HEIGHT: 1.5em; PADDING-TOP: 0em; BORDER-BOTTOM: #8cacbb 1px solid
+}
+LEGEND {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-SIZE: 90%; BACKGROUND: white; PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em
+}
+LABEL {
+	FONT-WEIGHT: bold
+}
+OPTGROUP {
+	PADDING-LEFT: 0.25em; FONT-WEIGHT: bold; COLOR: #999; FONT-STYLE: normal
+}
+OPTION {
+	COLOR: black
+}
+UNKNOWN {
+	PADDING-RIGHT: 0.25em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+DL.enableFormTabbing DD {
+	MARGIN-LEFT: 0px; PADDING-TOP: 2em
+}
+#login-form {
+	MARGIN: 0px auto; WIDTH: 30em
+}
+#login-form .field {
+	CLEAR: none
+}
+#login-form INPUT {
+	FONT-SIZE: 150%
+}
+#login-form INPUT.context {
+	PADDING-RIGHT: 10px; BACKGROUND-POSITION: 9px 5px; PADDING-LEFT: 20px; MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+#forgotten-password {
+	FLOAT: right; MARGIN: 0px 1em; WIDTH: 35%
+}
+.standalone {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 15px; FONT-SIZE: 90%; BACKGROUND: url(http://lince.dc.ufscar.br/home/linkOpaque.gif) #dee7ec no-repeat 9px 1px; PADDING-BOTTOM: 1px; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; CURSOR: pointer; COLOR: black; PADDING-TOP: 1px; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.documentEditable  .standalone {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 15px; FONT-SIZE: 90%; BACKGROUND: url(http://lince.dc.ufscar.br/home/linkOpaque.gif) #dee7ec no-repeat 9px 1px; PADDING-BOTTOM: 1px; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; CURSOR: pointer; COLOR: black; PADDING-TOP: 1px; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.context {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 15px; FONT-SIZE: 90%; BACKGROUND: url(http://lince.dc.ufscar.br/home/linkTransparent.gif) no-repeat 9px 1px; PADDING-BOTTOM: 1px; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; CURSOR: pointer; COLOR: black; PADDING-TOP: 1px; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.formControls .actionButtons .button {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 15px; FONT-SIZE: 90%; BACKGROUND: url(http://lince.dc.ufscar.br/home/linkTransparent.gif) no-repeat 9px 1px; PADDING-BOTTOM: 1px; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; CURSOR: pointer; COLOR: black; PADDING-TOP: 1px; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.documentEditable  .context {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 15px; FONT-SIZE: 90%; BACKGROUND: url(http://lince.dc.ufscar.br/home/linkTransparent.gif) no-repeat 9px 1px; PADDING-BOTTOM: 1px; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; CURSOR: pointer; COLOR: black; PADDING-TOP: 1px; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.destructive {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 15px; FONT-SIZE: 90%; BACKGROUND: url(http://lince.dc.ufscar.br/home/linkTransparent.gif) #ffce7b no-repeat 9px 1px; PADDING-BOTTOM: 1px; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; CURSOR: pointer; COLOR: black; PADDING-TOP: 1px; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.documentEditable  .destructive {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 15px; FONT-SIZE: 90%; BACKGROUND: url(http://lince.dc.ufscar.br/home/linkTransparent.gif) #ffce7b no-repeat 9px 1px; PADDING-BOTTOM: 1px; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; CURSOR: pointer; COLOR: black; PADDING-TOP: 1px; BORDER-BOTTOM: #8cacbb 1px solid
+}
+INPUT.searchButton {
+	BORDER-RIGHT: #8cacbb 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #8cacbb 1px solid; PADDING-LEFT: 19px; FONT-SIZE: 90%; BACKGROUND: url(http://lince.dc.ufscar.br/home/search_icon.gif) white no-repeat 2px 1px; MARGIN-BOTTOM: 1px! important; PADDING-BOTTOM: 1px; TEXT-TRANSFORM: none; BORDER-LEFT: #8cacbb 1px solid; CURSOR: pointer; COLOR: black; PADDING-TOP: 1px; BORDER-BOTTOM: #8cacbb 1px solid
+}
+.searchSection {
+	MARGIN-TOP: 0.25em; COLOR: #76797c
+}
+.searchSection LABEL:hover {
+	COLOR: black
+}
+.field {
+	CLEAR: both; LEFT: 0px; MARGIN: 0px 1em 1em 0px; TOP: 0px
+}
+.field .field {
+	MARGIN: 0px
+}
+.fieldRequired {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; BACKGROUND: url(http://lince.dc.ufscar.br/home/required.gif) no-repeat left center; PADDING-BOTTOM: 0px; COLOR: white; PADDING-TOP: 0px
+}
+.fieldUploadFile {
+	DISPLAY: none; MARGIN-RIGHT: 0.75em; TEXT-ALIGN: right
+}
+.fieldTextFormat {
+	MARGIN-RIGHT: 0.75em; TEXT-ALIGN: right
+}
+.formHelp {
+	FONT-SIZE: 90%; MARGIN: 0px 0px 0.2em; COLOR: #76797c
+}
+.formHelp:hover {
+	CURSOR: default; COLOR: black
+}
+DIV.error {
+	BORDER-RIGHT: #d00 1px solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #d00 1px solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; MARGIN: 0px 0px 1em; BORDER-LEFT: #d00 1px solid; WIDTH: 95%; PADDING-TOP: 0.5em; BORDER-BOTTOM: #d00 1px solid; BACKGROUND-COLOR: #fdc
+}
+.error .fieldRequired {
+	COLOR: #d00
+}
+#archetypes-fieldname-title INPUT {
+	FONT-WEIGHT: normal; FONT-SIZE: 160%; WIDTH: 99%; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+INPUT#form.title {
+	FONT-WEIGHT: normal; FONT-SIZE: 160%; WIDTH: 99%; FONT-FAMILY: "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+#archetypes-fieldname-description TEXTAREA {
+	FONT: bold 100% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+TEXTAREA#form.description {
+	FONT: bold 100% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif
+}
+INPUT.inputLabelActive {
+	COLOR: #76797c
+}
+TEXTAREA#form.description {
+	WIDTH: 99%; HEIGHT: 6em
+}
+TR.selected {
+	BACKGROUND-COLOR: #ffa
+}
+.kupu-save-message {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; FONT-WEIGHT: bold; Z-INDEX: 999; RIGHT: 0px; PADDING-BOTTOM: 0.3em; COLOR: white; PADDING-TOP: 0.3em; POSITION: fixed; TOP: 0px; BACKGROUND-COLOR: red
+}
+#kss-spinner {
+	BACKGROUND-POSITION: center center; MARGIN-TOP: -10px; DISPLAY: none; LEFT: 50%; MARGIN-LEFT: -10px; WIDTH: 20px; POSITION: fixed; TOP: 50%; HEIGHT: 20px
+}
+.formlibInlineEditable {
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+.inlineEditable {
+	PADDING-RIGHT: 1px; DISPLAY: block; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+BODY.kssActive .inlineEditable:hover {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #666 1px solid; PADDING-LEFT: 0px; BACKGROUND: url(input_background.gif) white repeat-x; PADDING-BOTTOM: 0px; BORDER-LEFT: #666 1px solid; CURSOR: text; PADDING-TOP: 0px; BORDER-BOTTOM: #ddd 1px solid
+}
+BODY.kssActive .formlibInlineEditable:hover {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #666 1px solid; PADDING-LEFT: 0px; BACKGROUND: url(input_background.gif) white repeat-x; PADDING-BOTTOM: 0px; BORDER-LEFT: #666 1px solid; CURSOR: text; PADDING-TOP: 0px; BORDER-BOTTOM: #ddd 1px solid
+}
+BODY.kssActive .inlineEditable A:hover {
+	CURSOR: pointer
+}
+BODY.kssActive .formlibInlineEditable A:hover {
+	CURSOR: pointer
+}
+BODY.kssActive .formlibInlineForm:hover {
+	BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+BODY.kssActive .formlibInlineForm A:hover {
+	BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.inlineForm .formHelp {
+	DISPLAY: none
+}
+.inlineForm .fieldRequired {
+	DISPLAY: none
+}
+.inlineForm LABEL {
+	DISPLAY: none
+}
+.inlineForm #archetypes-fieldname-title INPUT {
+	FONT-SIZE: 100%
+}
+.inlineForm #archetypes-fieldname-title {
+	FONT-SIZE: 100%
+}
+H1 DIV.formControls INPUT {
+	FONT-SIZE: 55%! important
+}
+
+}
+
+@media All    
+{
+#portal-personaltools {
+	COLOR: white; BACKGROUND-COLOR: #770000
+}
+#portal-personaltools LI A {
+	COLOR: white
+}
+#portal-footer {
+	DISPLAY: none
+}
+#portal-globalnav LI A:hover {
+	COLOR: white; BACKGROUND-COLOR: #770000
+}
+#portal-globalnav LI A {
+	COLOR: #436976
+}
+#portal-globalnav LI.selected A {
+	COLOR: white; BACKGROUND-COLOR: #770000
+}
+DD.portletItem .navTreeItem A:hover {
+	BORDER-RIGHT: #770000 2px solid; BORDER-TOP: #770000 2px solid; BORDER-LEFT: #770000 2px solid; BORDER-BOTTOM: #770000 2px solid; BACKGROUND-COLOR: white
+}
+DD.portletItem .navTreeItem A.navTreeCurrentItem {
+	BORDER-RIGHT: 2px solid; BORDER-TOP: 2px solid; BORDER-LEFT: 2px solid; BORDER-BOTTOM: 2px solid
+}
+.navTreeItem A:hover DD.portletItem .navTreeItem A:hover {
+	COLOR: white
+}
+.portletHeader {
+	BACKGROUND-COLOR: #770000
+}
+.portletHeader A {
+	FONT-WEIGHT: bold; COLOR: white
+}
+#portal-siteactions LI A:hover {
+	COLOR: white; BACKGROUND-COLOR: #770000
+}
+.ploneCalendar TH {
+	COLOR: white; BACKGROUND-COLOR: #770000
+}
+.ploneCalendar .weekdays TD {
+	COLOR: white; BACKGROUND-COLOR: #770000
+}
+
+}

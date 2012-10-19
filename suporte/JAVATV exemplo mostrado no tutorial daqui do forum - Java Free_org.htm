@@ -1,0 +1,1333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0095)http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html -->
+<HTML dir=ltr><HEAD><TITLE>JAVATV exemplo mostrado no tutorial daqui do forum - Java Free.org</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/thickbox.css" 
+type=text/css rel=stylesheet>
+<SCRIPT language=javascript>
+	var i18nWait = 'Aguarde';
+	var topicId = "861001";
+	var favoriteTopic = "0";
+	var varWatchTopic = "0";
+	var layerName = "spanLoadingPosts";
+	var imageNameAndPath = "";
+	var imageRolling = "http://images.javafree.com.br/forum/themes/jb2/images/loading.gif";
+	var imageDone = "http://images.javafree.com.br/forum/themes/jb2/images/done.gif";
+	var messageDeleteFavorite = "Excluir dos Favoritos";
+	var messageAddFavorite = "Adicionar aos Favoritos";
+	
+	varMessageWatchTopicDelete = "Parar de acompanhar";
+	varMessageWatchTopicAdd = "Acompanhar tópico";	
+</SCRIPT>
+
+<SCRIPT language=javascript>
+// Variaveis de configuracao
+var DEaff="parjavafree";	// Affiliate
+var DEchan="";		// Canal quando existe
+var DEsubc="outros";	// Subcanal capa ou outros.
+var Expble=1;		// Alterar para 0 se não houver 240 pixels de espaço abaixo do 468x60 até o final da pagina
+var DEcmpng=1;		// Alterar para 1 se participa de qualquer campanha vendida pelo UOL "cmpng"
+var DEGroup=7;		// Grupo de afinidade "group"
+// Fim da configuracao 
+
+
+/* NAO ALTERAR DAQUI PARA BAIXO, apenas remova os comentarios se precisar.
+A linha abaixo deve obrigatoriamente ficar fora da função o valor de 
+"DErand" nao pode ser diferente para os banners de uma mesma pagina */
+d=document; var DEt=new Date(); DEt=DEt.getTime(); DErand=Math.floor(DEt*1000*Math.random());
+
+// Verifica tipo de conexao do usuario
+var DEconn=d.body; DEconn.style.behavior='url(#default#clientCaps)'; DEconn=(DEconn.connectionType=='lan')?1:0;
+
+// Verifica resolucao de tela
+var scw=0,sch=0; if(screen.height){scw=screen.width;sch=screen.height;}
+
+// Funcao que exibe o banner
+function DEshow(ad,pos){
+	d.write('<scr'+'ipt language="JavaScript1.1" src="http://bn.uol.com.br/js.ng/site=par&chan='+DEchan+'&subchan='+DEsubc+'&affiliate='+DEaff+'&size='+ad+'&page='+pos+'&conntype='+DEconn+'&expble='+Expble+'&reso='+scw+'x'+sch+'&cmpng='+DEcmpng+'&group='+DEGroup+'&tile='+DErand+'?"></scr'+'ipt>');
+}
+
+</SCRIPT>
+
+<STYLE>.clear {
+	CLEAR: both
+}
+#content {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FLOAT: left; PADDING-BOTTOM: 40px; WIDTH: 100%; PADDING-TOP: 15px
+}
+#content P {
+	FONT-SIZE: 1.5em; MARGIN: -8px 0px 15px; LINE-HEIGHT: 1.7em
+}
+#content OL {
+	FONT-SIZE: 1.5em; MARGIN: 0px 0px 0px 20px; LINE-HEIGHT: 1.7em
+}
+#content UL {
+	FONT-SIZE: 1.5em; MARGIN: 0px 0px 0px 20px; LINE-HEIGHT: 1.7em
+}
+#content OL OL {
+	FONT-SIZE: 1em
+}
+#content UL UL {
+	FONT-SIZE: 1em
+}
+#content OL LI {
+	LIST-STYLE-TYPE: decimal
+}
+#content .post_nav {
+	WIDTH: 13em
+}
+#content .entry {
+	MARGIN-BOTTOM: 30px; PADDING-BOTTOM: 10px; BORDER-BOTTOM: #dbdbdb 1px solid
+}
+#content .single_entry {
+	PADDING-BOTTOM: 10px
+}
+#content .entry_meta UL {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FONT-SIZE: 1em; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1em; PADDING-TOP: 0px
+}
+#content .single_meta LI {
+	DISPLAY: inline; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#content .single_author {
+	FLOAT: left; MARGIN-LEFT: 10px; WIDTH: 200px
+}
+#content #comments {
+	PADDING-RIGHT: 30px; BORDER-TOP: #dde0e0 1px solid; PADDING-LEFT: 30px; BACKGROUND: #f1f3f3; PADDING-BOTTOM: 30px; PADDING-TOP: 30px; BORDER-BOTTOM: #dde0e0 1px solid
+}
+#content #comments OL.comment_list {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 100%; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1; PADDING-TOP: 0px
+}
+#content #comments OL.comment_list LI {
+	LIST-STYLE-TYPE: none
+}
+#content #comments .comment_author {
+	FLOAT: left; MARGIN-BOTTOM: 30px; WIDTH: 100px; PADDING-TOP: 1px
+}
+#content #comments .comment_author P {
+	MARGIN-TOP: 10px; FONT-SIZE: 1.3em; MARGIN-BOTTOM: 0px; COLOR: #5f6565; LINE-HEIGHT: 1em
+}
+#content #comments .single_comment {
+	BORDER-RIGHT: #e0e5e5 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #e0e5e5 1px solid; PADDING-LEFT: 20px; BACKGROUND: #fff; FLOAT: right; MARGIN-BOTTOM: 30px; PADDING-BOTTOM: 10px; BORDER-LEFT: #e0e5e5 1px solid; WIDTH: 83%; PADDING-TOP: 10px; BORDER-BOTTOM: #e0e5e5 1px solid; POSITION: relative
+}
+#content .comment_list {
+	PADDING-BOTTOM: 40px
+}
+#content .comment_arrow {
+	LEFT: -32px; POSITION: absolute; TOP: 10px
+}
+#content #comments .single_comment P {
+	FONT-SIZE: 1.3em; MARGIN-BOTTOM: 10px; LINE-HEIGHT: 1.5em; TEXT-ALIGN: left
+}
+#content #comments .comment_author SPAN {
+	
+}
+#content .aligncenter {
+	DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+#content DIV.aligncenter {
+	DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+#content .alignleft {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 20px; PADDING-TOP: 10px
+}
+#content .alignright {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; FLOAT: right; PADDING-BOTTOM: 20px; PADDING-TOP: 10px
+}
+.codeprettyprint {
+	BORDER-BOTTOM: #dbdbdb 1px solid
+}
+BLOCKQUOTE {
+	PADDING-LEFT: 20px; MARGIN: 15px 30px 0px 10px; BORDER-LEFT: #dddddd 5px solid
+}
+SMALL {
+	COLOR: #777777
+}
+#sidebar UL UL LI {
+	COLOR: #777777
+}
+#sidebar UL OL LI {
+	COLOR: #777777
+}
+.nocomments {
+	COLOR: #777777
+}
+.postmetadata {
+	COLOR: #777777
+}
+BLOCKQUOTE {
+	COLOR: #777777
+}
+STRIKE {
+	COLOR: #777777
+}
+.term {
+	TEXT-ALIGN: left
+}
+.definition {
+	TEXT-ALIGN: left
+}
+.linksRel {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: large; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+</STYLE>
+
+<SCRIPT 
+type=text/javascript>
+window.google_analytics_uacct = "UA-634369-10";
+</SCRIPT>
+
+<SCRIPT 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/forum.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/RemoteFunctions.js"></SCRIPT>
+
+<SCRIPT 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/engine.js"></SCRIPT>
+
+<SCRIPT 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/jquery-1.3.1.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/jquery.corner.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="" type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/thickbox-compressed.js" 
+type=text/javascript></SCRIPT>
+<LINK 
+href="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/SyntaxHighlighter.css" 
+type=text/css rel=stylesheet><LINK 
+href="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/css2.css" 
+type=text/css rel=stylesheet><LINK 
+href="http://javafree.uol.com.br/home/images/mini.gif" type=image/x-icon 
+rel="shortcut icon"><LINK title="JF News" 
+href="http://feeds2.feedburner.com/JavaFreeorg" type=application/rss+xml 
+rel=alternate>
+<SCRIPT>
+	function customSearch(){
+		var word = document.getElementById("customWord").value;
+		var url = 'http://javafree.uol.com.br/customSearch.action?q='+word+'&sa=Pesquisar&cx=009402207869349156211%3Ahkaoxgram6a&cof=FORID%3A10#1030';
+		document.location.href=url
+	}
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+    // test auto-ready logic - call corner before DOM is ready
+	$('#readyTest').corner();
+    $('#submenu').corner("bottom");
+	$('#abs').corner("bottom");
+	$('#cantoDireito').corner();
+</SCRIPT>
+
+<SCRIPT 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/bpv1.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5512" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<H1 id=banner><A id=backnav href="http://javafree.uol.com.br/index"><IMG 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/jfforum.png" 
+border=0></A></H1>
+<H2 id=submenu>
+<DIV id=cantoDireito>&nbsp; 
+<FORM id=cse-search-box action=/javafree/customSearch.jbb>&nbsp;&nbsp;&nbsp; 
+<INPUT type=hidden value=partner-pub-9439984557405450:f7zor0-i5vx name=cx> 
+<INPUT type=hidden value=FORID:10 name=cof> <INPUT type=hidden value=ISO-8859-1 
+name=ie> <INPUT size=31 name=q> <INPUT type=submit value=Pesquisar name=sa> 
+&nbsp;&nbsp;&nbsp; </FORM>
+<SCRIPT 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/brand.htm" 
+type=text/javascript></SCRIPT>
+</DIV>Seja bem vindo ao Fórum do JavaFree.org <BR>Aqui você irá encontrar 
+respostas para TUDO o que você precisa sobre java.<BR>Deseja participar? <A 
+class=nobg href="http://javafree.uol.com.br/new_member.jbb">Crie sua conta</A> 
+ou efetue <A class=nobg href="http://javafree.uol.com.br/login.jbb">seu 
+login</A> <BR><BR><A href="http://javafree.uol.com.br/index">&nbsp; ÍNDICE 
+&nbsp;</A> | <A href="http://javafree.uol.com.br/">&nbsp; NOTÍCIAS &nbsp;</A> | 
+<A href="http://javafree.uol.com.br/artigos/">&nbsp; TUTORIAIS &nbsp;</A> | <A 
+href="http://javafree.uol.com.br/spy.jbb">&nbsp; AO VIVO &nbsp;</A> | <A 
+href="http://javafree.uol.com.br/recentTopics.jbb?message=recent">&nbsp; 
+RECENTES &nbsp;</A> | <A href="http://javafree.uol.com.br/inbox.jbb">&nbsp; MPs 
+&nbsp;</A> | <A href="http://javafree.uol.com.br/login.jbb">&nbsp; LOGIN 
+&nbsp;</A> | <A href="http://javafree.uol.com.br/new_member.jbb">&nbsp; 
+REGISTRE-SE &nbsp;</A> </H2>
+<DIV id=abs>
+<SCRIPT language=JavaScript1.1 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/get_banner.htm" 
+type=text/javascript></SCRIPT>
+</DIV><A name=top></A>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR align=middle bgColor=#ffffff>
+    <TD class=mainbody colSpan=2>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=bottom align=left><SPAN class=nav><A class=topictitle 
+            href="http://javafree.uol.com.br/index">Índice do fórum</A> &gt; <A 
+            class=topictitle 
+            href="http://javafree.uol.com.br/f-10-JME-Dispositivos-Moveis.html">JME 
+            - Dispositivos Móveis</A> </SPAN><SPAN class=nav><BR><BR><A 
+            class=maintitle 
+            href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html">JAVATV 
+            exemplo mostrado no tutorial daqui do forum</A> </SPAN></TD>
+          <TD class=gensmall vAlign=bottom align=right>
+            <P align=right><B>Ir à página <B>1 </B></B></P></TD></TR></TBODY></TABLE><!-- INÍCIO FÓRUM --><A name=top>
+      <TABLE cellSpacing=2 cellPadding=2 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=bottom noWrap align=left><SPAN class=nav><A 
+            href="http://javafree.uol.com.br/new_topic.jbb?topic.forum.id=10"><IMG 
+            alt="Novo tópico" 
+            src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/post.gif" 
+            align=middle border=0></A>&nbsp;&nbsp;&nbsp; <A 
+            href="http://javafree.uol.com.br/reply.jbb?post.topic.id=861001&amp;post.topic.forum.id=10&amp;page=1"><IMG 
+            alt="Responder Mensagem" 
+            src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/reply.gif" 
+            align=middle border=0></A> </SPAN></TD>
+          <TD vAlign=center align=left width="50%"></TD>
+          <TD vAlign=center align=right width="50%"></TD></TR></TBODY></TABLE>
+      <DIV id=HOTWordsTxt name="HOTWordsTxt">
+      <DIV id=wrapper>
+      <DIV id=content>
+      <DIV id=comments><!-- ROBOT ANUNCIANTE GOOGLE USERS NAO LOGADOS -->
+      <OL class=comment_list>
+        <LI id=comment-0>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/whosonline.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B>Anunciante</B><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/comment_arrow.png" 
+        width=32> 
+        <P><IFRAME name=IFrameName 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/CAD8IXT3.htm" 
+        frameBorder=no width=730 scrolling=no height=91></IFRAME></P></DIV><BR 
+        class=clear></LI></OL><!--  //ROBOT ANUNCIANTE -->
+      <OL class=comment_list><A name=129051>
+        <LI id=comment-1>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=17097">comedor_de_folhas</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        13</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129051"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129051,'comedor_de_folhas',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>pessoal.<BR>no tutorial :<BR><BR>Java TV: 
+        Visão Geral<BR>Ricardo da Silva Ogliari<BR>Juliana Rosa 
+        Santos<BR><BR>...que tem aqui no forum, tem um exemplo que é mostrado no 
+        final (é uma tela de votação com 3 botoes (votar,resultado,lista) e 
+        alguns nomes pra se escolher) , eu gostaria de ver esse código (não tem 
+        la no tut) será que alguem pode postar ae?<BR><BR><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_biggrin.gif"> 
+        </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=129267>
+        <LI id=comment-2>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=2515">ping</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        1723</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129267"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129267,'ping',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Me manda seu e_mail que te mando o 
+        .java..<BR><BR>Att.. <BR>_________________<BR><A 
+        href="http://www.mobilidadetudo.com/" target=_new>Blog sobre 
+        mobilidade</A> </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=129272>
+        <LI id=comment-3>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=2646">HumbertoJr</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        251</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129272"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129272,'HumbertoJr',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Eu também tenho interesse em ver esse 
+        código...não tem como fazer UPLOAD do .java pelo fórum mesmo não? 
+        <BR>_________________<BR><A href="http://www.javafree.org/" 
+        target=_new>JavaFree.org</A><BR><IMG alt=0 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/fatherdeath.png" 
+        border=0><BR><IMG alt=0 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/girlfucker6lx.jpg" 
+        border=0><BR><IMG alt=0 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/spiderman35iv.gif" 
+        border=0><BR><IMG alt=0 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/sawuserbar7ja.gif" 
+        border=0><BR><IMG alt=0 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/userbarmelocomotodo0uk.gif" 
+        border=0> </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=129276>
+        <LI id=comment-4>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=17097">comedor_de_folhas</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        13</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129276"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129276,'comedor_de_folhas',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>vlws ping...!!<BR><BR><A 
+        href="mailto:rafacarvalho82@yahoo.com.br" 
+        target=_new>rafacarvalho82@yahoo.com.br</A><BR><BR>se vc tiver outros 
+        exemplos pra me mandar tmbm eu agradeço!!! <BR>to estudanu isso, e nao 
+        tem muita coisa em port pela net!!! <BR><BR><BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>ping:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV>Me manda seu e_mail que te mando o .java..<BR><BR>Att.. 
+          </DIV></DIV></DIV></BLOCKQUOTE>
+        <P></P>
+        <P></P></DIV><BR class=clear></LI></OL><!-- ROBOT ANUNCIANTE GOOGLE USERS NAO LOGADOS -->
+      <OL class=comment_list>
+        <LI id=comment-0>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/whosonline.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B>Anunciante</B><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/comment_arrow.png" 
+        width=32> 
+        <P>
+        <SCRIPT type=text/javascript><!--
+						google_ad_client = "pub-9439984557405450";
+						/* 728x90, criado 02/06/08 */
+						google_ad_slot = "1984420004";
+						google_ad_width = 728;
+						google_ad_height = 90;
+						//-->
+						</SCRIPT>
+
+        <SCRIPT 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/show_ads.js" 
+        type=text/javascript>
+						</SCRIPT>
+        </P></DIV><BR class=clear></LI></OL><!--  //ROBOT ANUNCIANTE -->
+      <OL class=comment_list><A name=129542>
+        <LI id=comment-5>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/10216358050022E12-brenno.jpg" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=9735">brennohayden</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        179</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129542"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129542,'brennohayden',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Olá aproveitando o tópico (TV Digital), 
+        gostaria de saber se alguem trabalha ou trabalhou, com <B>havi-ui</B> 
+        gostaria estudar (dev Guide), ver alguns exempos.<BR><BR>Se alguem tiver 
+        alguma experiência com <B>havi-ui</B> gostaria de trocar algumas 
+        idéias!<BR><BR><BR>vlw <BR>_________________<BR>Brenno 
+        Hayden<BR>http://www.brennovisk.com<BR></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=129690>
+        <LI id=comment-6>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/10216358050022E12-brenno.jpg" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=9735">brennohayden</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        179</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129690"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129690,'brennohayden',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Segue um "exemplozinho" com lista e botão, 
+        para ajudar alguem!!!<BR><BR>_________________<BR>Brenno 
+        Hayden<BR>http://www.brennovisk.com<BR></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=129691>
+        <LI id=comment-7>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=17097">comedor_de_folhas</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        13</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129691"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129691,'comedor_de_folhas',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>legal!!!<BR>vou dar uma estudada nesse 
+        codigo! <IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_evil.gif"> 
+        </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=129718>
+        <LI id=comment-8>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=17097">comedor_de_folhas</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        13</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129718"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129718,'comedor_de_folhas',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR><BR><B>brennohayden<BR></B><BR><BR>no seu 
+        codigo, vc declara um atributo do tipo image<BR><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100>&nbsp; &nbsp;private Image img_cb_normal;</TEXTAREA><!-- [/ -code- ] --><BR><BR>e 
+        la em baixo vc tem um método para carregar essa img:<BR><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100>&nbsp; &nbsp;//Carrega imagem
+&nbsp; &nbsp;public void loadImage() {
+&nbsp; &nbsp; &nbsp; img_cb_normal = Toolkit.getDefaultToolkit().getImage("tv.png");
+&nbsp; &nbsp;}</TEXTAREA><!-- [/ -code- ] --><BR><BR>eu rodei seu 
+        exemplo aqui e não apareceu nenhuma img (claro q eu não tenho nenhum 
+        arquivo com esse nome "tv.png" )<BR><BR><BR><SPAN style="COLOR: red">o 
+        que eu devo fazer para ver uma imagem carregada no aplicativo? <BR>no 
+        caso do seu ex, eu devo inserir uma imagem com o nome tv.png? devo ir em 
+        propriedades do projeto e adiciona-la como arquivo?</SPAN><BR><BR>vlws 
+        :smile: </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=129752>
+        <LI id=comment-9>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/10216358050022E12-brenno.jpg" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=9735">brennohayden</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        179</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129752"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129752,'brennohayden',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100>
+ hGraphicButton = new HGraphicButton(img, null, null);
+</TEXTAREA><!-- [/ -code- ] --><BR><BR>A imagem esta dentro de 1 botao! 
+        <BR>_________________<BR>Brenno 
+        Hayden<BR>http://www.brennovisk.com<BR></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=129755>
+        <LI id=comment-10>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/10216358050022E12-brenno.jpg" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=9735">brennohayden</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        179</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#129755"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(129755,'brennohayden',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>sim, vc tem que add uma imagem como arquivo 
+        no projeto! <BR>_________________<BR>Brenno 
+        Hayden<BR>http://www.brennovisk.com<BR></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=130070>
+        <LI id=comment-11>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=17097">comedor_de_folhas</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        13</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#130070"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(130070,'comedor_de_folhas',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>essa imagem esta dentro de um btao. <SPAN 
+        style="COLOR: red">Como eu faria apenas para jogar uma imagem na tela?? 
+        </SPAN>(tipo pra montar um layout da tela..) <BR><BR>-eu tentei criar 
+        uma variavel do tipo image e instancia-la (como faço com HStaticText 
+        etc) ... mas nao deu certo..! <BR><BR><BR><BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>brennohayden:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100>
+ hGraphicButton = new HGraphicButton(img, null, null);
+</TEXTAREA><!-- [/ -code- ] --><BR><BR>A imagem esta dentro de 1 
+          botao! </DIV></DIV></DIV></BLOCKQUOTE>
+        <P></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=130078>
+        <LI id=comment-12>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/10216358050022E12-brenno.jpg" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=9735">brennohayden</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        179</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#130078"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(130078,'brennohayden',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>se vc comparar api javatv com a do midp x.0 
+        vc pode ver que tem semelhaça!<BR><BR>para vc fazer isso use o extends 
+        Canvas<BR><BR>ex.. <BR><BR>g.drawImage(image,..,..);<BR><BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>comedor_de_folhas:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV>essa imagem esta dentro de um btao. <SPAN style="COLOR: red">Como 
+          eu faria apenas para jogar uma imagem na tela?? </SPAN>(tipo pra 
+          montar um layout da tela..) <BR><BR>-eu tentei criar uma variavel do 
+          tipo image e instancia-la (como faço com HStaticText etc) ... mas nao 
+          deu certo..! <BR><BR><BR><BR><BR>
+          <P></P>
+          <BLOCKQUOTE>
+            <DIV class=term><B>brennohayden:</B></DIV>
+            <DIV class=definition>
+            <DIV>
+            <DIV><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100>
+ hGraphicButton = new HGraphicButton(img, null, null);
+</TEXTAREA><!-- [/ -code- ] --><BR><BR>A imagem esta dentro de 1 
+            botao! </DIV></DIV></DIV></BLOCKQUOTE>
+          <P></P></DIV></DIV></DIV></BLOCKQUOTE>
+        <P><BR>_________________<BR>Brenno 
+        Hayden<BR>http://www.brennovisk.com<BR></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=130091>
+        <LI id=comment-13>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=17097">comedor_de_folhas</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        13</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#130091"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(130091,'comedor_de_folhas',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Ainda não estou familiarizado com as APi´s 
+        =(<BR><BR>veja o que eu estou tentando fazer:<BR><BR>// para inserir uma 
+        img "bola.png"<BR>eu declaro um atributo do tipo <SPAN 
+        style="COLOR: red">image</SPAN><BR><BR>meu método Init chama o metodo 
+        Tela1() que deve 'montar a interface da tela, la eu tenho uma chamada 
+        para um método que servirá para instanciar a foto, e um para 'coloca-la' 
+        na tela o g.drawImage.<BR><BR>este código abaixo está todo errado (estou 
+        tentando varias coisas aqui) sem sucesso no 
+        momento<BR><BR><BR>brennohayden!<BR><SPAN style="COLOR: red">vc pode por 
+        aqui um código completo (basicão) só mostrando como inserir uma imagem 
+        na tela?? está sendo mais facil pra mim estudar em cima de um exemplo 
+        ... já até consegui fazer um programinha parecido com aquele de votação 
+        que vc pois aqui. 
+        </SPAN><BR><BR>vlws!!!<BR><BR><BR><BR><BR><BR><BR><BR><BR>-&gt; ESTE 
+        CÒDIGO NÃO FUNCIONA (nem compensa tentar arrumar) &lt;-<BR><BR><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100>import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.tv.xlet.Xlet;
+import javax.tv.xlet.XletContext;
+import javax.tv.xlet.XletStateChangeException;
+
+import org.havi.ui.HBackgroundImage;
+import org.havi.ui.HScene;
+import org.havi.ui.HSceneFactory;
+import org.havi.ui.HScreen;
+import org.havi.ui.HStaticText;
+
+
+public class imgTeste extends Canvas implements Xlet{
+
+&nbsp; &nbsp;
+&nbsp; &nbsp;private XletContext contexto;
+&nbsp; &nbsp;private HScene scene;
+&nbsp; &nbsp;private HStaticText tex1;
+&nbsp; &nbsp;
+&nbsp; &nbsp;private Image minha_image;
+
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;public void ImageDemoCanvas () {&nbsp; 
+&nbsp; &nbsp; 
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; minha_image = Image.createImage ("/logo.png"); 
+&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;}
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; public void paint(Image g) {
+&nbsp; &nbsp; &nbsp; &nbsp;ImageDemoCanvas();
+&nbsp; &nbsp; &nbsp; &nbsp; g.drawImage( minha_image, 50, 100, this);
+
+&nbsp; &nbsp; }
+&nbsp; &nbsp;public void tela1(){
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;tex1 = new HStaticText("tesssssssste");
+&nbsp; &nbsp;&nbsp; &nbsp;tex1.setFont(new Font("Tiresias",Font.BOLD,30));
+&nbsp; &nbsp;&nbsp; &nbsp;tex1.setForeground(Color.WHITE);
+&nbsp; &nbsp;&nbsp; &nbsp;tex1.setBounds(100, 100, 100,60);
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+&nbsp; &nbsp;&nbsp; &nbsp;paint(minha_image);
+
+&nbsp; &nbsp;&nbsp; &nbsp;scene.add(tex1);
+&nbsp; &nbsp;}
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;//--------------------------------------------------------------
+&nbsp; &nbsp;public static void main(String[] args) {
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;}
+&nbsp; &nbsp;
+&nbsp; &nbsp;public void destroyXlet(boolean arg0) throws XletStateChangeException {
+
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;}
+
+&nbsp; &nbsp;public void initXlet(XletContext contexto) throws XletStateChangeException {
+
+&nbsp; &nbsp;&nbsp; &nbsp;this.contexto = contexto;
+&nbsp; &nbsp;&nbsp; &nbsp;scene = HSceneFactory.getInstance().getFullScreenScene(
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;HScreen.getDefaultHScreen().getDefaultHGraphicsDevice());
+&nbsp; &nbsp;&nbsp; &nbsp;tela1();
+&nbsp; &nbsp;}
+
+&nbsp; &nbsp;public void pauseXlet() {
+
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;}
+
+&nbsp; &nbsp;public void startXlet() throws XletStateChangeException {
+
+&nbsp; &nbsp;&nbsp; &nbsp;scene.setVisible(true);
+
+&nbsp; &nbsp;}
+
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+}
+</TEXTAREA><!-- [/ -code- ] --> </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138350>
+        <LI id=comment-14>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=10904">brunohansen</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#138350"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138350,'brunohansen',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>comedor_de_folhas:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV>Ainda não estou familiarizado com as APi´s =(<BR><BR>veja o que 
+          eu estou tentando fazer:<BR><BR>// para inserir uma img 
+          "bola.png"<BR>eu declaro um atributo do tipo <SPAN 
+          style="COLOR: red">image</SPAN><BR><BR>meu método Init chama o metodo 
+          Tela1() que deve 'montar a interface da tela, la eu tenho uma chamada 
+          para um método que servirá para instanciar a foto, e um para 
+          'coloca-la' na tela o g.drawImage.<BR><BR>este código abaixo está todo 
+          errado (estou tentando varias coisas aqui) sem sucesso no 
+          momento<BR><BR><BR>brennohayden!<BR><SPAN style="COLOR: red">vc pode 
+          por aqui um código completo (basicão) só mostrando como inserir uma 
+          imagem na tela?? está sendo mais facil pra mim estudar em cima de um 
+          exemplo ... já até consegui fazer um programinha parecido com aquele 
+          de votação que vc pois aqui. 
+          </SPAN><BR><BR>vlws!!!<BR><BR><BR><BR><BR><BR><BR><BR><BR>-&gt; ESTE 
+          CÒDIGO NÃO FUNCIONA (nem compensa tentar arrumar) &lt;-<BR><BR><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100>import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.tv.xlet.Xlet;
+import javax.tv.xlet.XletContext;
+import javax.tv.xlet.XletStateChangeException;
+
+import org.havi.ui.HBackgroundImage;
+import org.havi.ui.HScene;
+import org.havi.ui.HSceneFactory;
+import org.havi.ui.HScreen;
+import org.havi.ui.HStaticText;
+
+
+public class imgTeste extends Canvas implements Xlet{
+
+&nbsp; &nbsp;
+&nbsp; &nbsp;private XletContext contexto;
+&nbsp; &nbsp;private HScene scene;
+&nbsp; &nbsp;private HStaticText tex1;
+&nbsp; &nbsp;
+&nbsp; &nbsp;private Image minha_image;
+
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;public void ImageDemoCanvas () {&nbsp; 
+&nbsp; &nbsp; 
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; minha_image = Image.createImage ("/logo.png"); 
+&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;}
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; public void paint(Image g) {
+&nbsp; &nbsp; &nbsp; &nbsp;ImageDemoCanvas();
+&nbsp; &nbsp; &nbsp; &nbsp; g.drawImage( minha_image, 50, 100, this);
+
+&nbsp; &nbsp; }
+&nbsp; &nbsp;public void tela1(){
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;tex1 = new HStaticText("tesssssssste");
+&nbsp; &nbsp;&nbsp; &nbsp;tex1.setFont(new Font("Tiresias",Font.BOLD,30));
+&nbsp; &nbsp;&nbsp; &nbsp;tex1.setForeground(Color.WHITE);
+&nbsp; &nbsp;&nbsp; &nbsp;tex1.setBounds(100, 100, 100,60);
+&nbsp; &nbsp;&nbsp; &nbsp;
+
+&nbsp; &nbsp;&nbsp; &nbsp;paint(minha_image);
+
+&nbsp; &nbsp;&nbsp; &nbsp;scene.add(tex1);
+&nbsp; &nbsp;}
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;//--------------------------------------------------------------
+&nbsp; &nbsp;public static void main(String[] args) {
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;}
+&nbsp; &nbsp;
+&nbsp; &nbsp;public void destroyXlet(boolean arg0) throws XletStateChangeException {
+
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;}
+
+&nbsp; &nbsp;public void initXlet(XletContext contexto) throws XletStateChangeException {
+
+&nbsp; &nbsp;&nbsp; &nbsp;this.contexto = contexto;
+&nbsp; &nbsp;&nbsp; &nbsp;scene = HSceneFactory.getInstance().getFullScreenScene(
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;HScreen.getDefaultHScreen().getDefaultHGraphicsDevice());
+&nbsp; &nbsp;&nbsp; &nbsp;tela1();
+&nbsp; &nbsp;}
+
+&nbsp; &nbsp;public void pauseXlet() {
+
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;}
+
+&nbsp; &nbsp;public void startXlet() throws XletStateChangeException {
+
+&nbsp; &nbsp;&nbsp; &nbsp;scene.setVisible(true);
+
+&nbsp; &nbsp;}
+
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+&nbsp; &nbsp;
+}
+</TEXTAREA><!-- [/ -code- ] --> </DIV></DIV></DIV></BLOCKQUOTE>
+        <P><BR><BR>POxa nã to conseguindo me movimentar pelos botoes.<BR><BR>eu 
+        utilizei:<BR><BR>botao.setMove(HRcEvent.VK_LEFT, 
+        botao2);<BR>botao2.setMove(HRcEvent.VK_RIGHT, botao);<BR><BR>Alguem tem 
+        alguma ideia do pq? </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=157662><A name=lastPost>
+        <LI id=comment-15>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/10219003006799E12-02-c.jpg" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=24066">leobcc</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        1</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html?page=1#157662"><IMG 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(157662,'leobcc',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Ping, me manda o .java do exemplo 
+        pessoal.<BR>do tutorial :<BR><BR>Java TV: Visão Geral<BR>Ricardo da 
+        Silva Ogliari<BR>Juliana Rosa Santos<BR><BR><A 
+        href="mailto:leandrovirgens@gmail.com" 
+        target=_new>leandrovirgens@gmail.com</A><BR>grato. </P>
+        <P></P></DIV><BR class=clear></LI></OL><!-- Topicos Relacionados -->
+      <OL class=comment_list>
+        <LI id=comment-0>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/reload.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B>Relacionados</B><BR></P></DIV>
+        <DIV class=single_comment>
+        <P><B>Criar objetos "moveis"</B><BR><A 
+        href='http://javafree.uol.com.br/topic-12748-Criar-objetos-&amp;quotmoveis".html'>http://javafree.uol.com.br/topic-12748-Criar-objetos-&amp;quotmoveis".html</A> 
+        <BR><BR><B>Material sobre MHP e JavaTV </B><BR><A 
+        href="http://javafree.uol.com.br/topic-865953-Material-sobre-MHP-e-JavaTV.html">http://javafree.uol.com.br/topic-865953-Material-sobre-MHP-e-JavaTV.html</A> 
+        <BR><BR><B>Sugestões de Tc</B><BR><A 
+        href="http://javafree.uol.com.br/topic-847588-Sugestoes-de-Tc.html">http://javafree.uol.com.br/topic-847588-Sugestoes-de-Tc.html</A> 
+        <BR><BR><B>JAVA TV</B><BR><A 
+        href="http://javafree.uol.com.br/topic-2626-JAVA-TV.html">http://javafree.uol.com.br/topic-2626-JAVA-TV.html</A> 
+        <BR><BR><B>Duvida: O que é Struts</B><BR><A 
+        href="http://javafree.uol.com.br/topic-12854-Duvida-O-que-e-Struts.html">http://javafree.uol.com.br/topic-12854-Duvida-O-que-e-Struts.html</A> 
+        <BR><BR><B>JAVATV - usar o controle remoto do emulador </B><BR><A 
+        href="http://javafree.uol.com.br/topic-861184-JAVATV-usar-o-controle-remoto-do-emulador.html">http://javafree.uol.com.br/topic-861184-JAVATV-usar-o-controle-remoto-do-emulador.html</A> 
+        <BR><BR><B>Exemplo de aplicação JAVA TV</B><BR><A 
+        href="http://javafree.uol.com.br/topic-862877-Exemplo-de-aplicacao-JAVA-TV.html">http://javafree.uol.com.br/topic-862877-Exemplo-de-aplicacao-JAVA-TV.html</A> 
+        <BR><BR><B>Windows Media Center e JavaTV</B><BR><A 
+        href="http://javafree.uol.com.br/topic-862960-Windows-Media-Center-e-JavaTV.html">http://javafree.uol.com.br/topic-862960-Windows-Media-Center-e-JavaTV.html</A> 
+        <BR><BR><B>struts ???</B><BR><A 
+        href="http://javafree.uol.com.br/topic-10023-struts.html">http://javafree.uol.com.br/topic-10023-struts.html</A> 
+        <BR><BR></P></DIV><BR class=clear></LI></OL><!--  //Topicos Relacionados --><!-- ROBOT ANUNCIANTE -->
+      <OL class=comment_list>
+        <LI id=comment-0>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\whosonline(1).gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B>Anunciante</B><BR></P></DIV>
+        <DIV class=single_comment>
+        <P>
+        <DIV style="MARGIN-BOTTOM: -20px"><A 
+        href="http://www.submarino.com.br/">Submarino.com.br</A></DIV>
+        <DIV>
+        <SCRIPT language=JavaScript1.1 
+        src="C:\Documents and Settings\BRASIL\Desktop\JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos\get_banner(1).htm" 
+        type=text/javascript></SCRIPT>
+        </DIV>
+        <P></P></DIV><BR class=clear></LI></OL><!--  //ROBOT ANUNCIANTE --><BR 
+      class=clear></DIV><BR></DIV></DIV><!-- end content --></DIV><BR 
+      class=clear>
+      <DIV></DIV>
+      <TABLE cellSpacing=2 cellPadding=2 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=bottom noWrap align=left><SPAN class=nav><A 
+            href="http://javafree.uol.com.br/new_topic.jbb?topic.forum.idForum=10"><IMG 
+            alt="Novo tópico" 
+            src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/post.gif" 
+            align=middle border=0></A>&nbsp;&nbsp;&nbsp; <A 
+            href="http://javafree.uol.com.br/reply.jbb?post.topic.idTopic=861001&amp;post.topic.forum.idForum=10&amp;page=1"><IMG 
+            alt="Responder Mensagem" 
+            src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/reply.gif" 
+            align=middle border=0></A> </SPAN></TD>
+          <TD vAlign=center align=left width="50%"><SPAN 
+            class=nav>&nbsp;&nbsp;&nbsp; <A class=topictitle 
+            href="http://javafree.uol.com.br/index">Índice do fórum</A> -&gt; <A 
+            class=topictitle 
+            href="http://javafree.uol.com.br/f-10-JME-Dispositivos-Moveis.html">JME 
+            - Dispositivos Móveis </A></SPAN></TD>
+          <TD vAlign=center align=right 
+      width="50%"></TD></TR></TBODY></TABLE><BR><BR>
+      <TABLE cellSpacing=2 cellPadding=2 width="100%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=bottom noWrap align=right><SPAN class=gensmall><B>Ir à 
+            página <B>1 </B></B></SPAN></TD></TR></TBODY></TABLE><A name=#quick></A>
+      <DIV id=footer>
+      <DIV class=footer-contents>
+      <DIV class=footer-contents2>
+      <DL>
+        <DT class=gensmall>O que é o JavaFree? 
+        <DD>O JavaFree é uma comunidade virtual java sem fins lucrativos fundada 
+        em 19 de março de 2003. O objetivo principal é ajudar a desenvolver o 
+        Java e o Software Livre nos países de língua portuguesa com artigos, 
+        tutoriais, entrevistas, ofertas de empregos e um grande 
+        fórum.<BR><BR>contato: info@javafree.org<BR><BR><A 
+        href="http://javafree.uol.com.br/sobre.jbb">para saber mais...</A> 
+      </DD></DL>
+      <DL>
+        <DT class=gensmall>Últimos Empregos 
+        <DD>
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7586" 
+        target=_blank rel="external nofollow">Rs - analista para qualidade 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7584" 
+        target=_blank rel="external nofollow">Rs - programador web</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7583" 
+        target=_blank rel="external nofollow">Pr - estagiário</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7580" 
+        target=_blank rel="external nofollow">Rj - analista ccna - suporte 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7579" 
+        target=_blank rel="external nofollow">Sp - analista ccna - suporte 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7578" 
+        target=_blank rel="external nofollow">Rj - analista ccna - suporte 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7577" 
+        target=_blank rel="external nofollow">Pr - analista ccna - suporte 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7576" 
+        target=_blank rel="external nofollow">Pr - analista de testes pleno 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7575" 
+        target=_blank rel="external nofollow">Pr - gerente de configuração 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7574" 
+        target=_blank rel="external nofollow">Rj - analista de sistemas - j 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7573" 
+        target=_blank rel="external nofollow">Pr - técnico de informática j 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7572" 
+        target=_blank rel="external nofollow">Pr - assistente comercial</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7571" 
+        target=_blank rel="external nofollow">Pr - gerente de contas pleno 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7570" 
+        target=_blank rel="external nofollow">Pr - gerente de contas - aces 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7392" 
+        target=_blank rel="external nofollow">Pr - analista de sistemas ora 
+        ..</A> </LI></DD></DL>
+      <DL>
+        <DT class=gensmall>Últimos Posts em Blogs 
+        <DD>
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201686&amp;Quick-Review-Windows-Mobile-65.html" 
+        target=_blank rel="external nofollow">Quick review ? windows mobile 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201673&amp;SMS-e-sucesso-entre-as-pessoas-mais-velhas.html" 
+        target=_blank rel="external nofollow">Sms é sucesso entre as pessoa 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201652&amp;SCJP-Plus-BETA.html" 
+        target=_blank rel="external nofollow">Scjp plus beta</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201650&amp;O-Java-vai-muito-bem-obrigado.html" 
+        target=_blank rel="external nofollow">O java vai muito bem, obrigado</A> 
+
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201629&amp;FeedBurner.html" 
+        target=_blank rel="external nofollow">Feedburner</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201625&amp;Android-SDK-21-liberado-para-download.html" 
+        target=_blank rel="external nofollow">Android sdk 2.1 liberado para 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201618&amp;Gerando-um-arquivo-JKS.html" 
+        target=_blank rel="external nofollow">Gerando um arquivo jks</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201583&amp;Oracle-divulga-correcoes-de-seguranca-para-banco-de-dados.html" 
+        target=_blank rel="external nofollow">Oracle divulga correções de s 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201565&amp;HttpModule-no-IIS6-Eletronic-Billing-com-Log4Net.html" 
+        target=_blank rel="external nofollow">Httpmodule no iis6, eletronic 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201558&amp;Outro-review-do-Nexus-One-Android-21.html" 
+        target=_blank rel="external nofollow">Outro review do nexus one - a 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201548&amp;Botao-no-Eclipse-nao-funciona.html" 
+        target=_blank rel="external nofollow">Botão no eclipse não funciona</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201515&amp;My-DeveloperWorks-Como-e-a-vida-para-um-desenvolvedora-Java-no-Brasil.html" 
+        target=_blank rel="external nofollow">My developerworks: como é a v 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201463&amp;Aprenda-JAVA-em-Uberlandia-ultima-turma-com-precos-da-tabela-de-2009.html" 
+        target=_blank rel="external nofollow">Aprenda java em uberlândia! ú 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201413&amp;Ruby-on-Rails-101-Encurtador-de-URLs-=-Novo-Blog.html" 
+        target=_blank rel="external nofollow">Ruby on rails 101 ? encurtado 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201383&amp;Adobe-Flex-recursos-para-iniciantes.html" 
+        target=_blank rel="external nofollow">Adobe flex - recursos para in 
+        ..</A> </LI></DD></DL>
+      <DL>
+        <DT class=gensmall>Futebol 
+        <DD>
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29702&amp;Cativar-e-desprezar-e-so-comecar.html" 
+        target=_blank rel="external nofollow">Cativar e desprezar, é só com 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29701&amp;Alguem-sabe-por-onde-andam-os-militares.html" 
+        target=_blank rel="external nofollow">"alguém sabe por onde andam o 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29700&amp;Uma-estrutura-necessaria-aos-arbitros.html" 
+        target=_blank rel="external nofollow">Uma estrutura necessária aos 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29699&amp;Campeonato-Catarinense-2010-e-lancado-oficialmente.html" 
+        target=_blank rel="external nofollow">Campeonato catarinense 2010 é 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29698&amp;Visita-ao-Beira-Rio.html" 
+        target=_blank rel="external nofollow">Visita ao beira rio</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29697&amp;Comandando-a-gurizada.html" 
+        target=_blank rel="external nofollow">Comandando a gurizada</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29696&amp;BURGUeS-E-COVARDE.html" 
+        target=_blank rel="external nofollow">Burguês e covarde</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29695&amp;Golaco-Ronaldinho-Gaucho-Barcelona-x-Villareal-2006.html" 
+        target=_blank rel="external nofollow">Golaço ronaldinho gaúcho (bar 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29694&amp;Som-na-caixa-manguaca-Volume-47.html" 
+        target=_blank rel="external nofollow">Som na caixa, manguaça! - vol 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29693&amp;Duplo-FAIL-em-corrida.html" 
+        target=_blank rel="external nofollow">Duplo fail em corrida</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29692&amp;A-volta-de-Presidente-Prudente-pela-porta-dos-fundos.html" 
+        target=_blank rel="external nofollow">A volta de presidente prudent 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29691&amp;Mais-um-pouco-e-a-bola-rola.html" 
+        target=_blank rel="external nofollow">Mais um pouco e a bola rola</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29690&amp;HISToRIA-O-Gremio-de-2004.html" 
+        target=_blank rel="external nofollow">História - o grêmio de 2004.</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29689&amp;QUEM-NaO-PAGA-NaO-CHORA.html" 
+        target=_blank rel="external nofollow">Quem não paga não chora???</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29688&amp;Queria-ser-mais-otimista.html" 
+        target=_blank rel="external nofollow">Queria ser mais otimista</A> 
+        </LI></DD></DL></DIV></DIV><BR style="CLEAR: both"></DIV>
+      <SCRIPT 
+      src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/shCore15.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT 
+      src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/shBrushJava15.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT type=text/javascript>
+<!--
+dp.sh.ClipboardSwf = 'http://javafree.uol.com.br/home/css/syntax/clipboard.swf';
+dp.sh.HighlightAll('code');
+-->
+</SCRIPT>
+<!-- FIM FÓRUM -->
+      <SCRIPT type=text/javascript>
+			setTimeout("window.location.reload();",500000);
+		</SCRIPT>
+
+  <TR>
+    <TD 
+    background="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/_fadebot.gif" 
+    colSpan=2 height=16>&nbsp;</TD></TR>
+  <TR>
+    <TD 
+    background="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/_c_bg.gif" 
+    height=30>
+      <DIV id=footer2><SPAN><A href="http://www.javabb.org/" 
+      target=_blank>Powered by JavaBB 0.99</A></SPAN> </DIV></TD>
+    <TD vAlign=center align=right 
+    background="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/_c_bg.gif"><A 
+      href="http://whos.amung.us/stats/44l90veu934o/" target=_blank 
+      rel=noflow><IMG 
+      src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/wau-widget.png" 
+      border=0></A> </TD></TR></TBODY></TABLE><!-- twitter follow badge by go2web20 -->
+<SCRIPT 
+src="JAVATV exemplo mostrado no tutorial daqui do forum - Java Free_org_arquivos/badge.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript charset=utf-8><!--
+tfb.account = 'javafree';
+tfb.label = 'follow-us';
+tfb.color = '#35ccff';
+tfb.side = 'r';
+tfb.top = 220;
+tfb.showbadge();
+--></SCRIPT>
+<!-- end of twitter follow badge -->
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+try {
+var pageTracker = _gat._getTracker("UA-634369-10");
+pageTracker._trackPageview();
+} catch(err) {}</SCRIPT>
+</BODY></HTML>

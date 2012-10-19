@@ -1,0 +1,2012 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:expr="http://www.google.com/2005/gml/expr" xmlns:data="http://www.google.com/2005/gml/data" xmlns:b="http://www.google.com/2005/gml/b" xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><head>
+
+
+<script type="text/javascript">(function() { var a=window;function e(b){this.t={};this.tick=function(c,h,d){d=d?d:(new Date).getTime();this.t[c]=[d,h]};this.tick("start",null,b)}var f=new e;a.jstiming={Timer:e,load:f};try{a.jstiming.pt=a.gtbExternal&&a.gtbExternal.pageT()||a.external&&a.external.pageT}catch(g){};a.tickAboveFold=function(b){b=b;var c=0;if(b.offsetParent){do c+=b.offsetTop;while(b=b.offsetParent)}b=c;b<=750&&a.jstiming.load.tick("aft")};var i=false;function j(){if(!i){i=true;a.jstiming.load.tick("firstScrollTime")}}a.addEventListener?a.addEventListener("scroll",j,false):a.attachEvent("onscroll",j); })();</script>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="true" name="MSSmartTagsPreventParsing">
+<meta content="blogger" name="generator">
+<link href="http://www.blogger.com/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+<link href="http://b4dtv.blogspot.com/2009/07/tutorial-debug-no-xletview-usando-o.html" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="b4dtv - blog for digital tv - Atom" href="http://b4dtv.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="b4dtv - blog for digital tv - RSS" href="http://b4dtv.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="b4dtv - blog for digital tv - Atom" href="http://www.blogger.com/feeds/4807285074105044884/posts/default">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=4807285074105044884">
+<link rel="alternate" type="application/atom+xml" title="b4dtv - blog for digital tv - Atom" href="http://b4dtv.blogspot.com/feeds/8807019131209101521/comments/default">
+<title>b4dtv - blog for digital tv: Tutorial: Debug no XleTView usando o Eclipse - por Leonardo Leite</title>
+<meta content="tv digital, tecnologia da informacao, convergencia digital, convergencia tecnologica, ti, sbtvd, infomation technology, digital tv, tv 2.0, web 2.0, set top box, online movie, cable tv, new digital television, internet tv, buy digibox, tv series, buy digital television, movie download, internet movie, reality show tv, digital television, web tv, friend tv show, pc tv, tv on pc, digital set top boxes, online tv, digital satellites, tv for pc, ajax, live tv, satelite tv, tv plasma, set top, tv show, web design, hdtv, web 20, internet 2.0, digital televisions, lcd tv, tv, satelite, pay tv, web20, sattelite tv, web development, web applications, cable television, digital cable television, cable, tis, web2, download tv, social network, stb, digital tvs, social media, lcd, tv station, plasma, ecommerce, tvs, broadband, pvr, ruby on rails, streaming tv, web apps, tv on my pc, digiboxes, website design, digital cable, tv card, web designer, graphic design, internet marketing, javascript, information tecnology, ti89, watch tv online, tv program, iptv, download tv shows, watch tv, tv channels, television, rails, set top boxes, pc to tv, web application, evolucao tecnologica" name="Keywords">
+<meta content="digitalizando a TV" name="Description">
+<meta content="BpLGoXUOfgXRMKkcVan6ExHjiGC9WoqR0Qc86jW14HM=" name="verify-v1">
+<link type="text/css" rel="stylesheet" href="tutorial-debug-no-xletview-usando-o_arquivos/1557371536-widget_css_bundle.css">
+ <link rel="stylesheet" type="text/css" href="tutorial-debug-no-xletview-usando-o_arquivos/3727950723-blog_controls.css">
+ <link rel="stylesheet" type="text/css" href="tutorial-debug-no-xletview-usando-o_arquivos/authorization.css">
+<style type="text/css">#navbar-iframe { display:block }
+</style>
+
+<style id="page-skin-1" type="text/css"><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Rounders
+Date:     27 Feb 2004
+Updated by: Blogger Team
+----------------------------------------------- */
+/* Variable definitions
+====================
+<Variable name="mainBgColor" description="Main Background Color"
+type="color" default="#fff">
+<Variable name="mainTextColor" description="Text Color" type="color"
+default="#333">
+<Variable name="postTitleColor" description="Post Title Color" type="color"
+default="#333">
+<Variable name="dateHeaderColor" description="Date Header Color"
+type="color" default="#357">
+<Variable name="borderColor" description="Post Border Color" type="color"
+default="#bbb">
+<Variable name="mainLinkColor" description="Link Color" type="color"
+default="#258">
+<Variable name="mainVisitedLinkColor" description="Visited Link Color"
+type="color" default="#666">
+<Variable name="titleBgColor" description="Page Header Background Color"
+type="color" default="#456">
+<Variable name="titleTextColor" description="Blog Title Color"
+type="color" default="#fff">
+<Variable name="topSidebarHeaderColor"
+description="Top Sidebar Title Color"
+type="color" default="#234">
+<Variable name="topSidebarBgColor"
+description="Top Sidebar Background Color"
+type="color" default="#cdc">
+<Variable name="topSidebarTextColor" description="Top Sidebar Text Color"
+type="color" default="#345">
+<Variable name="topSidebarLinkColor" description="Top Sidebar Link Color"
+type="color" default="#258">
+<Variable name="topSidebarVisitedLinkColor"
+description="Top Sidebar Visited Link Color"
+type="color" default="#258">
+<Variable name="bodyFont" description="Text Font" type="font"
+default="normal normal 100% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="pageTitleFont" description="Blog Title Font" type="font"
+default="normal bold 200% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="descriptionFont" description="Blog Description Font" type="font"
+default="normal normal 100% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="headerFont" description="Sidebar Title Font" type="font"
+default="normal bold 100% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="postTitleFont" description="Post Title Font" type="font"
+default="normal bold 135% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="startSide" description="Start side in blog language"
+type="automatic" default="left">
+<Variable name="endSide" description="End side in blog language"
+type="automatic" default="right">
+*/
+body {
+background:#aba;
+margin:0;
+text-align:center;
+line-height: 1.5em;
+font:x-small Trebuchet MS, Verdana, Arial, Sans-serif;
+color:#333333;
+font-size/* */:/**/small;
+font-size: /**/small;
+}
+/* Page Structure
+----------------------------------------------- */
+/* The images which help create rounded corners depend on the
+following widths and measurements. If you want to change
+these measurements, the images will also need to change.
+*/
+#outer-wrapper {
+width:740px;
+margin:0 auto;
+text-align:left;
+font: normal normal 100% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+#main-wrap1 {
+width:485px;
+float:left;
+background:#ffffff url("http://www1.blogblog.com/rounders/corners_main_bot.gif") no-repeat left bottom;
+margin:15px 0 0;
+padding:0 0 10px;
+color:#333333;
+font-size:97%;
+line-height:1.5em;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+}
+#main-wrap2 {
+float:left;
+width:100%;
+background:url("http://www1.blogblog.com/rounders/corners_main_top.gif") no-repeat left top;
+padding:10px 0 0;
+}
+#main {
+background:url("http://www.blogblog.com/rounders/rails_main.gif") repeat-y left;
+padding:0;
+width:485px;
+}
+#sidebar-wrap {
+width:240px;
+float:right;
+margin:15px 0 0;
+font-size:97%;
+line-height:1.5em;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+}
+.main .widget {
+margin-top: 4px;
+width: 468px;
+padding: 0 13px;
+}
+.main .Blog {
+margin: 0;
+padding: 0;
+width: 484px;
+}
+/* Links
+----------------------------------------------- */
+a:link {
+color: #225588;
+}
+a:visited {
+color: #666666;
+}
+a:hover {
+color: #666666;
+}
+a img {
+border-width:0;
+}
+/* Blog Header
+----------------------------------------------- */
+#header-wrapper {
+background:#445566 url("http://www2.blogblog.com/rounders/corners_cap_top.gif") no-repeat left top;
+margin-top:22px;
+margin-right:0;
+margin-bottom:0;
+margin-left:0;
+padding-top:8px;
+padding-right:0;
+padding-bottom:0;
+padding-left:0;
+color:#ffffff;
+}
+#header {
+background:url("http://www.blogblog.com/rounders/corners_cap_bot.gif") no-repeat left bottom;
+padding:0 15px 8px;
+}
+#header h1 {
+margin:0;
+padding:10px 30px 5px;
+line-height:1.2em;
+font: normal bold 200% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+#header a,
+#header a:visited {
+text-decoration:none;
+color: #ffffff;
+}
+#header .description {
+margin:0;
+padding:5px 30px 10px;
+line-height:1.5em;
+font: normal normal 100% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+/* Posts
+----------------------------------------------- */
+h2.date-header {
+margin-top:0;
+margin-right:28px;
+margin-bottom:0;
+margin-left:43px;
+font-size:85%;
+line-height:2em;
+text-transform:uppercase;
+letter-spacing:.2em;
+color:#335577;
+}
+.post {
+margin:.3em 0 25px;
+padding:0 13px;
+border:1px dotted #bbbbbb;
+border-width:1px 0;
+}
+.post h3 {
+margin:0;
+line-height:1.5em;
+background:url("http://www2.blogblog.com/rounders/icon_arrow.gif") no-repeat 10px .5em;
+display:block;
+border:1px dotted #bbbbbb;
+border-width:0 1px 1px;
+padding-top:2px;
+padding-right:14px;
+padding-bottom:2px;
+padding-left:29px;
+color: #333333;
+font: normal bold 135% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+.post h3 a, .post h3 a:visited {
+text-decoration:none;
+color: #333333;
+}
+a.title-link:hover {
+background-color: #bbbbbb;
+color: #333333;
+}
+.post-body {
+border:1px dotted #bbbbbb;
+border-width:0 1px 1px;
+border-bottom-color:#ffffff;
+padding-top:10px;
+padding-right:14px;
+padding-bottom:1px;
+padding-left:29px;
+}
+html>body .post-body {
+border-bottom-width:0;
+}
+.post-body {
+margin:0 0 .75em;
+}
+.post-body blockquote {
+line-height:1.3em;
+}
+.post-footer {
+background: #ded;
+margin:0;
+padding-top:2px;
+padding-right:14px;
+padding-bottom:2px;
+padding-left:29px;
+border:1px dotted #bbbbbb;
+border-width:1px;
+font-size:100%;
+line-height:1.5em;
+color: #666;
+}
+/*
+The first line of the post footer might only have floated text, so we need to give it a height.
+The height comes from the post-footer line-height
+*/
+.post-footer-line-1 {
+min-height:1.5em;
+_height:1.5em;
+}
+.post-footer p {
+margin: 0;
+}
+html>body .post-footer {
+border-bottom-color:transparent;
+}
+.uncustomized-post-template .post-footer {
+text-align: right;
+}
+.uncustomized-post-template .post-author,
+.uncustomized-post-template .post-timestamp {
+display: block;
+float: left;
+text-align:left;
+margin-right: 4px;
+}
+.post-footer a {
+color: #258;
+}
+.post-footer a:hover {
+color: #666;
+}
+a.comment-link {
+/* IE5.0/Win doesn't apply padding to inline elements,
+so we hide these two declarations from it */
+background/* */:/**/url("http://www.blogblog.com/rounders/icon_comment_left.gif") no-repeat left 45%;
+padding-left:14px;
+}
+html>body a.comment-link {
+/* Respecified, for IE5/Mac's benefit */
+background:url("http://www.blogblog.com/rounders/icon_comment_left.gif") no-repeat left 45%;
+padding-left:14px;
+}
+.post img {
+margin-top:0;
+margin-right:0;
+margin-bottom:5px;
+margin-left:0;
+padding:4px;
+border:1px solid #bbbbbb;
+}
+blockquote {
+margin:.75em 0;
+border:1px dotted #bbbbbb;
+border-width:1px 0;
+padding:5px 15px;
+color: #335577;
+}
+.post blockquote p {
+margin:.5em 0;
+}
+#blog-pager-newer-link {
+float: left;
+margin-left: 13px;
+}
+#blog-pager-older-link {
+float: right;
+margin-right: 13px;
+}
+#blog-pager {
+text-align: center;
+}
+.feed-links {
+clear: both;
+line-height: 2.5em;
+margin-left: 13px;
+}
+/* Comments
+----------------------------------------------- */
+#comments {
+margin:-25px 13px 0;
+border:1px dotted #bbbbbb;
+border-width:0 1px 1px;
+padding-top:20px;
+padding-right:0;
+padding-bottom:15px;
+padding-left:0;
+}
+#comments h4 {
+margin:0 0 10px;
+padding-top:0;
+padding-right:14px;
+padding-bottom:2px;
+padding-left:29px;
+border-bottom:1px dotted #bbbbbb;
+font-size:120%;
+line-height:1.4em;
+color:#333333;
+}
+#comments-block {
+margin-top:0;
+margin-right:15px;
+margin-bottom:0;
+margin-left:9px;
+}
+.comment-author {
+background:url("http://www.blogblog.com/rounders/icon_comment_left.gif") no-repeat 2px .3em;
+margin:.5em 0;
+padding-top:0;
+padding-right:0;
+padding-bottom:0;
+padding-left:20px;
+font-weight:bold;
+}
+.comment-body {
+margin:0 0 1.25em;
+padding-top:0;
+padding-right:0;
+padding-bottom:0;
+padding-left:20px;
+}
+.comment-body p {
+margin:0 0 .5em;
+}
+.comment-footer {
+margin:0 0 .5em;
+padding-top:0;
+padding-right:0;
+padding-bottom:.75em;
+padding-left:20px;
+}
+.comment-footer a:link {
+color: #333;
+}
+.deleted-comment {
+font-style:italic;
+color:gray;
+}
+.comment-form {
+padding-left:20px;
+padding-right:5px;
+}
+#comments .comment-form h4 {
+padding-left:0px;
+}
+/* Profile
+----------------------------------------------- */
+.profile-img {
+float: left;
+margin-top: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
+margin-left: 0;
+border: 4px solid #334455;
+}
+.profile-datablock {
+margin-top:0;
+margin-right:15px;
+margin-bottom:.5em;
+margin-left:0;
+padding-top:8px;
+}
+.profile-link {
+background:url("http://www.blogblog.com/rounders/icon_profile_left.gif") no-repeat left .1em;
+padding-left:15px;
+font-weight:bold;
+}
+.profile-textblock {
+clear: both;
+margin: 0;
+}
+.sidebar .clear, .main .widget .clear {
+clear: both;
+}
+#sidebartop-wrap {
+background:#ccddcc url("http://www.blogblog.com/rounders/corners_prof_bot.gif") no-repeat left bottom;
+margin:0px 0px 15px;
+padding:0px 0px 10px;
+color:#334455;
+}
+#sidebartop-wrap2 {
+background:url("http://www2.blogblog.com/rounders/corners_prof_top.gif") no-repeat left top;
+padding: 10px 0 0;
+margin:0;
+border-width:0;
+}
+#sidebartop h2 {
+line-height:1.5em;
+color:#223344;
+border-bottom: 1px dotted #223344;
+margin-bottom: 0.5em;
+font: normal bold 100% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+#sidebartop a {
+color: #225588;
+}
+#sidebartop a:hover {
+color: #225588;
+}
+#sidebartop a:visited {
+color: #225588;
+}
+/* Sidebar Boxes
+----------------------------------------------- */
+.sidebar .widget {
+margin:.5em 13px 1.25em;
+padding:0 0px;
+}
+.widget-content {
+margin-top: 0.5em;
+}
+#sidebarbottom-wrap1 {
+background:#ffffff url("http://www.blogblog.com/rounders/corners_side_top.gif") no-repeat left top;
+margin:0 0 15px;
+padding:10px 0 0;
+color: #333333;
+}
+#sidebarbottom-wrap2 {
+background:url("http://www1.blogblog.com/rounders/corners_side_bot.gif") no-repeat left bottom;
+padding:0 0 8px;
+}
+.sidebar h2 {
+margin:0;
+padding:0 0 .2em;
+line-height:1.5em;
+font:normal bold 100% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+.sidebar ul {
+list-style:none;
+margin:0 0 1.25em;
+padding:0;
+}
+.sidebar ul li {
+background:url("http://www2.blogblog.com/rounders/icon_arrow_sm.gif") no-repeat 2px .25em;
+margin:0;
+padding-top:0;
+padding-right:0;
+padding-bottom:3px;
+padding-left:16px;
+margin-bottom:3px;
+border-bottom:1px dotted #bbbbbb;
+line-height:1.4em;
+}
+.sidebar p {
+margin:0 0 .6em;
+}
+#sidebar h2 {
+color: #333333;
+border-bottom: 1px dotted #333333;
+}
+/* Footer
+----------------------------------------------- */
+#footer-wrap1 {
+clear:both;
+margin:0 0 10px;
+padding:15px 0 0;
+}
+#footer-wrap2 {
+background:#445566 url("http://www2.blogblog.com/rounders/corners_cap_top.gif") no-repeat left top;
+color:#ffffff;
+}
+#footer {
+background:url("http://www.blogblog.com/rounders/corners_cap_bot.gif") no-repeat left bottom;
+padding:8px 15px;
+}
+#footer hr {display:none;}
+#footer p {margin:0;}
+#footer a {color:#ffffff;}
+#footer .widget-content {
+margin:0;
+}
+/** Page structure tweaks for layout editor wireframe */
+body#layout #main-wrap1,
+body#layout #sidebar-wrap,
+body#layout #header-wrapper {
+margin-top: 0;
+}
+body#layout #header, body#layout #header-wrapper,
+body#layout #outer-wrapper {
+margin-left:0,
+margin-right: 0;
+padding: 0;
+}
+body#layout #outer-wrapper {
+width: 730px;
+}
+body#layout #footer-wrap1 {
+padding-top: 0;
+}
+
+--></style>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script><link media="all" href="tutorial-debug-no-xletview-usando-o_arquivos/widget27.css" type="text/css" rel="stylesheet"><script src="tutorial-debug-no-xletview-usando-o_arquivos/pt.js"></script><script src="tutorial-debug-no-xletview-usando-o_arquivos/menu43.js"></script><script src="tutorial-debug-no-xletview-usando-o_arquivos/menu-ab02.js"></script></head><body><div id="atffc"><object type="application/x-shockwave-flash" data="tutorial-debug-no-xletview-usando-o_arquivos/button1.swf" id="atff" width="1" height="1"><param value="transparent" name="wmode"><param value="always" name="allowScriptAccess"></object></div>
+<div class="navbar section" id="navbar"><div class="widget Navbar" id="Navbar1"><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener("load",
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<iframe src="tutorial-debug-no-xletview-usando-o_arquivos/navbar.htm" marginwidth="0" marginheight="0" id="navbar-iframe" allowtransparency="true" title="Blogger Navigation and Search" scrolling="no" width="100%" frameborder="0" height="30"></iframe>
+<div></div></div></div>
+<div id="outer-wrapper">
+<div id="header-wrapper">
+<div class="header section" id="header"><div class="widget Header" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<h1 class="title">
+<a href="http://b4dtv.blogspot.com/">b4dtv - blog for digital tv</a>
+</h1>
+</div>
+<div class="descriptionwrapper">
+<p class="description"><span>digitalizando a TV</span></p>
+</div>
+</div>
+</div></div>
+</div>
+<div id="crosscol-wrapper" style="text-align: center;">
+<div class="crosscol section" id="crosscol"></div>
+</div>
+<div id="main-wrap1"><div id="main-wrap2">
+<div class="main section" id="main"><div class="widget HTML" id="HTML9">
+<div class="widget-content">
+<script type="text/javascript"><!--
+google_ad_client = "pub-9623385785350123";
+google_ad_host = "pub-1556223355139109";
+google_ad_host_channel="00000+00005+00036+00074";
+google_ad_slot = "4859272977";
+google_ad_width = 468;
+google_ad_height = 61;
+//-->
+</script>
+<script src="tutorial-debug-no-xletview-usando-o_arquivos/show_ads.js" type="text/javascript">
+</script><script src="tutorial-debug-no-xletview-usando-o_arquivos/expansion_embed.js"></script><script src="tutorial-debug-no-xletview-usando-o_arquivos/test_domain.js"></script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 61px; position: relative; visibility: visible; width: 468px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 61px; position: relative; visibility: visible; width: 468px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame" src="tutorial-debug-no-xletview-usando-o_arquivos/ads.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" scrolling="no" width="468" frameborder="0" height="61"></iframe></ins></ins>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=HTML&amp;widgetId=HTML9&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML9"));' target="configHTML9" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Blog" id="Blog1">
+<div class="blog-posts hfeed">
+<!-- google_ad_section_start(name=default) -->
+<h2 class="date-header">domingo, 19 de julho de 2009</h2>
+<div class="post hentry uncustomized-post-template">
+<a name="8807019131209101521"></a>
+<h3 class="post-title entry-title">
+<a href="http://b4dtv.blogspot.com/2009/07/tutorial-debug-no-xletview-usando-o.html">Tutorial: Debug no XleTView usando o Eclipse - por Leonardo Leite</a>
+</h3>
+<div class="post-header-line-1"></div>
+<div class="post-body entry-content">
+Ao se desenvolver programas de software, um recurso muito importante
+que nos ajuda a encontrar defeitos em nosso código e solucionar
+eventuais bugs, é o debug.<br>Um fator que há muito tempo me incomodava ao fazer xlets no <strong>XleTView</strong> era a aparente falta de possibilidade de realizar um debug.<br>Este tutorial mostra como realizar o debug de seu xlet, executado a partir do XleTView, usando a plataforma <strong>Eclipse</strong> (<a href="http://www.eclipse.org/">http://www.eclipse.org/</a>).<br><br><strong>Atenção:</strong>
+este tutorial não explica como fazer o debug no Eclipse, mas sim os
+passos necessários para que o debug no Eclipse possa ser realizado a
+partir de um xlet sendo executado no XleTView.<br><br><br><strong>Configurando o XleTView</strong><br>Para podermos realizar o debug, o XleTView deve ser chamado da seguinte maneira:<br><span style="font-family: courier new; font-size: 85%;">java -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n -jar xletview.jar</span><br><br><br><p></p><br><p><strong>Configurando o debug do Eclipse</strong><br>1. Abra a perspective de debug (Figura 1) </p><br><a href="http://1.bp.blogspot.com/_Y0gcyKwnB9U/SmNrpKo_TsI/AAAAAAAACWs/iiOeX5DFov8/s1600-h/DebugXletEclipe_1.jpg"><img style="margin: 0px auto 10px; text-align: center; width: 400px; display: block; height: 268px;" id="BLOGGER_PHOTO_ID_5360246336476106434" alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/DebugXletEclipe_1.jpg" border="0"></a><br><br>2. No menu de debug seleciona “Open debug dialog...” (Figura 2)<br><br><br><a href="http://2.bp.blogspot.com/_Y0gcyKwnB9U/SmNrpaTDhNI/AAAAAAAACW0/fuDOYsHSNpY/s1600-h/DebugXletEclipe_2.jpg"><img style="margin: 0px auto 10px; text-align: center; width: 400px; display: block; height: 312px;" id="BLOGGER_PHOTO_ID_5360246340679075026" alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/DebugXletEclipe_2.jpg" border="0"></a><br><br>3.
+No diálogo de debug insira um novo elemento de debug abaixo do elemento
+“Remote Java Application”, na árvore à esquerda (Figura 3)<br><br><br><a href="http://1.bp.blogspot.com/_Y0gcyKwnB9U/SmNrpsrd4uI/AAAAAAAACW8/gBtXUv52Ins/s1600-h/DebugXletEclipe_3.jpg"><img style="margin: 0px auto 10px; text-align: center; width: 400px; display: block; height: 199px;" id="BLOGGER_PHOTO_ID_5360246345613304546" alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/DebugXletEclipe_3.jpg" border="0"></a><br><br>4.
+Se necessário altere as propriedades do debug (à direita da árvore do
+passo anterior); o mais importante aqui é que a porta usada seja a
+mesma que foi passada como parâmetro para o XleTView (no meu exemplo, a
+porta 8000).<br><br>Pronto, agora basta setar seu(s) breakpoint(s) no Eclipse e iniciar a aplicação através do XleTView.<br><br><br>Na figura 4 temos um exemplo de debug, em que podemos constatar a na janela de variáveis o valor da variável x.<br><br><a href="http://2.bp.blogspot.com/_Y0gcyKwnB9U/SmNtCpS20nI/AAAAAAAACXU/jKSodf4EJSo/s1600-h/DebugXletEclipe_4.jpg"><img style="margin: 0px auto 10px; text-align: center; width: 400px; display: block; height: 320px;" id="BLOGGER_PHOTO_ID_5360247873713132146" alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/DebugXletEclipe_4.jpg" border="0"></a><br><br>Repare
+que na perspectiva de debug é importante conhecer algumas opções de
+controle, como o “Terminate” e o “Relaunch”, que podem ser vistos na
+figura 5.<br><br><a href="http://4.bp.blogspot.com/_Y0gcyKwnB9U/SmNrqK9KSqI/AAAAAAAACXM/CfzGGZkULjU/s1600-h/DebugXletEclipe_5.jpg"><img style="margin: 0px auto 10px; text-align: center; width: 400px; display: block; height: 326px;" id="BLOGGER_PHOTO_ID_5360246353740581538" alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/DebugXletEclipe_5.jpg" border="0"></a><br><br><div>Espero que aproveitem a dica!<br></div><div><strong>Autor: Leonardo Leite </strong></div><div> </div><div> </div>
+<div style="clear: both;"></div>
+</div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard">
+Postado por
+<span class="fn">Marcos Henke</span>
+</span>
+<span class="post-timestamp">
+às
+<a class="timestamp-link" href="http://b4dtv.blogspot.com/2009/07/tutorial-debug-no-xletview-usando-o.html" rel="bookmark" title="permanent link"><abbr class="published" title="2009-07-19T15:47:00-03:00">15:47</abbr></a>
+</span>
+<span class="reaction-buttons">
+</span>
+<span class="star-ratings">
+</span>
+<span class="post-comment-link">
+</span>
+<span class="post-backlinks post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-control blog-admin pid-2120685644">
+<a href="http://www.blogger.com/post-edit.g?blogID=4807285074105044884&amp;postID=8807019131209101521" title="Editar postagem">
+<img alt="" class="icon-action" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_edit_allbkg.gif" width="18" height="18">
+</a>
+</span>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+Marcadores:
+<a href="http://b4dtv.blogspot.com/search/label/desenvolvimento" rel="tag">desenvolvimento</a>,
+<a href="http://b4dtv.blogspot.com/search/label/Java" rel="tag">Java</a>,
+<a href="http://b4dtv.blogspot.com/search/label/tutoriais" rel="tag">tutoriais</a>,
+<a href="http://b4dtv.blogspot.com/search/label/tv%20digital" rel="tag">tv digital</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class="post-location">
+</span>
+</div>
+</div>
+</div>
+<div class="comments" id="comments">
+<a name="comments"></a>
+<h4>
+2
+comentários:
+        
+</h4>
+<dl class="avatar-comment-indent" id="comments-block">
+<dt class="comment-author" id="c2680951133895874640">
+<a name="c2680951133895874640"></a>
+<div class="avatar-image-container avatar-stock"><span dir="ltr"><a href="http://www.blogger.com/profile/10247099020171935063" rel="nofollow" onclick="" class="avatar-hovercard" id="av-0-10247099020171935063"><img src="tutorial-debug-no-xletview-usando-o_arquivos/b16-rounded.gif" alt="" title="renan.ec" width="16" height="16">
+
+</a></span></div>
+<a href="http://www.blogger.com/profile/10247099020171935063" rel="nofollow">renan.ec</a>
+disse...
+</dt>
+<dd class="comment-body">
+<p>Aqui no meu eclipse (no Windows Vista)não funcionou. O debug não é feito.</p>
+</dd>
+<dd class="comment-footer">
+<span class="comment-timestamp">
+<a href="http://b4dtv.blogspot.com/2009/07/tutorial-debug-no-xletview-usando-o.html?showComment=1248321057014#c2680951133895874640" title="comment permalink">
+23 de julho de 2009 00:50
+</a>
+<span class="item-control blog-admin pid-358859199">
+<a href="http://www.blogger.com/delete-comment.g?blogID=4807285074105044884&amp;postID=2680951133895874640" title="Excluir comentário">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/icon_delete13.gif">
+</a>
+</span>
+</span>
+</dd>
+<dt class="comment-author" id="c54678088680100743">
+<a name="c54678088680100743"></a>
+<div class="avatar-image-container avatar-stock"><span dir="ltr"><a href="http://www.blogger.com/profile/01585831280167473462" rel="nofollow" onclick="" class="avatar-hovercard" id="av-1-01585831280167473462"><img src="tutorial-debug-no-xletview-usando-o_arquivos/b16-rounded.gif" alt="" title="Leonardo Leite" width="16" height="16">
+
+</a></span></div>
+<a href="http://www.blogger.com/profile/01585831280167473462" rel="nofollow">Leonardo Leite</a>
+disse...
+</dt>
+<dd class="comment-body">
+<p>Vc poderia explicar melhor oq tentou fazer e oq foi q aconteceu?<br><br>Talvez
+o problema seja uma configuração de segurança do sistema, já que a
+comunicação do Eclipse e do XleTView se dá por uma porta de comunicação
+do PC. <br>Não sei se tô viajando, como um teste mais simples, vc pode
+tentar trocar o valor daquela porta (as vezes ela já tá sendo usada por
+outro programa seu tb)</p>
+</dd>
+<dd class="comment-footer">
+<span class="comment-timestamp">
+<a href="http://b4dtv.blogspot.com/2009/07/tutorial-debug-no-xletview-usando-o.html?showComment=1248698662295#c54678088680100743" title="comment permalink">
+27 de julho de 2009 09:44
+</a>
+<span class="item-control blog-admin pid-656646750">
+<a href="http://www.blogger.com/delete-comment.g?blogID=4807285074105044884&amp;postID=54678088680100743" title="Excluir comentário">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/icon_delete13.gif">
+</a>
+</span>
+</span>
+</dd>
+</dl>
+<p class="comment-footer">
+</p><div class="comment-form">
+<a name="comment-form"></a>
+<h4 id="comment-post-message">Postar um comentário</h4>
+<p>
+</p>
+<a href="http://www.blogger.com/comment-iframe.g?blogID=4807285074105044884&amp;postID=8807019131209101521&amp;blogspotRpcToken=150458" id="comment-editor-src"></a>
+<iframe allowtransparency="true" class="blogger-iframe-colorize blogger-comment-from-post" id="comment-editor" name="comment-editor" src="tutorial-debug-no-xletview-usando-o_arquivos/comment-iframe.htm" width="100%" frameborder="0" height="410"></iframe>
+<script type="text/javascript">
+        if (!window.google || !google.friendconnect) {
+          document.write('<script type="text/javascript"' +
+              'src="http://www.google.com/friendconnect/script/friendconnect.js">' +
+              '</scr' + 'ipt>');
+        }
+      </script><script type="text/javascript" src="comment-iframe_data/friendconnect.js"></script>
+<script type="text/javascript">
+      if (!window.registeredBloggerCallbacks) {
+        window.registeredBloggerCallbacks = true;
+
+        
+
+        
+        gadgets.rpc.register('requestReload', function() {
+          document.location.reload();
+        });
+
+        
+        gadgets.rpc.register('requestSignOut', function(siteId) {
+          
+          google.friendconnect.container.openSocialSiteId = siteId;
+          google.friendconnect.requestSignOut();
+        });
+      }
+    </script>
+<script type="text/javascript">
+    
+    function registerGetBlogUrls() {
+      gadgets.rpc.register('getBlogUrls', function() {
+        var holder = {};
+        
+          
+            
+            
+              holder.currentPost = "http://www.blogger.com/feeds/4807285074105044884/posts/default/8807019131209101521";
+            
+            
+            
+              holder.currentComments = "http://www.blogger.com/feeds/4807285074105044884/8807019131209101521/comments/default";
+            
+          
+          
+          
+            holder.postFeed = "http://www.blogger.com/feeds/4807285074105044884/posts/default";
+          
+          
+          
+            holder.commentFeed = "http://www.blogger.com/feeds/4807285074105044884/comments/default";
+          
+        
+        return holder;
+      });
+    }
+  </script>
+<script type="text/javascript">
+  if (!window.registeredCommonBloggerCallbacks) {
+    window.registeredCommonBloggerCallbacks = true;
+
+    gadgets.rpc.register('resize_iframe', function(height) {
+      var el = document.getElementById(this['f']);
+      if (el) {
+        el.style.height = height + 'px';
+      }
+    });
+
+    // We don't do anything w/ this, but don't let it bubble up and cause an
+    // exception
+    // TODO(henrywong): Don't just one-off this, fix at a more comprehensive
+    // level.
+    gadgets.rpc.register('set_pref', function() {});
+
+    
+    gadgets.rpc.register('registerGadgetForRpcs', function(gadgetDomain, iframeName) {
+      // TODO(sauravshah): We don't need this. Remove it from the google.Blog api
+    });
+
+    registerGetBlogUrls();
+  }
+  </script>
+<script type="text/javascript" src="tutorial-debug-no-xletview-usando-o_arquivos/2478851158-comment_from_post_iframe.js"></script>
+<script type="text/javascript">
+      BLOG_CMT_createIframe('http://www.blogger.com/rpc_relay.html', '09250453520028997803');
+    </script>
+</div>
+
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container"><a name="links"></a><h4>Links para esta postagem</h4>
+
+<p class="comment-footer">
+<a id="Blog1_backlinks-create-link" href="http://www.blogger.com/blog-this.g" target="_blank" class="comment-link">Criar um link</a>
+</p></div>
+</div>
+</div>
+<!-- google_ad_section_end -->
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="http://b4dtv.blogspot.com/2009/08/tutorial-de-instalacao-da-maquina.html" id="Blog1_blog-pager-newer-link" title="Postagem mais recente">Postagem mais recente</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="http://b4dtv.blogspot.com/2009/07/api-de-integracao-de-dispositivos.html" id="Blog1_blog-pager-older-link" title="Postagem mais antiga">Postagem mais antiga</a>
+</span>
+<a class="home-link" href="http://b4dtv.blogspot.com/">Início</a>
+</div>
+<div class="clear"></div>
+<div class="post-feeds">
+<div class="feed-links">
+Assinar:
+<a class="feed-link" href="http://b4dtv.blogspot.com/feeds/8807019131209101521/comments/default" target="_blank" type="application/atom+xml">Postar comentários (Atom)</a>
+</div>
+</div>
+</div><div class="widget HTML" id="HTML10">
+<div class="widget-content">
+<script type="text/javascript"><!--
+google_ad_client = "pub-9623385785350123";
+google_ad_host = "pub-1556223355139109";
+google_ad_host_channel="00000+00005+00036+00074";
+/* 468x60, criado 05/11/08 */
+google_ad_slot = "4859272977";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script src="tutorial-debug-no-xletview-usando-o_arquivos/show_ads.js" type="text/javascript">
+</script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 60px; position: relative; visibility: visible; width: 468px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 60px; position: relative; visibility: visible; width: 468px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame2" marginheight="0" marginwidth="0" name="google_ads_frame" src="tutorial-debug-no-xletview-usando-o_arquivos/ads_002.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" scrolling="no" width="468" frameborder="0" height="60"></iframe></ins></ins>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=HTML&amp;widgetId=HTML10&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML10"));' target="configHTML10" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div></div>
+<div id="sidebar-wrap">
+<div id="sidebartop-wrap"><div id="sidebartop-wrap2">
+<div class="sidebar section" id="sidebartop"><div class="widget HTML" id="HTML4">
+<div class="widget-content">
+<!-- AddThis Bookmark Button BEGIN -->
+<script type="text/javascript">
+  addthis_url    = location.href;   
+  addthis_title  = document.title;  
+  addthis_pub    = 'alemaodokiss';     
+</script><script src="tutorial-debug-no-xletview-usando-o_arquivos/addthis_widget.txt" type="text/javascript"></script><span id="atb4b573108a0685b9e"><a href="http://www.addthis.com/bookmark.php?v=120&amp;winname=addthis&amp;pub=alemaodokiss&amp;source=men-120&amp;lng=pt&amp;s=&amp;url=http%3A%2F%2Fb4dtv.blogspot.com%2F2009%2F07%2Ftutorial-debug-no-xletview-usando-o.html&amp;title=b4dtv%20-%20blog%20for%20digital%20tv%3A%20Tutorial%3A%20Debug%20no%20XleTView%20usando%20o%20Eclipse%20-%20por%20Leonardo%20Leite&amp;logo=&amp;logobg=&amp;logocolor=&amp;ate=AT-alemaodokiss/-/-/4b573108a772d257/1/4b24260d2d284c35&amp;uid=4b24260d2d284c35&amp;CXNID=2000001.5215456080540439074NXC&amp;pre=http%3A%2F%2Fwww.google.com.br%2Fsearch%3Fq%3Dxletview%2Bcarregando%2Bfiguras%26ie%3Dutf-8%26oe%3Dutf-8%26aq%3Dt%26rls%3Dorg.mozilla%3Apt-BR%3Aofficial%26client%3Dfirefox-a&amp;tt=0" onmouseover="return addthis_open(this, 'share', 'http://b4dtv.blogspot.com/2009/07/tutorial-debug-no-xletview-usando-o.html', 'b4dtv - blog for digital tv: Tutorial: Debug no XleTView usando o Eclipse - por Leonardo Leite')" onmouseout="addthis_close()" onclick="return addthis_to()" class="snap_noshots"><img src="tutorial-debug-no-xletview-usando-o_arquivos/lg-bookmark-en.gif" style="border: medium none ; padding: 0px;" alt="AddThis" width="125" height="16"></a></span>
+<!-- AddThis Bookmark Button END -->
+
+<a href="http://technorati.com/faves?sub=addfavbtn&amp;add=http://b4dtv.blogspot.com"><img alt="Add to Technorati Favorites" src="tutorial-debug-no-xletview-usando-o_arquivos/btn-fave2.png"></a>
+
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/" rel="license"><img alt="Creative Commons License" style="border-width: 0pt;" src="tutorial-debug-no-xletview-usando-o_arquivos/somerights20.png"></a><br><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title" href="http://purl.org/dc/dcmitype/Text" rel="dc:type"></span>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=HTML&amp;widgetId=HTML4&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML4"));' target="configHTML4" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget LinkList" id="LinkList4">
+<h2>ferramentas de desenvolvimento</h2>
+<div class="widget-content">
+<ul>
+<li><a href="http://www.openginga.org/">Open Ginga (Ginga-J)</a></li>
+<li><a href="http://www.ncl.org.br/ferramentas/ginga_LiveCD_v1.0.iso">Ginga Live CD 1.0</a></li>
+<li><a href="http://www.laws.deinf.ufma.br/%7Encleclipse/">NCL Eclipse</a></li>
+<li><a href="http://luaeclipse.luaforge.net/">LUA Eclipse</a></li>
+<li><a href="http://clube.ncl.org.br/">Clube NCL (ferramentas, tutoriais, exemplos)</a></li>
+<li><a href="http://sourceforge.net/projects/xletview/">XletView - Emulador MHP</a></li>
+<li><a href="http://b4dtv.blogspot.com/2007/11/fontes-do-xletview-havi-dvb-davic.html">Fontes do XletView (HAVi, DVB Davic)</a></li>
+<li><a href="http://www.tvdi.inf.br/index.php?s=downloads">TVDi UFPEL - Lista de ferramentas</a></li>
+<li><a href="http://www.icareus.com/web/guest/technologies/interactivetv">Icareus ITV Suite &amp; Playout</a></li>
+<li><a href="http://www.eitv.com.br/">EITV Playout</a></li>
+<li><a href="http://www.alticast.com/">Alticast</a></li>
+<li><a href="http://etvcookbook.org/system/authoring.html">ETV Cookbook - Lista de ferramentas</a></li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=LinkList&amp;widgetId=LinkList4&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList4"));' target="configLinkList4" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Subscribe" id="Subscribe1">
+<div style="white-space: nowrap;">
+<h2 class="title">acompanhe este blog</h2>
+<div class="widget-content">
+<div class="subscribe-wrapper subscribe-type-POST">
+<div class="subscribe expanded subscribe-type-POST" id="SW_READER_LIST_Subscribe1POST" style="display: none;">
+<div class="top">
+<span class="inner" onclick='return(_SW_toggleReaderList(event, "Subscribe1POST"));'>
+<img class="subscribe-dropdown-arrow" src="tutorial-debug-no-xletview-usando-o_arquivos/arrow_dropdown.gif">
+<img alt="" class="feed-icon" src="tutorial-debug-no-xletview-usando-o_arquivos/icon_feed12.png" align="absmiddle" border="0">
+Postagens
+</span>
+<ul class="feed-reader-links">
+<a class="feed-reader-link" href="http://www.google.com/ig/add?source=bstp&amp;feedurl=http%3A%2F%2Fb4dtv.blogspot.com%2Ffeeds%2Fposts%2Fdefault" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-google.png">
+</a>
+<a class="feed-reader-link" href="http://www.bloglines.com/sub/http://b4dtv.blogspot.com/feeds/posts/default" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-bloglines.png">
+</a>
+<a class="feed-reader-link" href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Fb4dtv.blogspot.com%2Ffeeds%2Fposts%2Fdefault" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-netvibes.png">
+</a>
+<a class="feed-reader-link" href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http%3A%2F%2Fb4dtv.blogspot.com%2Ffeeds%2Fposts%2Fdefault" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-newsgator.png">
+</a>
+<a class="feed-reader-link" href="http://add.my.yahoo.com/content?url=http%3A%2F%2Fb4dtv.blogspot.com%2Ffeeds%2Fposts%2Fdefault" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-yahoo.png">
+</a>
+<a class="feed-reader-link" href="http://b4dtv.blogspot.com/feeds/posts/default" target="_blank">
+<img class="feed-icon" src="tutorial-debug-no-xletview-usando-o_arquivos/icon_feed12.png" align="absmiddle">
+                Atom
+              </a>
+</ul>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="subscribe" id="SW_READER_LIST_CLOSED_Subscribe1POST" onclick='return(_SW_toggleReaderList(event, "Subscribe1POST"));'>
+<div class="top">
+<span class="inner">
+<img class="subscribe-dropdown-arrow" src="tutorial-debug-no-xletview-usando-o_arquivos/arrow_dropdown.gif">
+<span onclick='return(_SW_toggleReaderList(event, "Subscribe1POST"));'>
+<img alt="" class="feed-icon" src="tutorial-debug-no-xletview-usando-o_arquivos/icon_feed12.png" align="absmiddle" border="0">
+Postagens
+</span>
+</span>
+</div>
+<div class="bottom"></div>
+</div>
+</div>
+<div class="subscribe-wrapper subscribe-type-PER_POST">
+<div class="subscribe expanded subscribe-type-PER_POST" id="SW_READER_LIST_Subscribe1PER_POST" style="display: none;">
+<div class="top">
+<span class="inner" onclick='return(_SW_toggleReaderList(event, "Subscribe1PER_POST"));'>
+<img class="subscribe-dropdown-arrow" src="tutorial-debug-no-xletview-usando-o_arquivos/arrow_dropdown.gif">
+<img alt="" class="feed-icon" src="tutorial-debug-no-xletview-usando-o_arquivos/icon_feed12.png" align="absmiddle" border="0">
+Comentários
+</span>
+<ul class="feed-reader-links">
+<a class="feed-reader-link" href="http://www.google.com/ig/add?source=bstp&amp;feedurl=http%3A%2F%2Fb4dtv.blogspot.com%2Ffeeds%2F8807019131209101521%2Fcomments%2Fdefault" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-google.png">
+</a>
+<a class="feed-reader-link" href="http://www.bloglines.com/sub/http://b4dtv.blogspot.com/feeds/8807019131209101521/comments/default" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-bloglines.png">
+</a>
+<a class="feed-reader-link" href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Fb4dtv.blogspot.com%2Ffeeds%2F8807019131209101521%2Fcomments%2Fdefault" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-netvibes.png">
+</a>
+<a class="feed-reader-link" href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http%3A%2F%2Fb4dtv.blogspot.com%2Ffeeds%2F8807019131209101521%2Fcomments%2Fdefault" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-newsgator.png">
+</a>
+<a class="feed-reader-link" href="http://add.my.yahoo.com/content?url=http%3A%2F%2Fb4dtv.blogspot.com%2Ffeeds%2F8807019131209101521%2Fcomments%2Fdefault" target="_blank">
+<img src="tutorial-debug-no-xletview-usando-o_arquivos/subscribe-yahoo.png">
+</a>
+<a class="feed-reader-link" href="http://b4dtv.blogspot.com/feeds/8807019131209101521/comments/default" target="_blank">
+<img class="feed-icon" src="tutorial-debug-no-xletview-usando-o_arquivos/icon_feed12.png" align="absmiddle">
+                Atom
+              </a>
+</ul>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="subscribe" id="SW_READER_LIST_CLOSED_Subscribe1PER_POST" onclick='return(_SW_toggleReaderList(event, "Subscribe1PER_POST"));'>
+<div class="top">
+<span class="inner">
+<img class="subscribe-dropdown-arrow" src="tutorial-debug-no-xletview-usando-o_arquivos/arrow_dropdown.gif">
+<span onclick='return(_SW_toggleReaderList(event, "Subscribe1PER_POST"));'>
+<img alt="" class="feed-icon" src="tutorial-debug-no-xletview-usando-o_arquivos/icon_feed12.png" align="absmiddle" border="0">
+Comentários
+</span>
+</span>
+</div>
+<div class="bottom"></div>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=Subscribe&amp;widgetId=Subscribe1&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("Subscribe1"));' target="configSubscribe1" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" id="HTML1">
+<div class="widget-content">
+<!-- SiteSearch Google -->
+<form action="http://www.google.com.br/custom" target="google_window" method="get">
+<table border="0">
+<tbody><tr><td valign="top" align="left" nowrap="nowrap">
+<input value="b4dtv.blogspot.com" name="domains" type="hidden">
+<label for="sbi" style="display: none;">Digite os termos da sua pesquisa</label>
+<input maxlength="255" id="sbi" value="" name="q" size="28" type="text">
+</td></tr>
+<tr>
+<td nowrap="nowrap">
+<table>
+<tbody><tr>
+<td>
+<input id="ss0" checked="checked" value="" name="sitesearch" type="radio">
+<label for="ss0" title="Pesquisar na web"><font size="-1" color="#000000">Web</font></label></td>
+<td>
+<input id="ss1" value="b4dtv.blogspot.com" name="sitesearch" type="radio">
+<label for="ss1" title="Pesquisar b4it.blogspot.com"><font size="-1" color="#000000">Este blog</font></label></td>
+</tr>
+</tbody></table>
+<label for="sbb" style="display: none;">Enviar formulário de pesquisa</label>
+<input id="sbb" value="Pesquisa Google" name="sa" type="submit">
+<input value="pub-9623385785350123" name="client" type="hidden">
+<input value="1" name="forid" type="hidden">
+<input value="ISO-8859-1" name="ie" type="hidden">
+<input value="ISO-8859-1" name="oe" type="hidden">
+<input value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1" name="cof" type="hidden">
+<input value="pt" name="hl" type="hidden">
+</td></tr></tbody></table>
+</form>
+<!-- SiteSearch Google -->
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=HTML&amp;widgetId=HTML1&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target="configHTML1" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Image" id="Image3">
+<h2>sites do SBTVD</h2>
+<div class="widget-content">
+<a href="http://www.ginga.org.br/">
+<img alt="sites do SBTVD" id="Image3_img" src="tutorial-debug-no-xletview-usando-o_arquivos/ginga-shadow.png" width="100" height="60">
+</a>
+<br>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=Image&amp;widgetId=Image3&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("Image3"));' target="configImage3" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Image" id="Image2">
+<div class="widget-content">
+<a href="http://www.forumsbtvd.org.br/">
+<img alt="" id="Image2_img" src="tutorial-debug-no-xletview-usando-o_arquivos/sbtvd.png" width="76" height="44">
+</a>
+<br>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=Image&amp;widgetId=Image2&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("Image2"));' target="configImage2" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget LinkList" id="LinkList3">
+<h2>desenvolvimento e treinamento</h2>
+<div class="widget-content">
+<ul>
+<li><a href="http://www.hxd.com.br/">HXD</a></li>
+<li><a href="http://www.itvproducoesinterativas.com.br/">iTV Produções Interativas</a></li>
+<li><a href="http://www.peta5.com.br/ped">Peta5</a></li>
+<li><a href="http://www.rcasoft.com.br/">RcaSoft</a></li>
+<li><a href="http://www.tqtvd.com.br/">TQTVD</a></li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=LinkList&amp;widgetId=LinkList3&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList3"));' target="configLinkList3" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Label" id="Label1">
+<h2>categorias</h2>
+<div class="widget-content list-label-widget-content">
+<ul>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/API%20de%20Integra%C3%A7%C3%A3o%20de%20Dispositivos">API de Integração de Dispositivos</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/canal%20de%20retorno">canal de retorno</a>
+<span dir="ltr">(7)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/converg%C3%AAncia%20tecnol%C3%B3gica">convergência tecnológica</a>
+<span dir="ltr">(25)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/desenvolvimento">desenvolvimento</a>
+<span dir="ltr">(48)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/Ginga">Ginga</a>
+<span dir="ltr">(9)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/interatividade">interatividade</a>
+<span dir="ltr">(52)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/Java">Java</a>
+<span dir="ltr">(10)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/Java%20DTV">Java DTV</a>
+<span dir="ltr">(13)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/middleware">middleware</a>
+<span dir="ltr">(41)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/NCL">NCL</a>
+<span dir="ltr">(10)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/premios">premios</a>
+<span dir="ltr">(3)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/tutoriais">tutoriais</a>
+<span dir="ltr">(6)</span>
+</li>
+<li>
+<a dir="ltr" href="http://b4dtv.blogspot.com/search/label/tv%20digital">tv digital</a>
+<span dir="ltr">(110)</span>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=Label&amp;widgetId=Label1&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("Label1"));' target="configLabel1" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget BlogArchive" id="BlogArchive1">
+<h2>arquivo do blog</h2>
+<div class="widget-content">
+<div id="ArchiveList">
+<div id="BlogArchive1_ArchiveList">
+<ul>
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">▼&nbsp;</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/search?updated-min=2009-01-01T00%3A00%3A00-02%3A00&amp;updated-max=2010-01-01T00%3A00%3A00-02%3A00&amp;max-results=36">2009</a>
+<span class="post-count" dir="ltr">(36)</span>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_12_01_archive.html">Dezembro</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/12/ginga-j-liberado-no-portal-do-software.html">Convite de participação no ambiente de desenvolvim...</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_10_01_archive.html">Outubro</a>
+<span class="post-count" dir="ltr">(3)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/10/prototipo-de-sistema-interativo-de.html">Prototipo de Sistema Interativo de Controle para T...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/10/livro-tv-digitalbr-conceitos-e-estudos.html">livro "TV Digital.Br: Conceitos e Estudos sobre o ...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/10/cobertura-da-tv-digital-no-brasil.html">cobertura da TV Digital no Brasil - outubro/2009</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_09_01_archive.html">Setembro</a>
+<span class="post-count" dir="ltr">(7)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/09/divulgando-comunidade-ginga-o-i.html">I Encontro Nacional do Software Público Brasileiro...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/09/curso-desenvolvendo-aplicacoes-em-ginga.html">curso Desenvolvendo Aplicações em Ginga para TV Di...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/09/especificacao-java-dtv-121-disponivel.html">Especificação Java DTV 1.2.1 disponível</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/09/ufpbginga-j-na-comunidade-ginga-do.html">UFPB/Ginga-J na Comunidade Ginga do Portal do Soft...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/09/ny-times-via-terra-tv-investe-em.html">NY Times (via Terra): TV investe em aplicativos se...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/09/livro-programando-em-ncl-venda-online.html">livro "Programando em NCL" à venda online</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/09/argentina-oficializa-adocao-do-sistema.html">Argentina oficializa adoção do sistema nipo-brasil...</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_08_01_archive.html">Agosto</a>
+<span class="post-count" dir="ltr">(3)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/08/set-top-box-proview-middleware-rcasoft.html">set-top-box Proview + middleware RCASoft por R$ 59...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/08/lancamento-do-livro-programando-em-ncl.html">Lançamento do livro "Programando em NCL 3.0" - Lui...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/08/tutorial-de-instalacao-da-maquina.html">Tutorial de Instalação da Máquina Virtual do OpenG...</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">▼&nbsp;</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_07_01_archive.html">Julho</a>
+<span class="post-count" dir="ltr">(3)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/07/tutorial-debug-no-xletview-usando-o.html">Tutorial: Debug no XleTView usando o Eclipse - por...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/07/api-de-integracao-de-dispositivos.html">API de Integração de Dispositivos: Limitações</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/07/open-ginga-liberado-para-download.html">Open Ginga liberado para download</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_06_01_archive.html">Junho</a>
+<span class="post-count" dir="ltr">(7)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/06/fisl-10-debate-sbtvd-historia-do-ginga.html">FISL 10: debate SBTVD - a história do Ginga</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/06/demonstracao-de-aplicativo-interativo.html">demonstração de aplicativo interativo em um set-to...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/06/fisl-10-agora-com-ginga-j-o-novo-com.html">FISL 10: agora com Ginga-J... o novo, com Java DTV...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/06/fisl-10-com-luiz-fernando-guido-lemos.html">FISL 10: com Luiz Fernando, Guido Lemos, Raoni e L...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/06/fisl-10-sem-moreno.html">FISL 10: sem Moreno</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/06/divulgando-finalmente-temos-programacao.html">Ginga no FISL 10! Programação oficial</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/06/programacao-preliminar-do-fisl-10.html">programação preliminar do FISL 10</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_05_01_archive.html">Maio</a>
+<span class="post-count" dir="ltr">(2)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/05/ginga-ncl-virtual-set-top-box-v0101.html">Ginga-NCL Virtual Set-top Box v.0.10.1</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/05/artigo-sobre-tv-digital-publicado-na.html">Artigo sobre TV Digital publicado na REIC de março...</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_04_01_archive.html">Abril</a>
+<span class="post-count" dir="ltr">(2)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/04/set-top-box-com-dvr-da-topfield.html">set-top-box com DVR da Topfield</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/04/congresso-tv-20-4-edicao.html">Congresso TV 2.0  - 4ª Edição</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_03_01_archive.html">Março</a>
+<span class="post-count" dir="ltr">(4)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/03/apresentacao-new-tv-standard-for.html">apresentação: New TV Standard for Digital TV in Br...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/03/outro-set-top-box-com-interatividade.html">outro set-top-box com interatividade</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/03/link-oficial-para-download-da.html">link oficial para download da espeficicação do Jav...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/03/cw-sun-e-intel-terao-maquina-virtual.html">CW: "Sun e Intel terão máquina virtual Java para d...</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_02_01_archive.html">Fevereiro</a>
+<span class="post-count" dir="ltr">(3)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/02/ginga-live-cd-disponivel-para-download.html">Ginga Live CD disponível para download</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/02/youtube-para-tv.html">YouTube para TV</a></li>
+<li><a href="http://b4dtv.blogspot.com/2009/02/java-dtv-espeficicacao-da-sun.html">Java DTV - espeficicação da Sun disponível para do...</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2009_01_01_archive.html">Janeiro</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2009/01/ferramentas-de-acessibilidade-para-tv.html">Ferramentas de Acessibilidade para TV Digital - Ar...</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/search?updated-min=2008-01-01T00%3A00%3A00-02%3A00&amp;updated-max=2009-01-01T00%3A00%3A00-02%3A00&amp;max-results=50">2008</a>
+<span class="post-count" dir="ltr">(64)</span>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_12_01_archive.html">Dezembro</a>
+<span class="post-count" dir="ltr">(4)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2008/12/eua-tambm-tem-problemas-com-transio.html">EUA também tem problemas com transição para TV dig...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/12/set-top-box-83-mais-barato-desde-o.html">set-top-box 83% mais barato desde o lançamento</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/12/laptop-do-mec-ter-touch-screen-tv.html">laptop do MEC terá touch-screen, TV digital e Linu...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/12/resumo-do-tc-publicado-nos-anais-do.html">resumo do TC publicado nos Anais do Seminfo 2008</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_11_01_archive.html">Novembro</a>
+<span class="post-count" dir="ltr">(5)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2008/11/montenegro-rs-j-tem-tv-digital.html">Montenegro-RS já tem TV Digital</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/11/no-confunda-o-openginga-com-o-ginga-j.html">"Não confunda o OpenGinga com o Ginga-J"</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/11/foi-ao-ar-o-jornal-do-almoo-em-alta.html">foi ao ar o Jornal do Almoço em alta definição</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/11/verso-livre-do-ginga-java-ser.html">Versão Livre do Ginga Java será demonstrada no IV ...</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/11/estria-hoje-tv-digital-em-porto-alegre.html">estréia hoje a TV Digital em Porto Alegre</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_10_01_archive.html">Outubro</a>
+<span class="post-count" dir="ltr">(5)</span>
+<ul class="posts">
+<li><a href="http://b4dtv.blogspot.com/2008/10/lojas-j-demonstram-hdtv-em-porto-alegre.html">lojas já demonstram HDTV em Porto Alegre</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/10/tv-digital-chega-porto-alegre-dia-4-de.html">TV Digital chega a Porto Alegre dia 4 de novembro</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/10/ps-graduao-em-tv-digital-na-unisal.html">Pós-Graduação em TV Digital na Unisal</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/10/nascar-voc-est-pronto-para-o-digital.html">Nascar: "Você está pronto para o digital?"</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/10/curso-desenvolvendo-aplicaes-para-tv.html">Curso: Desenvolvendo Aplicações para TV Digital In...</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_08_01_archive.html">Agosto</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_07_01_archive.html">Julho</a>
+<span class="post-count" dir="ltr">(7)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_06_01_archive.html">Junho</a>
+<span class="post-count" dir="ltr">(5)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_05_01_archive.html">Maio</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_04_01_archive.html">Abril</a>
+<span class="post-count" dir="ltr">(15)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_03_01_archive.html">Março</a>
+<span class="post-count" dir="ltr">(5)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_02_01_archive.html">Fevereiro</a>
+<span class="post-count" dir="ltr">(13)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2008_01_01_archive.html">Janeiro</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/search?updated-min=2007-01-01T00%3A00%3A00-02%3A00&amp;updated-max=2008-01-01T00%3A00%3A00-02%3A00&amp;max-results=15">2007</a>
+<span class="post-count" dir="ltr">(15)</span>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2007_12_01_archive.html">Dezembro</a>
+<span class="post-count" dir="ltr">(7)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2007_11_01_archive.html">Novembro</a>
+<span class="post-count" dir="ltr">(5)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2007_10_01_archive.html">Outubro</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul>
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://b4dtv.blogspot.com/2007_09_01_archive.html">Setembro</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=BlogArchive&amp;widgetId=BlogArchive1&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target="configBlogArchive1" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget AdSense" id="AdSense4">
+<div class="widget-content">
+<script type="text/javascript"><!--
+google_ad_client="pub-9623385785350123";
+google_ad_host="pub-1556223355139109";
+google_ad_host_channel="00000+00005+00036+00074";
+google_ad_width=160;
+google_ad_height=600;
+google_ad_format="160x600_as";
+google_ad_type="text";
+google_color_border="225588";
+google_color_bg="FFFFFF";
+google_color_link="225588";
+google_color_url="225588";
+google_color_text="333333";
+//--></script>
+<script type="text/javascript" src="tutorial-debug-no-xletview-usando-o_arquivos/show_ads.js">
+</script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 600px; position: relative; visibility: visible; width: 160px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 600px; position: relative; visibility: visible; width: 160px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame3" marginheight="0" marginwidth="0" name="google_ads_frame" src="tutorial-debug-no-xletview-usando-o_arquivos/ads_003.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" scrolling="no" width="160" frameborder="0" height="600"></iframe></ins></ins>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=AdSense&amp;widgetId=AdSense4&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("AdSense4"));' target="configAdSense4" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget LinkList" id="LinkList2">
+<h2>alguns prêmios recebidos</h2>
+<div class="widget-content">
+<ul>
+<li><a href="http://www.softwarepublico.gov.br/acao_coletiva">Ação Coletiva - Comunidade Ginga 2008</a></li>
+<li><a href="http://www.blogger.com/http//www.sbc.org.br/index.php?language=1&amp;subject=514">Alunos Destaque SBC 2007/2</a></li>
+<li><a href="http://www.seprorgs.org.br/news/news.php?news_type_id=3&amp;news_id=2079">Destaque Universitário em Informática 2007/2</a></li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=LinkList&amp;widgetId=LinkList2&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList2"));' target="configLinkList2" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget LinkList" id="LinkList1">
+<h2>links</h2>
+<div class="widget-content">
+<ul>
+<li><a href="http://www.ginga.org.br/">Ginga (middleware brasileiro)</a></li>
+<li><a href="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=javadtv-1.0-oth-JPR@CDS-CDS_Developer">Java DTV API 1.0 - Especificação SUN</a></li>
+<li><a href="http://www.abnt.org.br/imagens/Normalizacao_TV_Digital/ABNTNBR15606-2_2007Vc_2008.pdf">Norma Ginga-NCL</a></li>
+<li><a href="http://www.ncl.org.br/documentos/JAI2008.pdf">Tutorial NCL e TV Digital</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/02/tutorial-de-instalao-do-java-tv-e.html">Tutorial de instalação do JavaTV e XletView</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/04/tutorial-como-exibir-vdeo-no-xletview.html">Como exibir vídeo no XletView</a></li>
+<li><a href="http://b4dtv.blogspot.com/2008/02/middlewares-e-bibliotecas-para-tv.html">Middlewares e Bibliotecas para TV digital</a></li>
+<li><a href="https://javatv-developers.dev.java.net/">javatv-developers</a></li>
+<li><a href="http://forum.java.sun.com/forum.jspa?forumID=36&amp;start=0">Forum JavaTV</a></li>
+<li><a href="http://www.softwarepublico.gov.br/dotlrn/clubs/ginga/?page_num=3">Ginga Wiki</a></li>
+<li><a href="http://sbtvd.cpqd.com.br/">Sistema Brasileiro de TV Digital</a></li>
+<li><a href="http://www.tvdi.inf.br/">Grupo de pesquisa em TVDI - UCPEL (Reúne ótimo material)</a></li>
+<li><a href="http://www.telacheia.com/">Tela Cheia</a></li>
+<li><a href="http://www.mhp.org/fullspeclist.htm">Especificações GEM</a></li>
+<li><a href="http://www.clicrbs.com.br/especial/rs/rbstvdigital/home">RBS TV Digital</a></li>
+<li><a href="http://b4it.blogspot.com/2007/09/tv-digital-no-brasil-parte-i.html">TV Digital no Brasil - Parte I</a></li>
+<li><a href="http://mpcomp.pgcomp.uece.br/admin/arquivos/MarciaTonieto2006.PDF">Dissertação Márcia Tonieto (Excelente)</a></li>
+<li><a href="http://www.midiacom.uff.br/gtvd">Midiacom - GTVD</a></li>
+<li><a href="http://www.eitv.com.br/">EITV</a></li>
+<li><a href="http://www.dtv.org.br/">DTV</a></li>
+<li><a href="http://www.dtv.gov/">DTV USA</a></li>
+<li><a href="http://www.inf.pucpcaldas.br/%7Ejoao/tvdi2007/repositorio.html">Repositório P&amp;D TV Digital</a></li>
+<li><a href="http://www.mhp.org/">MHP</a></li>
+<li><a href="http://mhpkdbwiki.s3.uni-due.de/mhpkdbwiki/index.php/Main_Page">MHP Wiki</a></li>
+<li><a href="http://www.interactivetvweb.org/">Interactive TV Web</a></li>
+<li><a href="http://www.itvt.com/">Interactive TV Today</a></li>
+<li><a href="http://www.opencable.com/ocap/">Ocap</a></li>
+<li><a href="http://www.htforum.com/">HT Forum</a></li>
+<li><a href="http://www.javafree.org/javabb/viewtopic.jbb?t=2626">Java Free - Forum</a></li>
+<li><a href="http://www.producaoprofissional.com.br/">Produção Profissional</a></li>
+<li><a href="http://www.dtv.org.br/materias.asp?menuid=3&amp;id=11">Mapa de cobertura da TV digital</a></li>
+<li><a href="http://www.abtu.org.br/">Assoc. Bras. de TV Universitária</a></li>
+<li><a href="http://ietv.org.br/">Instituto de Estudos de Televisão</a></li>
+<li><a href="http://www.fabianatoledo.com.br/projetotvdi.html">Fabiana Toledo - TVDI</a></li>
+<li><a href="http://www.youtube.com/tv">YouTube TV</a></li>
+<li><a href="http://b4it.blogspot.com/search/label/tv%20digital">b4it - blog for it</a></li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=LinkList&amp;widgetId=LinkList1&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList1"));' target="configLinkList1" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div></div>
+</div></div>
+<div id="sidebarbottom-wrap1"><div id="sidebarbottom-wrap2">
+<div class="sidebar section" id="sidebar"><div class="widget HTML" id="HTML8">
+<h2 class="title">google reader</h2>
+<div class="widget-content">
+<script src="tutorial-debug-no-xletview-usando-o_arquivos/publisher-pt_BR.js" type="text/javascript"></script>
+<script src="tutorial-debug-no-xletview-usando-o_arquivos/broadcast" type="text/javascript"></script><div style="border: 1px solid rgb(188, 204, 235); margin: 0.5em; padding: 0pt; background: rgb(255, 255, 255) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; font-family: arial,sans-serif; font-size: 10pt;" id="readerpublishermodule0" class="reader-publisher-module"><ul style="border: medium none ; margin: 0pt 0.5em; padding: 0.2em; background: transparent none repeat scroll 0% 0%; overflow: hidden; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal;"><li style="border: medium none ; margin: 0pt; padding: 0.4em 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; list-style-type: none;"><a style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color rgb(122, 126, 224); border-width: medium medium 1px; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; color: rgb(16, 16, 200);" class="i" title="Fwd: Nova versao da implementacao de referencia do Ginga-NCL" href="http://groups.google.com/group/devdtv/browse_thread/thread/6fd285c68b34d21a/046ef91ad0b1c1ec?show_docid=046ef91ad0b1c1ec">Fwd: Nova versao da implementacao de referencia do...</a></li><li style="border: medium none ; margin: 0pt; padding: 0.4em 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; list-style-type: none;"><a style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color rgb(122, 126, 224); border-width: medium medium 1px; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; color: rgb(16, 16, 200);" class="i" title="TV Digital na Educação a Distância é tema de fórum virtual" href="http://groups.google.com/group/devdtv/browse_thread/thread/71ba17fc687c4864/77332b13edbf9b7c?show_docid=77332b13edbf9b7c">TV Digital na Educação a Distância é tema de fórum...</a></li><li style="border: medium none ; margin: 0pt; padding: 0.4em 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; list-style-type: none;"><a style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color rgb(122, 126, 224); border-width: medium medium 1px; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; color: rgb(16, 16, 200);" class="i" title="TV digital completa dois anos no Brasil!" href="http://groups.google.com/group/devdtv/browse_thread/thread/833ea46f46275fdc/33ca84bae7e35560?show_docid=33ca84bae7e35560">TV digital completa dois anos no Brasil!</a></li><li style="border: medium none ; margin: 0pt; padding: 0.4em 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; list-style-type: none;"><a style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color rgb(122, 126, 224); border-width: medium medium 1px; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; color: rgb(16, 16, 200);" class="i" title="Ambiente de Desenvolvimento -  TV Digital - GINGA" href="http://tvdigitalsocial.blogspot.com/2009/08/ambiente-de-desenvolvimento-tv-digital.html">Ambiente de Desenvolvimento - TV Digital - GINGA</a></li><li style="border: medium none ; margin: 0pt; padding: 0.4em 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; list-style-type: none;"><a style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color rgb(122, 126, 224); border-width: medium medium 1px; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: none; font-weight: normal; color: rgb(16, 16, 200);" class="i" title="Testes de Interatividade - RBS" href="http://tvdigitalsocial.blogspot.com/2009/08/testes-de-interatividade-rbs.html">Testes de Interatividade - RBS</a></li></ul><div style="border-style: solid none none; border-color: rgb(188, 204, 235) -moz-use-text-color -moz-use-text-color; border-width: 1px medium medium; margin: 0pt; padding: 0.2em 8px; background: rgb(229, 236, 249) none repeat scroll 0% 0%; overflow: hidden; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: right; text-indent: 0pt; text-decoration: none; font-weight: normal; font-size: small; white-space: nowrap;" class="f"><a href="http://www.google.com/reader/shared/user/04720126172722131899/state/com.google/broadcast" style="border: medium none ; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: left; text-indent: 0pt; text-decoration: underline; font-weight: normal; color: rgb(137, 141, 233);">Visualizar tudo »</a></div></div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=HTML&amp;widgetId=HTML8&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML8"));' target="configHTML8" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" id="HTML5">
+<div class="widget-content">
+<table style="padding: 5px;" border="0" cellspacing="0">
+  <tbody><tr><td>
+  <img alt="Grupos do Google" src="tutorial-debug-no-xletview-usando-o_arquivos/groups_bar_pt-BR.gif" width="132" height="26">
+  </td></tr>
+  <tr><td style="padding-left: 5px;"> <b>Desenvolvimento para TV digital</b> </td></tr>
+  <form action="http://groups.google.com/group/devdtv/boxsubscribe"></form>
+  <tr><td style="padding-left: 5px;"> E-mail: <input name="email" type="text"><br>
+  <input value="Participe" name="sub" type="submit">
+  </td></tr>
+
+<tr><td align="right"> <a href="http://groups.google.com/group/devdtv">Visitar este grupo</a> </td></tr>
+</tbody></table>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=HTML&amp;widgetId=HTML5&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML5"));' target="configHTML5" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Feed" id="Feed4">
+<h2>últimas discussões</h2>
+<div class="widget-content" id="Feed4_feedItemListDisplay"><ul><li><span class="item-title"><a target="_self" href="http://groups.google.com/group/devdtv/browse_thread/thread/571d036e35b18b1f/169f92db471ec869?show_docid=169f92db471ec869">Re: [devdtv] Componentes Visuais em Lua</a></span><span class="item-date">&nbsp;-&nbsp;quarta-feira, 20 de janeiro de 2010</span></li><li><span class="item-title"><a target="_self" href="http://groups.google.com/group/devdtv/browse_thread/thread/571d036e35b18b1f/9342bb52e3f38d83?show_docid=9342bb52e3f38d83">Re: [devdtv] Componentes Visuais em Lua</a></span><span class="item-date">&nbsp;-&nbsp;quarta-feira, 20 de janeiro de 2010</span></li><li><span class="item-title"><a target="_self" href="http://groups.google.com/group/devdtv/browse_thread/thread/571d036e35b18b1f/c503b4ca8944b444?show_docid=c503b4ca8944b444">Re: [devdtv] Componentes Visuais em Lua</a></span><span class="item-date">&nbsp;-&nbsp;quarta-feira, 20 de janeiro de 2010</span></li><li><span class="item-title"><a target="_self" href="http://groups.google.com/group/devdtv/browse_thread/thread/571d036e35b18b1f/9a3e85fb84d6cfb4?show_docid=9a3e85fb84d6cfb4">Re: [devdtv] Componentes Visuais em Lua</a></span><span class="item-date">&nbsp;-&nbsp;quarta-feira, 20 de janeiro de 2010</span></li><li><span class="item-title"><a target="_self" href="http://groups.google.com/group/devdtv/browse_thread/thread/571d036e35b18b1f/512eac9008073101?show_docid=512eac9008073101">Re: [devdtv] Componentes Visuais em Lua</a></span><span class="item-date">&nbsp;-&nbsp;quarta-feira, 20 de janeiro de 2010</span></li></ul></div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=Feed&amp;widgetId=Feed4&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("Feed4"));' target="configFeed4" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Profile" id="Profile1">
+<h2>autores deste blog</h2>
+<div class="widget-content">
+<a href="http://www.blogger.com/profile/13222979982931518281"><img alt="Minha foto" class="profile-img" src="tutorial-debug-no-xletview-usando-o_arquivos/java_tv_duke.jpg" width="80" height="80"></a>
+<dl class="profile-datablock">
+<dt class="profile-data">Marcos Henke</dt>
+<dd class="profile-textblock">Empresário e Engenheiro de Software.</dd>
+</dl>
+<a class="profile-link" href="http://www.blogger.com/profile/13222979982931518281">Visualizar meu perfil completo</a>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=Profile&amp;widgetId=Profile1&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("Profile1"));' target="configProfile1" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget HTML" id="HTML2">
+<h2 class="title">notificações por e-mail</h2>
+<div class="widget-content">
+<form action="http://www.feedburner.com/fb/a/emailverify" style="border: 1px solid rgb(204, 204, 204); padding: 3px; text-align: center;" target="popupwindow" method="post" onsubmit="window.open('http://www.feedburner.com', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Endereço de e-mail:</p><p><input style="width: 140px;" name="email" type="text"></p><input value="http://feeds.feedburner.com/~e?ffid=1206664" name="url" type="hidden"><input value="b4dtv - blog for digital tv" name="title" type="hidden"><input value="pt_BR" name="loc" type="hidden"><input value="Assinar" type="submit"><p>Delivered by <a href="http://www.feedburner.com/" target="_blank">FeedBurner</a></p></form>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=HTML&amp;widgetId=HTML2&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML2"));' target="configHTML2" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" id="HTML6">
+<h2 class="title">Mercado Livre</h2>
+<div class="widget-content">
+<center>
+<iframe src="tutorial-debug-no-xletview-usando-o_arquivos/SmartAd.htm" marginheight="0" marginwidth="0" scrolling="no" width="180" frameborder="0" height="150">
+</iframe>
+</center>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=HTML&amp;widgetId=HTML6&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML6"));' target="configHTML6" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div></div>
+</div>
+<div id="footer-wrap1"><div id="footer-wrap2">
+<div class="footer section" id="footer"><div class="widget Feed" id="Feed3">
+<h2>RSS sobre TV digital</h2>
+<div class="widget-content" id="Feed3_feedItemListDisplay"><ul><li><span class="item-title"><a target="_self" href="http://groups.google.com/group/devdtv/browse_thread/thread/571d036e35b18b1f/169f92db471ec869?show_docid=169f92db471ec869">Re: [devdtv] Componentes Visuais em Lua</a></span><span class="item-date">&nbsp;-&nbsp;quarta-feira, 20 de janeiro de 2010</span><span class="item-author">&nbsp;-&nbsp;Luiz Eduardo</span></li><li><span class="item-title"><a target="_self" href="http://groups.google.com/group/devdtv/browse_thread/thread/571d036e35b18b1f/9342bb52e3f38d83?show_docid=9342bb52e3f38d83">Re: [devdtv] Componentes Visuais em Lua</a></span><span class="item-date">&nbsp;-&nbsp;quarta-feira, 20 de janeiro de 2010</span><span class="item-author">&nbsp;-&nbsp;Italo Matos</span></li><li><span class="item-title"><a target="_self" href="http://groups.google.com/group/devdtv/browse_thread/thread/571d036e35b18b1f/c503b4ca8944b444?show_docid=c503b4ca8944b444">Re: [devdtv] Componentes Visuais em Lua</a></span><span class="item-date">&nbsp;-&nbsp;terça-feira, 19 de janeiro de 2010</span><span class="item-author">&nbsp;-&nbsp;Marcos V. Henke Arnoldo</span></li><li><span class="item-title"><a target="_self" href="http://forums.sun.com/thread.jspa?threadID=5410704">Deploying Java TV Applications</a></span><span class="item-date">&nbsp;-&nbsp;quarta-feira, 20 de janeiro de 2010</span><span class="item-author">&nbsp;-&nbsp;</span></li><li><span class="item-title"><a target="_self" href="http://groups.google.com/group/devdtv/browse_thread/thread/571d036e35b18b1f/9a3e85fb84d6cfb4?show_docid=9a3e85fb84d6cfb4">Re: [devdtv] Componentes Visuais em Lua</a></span><span class="item-date">&nbsp;-&nbsp;terça-feira, 19 de janeiro de 2010</span><span class="item-author">&nbsp;-&nbsp;Luiz Eduardo</span></li></ul></div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=Feed&amp;widgetId=Feed3&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("Feed3"));' target="configFeed3" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Feed" id="Feed2">
+<h2>Sun Forums - Java TV</h2>
+<div class="widget-content" id="Feed2_feedItemListDisplay"><ul><li><span class="item-title"><a target="_self" href="http://forums.sun.com/thread.jspa?threadID=5410704">Deploying Java TV Applications</a></span><span class="item-date">&nbsp;-&nbsp;quarta-feira, 20 de janeiro de 2010</span></li><li><span class="item-title"><a target="_self" href="http://forums.sun.com/thread.jspa?threadID=5244402">Need an example for using the  Return Channel</a></span><span class="item-date">&nbsp;-&nbsp;sexta-feira, 15 de janeiro de 2010</span></li><li><span class="item-title"><a target="_self" href="http://forums.sun.com/thread.jspa?threadID=5423679">Parental Control using OCAP 1.1.2 ????</a></span><span class="item-date">&nbsp;-&nbsp;sexta-feira, 15 de janeiro de 2010</span></li><li><span class="item-title"><a target="_self" href="http://forums.sun.com/thread.jspa?threadID=5422304">To Read "current" Network ID instead of oNID?</a></span><span class="item-date">&nbsp;-&nbsp;sexta-feira, 8 de janeiro de 2010</span></li><li><span class="item-title"><a target="_self" href="http://forums.sun.com/thread.jspa?threadID=5419083">Questions BD-J</a></span><span class="item-date">&nbsp;-&nbsp;sexta-feira, 1 de janeiro de 2010</span></li></ul></div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=Feed&amp;widgetId=Feed2&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("Feed2"));' target="configFeed2" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Feed" id="Feed1">
+<h2>b4it - blog for information technology</h2>
+<div class="widget-content" id="Feed1_feedItemListDisplay"><ul><li><span class="item-title"><a target="_self" href="http://feedproxy.google.com/%7Er/b4it/%7E3/Xy8_cLa8SjI/cw-salarios-de-profissionais-tecnicos.html">CW: Salários de profissionais técnicos aumentaram até 30% este ano</a></span><span class="item-date">&nbsp;-&nbsp;quinta-feira, 26 de novembro de 2009</span><span class="item-author">&nbsp;-&nbsp;Marcos Henke</span></li><li><span class="item-title"><a target="_self" href="http://feedproxy.google.com/%7Er/b4it/%7E3/575q5J6WBLE/roda-magica-do-google.html">a roda mágica do google</a></span><span class="item-date">&nbsp;-&nbsp;sexta-feira, 20 de novembro de 2009</span><span class="item-author">&nbsp;-&nbsp;Marcos Henke</span></li><li><span class="item-title"><a target="_self" href="http://feedproxy.google.com/%7Er/b4it/%7E3/NyajqLViEy0/como-publicar-relatorios-em-aspnet-com.html">como publicar relatórios em Asp.Net com ReportViewer na Locaweb</a></span><span class="item-date">&nbsp;-&nbsp;domingo, 1 de novembro de 2009</span><span class="item-author">&nbsp;-&nbsp;Marcos Henke</span></li><li><span class="item-title"><a target="_self" href="http://feedproxy.google.com/%7Er/b4it/%7E3/H_xZXPvEuEI/marcelo-tas-no-seminarios-info.html">marcelo tas no seminários info</a></span><span class="item-date">&nbsp;-&nbsp;segunda-feira, 21 de setembro de 2009</span><span class="item-author">&nbsp;-&nbsp;Marcos Henke</span></li><li><span class="item-title"><a target="_self" href="http://feedproxy.google.com/%7Er/b4it/%7E3/hRedMxOdeag/dicas-para-o-jogo-monopoly-city-streets.html">dicas para o jogo Monopoly City Streets</a></span><span class="item-date">&nbsp;-&nbsp;terça-feira, 15 de setembro de 2009</span><span class="item-author">&nbsp;-&nbsp;Marcos Henke</span></li></ul></div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=Feed&amp;widgetId=Feed1&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("Feed1"));' target="configFeed1" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget AdSense" id="AdSense1">
+<div class="widget-content">
+<script type="text/javascript"><!--
+google_ad_client="pub-9623385785350123";
+google_ad_host="pub-1556223355139109";
+google_ad_host_channel="00000+00005+00036+00074";
+google_ad_width=468;
+google_ad_height=60;
+google_ad_format="468x60_as";
+google_ad_type="text";
+google_color_border="335577";
+google_color_bg="335577";
+google_color_link="FFFFFF";
+google_color_url="445566";
+google_color_text="FFFFFF";
+//--></script>
+<script type="text/javascript" src="tutorial-debug-no-xletview-usando-o_arquivos/show_ads.js">
+</script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: inline-table; height: 60px; position: relative; visibility: visible; width: 468px;"><ins style="border: medium none ; margin: 0pt; padding: 0pt; display: block; height: 60px; position: relative; visibility: visible; width: 468px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame4" marginheight="0" marginwidth="0" name="google_ads_frame" src="tutorial-debug-no-xletview-usando-o_arquivos/ads_004.htm" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" scrolling="no" width="468" frameborder="0" height="60"></iframe></ins></ins>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=AdSense&amp;widgetId=AdSense1&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("AdSense1"));' target="configAdSense1" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget HTML" id="HTML3">
+<div class="widget-content">
+<a href="http://feeds.feedburner.com/b4dtv"><img style="border: 0pt none ;" alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/b4dtv.gif" width="88" height="26"></a>
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/" rel="license"><img alt="Creative Commons License" style="border-width: 0pt;" src="tutorial-debug-no-xletview-usando-o_arquivos/88x31.png"></a><br><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title" href="http://purl.org/dc/dcmitype/Text" rel="dc:type">blog for digital tv</span> by <a property="cc:attributionName" href="http://b4dtv.blogspot.com/" rel="cc:attributionURL" xmlns:cc="http://creativecommons.org/ns#">Marcos Henke</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/" rel="license">Creative Commons Atribuição-Uso Não-Comercial-Compartilhamento pela mesma Licença 2.5 Brasil License</a>.
+
+<script src="tutorial-debug-no-xletview-usando-o_arquivos/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2647877-2";
+urchinTracker();
+</script>
+
+<h2>política de privacidade</h2>
+Usamos empresas de publicidade de terceiros para veicular anúncios
+durante a sua visita ao nosso website. Essas empresas podem usar
+informações (que não incluem o seu nome, endereço, endereço de e-mail
+ou número de telefone) sobre suas visitas a este e a outros websites a
+fim de exibir anúncios relacionados a produtos e serviços de seu
+interesse. Para obter mais informações sobre essa prática e saber como
+impedir que as empresas utilizem esses dados, <a href="http://www.google.com/privacy_ads.html">clique aqui</a>.
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=4807285074105044884&amp;widgetType=HTML&amp;widgetId=HTML3&amp;action=editWidget" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML3"));' target="configHTML3" title="Editar">
+<img alt="" src="tutorial-debug-no-xletview-usando-o_arquivos/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div></div>
+</div>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="tutorial-debug-no-xletview-usando-o_arquivos/4142793876-widgets.js"></script>
+<script type="text/javascript">
+_WidgetManager._Init('http://www.blogger.com/rearrange?blogID=4807285074105044884', 'http://b4dtv.blogspot.com/2009/07/tutorial-debug-no-xletview-usando-o.html','4807285074105044884');
+_WidgetManager._SetPageActionUrl('http://www.blogger.com/display?blogID=4807285074105044884', 'bJxYfpFsCBqsx13MK9MSjtPEE8c:1264005371953');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'title': 'b4dtv - blog for digital tv', 'pageType': 'item', 'url': 'http://b4dtv.blogspot.com/2009/07/tutorial-debug-no-xletview-usando-o.html', 'homepageUrl': 'http://b4dtv.blogspot.com/', 'enabledCommentProfileImages': true, 'searchLabel': '', 'searchQuery': '', 'pageName': 'Tutorial: Debug no XleTView usando o Eclipse - por Leonardo Leite', 'pageTitle': 'b4dtv - blog for digital tv: Tutorial: Debug no XleTView usando o Eclipse - por Leonardo Leite', 'encoding': 'UTF-8', 'locale': 'pt-BR', 'isPrivate': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42b4dtv - blog for digital tv - Atom\42 href\75\42http://b4dtv.blogspot.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42b4dtv - blog for digital tv - RSS\42 href\75\42http://b4dtv.blogspot.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42b4dtv - blog for digital tv - Atom\42 href\75\42http://www.blogger.com/feeds/4807285074105044884/posts/default\42 /\76\n\74link rel\75\42EditURI\42 type\75\42application/rsd+xml\42 title\75\42RSD\42 href\75\42http://www.blogger.com/rsd.g?blogID\0754807285074105044884\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42b4dtv - blog for digital tv - Atom\42 href\75\42http://b4dtv.blogspot.com/feeds/8807019131209101521/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var a\75window;function e(b){this.t\75{};this.tick\75function(c,h,d){d\75d?d:(new Date).getTime();this.t[c]\75[d,h]};this.tick(\42start\42,null,b)}var f\75new e;a.jstiming\75{Timer:e,load:f};try{a.jstiming.pt\75a.gtbExternal\46\46a.gtbExternal.pageT()||a.external\46\46a.external.pageT}catch(g){};a.tickAboveFold\75function(b){b\75b;var c\0750;if(b.offsetParent){do c+\75b.offsetTop;while(b\75b.offsetParent)}b\75c;b\74\075750\46\46a.jstiming.load.tick(\42aft\42)};var i\75false;function j(){if(!i){i\75true;a.jstiming.load.tick(\42firstScrollTime\42)}}a.addEventListener?a.addEventListener(\42scroll\42,j,false):a.attachEvent(\42onscroll\42,j); })();\74/script\076'}}]);
+_WidgetManager._SetSystemMarkup({'layout': {'varName': '', 'template': '\74div class\75\47widget-wrap1\47\76\n\74div class\75\47widget-wrap2\47\76\n\74div class\75\47widget-wrap3\47\76\n\74div class\75\47widget-content\47\76\n\74div class\75\47layout-title\47\76\74data:layout-title\76\74/data:layout-title\76\74/div\76\n\74a class\75\47editlink\47 expr:href\75\47data:widget.quickEditUrl\47 expr:onclick\75\47\46quot;return _WidgetManager._PopupConfig(document.getElementById(\\\46quot;\46quot; +       data:widget.instanceId + \46quot;\\\46quot;));\46quot;\47 target\75\47chooseWidget\47\76\74data:edit-link\76\74/data:edit-link\76\74/a\76\n\74/div\76\n\74/div\76\n\74/div\76\n\74/div\076'}, 'quickedit': {'varName': '', 'template': '\74div class\75\47clear\47\76\74/div\76\n\74span class\75\47widget-item-control\47\76\n\74span class\75\47item-control blog-admin\47\76\n\74a class\75\47quickedit\47 expr:href\75\47data:widget.quickEditUrl\47 expr:onclick\75\47\46quot;return _WidgetManager._PopupConfig(document.getElementById(\\\46quot;\46quot; +       data:widget.instanceId + \46quot;\\\46quot;));\46quot;\47 expr:target\75\47\46quot;config\46quot; + data:widget.instanceId\47 expr:title\75\47data:edit-link\47\76\n\74img alt\75\47\47 height\75\04718\47 src\75\47http://img1.blogblog.com/img/icon18_wrench_allbkg.png\47 width\75\04718\47/\76\n\74/a\76\n\74/span\76\n\74/span\76\n\74div class\75\47clear\47\76\74/div\076'}, 'all-head-content': {'varName': 'page', 'template': '\74data:blog.latencyHeadScript\76\74/data:blog.latencyHeadScript\76\n\74meta expr:content\75\47\46quot;text/html; charset\75\46quot; + data:page.encoding\47 http-equiv\75\47Content-Type\47/\76\n\74meta content\75\47true\47 name\75\47MSSmartTagsPreventParsing\47/\76\n\74meta content\75\47blogger\47 name\75\47generator\47/\76\n\74link href\75\47http://www.blogger.com/favicon.ico\47 rel\75\47icon\47 type\75\47image/vnd.microsoft.icon\47/\76\n\74link expr:href\75\47data:blog.url\47 rel\75\47canonical\47/\76\n\74data:blog.feedLinks\76\74/data:blog.feedLinks\76\n\74data:blog.meTag\76\74/data:blog.meTag\76\n\74data:blog.openIdOpTag\76\74/data:blog.openIdOpTag\076'}});
+_WidgetManager._RegisterWidget('_FeedView', new _WidgetInfo('Feed3', 'footer',{'main': {'varName': '', 'template': '\74h2\76\74data:title\76\74/data:title\76\74/h2\76\n\74div class\75\47widget-content\47 expr:id\75\47data:widget.instanceId + \46quot;_feedItemListDisplay\46quot;\47\76\n\74span style\75\47filter: alpha(25); opacity: 0.25;\47\76\n\74a expr:href\75\47data:feedUrl\47\76\74data:loadingMsg\76\74/data:loadingMsg\76\74/a\76\n\74/span\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('Feed3'), {'title': 'RSS sobre TV digital', 'showItemDate': true, 'showItemAuthor': true, 'feedUrl': 'http://pipes.yahoo.com/pipes/pipe.run?_id\0750AAHxNcH3RGzJjAqJphxuA\46_render\75rss', 'numItemsShow': 5, 'loadingMsg': 'Carregando...'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FeedView', new _WidgetInfo('Feed2', 'footer',{'main': {'varName': '', 'template': '\74h2\76\74data:title\76\74/data:title\76\74/h2\76\n\74div class\75\47widget-content\47 expr:id\75\47data:widget.instanceId + \46quot;_feedItemListDisplay\46quot;\47\76\n\74span style\75\47filter: alpha(25); opacity: 0.25;\47\76\n\74a expr:href\75\47data:feedUrl\47\76\74data:loadingMsg\76\74/data:loadingMsg\76\74/a\76\n\74/span\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('Feed2'), {'title': 'Sun Forums - Java TV', 'showItemDate': true, 'showItemAuthor': false, 'feedUrl': 'http://forum.java.sun.com/rss/rssthreads.jspa?forumID\07536', 'numItemsShow': 5, 'loadingMsg': 'Carregando...'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FeedView', new _WidgetInfo('Feed1', 'footer',{'main': {'varName': '', 'template': '\74h2\76\74data:title\76\74/data:title\76\74/h2\76\n\74div class\75\47widget-content\47 expr:id\75\47data:widget.instanceId + \46quot;_feedItemListDisplay\46quot;\47\76\n\74span style\75\47filter: alpha(25); opacity: 0.25;\47\76\n\74a expr:href\75\47data:feedUrl\47\76\74data:loadingMsg\76\74/data:loadingMsg\76\74/a\76\n\74/span\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('Feed1'), {'title': 'b4it - blog for information technology', 'showItemDate': true, 'showItemAuthor': true, 'feedUrl': 'http://b4it.blogspot.com/feeds/posts/default', 'numItemsShow': 5, 'loadingMsg': 'Carregando...'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AdSenseView', new _WidgetInfo('AdSense1', 'footer',{'main': {'varName': '', 'template': '\74div class\75\47widget-content\47\76\n\74data:adCode\76\74/data:adCode\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/div\076'}}, document.getElementById('AdSense1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'footer',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74data:content\76\74/data:content\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74data:content\76\74/data:content\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList4', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title\47\76\74h2\76\74data:title\76\74/data:title\76\74/h2\76\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74ul\76\n\74b:loop values\75\47data:links\47 var\75\47link\47\76\n\74li\76\74a expr:href\75\47data:link.target\47\76\74data:link.name\76\74/data:link.name\76\74/a\76\74/li\76\n\74/b:loop\76\n\74/ul\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/div\076'}}, document.getElementById('LinkList4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_SubscribeView', new _WidgetInfo('Subscribe1', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:isPublic\47\76\n\74div style\75\47white-space:nowrap\47\76\n\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74b:loop values\75\47data:feeds\47 var\75\47feed\47\76\n\74div expr:class\75\47\46quot;subscribe-wrapper subscribe-type-\46quot; + data:feed.type\47\76\n\74div expr:class\75\47\46quot;subscribe expanded subscribe-type-\46quot; + data:feed.type\47 expr:id\75\47\46quot;SW_READER_LIST_\46quot; + data:widgetId + data:feed.type\47 style\75\47display:none;\47\76\n\74div class\75\47top\47\76\n\74span class\75\47inner\47 expr:onclick\75\47\46quot;return(_SW_toggleReaderList(event, \\\46quot;\46quot; + data:widgetId +data:feed.type + \46quot;\\\46quot;));\46quot;\47\76\n\74img class\75\47subscribe-dropdown-arrow\47 expr:src\75\47data:arrowDropdownImg\47/\76\n\74img align\75\47absmiddle\47 alt\75\47\47 border\75\0470\47 class\75\47feed-icon\47 expr:src\75\47data:feedIconImg\47/\76\n\74data:feed.title\76\74/data:feed.title\76\n\74/span\76\n\74ul class\75\47feed-reader-links\47\76\n\74a class\75\47feed-reader-link\47 expr:href\75\47\46quot;http://www.google.com/ig/add?source\75bstp\46amp;feedurl\75\46quot; + data:feed.encodedUrl\47 target\75\47_blank\47\76\n\74img expr:src\75\47data:imagePathBase + \46quot;subscribe-google.png\46quot;\47/\76\n\74/a\76\n\74a class\75\47feed-reader-link\47 expr:href\75\47\46quot;http://www.bloglines.com/sub/\46quot; + data:feed.url\47 target\75\47_blank\47\76\n\74img expr:src\75\47data:imagePathBase + \46quot;subscribe-bloglines.png\46quot;\47/\76\n\74/a\76\n\74a class\75\47feed-reader-link\47 expr:href\75\47\46quot;http://www.netvibes.com/subscribe.php?url\75\46quot; + data:feed.encodedUrl\47 target\75\47_blank\47\76\n\74img expr:src\75\47data:imagePathBase + \46quot;subscribe-netvibes.png\46quot;\47/\76\n\74/a\76\n\74a class\75\47feed-reader-link\47 expr:href\75\47\46quot;http://www.newsgator.com/ngs/subscriber/subext.aspx?url\75\46quot; + data:feed.encodedUrl\47 target\75\47_blank\47\76\n\74img expr:src\75\47data:imagePathBase + \46quot;subscribe-newsgator.png\46quot;\47/\76\n\74/a\76\n\74a class\75\47feed-reader-link\47 expr:href\75\47\46quot;http://add.my.yahoo.com/content?url\75\46quot; + data:feed.encodedUrl\47 target\75\47_blank\47\76\n\74img expr:src\75\47data:imagePathBase + \46quot;subscribe-yahoo.png\46quot;\47/\76\n\74/a\76\n\74a class\75\47feed-reader-link\47 expr:href\75\47data:feed.url\47 target\75\47_blank\47\76\n\74img align\75\47absmiddle\47 class\75\47feed-icon\47 expr:src\75\47data:feedIconImg\47/\76\n                Atom\n              \74/a\76\n\74/ul\76\n\74/div\76\n\74div class\75\47bottom\47\76\74/div\76\n\74/div\76\n\74div class\75\47subscribe\47 expr:id\75\47\46quot;SW_READER_LIST_CLOSED_\46quot; + data:widgetId +data:feed.type\47 expr:onclick\75\47\46quot;return(_SW_toggleReaderList(event, \\\46quot;\46quot; + data:widgetId +data:feed.type + \46quot;\\\46quot;));\46quot;\47\76\n\74div class\75\47top\47\76\n\74span class\75\47inner\47\76\n\74img class\75\47subscribe-dropdown-arrow\47 expr:src\75\47data:arrowDropdownImg\47/\76\n\74span expr:onclick\75\47\46quot;return(_SW_toggleReaderList(event, \\\46quot;\46quot; + data:widgetId +data:feed.type + \46quot;\\\46quot;));\46quot;\47\76\n\74img align\75\47absmiddle\47 alt\75\47\47 border\75\0470\47 class\75\47feed-icon\47 expr:src\75\47data:feedIconImg\47/\76\n\74data:feed.title\76\74/data:feed.title\76\n\74/span\76\n\74/span\76\n\74/div\76\n\74div class\75\47bottom\47\76\74/div\76\n\74/div\76\n\74/div\76\n\74/b:loop\76\n\74div style\75\47clear:both\47\76\74/div\76\n\74/div\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/b:if\076'}}, document.getElementById('Subscribe1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74data:content\76\74/data:content\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ImageView', new _WidgetInfo('Image3', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74b:if cond\75\47data:link !\75 \46quot;\46quot;\47\76\n\74a expr:href\75\47data:link\47\76\n\74img expr:alt\75\47data:title\47 expr:height\75\47data:height\47 expr:id\75\47data:widget.instanceId + \46quot;_img\46quot;\47 expr:src\75\47data:sourceUrl\47 expr:width\75\47data:width\47/\76\n\74/a\76\n\74b:else\76\74/b:else\76\n\74img expr:alt\75\47data:title\47 expr:height\75\47data:height\47 expr:id\75\47data:widget.instanceId + \46quot;_img\46quot;\47 expr:src\75\47data:sourceUrl\47 expr:width\75\47data:width\47/\76\n\74/b:if\76\n\74br/\76\n\74b:if cond\75\47data:caption !\75 \46quot;\46quot;\47\76\n\74span class\75\47caption\47\76\74data:caption\76\74/data:caption\76\74/span\76\n\74/b:if\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('Image3'), {'resize': true}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ImageView', new _WidgetInfo('Image2', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74b:if cond\75\47data:link !\75 \46quot;\46quot;\47\76\n\74a expr:href\75\47data:link\47\76\n\74img expr:alt\75\47data:title\47 expr:height\75\47data:height\47 expr:id\75\47data:widget.instanceId + \46quot;_img\46quot;\47 expr:src\75\47data:sourceUrl\47 expr:width\75\47data:width\47/\76\n\74/a\76\n\74b:else\76\74/b:else\76\n\74img expr:alt\75\47data:title\47 expr:height\75\47data:height\47 expr:id\75\47data:widget.instanceId + \46quot;_img\46quot;\47 expr:src\75\47data:sourceUrl\47 expr:width\75\47data:width\47/\76\n\74/b:if\76\n\74br/\76\n\74b:if cond\75\47data:caption !\75 \46quot;\46quot;\47\76\n\74span class\75\47caption\47\76\74data:caption\76\74/data:caption\76\74/span\76\n\74/b:if\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('Image2'), {'resize': true}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList3', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title\47\76\74h2\76\74data:title\76\74/data:title\76\74/h2\76\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74ul\76\n\74b:loop values\75\47data:links\47 var\75\47link\47\76\n\74li\76\74a expr:href\75\47data:link.target\47\76\74data:link.name\76\74/data:link.name\76\74/a\76\74/li\76\n\74/b:loop\76\n\74/ul\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/div\076'}}, document.getElementById('LinkList3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title\47\76\n\74h2\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div expr:class\75\47\46quot;widget-content \46quot; + data:display + \46quot;-label-widget-content\46quot;\47\76\n\74b:if cond\75\47data:display \75\75 \46quot;list\46quot;\47\76\n\74ul\76\n\74b:loop values\75\47data:labels\47 var\75\47label\47\76\n\74li\76\n\74b:if cond\75\47data:blog.url \75\75 data:label.url\47\76\n\74span expr:dir\75\47data:blog.languageDirection\47\76\74data:label.name\76\74/data:label.name\76\74/span\76\n\74b:else\76\74/b:else\76\n\74a expr:dir\75\47data:blog.languageDirection\47 expr:href\75\47data:label.url\47\76\74data:label.name\76\74/data:label.name\76\74/a\76\n\74/b:if\76\n\74b:if cond\75\47data:showFreqNumbers\47\76\n\74span dir\75\47ltr\47\76(\74data:label.count\76\74/data:label.count\76)\74/span\76\n\74/b:if\76\n\74/li\76\n\74/b:loop\76\n\74/ul\76\n\74b:else\76\74/b:else\76\n\74b:loop values\75\47data:labels\47 var\75\47label\47\76\n\74span expr:class\75\47\46quot;label-size label-size-\46quot; + data:label.cssSize\47\76\n\74b:if cond\75\47data:blog.url \75\75 data:label.url\47\76\n\74span expr:dir\75\47data:blog.languageDirection\47\76\74data:label.name\76\74/data:label.name\76\74/span\76\n\74b:else\76\74/b:else\76\n\74a expr:dir\75\47data:blog.languageDirection\47 expr:href\75\47data:label.url\47\76\74data:label.name\76\74/data:label.name\76\74/a\76\n\74/b:if\76\n\74b:if cond\75\47data:showFreqNumbers\47\76\n\74span class\75\47label-count\47 dir\75\47ltr\47\76(\74data:label.count\76\74/data:label.count\76)\74/span\76\n\74/b:if\76\n\74/span\76\n\74/b:loop\76\n\74/b:if\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/div\076'}}, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title\47\76\n\74h2\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74div id\75\47ArchiveList\47\76\n\74div expr:id\75\47data:widget.instanceId + \46quot;_ArchiveList\46quot;\47\76\n\74b:if cond\75\47data:style \75\75 \46quot;HIERARCHY\46quot;\47\76\n\74b:include data\75\47data\47 name\75\47interval\47\76\74/b:include\76\n\74/b:if\76\n\74b:if cond\75\47data:style \75\75 \46quot;FLAT\46quot;\47\76\n\74b:include data\75\47data\47 name\75\47flat\47\76\74/b:include\76\n\74/b:if\76\n\74b:if cond\75\47data:style \75\75 \46quot;MENU\46quot;\47\76\n\74b:include data\75\47data\47 name\75\47menu\47\76\74/b:include\76\n\74/b:if\76\n\74/div\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/div\076'}, 'flat': {'varName': 'data', 'template': '\74ul\76\n\74b:loop values\75\47data:data\47 var\75\47i\47\76\n\74li class\75\47archivedate\47\76\n\74a expr:href\75\47data:i.url\47\76\74data:i.name\76\74/data:i.name\76\74/a\76 (\74data:i.post-count\76\74/data:i.post-count\76)\n      \74/li\76\n\74/b:loop\76\n\74/ul\076'}, 'menu': {'varName': 'data', 'template': '\74select expr:id\75\47data:widget.instanceId + \46quot;_ArchiveMenu\46quot;\47\76\n\74option value\75\47\47\76\74data:title\76\74/data:title\76\74/option\76\n\74b:loop values\75\47data:data\47 var\75\47i\47\76\n\74option expr:value\75\47data:i.url\47\76\74data:i.name\76\74/data:i.name\76 (\74data:i.post-count\76\74/data:i.post-count\76)\74/option\76\n\74/b:loop\76\n\74/select\076'}, 'interval': {'varName': 'intervalData', 'template': '\74b:loop values\75\47data:intervalData\47 var\75\47i\47\76\n\74ul\76\n\74li expr:class\75\47\46quot;archivedate \46quot; + data:i.expclass\47\76\n\74b:include data\75\47i\47 name\75\47toggle\47\76\74/b:include\76\n\74a class\75\47post-count-link\47 expr:href\75\47data:i.url\47\76\74data:i.name\76\74/data:i.name\76\74/a\76\n\74span class\75\47post-count\47 dir\75\47ltr\47\76(\74data:i.post-count\76\74/data:i.post-count\76)\74/span\76\n\74b:if cond\75\47data:i.data\47\76\n\74b:include data\75\47i.data\47 name\75\47interval\47\76\74/b:include\76\n\74/b:if\76\n\74b:if cond\75\47data:i.posts\47\76\n\74b:include data\75\47i.posts\47 name\75\47posts\47\76\74/b:include\76\n\74/b:if\76\n\74/li\76\n\74/ul\76\n\74/b:loop\076'}, 'toggle': {'varName': 'interval', 'template': '\74b:if cond\75\47data:interval.toggleId\47\76\n\74b:if cond\75\47data:interval.expclass \75\75 \46quot;expanded\46quot;\47\76\n\74a class\75\47toggle\47 href\75\47javascript:void(0)\47\76\n\74span class\75\47zippy toggle-open\47\76\46#9660;\46#160;\74/span\76\n\74/a\76\n\74b:else\76\74/b:else\76\n\74a class\75\47toggle\47 href\75\47javascript:void(0)\47\76\n\74span class\75\47zippy\47\76\n\74b:if cond\75\47data:blog.languageDirection \75\75 \46quot;rtl\46quot;\47\76\n          \46#9668;\46#160;\n        \74b:else\76\74/b:else\76\n          \46#9658;\46#160;\n        \74/b:if\76\n\74/span\76\n\74/a\76\n\74/b:if\76\n\74/b:if\076'}, 'posts': {'varName': 'posts', 'template': '\74ul class\75\47posts\47\76\n\74b:loop values\75\47data:posts\47 var\75\47i\47\76\n\74li\76\74a expr:href\75\47data:i.url\47\76\74data:i.title\76\74/data:i.title\76\74/a\76\74/li\76\n\74/b:loop\76\n\74/ul\076'}}, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AdSenseView', new _WidgetInfo('AdSense4', 'sidebartop',{'main': {'varName': '', 'template': '\74div class\75\47widget-content\47\76\n\74data:adCode\76\74/data:adCode\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/div\076'}}, document.getElementById('AdSense4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList2', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title\47\76\74h2\76\74data:title\76\74/data:title\76\74/h2\76\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74ul\76\n\74b:loop values\75\47data:links\47 var\75\47link\47\76\n\74li\76\74a expr:href\75\47data:link.target\47\76\74data:link.name\76\74/data:link.name\76\74/a\76\74/li\76\n\74/b:loop\76\n\74/ul\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/div\076'}}, document.getElementById('LinkList2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList1', 'sidebartop',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title\47\76\74h2\76\74data:title\76\74/data:title\76\74/h2\76\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74ul\76\n\74b:loop values\75\47data:links\47 var\75\47link\47\76\n\74li\76\74a expr:href\75\47data:link.target\47\76\74data:link.name\76\74/data:link.name\76\74/a\76\74/li\76\n\74/b:loop\76\n\74/ul\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/div\076'}}, document.getElementById('LinkList1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML8', 'sidebar',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74data:content\76\74/data:content\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('HTML8'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML5', 'sidebar',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74data:content\76\74/data:content\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('HTML5'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FeedView', new _WidgetInfo('Feed4', 'sidebar',{'main': {'varName': '', 'template': '\74h2\76\74data:title\76\74/data:title\76\74/h2\76\n\74div class\75\47widget-content\47 expr:id\75\47data:widget.instanceId + \46quot;_feedItemListDisplay\46quot;\47\76\n\74span style\75\47filter: alpha(25); opacity: 0.25;\47\76\n\74a expr:href\75\47data:feedUrl\47\76\74data:loadingMsg\76\74/data:loadingMsg\76\74/a\76\n\74/span\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('Feed4'), {'title': 'últimas discussões', 'showItemDate': true, 'showItemAuthor': false, 'feedUrl': 'http://groups.google.com/group/devdtv/feed/rss_v2_0_msgs.xml', 'numItemsShow': 5, 'loadingMsg': 'Carregando...'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74b:if cond\75\47data:team \75\75 \46quot;true\46quot;\47\76\n\74ul\76\n\74b:loop values\75\47data:authors\47 var\75\47i\47\76\n\74li\76\74a expr:href\75\47data:i.userUrl\47\76\74data:i.display-name\76\74/data:i.display-name\76\74/a\76\74/li\76\n\74/b:loop\76\n\74/ul\76\n\74b:else\76\74/b:else\76\n\74b:if cond\75\47data:photo.url !\75 \46quot;\46quot;\47\76\n\74a expr:href\75\47data:userUrl\47\76\74img class\75\47profile-img\47 expr:alt\75\47data:photo.alt\47 expr:height\75\47data:photo.height\47 expr:src\75\47data:photo.url\47 expr:width\75\47data:photo.width\47/\76\74/a\76\n\74/b:if\76\n\74dl class\75\47profile-datablock\47\76\n\74dt class\75\47profile-data\47\76\74data:displayname\76\74/data:displayname\76\74/dt\76\n\74b:if cond\75\47data:showlocation \75\75 \46quot;true\46quot;\47\76\n\74dd class\75\47profile-data\47\76\74data:location\76\74/data:location\76\74/dd\76\n\74/b:if\76\n\74b:if cond\75\47data:aboutme !\75 \46quot;\46quot;\47\76\74dd class\75\47profile-textblock\47\76\74data:aboutme\76\74/data:aboutme\76\74/dd\76\74/b:if\76\n\74/dl\76\n\74a class\75\47profile-link\47 expr:href\75\47data:userUrl\47\76\74data:viewProfileMsg\76\74/data:viewProfileMsg\76\74/a\76\n\74/b:if\76\n\74b:include name\75\47quickedit\47\76\74/b:include\76\n\74/div\076'}}, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74data:content\76\74/data:content\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML6', 'sidebar',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74data:content\76\74/data:content\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('HTML6'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML9', 'main',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74data:content\76\74/data:content\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('HTML9'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main',{'main': {'varName': 'top', 'template': '\74div class\75\47blog-posts hfeed\47\76\n\74b:include data\75\47top\47 name\75\47status-message\47\76\74/b:include\76\n\74data:defaultAdStart\76\74/data:defaultAdStart\76\n\74b:loop values\75\47data:posts\47 var\75\47post\47\76\n\74b:if cond\75\47data:post.dateHeader\47\76\n\74h2 class\75\47date-header\47\76\74data:post.dateHeader\76\74/data:post.dateHeader\76\74/h2\76\n\74/b:if\76\n\74b:include data\75\47post\47 name\75\47post\47\76\74/b:include\76\n\74b:if cond\75\47data:blog.pageType \75\75 \46quot;static_page\46quot;\47\76\n\74b:include data\75\47post\47 name\75\47comments\47\76\74/b:include\76\n\74/b:if\76\n\74b:if cond\75\47data:blog.pageType \75\75 \46quot;item\46quot;\47\76\n\74b:include data\75\47post\47 name\75\47comments\47\76\74/b:include\76\n\74/b:if\76\n\74b:if cond\75\47data:post.includeAd\47\76\n\74b:if cond\75\47data:post.isFirstPost\47\76\n\74data:defaultAdEnd\76\74/data:defaultAdEnd\76\n\74b:else\76\74/b:else\76\n\74data:adEnd\76\74/data:adEnd\76\n\74/b:if\76\n\74div class\75\47inline-ad\47\76\n\74data:adCode\76\74/data:adCode\76\n\74/div\76\n\74data:adStart\76\74/data:adStart\76\n\74/b:if\76\n\74b:if cond\75\47data:post.trackLatency\47\76\n\74data:post.latencyJs\76\74/data:post.latencyJs\76\n\74/b:if\76\n\74/b:loop\76\n\74data:adEnd\76\74/data:adEnd\76\n\74/div\76\n\74b:include name\75\47nextprev\47\76\74/b:include\76\n\74b:include name\75\47feedLinks\47\76\74/b:include\76\n\74b:if cond\75\47data:top.showStars\47\76\n\74script src\75\47http://www.google.com/jsapi\47 type\75\47text/javascript\47\76\74/script\76\n\74script type\75\47text/javascript\47\76\n      google.load(\46quot;annotations\46quot;, \46quot;1\46quot;, {\46quot;locale\46quot;: \46quot;\74data:top.languageCode\76\74/data:top.languageCode\76\46quot;});\n      function initialize() {\n        google.annotations.setApplicationId(\74data:top.blogspotReviews\76\74/data:top.blogspotReviews\76);\n        google.annotations.createAll();\n        google.annotations.fetch();\n      }\n      google.setOnLoadCallback(initialize);\n    \74/script\76\n\74/b:if\076'}, 'nextprev': {'varName': '', 'template': '\74div class\75\47blog-pager\47 id\75\47blog-pager\47\76\n\74b:if cond\75\47data:newerPageUrl\47\76\n\74span id\75\47blog-pager-newer-link\47\76\n\74a class\75\47blog-pager-newer-link\47 expr:href\75\47data:newerPageUrl\47 expr:id\75\47data:widget.instanceId + \46quot;_blog-pager-newer-link\46quot;\47 expr:title\75\47data:newerPageTitle\47\76\74data:newerPageTitle\76\74/data:newerPageTitle\76\74/a\76\n\74/span\76\n\74/b:if\76\n\74b:if cond\75\47data:olderPageUrl\47\76\n\74span id\75\47blog-pager-older-link\47\76\n\74a class\75\47blog-pager-older-link\47 expr:href\75\47data:olderPageUrl\47 expr:id\75\47data:widget.instanceId + \46quot;_blog-pager-older-link\46quot;\47 expr:title\75\47data:olderPageTitle\47\76\74data:olderPageTitle\76\74/data:olderPageTitle\76\74/a\76\n\74/span\76\n\74/b:if\76\n\74b:if cond\75\47data:blog.homepageUrl !\75 data:blog.url\47\76\n\74a class\75\47home-link\47 expr:href\75\47data:blog.homepageUrl\47\76\74data:homeMsg\76\74/data:homeMsg\76\74/a\76\n\74b:else\76\74/b:else\76\n\74b:if cond\75\47data:newerPageUrl\47\76\n\74a class\75\47home-link\47 expr:href\75\47data:blog.homepageUrl\47\76\74data:homeMsg\76\74/data:homeMsg\76\74/a\76\n\74/b:if\76\n\74/b:if\76\n\74/div\76\n\74div class\75\47clear\47\76\74/div\076'}, 'post': {'varName': 'post', 'template': '\74div class\75\47post hentry uncustomized-post-template\47\76\n\74a expr:name\75\47data:post.id\47\76\74/a\76\n\74b:if cond\75\47data:post.title\47\76\n\74h3 class\75\47post-title entry-title\47\76\n\74b:if cond\75\47data:post.link\47\76\n\74a expr:href\75\47data:post.link\47\76\74data:post.title\76\74/data:post.title\76\74/a\76\n\74b:else\76\74/b:else\76\n\74b:if cond\75\47data:post.url\47\76\n\74a expr:href\75\47data:post.url\47\76\74data:post.title\76\74/data:post.title\76\74/a\76\n\74b:else\76\74/b:else\76\n\74data:post.title\76\74/data:post.title\76\n\74/b:if\76\n\74/b:if\76\n\74/h3\76\n\74/b:if\76\n\74div class\75\47post-header-line-1\47\76\74/div\76\n\74div class\75\47post-body entry-content\47\76\n\74data:post.body\76\74/data:post.body\76\n\74div style\75\47clear: both;\47\76\74/div\76\n\74/div\76\n\74b:if cond\75\47data:post.hasJumpLink\47\76\n\74div class\75\47jump-link\47\76\n\74a expr:href\75\47data:post.url + \46quot;#more\46quot;\47 expr:title\75\47data:post.title\47\76\74data:post.jumpText\76\74/data:post.jumpText\76\74/a\76\n\74/div\76\n\74/b:if\76\n\74div class\75\47post-footer\47\76\n\74div class\75\47post-footer-line post-footer-line-1\47\76\n\74span class\75\47post-author vcard\47\76\n\74b:if cond\75\47data:top.showAuthor\47\76\n\74data:top.authorLabel\76\74/data:top.authorLabel\76\n\74span class\75\47fn\47\76\74data:post.author\76\74/data:post.author\76\74/span\76\n\74/b:if\76\n\74/span\76\n\74span class\75\47post-timestamp\47\76\n\74b:if cond\75\47data:top.showTimestamp\47\76\n\74data:top.timestampLabel\76\74/data:top.timestampLabel\76\n\74b:if cond\75\47data:post.url\47\76\n\74a class\75\47timestamp-link\47 expr:href\75\47data:post.url\47 rel\75\47bookmark\47 title\75\47permanent link\47\76\74abbr class\75\47published\47 expr:title\75\47data:post.timestampISO8601\47\76\74data:post.timestamp\76\74/data:post.timestamp\76\74/abbr\76\74/a\76\n\74/b:if\76\n\74/b:if\76\n\74/span\76\n\74span class\75\47reaction-buttons\47\76\n\74b:if cond\75\47data:top.showReactions\47\76\n\74table border\75\0470\47 cellpadding\75\0470\47 cellspacing\75\0470\47 width\75\047100%\47\76\74tr\76\n\74td class\75\47reactions-label-cell\47 nowrap\75\47nowrap\47 valign\75\47top\47 width\75\0471%\47\76\n\74span class\75\47reactions-label\47\76\n\74data:top.reactionsLabel\76\74/data:top.reactionsLabel\76\74/span\76\46#160;\74/td\76\n\74td\76\74iframe allowtransparency\75\47true\47 class\75\47reactions-iframe\47 expr:src\75\47data:post.reactionsUrl\47 frameborder\75\0470\47 name\75\47reactions\47 scrolling\75\47no\47\76\74/iframe\76\74/td\76\n\74/tr\76\74/table\76\n\74/b:if\76\n\74/span\76\n\74span class\75\47star-ratings\47\76\n\74b:if cond\75\47data:top.showStars\47\76\n\74div expr:g:background-color\75\47data:backgroundColor\47 expr:g:text-color\75\47data:textColor\47 expr:g:url\75\47data:post.absoluteUrl\47 g:height\75\04742\47 g:type\75\47RatingPanel\47 g:width\75\047280\47\76\74/div\76\n\74/b:if\76\n\74/span\76\n\74span class\75\47post-comment-link\47\76\n\74b:if cond\75\47data:blog.pageType !\75 \46quot;item\46quot;\47\76\n\74b:if cond\75\47data:post.allowComments\47\76\n\74a class\75\47comment-link\47 expr:href\75\47data:post.addCommentUrl\47 expr:onclick\75\47data:post.addCommentOnclick\47\76\74b:if cond\75\47data:post.numComments \75\75 1\47\0761 \74data:top.commentLabel\76\74/data:top.commentLabel\76\74b:else\76\74/b:else\76\74data:post.numComments\76\74/data:post.numComments\76\n\74data:top.commentLabelPlural\76\74/data:top.commentLabelPlural\76\74/b:if\76\74/a\76\n\74/b:if\76\n\74/b:if\76\n\74/span\76\n\74span class\75\47post-backlinks post-comment-link\47\76\n\74b:if cond\75\47data:blog.pageType !\75 \46quot;item\46quot;\47\76\n\74b:if cond\75\47data:post.showBacklinks\47\76\n\74a class\75\47comment-link\47 expr:href\75\47data:post.url + \46quot;#links\46quot;\47\76\74data:top.backlinkLabel\76\74/data:top.backlinkLabel\76\74/a\76\n\74/b:if\76\n\74/b:if\76\n\74/span\76\n\74span class\75\47post-icons\47\76\n\74b:if cond\75\47data:post.emailPostUrl\47\76\n\74span class\75\47item-action\47\76\n\74a expr:href\75\47data:post.emailPostUrl\47 expr:title\75\47data:top.emailPostMsg\47\76\n\74img alt\75\47\47 class\75\47icon-action\47 height\75\04713\47 src\75\47http://www.blogger.com/img/icon18_email.gif\47 width\75\04718\47/\76\n\74/a\76\n\74/span\76\n\74/b:if\76\n\74b:include data\75\47post\47 name\75\47postQuickEdit\47\76\74/b:include\76\n\74/span\76\n\74/div\76\n\74div class\75\47post-footer-line post-footer-line-2\47\76\n\74span class\75\47post-labels\47\76\n\74b:if cond\75\47data:post.labels\47\76\n\74data:postLabelsLabel\76\74/data:postLabelsLabel\76\n\74b:loop values\75\47data:post.labels\47 var\75\47label\47\76\n\74a expr:href\75\47data:label.url\47 rel\75\47tag\47\76\74data:label.name\76\74/data:label.name\76\74/a\76\74b:if cond\75\47data:label.isLast !\75 \46quot;true\46quot;\47\76,\74/b:if\76\n\74/b:loop\76\n\74/b:if\76\n\74/span\76\n\74/div\76\n\74div class\75\47post-footer-line post-footer-line-3\47\76\n\74span class\75\47post-location\47\76\n\74b:if cond\75\47data:top.showLocation\47\76\n\74b:if cond\75\47data:post.location\47\76\n\74data:postLocationLabel\76\74/data:postLocationLabel\76\n\74a expr:href\75\47data:post.location.mapsUrl\47 target\75\47_blank\47\76\74data:post.location.name\76\74/data:post.location.name\76\74/a\76\n\74/b:if\76\n\74/b:if\76\n\74/span\76\n\74/div\76\n\74/div\76\n\74/div\076'}, 'postQuickEdit': {'varName': 'post', 'template': '\74b:if cond\75\47data:post.editUrl\47\76\n\74span expr:class\75\47\46quot;item-control \46quot; + data:post.adminClass\47\76\n\74a expr:href\75\47data:post.editUrl\47 expr:title\75\47data:top.editPostMsg\47\76\n\74img alt\75\47\47 class\75\47icon-action\47 height\75\04718\47 src\75\47http://www.blogger.com/img/icon18_edit_allbkg.gif\47 width\75\04718\47/\76\n\74/a\76\n\74/span\76\n\74/b:if\076'}, 'commentDeleteIcon': {'varName': 'comment', 'template': '\74span expr:class\75\47\46quot;item-control \46quot; + data:comment.adminClass\47\76\n\74a expr:href\75\47data:comment.deleteUrl\47 expr:title\75\47data:top.deleteCommentMsg\47\76\n\74img src\75\47http://www.blogger.com/img/icon_delete13.gif\47/\76\n\74/a\76\n\74/span\076'}, 'backlinkDeleteIcon': {'varName': 'backlink', 'template': '\74span expr:class\75\47\46quot;item-control \46quot; + data:backlink.adminClass\47\76\n\74a expr:href\75\47data:backlink.deleteUrl\47 expr:title\75\47data:top.deleteBacklinkMsg\47\76\n\74img src\75\47http://www.blogger.com/img/icon_delete13.gif\47/\76\n\74/a\76\n\74/span\076'}, 'comments': {'varName': 'post', 'template': '\74div class\75\47comments\47 id\75\47comments\47\76\n\74a name\75\47comments\47\76\74/a\76\n\74b:if cond\75\47data:post.allowComments\47\76\n\74h4\76\n\74b:if cond\75\47data:post.numComments \75\75 1\47\76\n          1 \74data:commentLabel\76\74/data:commentLabel\76:\n        \74b:else\76\74/b:else\76\n\74data:post.numComments\76\74/data:post.numComments\76\n\74data:commentLabelPlural\76\74/data:commentLabelPlural\76:\n        \74/b:if\76\n\74/h4\76\n\74b:if cond\75\47data:post.commentPagingRequired\47\76\n\74span class\75\47paging-control-container\47\76\n\74a expr:class\75\47data:post.oldLinkClass\47 expr:href\75\47data:post.oldestLinkUrl\47\76\74data:post.oldestLinkText\76\74/data:post.oldestLinkText\76\74/a\76\n          \46#160;\n          \74a expr:class\75\47data:post.oldLinkClass\47 expr:href\75\47data:post.olderLinkUrl\47\76\74data:post.olderLinkText\76\74/data:post.olderLinkText\76\74/a\76\n          \46#160;\n          \74data:post.commentRangeText\76\74/data:post.commentRangeText\76\n          \46#160;\n          \74a expr:class\75\47data:post.newLinkClass\47 expr:href\75\47data:post.newerLinkUrl\47\76\74data:post.newerLinkText\76\74/data:post.newerLinkText\76\74/a\76\n          \46#160;\n          \74a expr:class\75\47data:post.newLinkClass\47 expr:href\75\47data:post.newestLinkUrl\47\76\74data:post.newestLinkText\76\74/data:post.newestLinkText\76\74/a\76\n\74/span\76\n\74/b:if\76\n\74dl expr:class\75\47data:post.avatarIndentClass\47 id\75\47comments-block\47\76\n\74b:loop values\75\47data:post.comments\47 var\75\47comment\47\76\n\74dt expr:class\75\47\46quot;comment-author \46quot; + data:comment.authorClass\47 expr:id\75\47data:comment.anchorName\47\76\n\74b:if cond\75\47data:comment.favicon\47\76\n\74img expr:src\75\47data:comment.favicon\47 height\75\04716px\47 style\75\47margin-bottom:-2px;\47 width\75\04716px\47/\76\n\74/b:if\76\n\74a expr:name\75\47data:comment.anchorName\47\76\74/a\76\n\74b:if cond\75\47data:blog.enabledCommentProfileImages\47\76\n\74data:comment.authorAvatarImage\76\74/data:comment.authorAvatarImage\76\n\74/b:if\76\n\74b:if cond\75\47data:comment.authorUrl\47\76\n\74a expr:href\75\47data:comment.authorUrl\47 rel\75\47nofollow\47\76\74data:comment.author\76\74/data:comment.author\76\74/a\76\n\74b:else\76\74/b:else\76\n\74data:comment.author\76\74/data:comment.author\76\n\74/b:if\76\n\74data:commentPostedByMsg\76\74/data:commentPostedByMsg\76\n\74/dt\76\n\74dd class\75\47comment-body\47\76\n\74b:if cond\75\47data:comment.isDeleted\47\76\n\74span class\75\47deleted-comment\47\76\74data:comment.body\76\74/data:comment.body\76\74/span\76\n\74b:else\76\74/b:else\76\n\74p\76\74data:comment.body\76\74/data:comment.body\76\74/p\76\n\74/b:if\76\n\74/dd\76\n\74dd class\75\47comment-footer\47\76\n\74span class\75\47comment-timestamp\47\76\n\74a expr:href\75\47data:comment.url\47 title\75\47comment permalink\47\76\n\74data:comment.timestamp\76\74/data:comment.timestamp\76\n\74/a\76\n\74b:include data\75\47comment\47 name\75\47commentDeleteIcon\47\76\74/b:include\76\n\74/span\76\n\74/dd\76\n\74/b:loop\76\n\74/dl\76\n\74b:if cond\75\47data:post.commentPagingRequired\47\76\n\74span class\75\47paging-control-container\47\76\n\74a expr:class\75\47data:post.oldLinkClass\47 expr:href\75\47data:post.oldestLinkUrl\47\76\n\74data:post.oldestLinkText\76\74/data:post.oldestLinkText\76\n\74/a\76\n\74a expr:class\75\47data:post.oldLinkClass\47 expr:href\75\47data:post.olderLinkUrl\47\76\n\74data:post.olderLinkText\76\74/data:post.olderLinkText\76\n\74/a\76\n          \46#160;\n          \74data:post.commentRangeText\76\74/data:post.commentRangeText\76\n          \46#160;\n          \74a expr:class\75\47data:post.newLinkClass\47 expr:href\75\47data:post.newerLinkUrl\47\76\n\74data:post.newerLinkText\76\74/data:post.newerLinkText\76\n\74/a\76\n\74a expr:class\75\47data:post.newLinkClass\47 expr:href\75\47data:post.newestLinkUrl\47\76\n\74data:post.newestLinkText\76\74/data:post.newestLinkText\76\n\74/a\76\n\74/span\76\n\74/b:if\76\n\74p class\75\47comment-footer\47\76\n\74b:if cond\75\47data:post.embedCommentForm\47\76\n\74b:if cond\75\47data:post.allowNewComments\47\76\n\74b:include data\75\47post\47 name\75\47comment-form\47\76\74/b:include\76\n\74b:else\76\74/b:else\76\n\74data:post.noNewCommentsText\76\74/data:post.noNewCommentsText\76\n\74/b:if\76\n\74b:else\76\74/b:else\76\n\74b:if cond\75\47data:post.allowComments\47\76\n\74a expr:href\75\47data:post.addCommentUrl\47 expr:onclick\75\47data:post.addCommentOnclick\47\76\74data:postCommentMsg\76\74/data:postCommentMsg\76\74/a\76\n\74/b:if\76\n\74/b:if\76\n\74/p\76\n\74/b:if\76\n\74div id\75\47backlinks-container\47\76\n\74div expr:id\75\47data:widget.instanceId + \46quot;_backlinks-container\46quot;\47\76\n\74b:if cond\75\47data:post.showBacklinks\47\76\n\74b:include data\75\47post\47 name\75\47backlinks\47\76\74/b:include\76\n\74/b:if\76\n\74/div\76\n\74/div\76\n\74/div\076'}, 'comment-form': {'varName': 'post', 'template': '\74div class\75\47comment-form\47\76\n\74a name\75\47comment-form\47\76\74/a\76\n\74h4 id\75\47comment-post-message\47\76\74data:postCommentMsg\76\74/data:postCommentMsg\76\74/h4\76\n\74p\76\74data:blogCommentMessage\76\74/data:blogCommentMessage\76\74/p\76\n\74data:blogTeamBlogMessage\76\74/data:blogTeamBlogMessage\76\n\74a expr:href\75\47data:post.commentFormIframeSrc\47 id\75\47comment-editor-src\47\76\74/a\76\n\74iframe allowtransparency\75\47true\47 class\75\47blogger-iframe-colorize blogger-comment-from-post\47 frameborder\75\0470\47 height\75\047410\47 id\75\47comment-editor\47 name\75\47comment-editor\47 src\75\47\47 width\75\047100%\47\76\74/iframe\76\n\74data:post.friendConnectJs\76\74/data:post.friendConnectJs\76\n\74data:post.cmtfpIframe\76\74/data:post.cmtfpIframe\76\n\74script type\75\47text/javascript\47\76\n      BLOG_CMT_createIframe(\46#39;\74data:post.appRpcRelayPath\76\74/data:post.appRpcRelayPath\76\46#39;, \46#39;\74data:post.communityId\76\74/data:post.communityId\76\46#39;);\n    \74/script\76\n\74/div\076'}, 'backlinks': {'varName': 'post', 'template': '\74a name\75\47links\47\76\74/a\76\74h4\76\74data:post.backlinksLabel\76\74/data:post.backlinksLabel\76\74/h4\76\n\74b:if cond\75\47data:post.numBacklinks !\75 0\47\76\n\74dl class\75\47comments-block\47 id\75\47comments-block\47\76\n\74b:loop values\75\47data:post.backlinks\47 var\75\47backlink\47\76\n\74div class\75\47collapsed-backlink backlink-control\47\76\n\74dt class\75\47comment-title\47\76\n\74span class\75\47backlink-toggle-zippy\47\76\46#160;\74/span\76\n\74a expr:href\75\47data:backlink.url\47 rel\75\47nofollow\47\76\74data:backlink.title\76\74/data:backlink.title\76\74/a\76\n\74b:include data\75\47backlink\47 name\75\47backlinkDeleteIcon\47\76\74/b:include\76\n\74/dt\76\n\74dd class\75\47comment-body collapseable\47\76\n\74data:backlink.snippet\76\74/data:backlink.snippet\76\n\74/dd\76\n\74dd class\75\47comment-footer collapseable\47\76\n\74span class\75\47comment-author\47\76\74data:post.authorLabel\76\74/data:post.authorLabel\76\n\74data:backlink.author\76\74/data:backlink.author\76\74/span\76\n\74span class\75\47comment-timestamp\47\76\74data:post.timestampLabel\76\74/data:post.timestampLabel\76\n\74data:backlink.timestamp\76\74/data:backlink.timestamp\76\74/span\76\n\74/dd\76\n\74/div\76\n\74/b:loop\76\n\74/dl\76\n\74/b:if\76\n\74p class\75\47comment-footer\47\76\n\74a class\75\47comment-link\47 expr:href\75\47data:post.createLinkUrl\47 expr:id\75\47data:widget.instanceId + \46quot;_backlinks-create-link\46quot;\47 target\75\47_blank\47\76\74data:post.createLinkLabel\76\74/data:post.createLinkLabel\76\74/a\76\n\74/p\076'}, 'feedLinks': {'varName': '', 'template': '\74b:if cond\75\47data:blog.pageType !\75 \46quot;item\46quot;\47\76\n\74b:if cond\75\47data:feedLinks\47\76\n\74div class\75\47blog-feeds\47\76\n\74b:include data\75\47feedLinks\47 name\75\47feedLinksBody\47\76\74/b:include\76\n\74/div\76\n\74/b:if\76\n\74b:else\76\74/b:else\76\n\74div class\75\47post-feeds\47\76\n\74b:loop values\75\47data:posts\47 var\75\47post\47\76\n\74b:if cond\75\47data:post.allowComments\47\76\n\74b:if cond\75\47data:post.feedLinks\47\76\n\74b:include data\75\47post.feedLinks\47 name\75\47feedLinksBody\47\76\74/b:include\76\n\74/b:if\76\n\74/b:if\76\n\74/b:loop\76\n\74/div\76\n\74/b:if\076'}, 'feedLinksBody': {'varName': 'links', 'template': '\74div class\75\47feed-links\47\76\n\74data:feedLinksMsg\76\74/data:feedLinksMsg\76\n\74b:loop values\75\47data:links\47 var\75\47f\47\76\n\74a class\75\47feed-link\47 expr:href\75\47data:f.url\47 expr:type\75\47data:f.mimeType\47 target\75\47_blank\47\76\74data:f.name\76\74/data:f.name\76 (\74data:f.feedType\76\74/data:f.feedType\76)\74/a\76\n\74/b:loop\76\n\74/div\076'}, 'status-message': {'varName': '', 'template': '\74b:if cond\75\47data:navMessage\47\76\n\74div class\75\47status-msg-wrap\47\76\n\74div class\75\47status-msg-body\47\76\n\74data:navMessage\76\74/data:navMessage\76\n\74/div\76\n\74div class\75\47status-msg-border\47\76\n\74div class\75\47status-msg-bg\47\76\n\74div class\75\47status-msg-hidden\47\76\74data:navMessage\76\74/data:navMessage\76\74/div\76\n\74/div\76\n\74/div\76\n\74/div\76\n\74div style\75\47clear: both;\47\76\74/div\76\n\74/b:if\076'}}, document.getElementById('Blog1'), {'showBacklinks': true, 'postId': '8807019131209101521'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML10', 'main',{'main': {'varName': '', 'template': '\74b:if cond\75\47data:title !\75 \46quot;\46quot;\47\76\n\74h2 class\75\47title\47\76\74data:title\76\74/data:title\76\74/h2\76\n\74/b:if\76\n\74div class\75\47widget-content\47\76\n\74data:content\76\74/data:content\76\n\74/div\76\n\74b:include name\75\47quickedit\47\76\74/b:include\076'}}, document.getElementById('HTML10'), {}, 'displayModeFull'));
+</script>
+<iframe src="tutorial-debug-no-xletview-usando-o_arquivos/sh10.htm" style="border: 0pt none ; height: 1px; width: 1px; position: absolute; z-index: 100000; left: 0pt; top: 0pt;" id="_atssh"></iframe></body></html>

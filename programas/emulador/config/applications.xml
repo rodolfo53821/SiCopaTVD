@@ -1,0 +1,7 @@
+<APPLICATIONS>
+    <APPLICATION>
+        <NAME>Jogo da Velha</NAME>
+        <PATH>C:\Users\aguirre\workspace\Jogo da Velha\bin</PATH>
+        <XLET>Telas.JogoXlet</XLET>
+    </APPLICATION>
+</APPLICATIONS>

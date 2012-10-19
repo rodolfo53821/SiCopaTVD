@@ -1,0 +1,487 @@
+/***********************************************************************************
+ *
+ * THIS SOFTWARE IS COPYRIGHT STEVEN MORRIS 2002. ALL RIGHTS RESERVED
+ *
+ * THIS SOFTWARE IS FREE FOR NON COMMERCIAL USE FOR THE PURPOSE OF LEARNING MHP.  ANY
+ * USE FOR OTHER PURPOSES IS PROHIBITED UNLESS WRITTEN AGREEMENT IS OBTAINED.
+ *
+ * DISTRIBUTION OF THIS CODE IS PROHIBITED
+ */
+
+// Import the standard package that we need to be an Xlet
+import javax.tv.xlet.*;
+
+// The org.davic.mpeg.sections package implements the section filtering API
+import org.davic.mpeg.sections.*;
+
+// As with many other APIs, the section filtering API uses the DAVIC resource notification API
+import org.davic.resources.*;
+
+// The basic MPEG concepts API and the tuning API are used to find the transport
+// stream we want to filter on.  We will see how these get used later.
+import org.davic.mpeg.*;
+import org.davic.net.tuning.*;
+
+
+
+/**
+  * This Xlet parses DSM-CC stream events from the transport stream by filtering the
+  * appropriate sections, and then prints the event ID form the stream event.
+  *
+  * Since this is quite a complex Xlet that will take some time to filter the sections,
+  * we do most of the work in a separate thread.  For this reason,  the Xlet implements
+  * the Runnable interface.  It also implements the SectionFilterListener interface
+  * from org.davic.mpeg.sections.*, because it needs this interface to get the filtered
+  * sections.
+  *
+  * Finally, it implements the ResourceClient interface from org.davic.resources.* -
+  * this allows the MHP middleware to tell the application if it has lost access to
+  * any of the sections filters that it's using (since these are considered a scarce
+  * resource)
+  */
+public class SectionFilterExample
+	implements Xlet,
+				Runnable,
+				SectionFilterListener,
+				ResourceClient {
+
+	// A private variable to store our Xlet context.  In this case, we do actually
+	// use this, showing why it's a good idea to keep a reference to the Xlet context.
+	private XletContext context;
+
+	// A private variable that keeps a reference to the thread that
+	// will do all of the work.
+	private Thread myWorkerThread;
+
+	// A private field to hold the current state.  This is needed because the startXlet()
+	// method is called both to start the Xlet for the first time and also to make the
+	// Xlet resume from the paused state.  This filed lets us keep track of whether we're
+	// starting for the first time.
+	private boolean hasBeenStarted;
+
+	/**************************************************************************
+	 *
+	 * The methods below this line are the standard Xlet methods.  These mostly do
+	 * nothing surprising,since we do most of the work in a separate thread.
+	 */
+
+	/**
+	 * A default constructor, included for completeness.
+	 */
+	public SectionFilterExample()
+	{
+	}
+
+	/**
+	 * Initialise the Xlet.  In this case, we have no special initialisation
+	 * that we need to do.
+	 */
+	public void initXlet(XletContext context)
+		throws XletStateChangeException
+	{
+		// We keep a reference to our Xlet context because it's good practise to do so.
+		// We don't need it in this example, but that's beside the point.
+		this.context = context;
+
+		// The Xlet has not yet been started for the first time, so set
+		// this variable to false.
+		hasBeenStarted = false;
+	}
+
+	/**
+	 * Start the Xlet.  This is where we actually start doing useful work.
+	 */
+	public void startXlet()
+		throws XletStateChangeException
+	{
+		// Check if the Xlet has been started and resuming from the paused state,
+		// or whether it's being started for the first time.  If it's being
+		// started for the first time, we reate a new thread to do the work
+		if (!hasBeenStarted) {
+			// startXlet() should not block for too long, and waiting for sections
+			// to be filtered is definitely too long.  To solve this, we start
+			// another thread to do the work.
+			myWorkerThread = new Thread(this);
+			myWorkerThread.start();
+		}
+		else {
+			// If we're resuming from the paused state, we don't need to set
+			// up the thread.
+			doResume();
+		}
+	}
+
+	/**
+	 * Pause the Xlet.
+	 */
+	public void pauseXlet()
+	{
+		// The doPause() method does everything we need to pause
+		// the Xlet
+		doPause();
+	}
+
+	/**
+	 * Destroy the Xlet.
+	 */
+	public void destroyXlet(boolean unconditional)
+		throws XletStateChangeException
+	{
+		//tell the user that the method has been called
+		System.out.println("destroyXlet() called");
+
+		if (unconditional) {
+			// We have been ordered to terminate, so we obey the order politely and release any
+			//scarce resources that we are holding.
+		}
+		else {
+			// We have had a polite request to die, so we can refuse this request if we want.
+			throw new XletStateChangeException("Please don't let me die!");
+		}
+	}
+
+
+	/**************************************************************************
+	 *
+	 * The methods below this point are the ones which actually do all of the work
+	 * related to the section filtering.  These set up the filters, and display the
+	 * filtered data.
+	 */
+
+
+	// The constants below are used to define what we filter for,and where we filter for it.
+
+	// This table ID is used for DSM-CC stream events.  This can be changed to
+	// filter any table ID that you are interested in.
+	static final int TABLE_ID = 0x3D;
+
+	// The PID of the stream we will be filtering.  You will need to change this to
+	// reflect the PID you want to filter on.
+	static final int STREAM_PID = 100;
+
+	// The descriptor tag for a DSM-CC stream event descriptor
+	static final int STREAM_EVENT_DESCRIPTOR_TAG = 26;
+
+	// Constant defining the size of an MPEG section header
+	static final int SECTION_HEADER_SIZE = 8;
+
+	// Since we will use a RingSectionFilter, we need to define the size of the buffer.
+	// Using a single element would be the same as using a SimpleSectionFilter.  Instead,
+	// we will use a buffer size of 7, since we don't know how often we will filter a
+	// new section.  This is a tradeoff between memory efficiency and the chances of
+	// missing a section, and the size of the buffer really depends on the frequency at
+	// which sections will be matched and how much work processing you will be doing
+	// on each section.  If you're doing a lot of work, the easiest way is to simply
+	// copy the section data to another data structure and free the buffer slot.  This
+	// allows you to use a fairly small buffer for your filter, while using a data
+	// structure more suitable to your application for actually holding the section
+	// data.  If you want to change this value, you can.
+	static final int NUMBER_OF_SECTIONS = 7;
+
+
+
+	// Since we will use a RingSectionFilter to filter the sections, we need to keep
+	// track of which slot in the buffer contains the current section.  This
+	// variable will hold that index.
+	int currentSlotIndex = 0;
+
+	// Stream events have a version number.  To stop us printing out the event ID for
+	// every stream event we see (because they may be repeated), we will keep track
+	// of the version numbers for each section containing a stream event, and only
+	// print a message when the version number changes.
+
+	// The key of each entry in the hash table is the event ID of the stream event,
+	// with the value being the version number.  The hash table is the easiest data
+	// structure for tracking this, since event IDs can be arbitrarily assigned.
+	java.util.Hashtable eventVersions = new java.util.Hashtable();
+
+	// These variables will hold the section filter and section filter group that
+	// we will use.
+	private RingSectionFilter filter = null;
+	private SectionFilterGroup filterGroup = null;
+
+
+
+
+	/**
+	 * The main method for the worker thread.  This is where most of the work is done.
+	 */
+	public void run()
+	{
+		// Check if we've already been started.  If we have been started, we don't
+		// need to set up the section filter and section filter group.
+		if (!hasBeenStarted) {
+			
+			hasBeenStarted = true;
+
+			// Set up the filters
+			setupFilters();
+
+			// Set the flag to tell us we've been started.  We do this here, instead
+			// of in startXlet() as in some other examples, because doing the check
+			// here makes the thread handling code simpler
+			hasBeenStarted = true;
+		}
+
+		// Now we are ready to start filtering.
+
+		// In order to use the section filter, we need to attach it to a transport
+		// stream.  However, we don't know which transport stream we should attach
+		// it to.  We will use the current transport stream but we need ot get a
+		// reference to an object that represents it.  To do this, we have to use
+		// the tuning API.
+
+		// First, we get a reference to our network interface.  This assumes we
+		// only have one network interface in our receiver.  Remember that a
+		// 'network interface' is an interface to the broadcast network, not to
+		// an IP network.
+
+		// Get a reference to the NetworkInterfaceManager from the tuning API
+		NetworkInterfaceManager manager = NetworkInterfaceManager.getInstance();
+
+		// Now get a reference ot the first network interface
+		NetworkInterface networkInterface = manager.getNetworkInterfaces()[0];
+
+		// Once we have a reference to the network interface, we can find out what
+		// transport stream it's currently receiving.
+		TransportStream ts = networkInterface.getCurrentTransportStream();
+
+		// Now we can attach the section filter group to the transport stream.  This
+		// reserves the section filter resources that will be used for the
+		// filtering.  This method also tells the section filter group what event
+		// listener it should notify when its state changes.  This does NOT tell us
+		// when we have successfully filtered a section.
+		try {
+			filterGroup.attach(ts, this, null);
+		}
+		catch (org.davic.mpeg.TuningException te) {
+			// There's a problem tuning to the transport stream.  This shouldn't get
+			// thrown, because we're already tuned to the transport stream in this
+			// example.
+			te.printStackTrace();
+		}
+		catch (InvalidSourceException ise) {
+			// The section source is not valid.  The exact meaning of this is
+			// unclear, and it's a fairly general 'something went wrong' error
+			// that's not related to tuning or resource issues.
+			ise.printStackTrace();
+		}
+		catch (FilterResourceException fre1) {
+			// There aren't enough resources to fulfill the request.
+			fre1.printStackTrace();
+		}
+
+		// Once our filter group has been attached to the transport stream, we
+		// can add a listener for events from the section filter.  This will
+		// tell us when we have successfully filtered a section.
+        filter.addSectionFilterListener(this);
+
+		// We're now ready to start filtering.  In this case, we're using a fairly
+		// simple filter that just filters on the PID and the table ID (more
+		// complex ones are available that filter on different parts of the
+		// section). This can generate a number of exceptions, so we enclose it
+		// in a 'try' block.
+		try {
+			filter.startFiltering(null, STREAM_PID, TABLE_ID);
+		}
+		catch (NotAuthorizedException nae) {
+			nae.printStackTrace();
+		}
+		catch (FilterResourceException fre2) {
+			fre2.printStackTrace();
+		}
+		catch (ConnectionLostException cle) {
+			cle.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * Set up the section filter and section filter group, ready for us to start
+	 * filtering.
+	 */
+	private void setupFilters() {
+		// Before we can use a section filter, we have to create a section filter group.
+		// The argument specifies the number of filters we should use for this group
+		// (more filters means better performance).  We only need one filter.
+		filterGroup = new SectionFilterGroup(1);
+
+		// Create the section filter.  We use a ring section filter, because we are
+		// filtering many sections (which makes a simple section filter less useful)
+		// where the sections are not parts of the same table (which rules out using
+		// a table section filter).  The ring section filter is generally the more
+		// flexible of the three types available to us.
+		//
+		//  We need to specify the number of buffer slots that our ring section
+		// filter will have - we use the constant we defined earlier.
+		filter = filterGroup.newRingSectionFilter(NUMBER_OF_SECTIONS);
+	}
+
+
+	/**
+	 * Take the actions needed to pause the Xlet.  In this case, that means
+	 * stopping the section filters and releasing them, since they are
+	 * scarce resources.  We also kill the filtering thread, since this
+	 * isn't needed once the Xlet is paused and we should kill unnecessary
+	 * threads when we pause ourselves.
+	 */
+	private void doPause() {
+		filterGroup.detach();
+
+		// Now kill the thread
+		myWorkerThread.stop();
+	}
+
+	/**
+	 * Take the actions needed to resume the Xlet from the paused state.
+	 * In our case, that means restarting the thread that does the
+	 * section filtering.
+	 */
+	private void doResume() {
+		// Start the thread.  The section filter group gets attached
+		// to the transport stream when we do this
+		myWorkerThread.start();
+	}
+
+	/**
+     * Once we have a section, this method can be used to parse it and get the information
+     * about the stream event that we need.
+     */
+    private void parseSection(Section section) {
+
+		// Holds the section data
+		byte[] sectionbytes;
+
+		// The ID and version of the parsed stream event
+		int eventId;
+		int eventVersion;
+
+
+		try {
+			// First, we read the contents of the section into our buffer.  Once we've done
+			// this, we can start manipulating it.
+			sectionbytes = section.getData();
+
+			// The filter is a little too broad, and will match some sections which
+			// don't contain stream events.  This means we have to do some filtering
+			// ourselves.  We can make our lives easier by filtering out those
+			// sections that are too short to contain a stream event descriptor.
+			if (section.section_length() < 12) return;
+
+			// Skip the section header, because it's of no interest to us.
+			int i = SECTION_HEADER_SIZE;
+
+			// Do we have a stream event descriptor?
+			if (sectionbytes[i] == STREAM_EVENT_DESCRIPTOR_TAG) {
+				// Get the event ID from the descriptor
+				eventId = ((0xFF & (int)sectionbytes[i+2]) << 8) +
+						   (0xFF & (int)sectionbytes[i+3]);
+
+				// Get the version number for the section.
+				eventVersion = section.version_number();
+
+				// Check if we have a record for this event ID in the hash table.
+				// By only printing a message when we receive a new event ID or a new
+				// version of an existing event ID, we reduce the output to a manageable
+				// level.  This is also what we'd need to do if we were handling stream
+				// events in a real application, since we only want to respond to an
+				// event once .
+				Integer previousVersion = (Integer) eventVersions.get(new Integer(eventId));
+				// if we don't have an entry for this event ID in the hash table, or the
+				// version is smaller, update the hash table and print the details of the
+				// new event
+				if ((previousVersion == null) || (previousVersion.intValue() < eventVersion)){
+					eventVersions.put(new Integer(eventId), new Integer(eventVersion));
+					System.out.println("event ID: " + eventId);
+					System.out.println("version: " + section.version_number());
+				}
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return;
+	}
+
+	/**
+	 * This method is inherited from the SectionFilterListener interface, and gets called
+	 * any time a section is filtered successfully.  Since many sections could get
+	 * filtered in close succession, this method is declared as synchronized to ensure
+	 * thread safety.
+	 */
+	public synchronized void sectionFilterUpdate(SectionFilterEvent event){
+
+		// Check the type of event to see whether it's indicating that a section
+		// has been filtered.
+		if(event instanceof SectionAvailableEvent)
+		{
+			// A new section is available, so we parse it.
+		try {
+
+			// Get the buffer that is used by the section filter
+			Section[] sections = filter.getSections();
+
+			// Increment the current slot index.  Since this is a ring section
+			// filter, we do this modulo the size of the buffer
+			currentSlotIndex++;
+			currentSlotIndex = currentSlotIndex % NUMBER_OF_SECTIONS;
+
+			// We've got a complete section, so we can now do what we like with it.
+			// In this case, we parse the DSM-CC event ID from it
+			parseSection(sections[currentSlotIndex]);
+
+			// When we've finished with the section, we flag this buffer slot as
+			// empty.  The section filter will stop when no more empty slots are
+			// available, so it's important to do this as soon as we don't need
+			// the slot any more.
+			sections[currentSlotIndex].setEmpty();
+
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+	/**************************************************************************
+	 *
+	 * These methods are inherited from the ResourceClient interface and are used
+	 * to tell the application when it has lost access to its resources (or
+	 * when it is about to lose access to them).  This gives the application a
+	 * chance to clean up when it loses access to a resource, and gives it a
+	 * chance to handle things gracefully.
+	 */
+
+	/**
+	 * This method gets called when the resource manager requests that we give
+	 * up a resource.  We can refuse to do so, and that's what we do in this
+	 * case (even though we shouldn't).
+	 */
+	public boolean requestRelease(ResourceProxy proxy, Object requestData) {
+		return false;
+	}
+
+	/**
+	 * This method gets called when the resource manager informs us that we must
+	 * release a resource
+	 */
+	public void release(ResourceProxy proxy) {
+		// We detach the section filter group from the transport stream.  Doing
+		// this automatically stops the section filter(s) and releases the
+		// resources that they are using.
+		filterGroup.detach();
+	}
+
+	/**
+	 * This method gets called when the resource manager tells us we've
+	 * lost access to a resource and we should clean up after ourselves.
+	 */
+	public void notifyRelease(ResourceProxy proxy) {
+		// In this case, we also detach the section filter group from
+		// the transport stream to make sure everything is in a known state.
+		filterGroup.detach();
+	}
+
+}
+
+

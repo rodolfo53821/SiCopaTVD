@@ -1,0 +1,30 @@
+#menu UL LI {
+	FONT-SIZE: 17px
+}
+#content #home .forum {
+	WIDTH: 28%
+}
+#content #home .news {
+	WIDTH: 29%
+}
+#content #home .articles {
+	WIDTH: 25%
+}
+#content #home .posts {
+	WIDTH: 48%
+}
+#content #home .infoq {
+	WIDTH: 48%
+}
+#menu {
+	PADDING-TOP: 7px
+}
+#submenu {
+	VERTICAL-ALIGN: middle; PADDING-TOP: 10px
+}
+#content .box {
+	WIDTH: 84%
+}
+#content .box UL LI {
+	PADDING-LEFT: 10px
+}

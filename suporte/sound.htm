@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="js" dir="ltr" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Using Sound In Your Applications | www.tvwithoutborders.com</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="http://www.interactivetvweb.org/misc/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" media="all" href="sound_arquivos/node.css">
+<link type="text/css" rel="stylesheet" media="all" href="sound_arquivos/defaults.css">
+<link type="text/css" rel="stylesheet" media="all" href="sound_arquivos/system.css">
+<link type="text/css" rel="stylesheet" media="all" href="sound_arquivos/system-menus.css">
+<link type="text/css" rel="stylesheet" media="all" href="sound_arquivos/user.css">
+<link type="text/css" rel="stylesheet" media="all" href="sound_arquivos/lightbox.css">
+<link type="text/css" rel="stylesheet" media="all" href="sound_arquivos/style.css">
+<link type="text/css" rel="stylesheet" media="print" href="sound_arquivos/print.css">
+    <script type="text/javascript" src="sound_arquivos/jquery.js"></script>
+<script type="text/javascript" src="sound_arquivos/drupal.js"></script>
+<script type="text/javascript" src="sound_arquivos/auto_image_handling.js"></script>
+<script type="text/javascript" src="sound_arquivos/lightbox.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "lightbox2": { "rtl": 0, "file_path": "/(\\w\\w/)sites/default/files", "default_image": "/sites/all/modules/lightbox2/images/brokenimage.jpg", "border_size": "10", "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": true, "resize_sequence": "0", "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": 0, "disable_resize": 0, "disable_zoom": false, "force_show_nav": 1, "loop_items": 1, "node_link_text": "View Image Details", "node_link_target": 0, "image_count": "Image !current of !total", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "preview", "image_node_sizes": "(\\.thumbnail)", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "img.thumbnail, img.image-thumbnail", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": 1, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": 1, "show_play_pause": 1, "pause_on_next_click": 0, "pause_on_previous_click": true, "loop_slides": 0, "iframe_width": "800", "iframe_height": "600", "iframe_border": 1, "enable_video": 0 } });
+//--><!]]>
+</script>
+    <!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/tvwithoutborders/fix-ie.css" />    <![endif]-->
+  </head><body class="sidebar-left lightbox-processed">
+
+<!-- Layout -->
+
+<div class="cb">
+<div class="i1">
+<div class="i2">
+<div id="page">
+  <div id="masthead">
+
+      <div id="header">
+       <a href="http://www.interactivetvweb.org/" title=""><img src="sound_arquivos/logo.png" alt="" id="logo"></a>
+  <div id="header-region"><div id="block-menu-menu-primary-tutorial" class="clear-block block block-menu">
+
+  <h2>Primary Tutorial</h2>
+
+  <div class="content"><ul class="menu"><li class="expanded first"><a href="http://www.interactivetvweb.org/tutorials" title="">Tutorials</a><ul class="menu"><li class="leaf first"><a href="http://www.interactivetvweb.org/tutorials/dtv_intro" title="">DTV Introduction</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/getting_started" title="">Getting Started</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/javatv" title="">JavaTV</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp" title="">MHP</a></li>
+<li class="leaf last"><a href="http://www.interactivetvweb.org/tutorials/ocap" title="">OCAP</a></li>
+</ul></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/resources" title="">Resources</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/book" title="">Book</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/jobs" title="">Jobs</a></li>
+<li class="leaf last"><a href="http://www.interactivetvweb.org/content/contacting-us" title="">Contact Us</a></li>
+</ul></div>
+</div>
+</div>
+
+
+      </div> <!-- /header -->
+
+  </div> <!-- /masthead -->
+    <div id="wrapper">
+    <div id="container" class="clear-block">
+        <div id="sidebar-left" class="sidebar">
+                          <h3>Contents</h3><div id="block-menu-secondary-links" class="clear-block block block-menu">
+
+  <h2>MHP Tutorials</h2>
+
+  <div class="content"><ul class="menu"><li class="leaf first"><a href="http://www.interactivetvweb.org/tutorials/mhp/background_to_mhp" title="">The background story</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/interactive_applications" title="">Interactive applications</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/xlet_introduction" title="">Introduction to Xlets</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/your_first_xlet" title="">Your first Xlet</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/application_lifecycle" title="">Application Lifecycle</a></li>
+<li class="expanded active-trail"><a href="http://www.interactivetvweb.org/tutorials/mhp/apis" title="">The MHP APIs</a><ul class="menu"><li class="leaf first"><a href="http://www.interactivetvweb.org/tutorials/mhp/graphics" title="">Graphics In MHP</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/text_presentation" title="">Text Presentation</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/handling_user_input" title="">User Input</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/content_referencing" title="">Content Referencing</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/jmf" title="">Media Control</a></li>
+<li class="leaf active-trail"><a href="http://www.interactivetvweb.org/tutorials/mhp/sound" title="" class="active">Using Sound</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/video_graphics_integration" title="">Video/Graphics Integration</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/synchronization" title="">Synchronization</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/service_selection" title="">Service Selection</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/dvb_si" title="">The DVB SI API</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/javatv_si" title="">JavaTV SI Access</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/file_access" title="">File Access</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/section_filtering" title="">Section Filtering</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/tuner_control" title="">Tuning</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/resource_management" title="">Resource Management</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/application_lifecycle_control" title="">App Lifecycle Control</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/return_channel" title="">Using The Return Channel</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/inter_xlet_communication" title="">Iner-Xlet Communication</a></li>
+<li class="leaf last"><a href="http://www.interactivetvweb.org/tutorials/mhp/conditional_access_api" title="">Conditional Access</a></li>
+</ul></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/application_signalling" title="">Application Signalling</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/loading_an_application" title="">Loading An Application</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/platform_profiles" title="">Platform Profiles</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/gem" title="">Globally Executable MHP</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/security" title="">Security</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/mhp_1.1" title="">MHP 1.1</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/dvb_html" title="">DVB-HTML</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/internet_access_profile" title="">Inernet Access Profile</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/software_stack" title="">The MHP Software Stack</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/conformance_testing" title="">Conformance Testing</a></li>
+<li class="leaf"><a href="http://www.interactivetvweb.org/tutorials/mhp/moving_to_mhp" title="">Moving To MHP</a></li>
+<li class="leaf last"><a href="http://www.interactivetvweb.org/tutorials/mhp/further_reading" title="">Further Reading</a></li>
+</ul></div>
+</div>
+              </div>
+
+      <div id="content">
+          <h2>Using Sound In Your Applications</h2>           <div class="clear-block">  
+            <div id="node-103" class="node">
+
+
+
+  
+  <div class="content clear-block">
+    <p>Sound
+effects are a common part of many applications, and MHP and OCAP give
+developers have two possible ways of including sound in their
+application. As we will see, the two approaches have different
+strengths and weaknesses, and developers may choose to use either or
+both of these techniques in an application. In this tutorial, we will
+look at the two approaches, and where we should use one approach over
+the other.</p>
+<p>The first way to play a sound is using the Java Media Framework API.
+We won't look at this in any detail in this tutorial because it is
+covered in much more detail in the <a href="http://www.interactivetvweb.org/tutorials/mhp/jmf">JMF tutorial</a>, but we will look at the basics. The second way is through the <code>org.havi.ui.HSound</code>
+class. This provides a simpler API for audio playback, but it does not
+offer as much control over the media as JMF. In many cases applications
+will not need this extra control, and for applications that simply want
+to play a sound on certain events (e.g. when the user enters an invalid
+value in a form, or when they press a button that has no effect) then <code>HSound</code> is probably all they need.</p>
+<h2>Playing sounds with HSound</h2>
+<p>As we can see from the interface to the <code>HSound</code> class
+below, it offers a fairly simple way to play an audio clip without a
+lot of unnecessary overhead. The methods on this class are limited to
+loading the source clip, playing and stopping it, and ensuring that any
+audio data is free when it is no longer needed. For many applications,
+this is enough: they do not need any more control and a complex API
+would only get in the way.</p>
+<div class="diagram">
+<pre>public class HSound {
+
+  public HSound();
+
+  public void load(java.lang.String location)
+    throws java.io.IOException, 
+           java.lang.SecurityException;
+
+  public void load(java.net.URL contents)
+    throws java.io.IOException, 
+           java.lang.SecurityException;
+
+  public void set (byte[] data);
+
+  public void play();
+
+  public void stop();
+  public void loop();
+
+  public void dispose();
+
+}
+</pre></div>
+<p>Using this API is as simple as it appears. An application simply loads the clip it wants to play and then calls the <code>play()</code>
+method; this method is asynchronous, and so the method will return
+before the clip has finished playing, avoiding the need for the
+application to spawn another thread simply for playing a sound. The
+code below shows how an application can play a sound:</p>
+<div class="diagram">
+<pre>// Create an HSound object
+HSound player;
+player = new HSound();
+
+// Load an audio clip into the HSound object
+try {
+  player.load("myFile.mp2");
+}
+catch (Exception e) {
+  e.printStackTrace();
+}
+  
+// Now play the clip
+player.play();
+</pre></div>
+<p>The <code>loop()</code> method allows a sound to be played
+repeatedly, instead of simply playing and then stopping when the end of
+the clip is reached. This is useful for playing a piece of background
+music, for instance, where the clip can simply be left playing with no
+intervention needed by the application or the user. Simply playing the
+clip repeatedly using <code>play()</code> may result in a gap at the end of the clip before it starts playing again. Some people have reported a that the <code>loop()</code> method does not work correctly on some implementations, however, and so developers should take care not to rely on this.</p>
+<p>One thing that applications must take care with, however, is to free the audio data when it is no longer needed. Calling the <code>dispose()</code>
+method will free the audio data held in memory and allow other
+applications to re-use the space. Simply stopping the clip is not
+enough, because references to the audio data may still remain within
+the middleware. Disposing of the <code>HSound</code> object correctly will avoid memory leaks and increase reliability.</p>
+<p>Clips can be loaded from a variety of sources. While a file is the most obvious source, the other versions of the <code>load()</code> method provide more flexibility. Loading data from a URL can mean any kind of URL, so data can be loaded from a file using a <code>file://</code> URL or from a remote source using HTTP or some other protocol. The third version of the <code>load()</code> method passes a buffer containing the sample data directly to the <code>HSound</code>
+object, and while this creates slightly more work for the application
+developer it does give complete freedom as to where the sample data
+comes from. It could be read from a file, hard-coded directly into the
+application, or even acquired from an IP multicast stream or a stream
+of MPEG private sections.</p>
+<p>One problem that has been noticed is that not all platforms behave
+the same way when loading data from files. Some platforms take a string
+containing a <code>file:// </code>URL as a parameter to the first version of the <code>load()</code>
+method, while others take a filename. To avoid problems, many
+developers prefer to load the audio clip into a memory buffer and then
+tell the <code>HSound</code> object to use that buffer for its sample data, or use the version of the <code>load()</code> method that takes a URL. The example below shows one common way of doing this:</p>
+<div class="diagram">
+<pre>org.havi.ui.HSound player;
+java.io.File file;
+byte[] audioData;
+java.io.FileInputStream stream;
+
+// create the File object that we will get the data 
+// from
+file = new File("mySound.mp2");
+
+// Create a memory buffer to hold the audio clip
+audioData = new byte[(int)file.length()];
+
+// Load the audio clip in to the memory buffer 
+// using the standard Java file operations.  We 
+// could also use the DSM-CC API and load this file 
+// asynchronously if we wanted to.
+try {
+  stream = new FileInputStream(file);
+  stream.read(sample);
+  stream.close();
+}
+catch (Exception e) {
+  e.printStackTrace();
+}
+
+// Create the HSound object that we will use to 
+// play this audio clip
+player = new HSound();
+
+// Tell the HSound object to use the sample data 
+// that we have just loaded
+player.set(audioData);
+
+// Now play the clip.
+player.play();
+</pre></div>
+<h2>Playing sounds with JMF</h2>
+<p>Sometimes, applications need more control than just choosing whether
+a clip plays once or repeatedly. The Java Media Framework offers
+applications significantly more control over the playback of an audio
+clip, at the expense of slightly more complexity. We will not look at
+JMF in too much detail here, because most of the information is already
+covered in the JMF tutorial elsewhere on this site.</p>
+<p>As with <code>HSound</code>, simply playing back a clip is fairly straightforward:</p>
+<div class="diagram">
+<pre>javax.media.MediaLocator loc;
+javax.media.Player player;
+java.io.File file;
+
+// Create a Medialocator that represents our clip.  
+// This should be a file URL, so first we create 
+// an object representing the file and then we 
+// get the URL from that File object
+file = new File("mySound.mp2");
+loc = new javax.media.MediaLocator(
+	file.toURL().toExternalForm())
+
+try {
+  // Create the JMF Player for the audio file
+  player = javax.media.Manager.createPlayer(loc);
+  
+  // Play it
+  player.play();
+}
+catch (Exception e) {
+	e.printStackTrace()
+}
+</pre></div>
+<p>The big advantage that we get with using JMF is flexibility. While the basic functionality of a JMF <code>Player</code> object is very similar to that of <code>HSound</code>, the additional controls that may be available for a JMF player are a big advantage. Applications can call the <code>getControl()</code> method on a player to get a <code>Control</code> object that can implement a wide variety of functionality. For audio clips, one of the more useful of these is the <code>org.davic.media.MediaTimePositionControl</code>.
+This lets the application decide at what point a clips should start
+playing, so that part of the clip could be skipped if necessary. The
+application can also set the time at which a clip ends, so together
+these give an application the ability to play only a small part of a
+much longer clip. Applications can also control how fast a clip is
+played, pause and resume it, and generally get much more fine-grained
+control over the playback of the audio through JMF than they can
+through <code>HSound</code>.<br>
+  The only thing that <code>HSound</code> can do that JMF can not is loop a sound (it's possible to emulate this with JMF, but <code>HSound</code> tends to do it better).</p>
+<p>The other area where JMF is weaker is when we look at loading the audio data. <code>HSound</code>
+supports loading the data from a file in the object carousel or from a
+URL, or even from an array of bytes. JMF only supports loading data
+from a file using a <code>file://</code> URL.</p>
+<h2>Sound formats</h2>
+<p>MHP and OCAP both support only one format for sound clips - MPEG 1
+layer 1 or layer 2, with the restrictions imposed in ETSI standard TR
+101 154. This is the same standard that is used for audio in DVB
+services. MPEG-1 layer 3 (MP3) files or other audio formats such as WAV
+are <em>not</em> supported, and applications should not try and use
+them. While MPEG may not seem the most obvious choice at first, it is
+the format that is supported by every receiver in the market today.
+Other formats may not be supported in the receiver hardware that is
+currently available, making it impractical to use those formats on some
+hardware platforms, and so the choice of MPEG-1 offers a safe choice
+for all receivers.</p>
+<p>Some emulators do not support MPEG audio, however, and so in these
+cases application authors will need to use a different format such as
+the Sun .au format for their audio files. These will not work on a real
+STB, however, and so developers should take care when moving their
+application from an emulator to a real environment.</p>
+<h2>Limitations on using sound</h2>
+<p>One thing that designers and developers need to be aware of when
+using sound is the size of the files. Since most sound clips will be
+downloaded from the object carousel, large sound files will take a long
+time do download and may affect the loading times for other files - as
+the overall size of the carousel increases, the average latency of a
+file will also increase. Large files also use more memory, which may be
+a problem on receivers will less RAM. In general, this means that long
+sound clips (e.g. background music for your application) are probably
+not a good idea.</p>
+<p>Length of clips is not the only reason for thinking this way. MHP
+and OCAP receivers may not be able to mix sound clips, meaning that a
+receiver may only be able to play one sound at a time. Any other audio
+that is playing will be cut off until the new sound has finished, so if
+your application has background music, any other sound effects may mute
+the background music until they are finished. This applies to audio
+from the service associated with your application as well, so a sound
+effect will mute the audio from the parent service. By keeping audio
+clips short, designers and developers can use audio without conflicting
+with other elements of the service.</p>
+<p>Of course, there are times when you don't want the audio from the
+parent service to be heard at all - in a full-screen application, it
+may make no sense to keep the underlying audio playing. To stop the
+audio from the parent service, we have to use JMF and the JavaTV
+service selection API:</p>
+<div class="diagram">
+<pre>// Get a reference to the JavaTV ServiceContextFactory
+ServiceContextFactory factory;
+factory = ServiceContextFactory.getInstance();
+
+// From this, we can get a reference to the parent
+// service context of our Xlet.  To do this, we need a
+// reference to our Xlet context.  It's times like this
+// that show why your application should always keep a
+// reference to its Xlet context
+ServiceContext myContext;
+myContext = factory.getServiceContext(myXletContext);
+
+// ServiceContentHandler objects are responsible for
+// presenting the different parts of the service.  This
+// includes the media components
+ServiceContentHandler[] handlers;
+handlers = myContext.getServiceContentHandlers();
+
+for(int i=0; i &lt; handlers.length ; i++) {
+  if (handlers[i] instanceof ServiceMediaHandler) {
+    // This is a Player for part of the service, since
+    // ServiceMediaHandler objects are instances of JMF
+    // Player objects
+    
+    // All we have to do is stop the player to stop the 
+    // underlying audio.  This is a crude approach, and
+    // a better solution would be to get a reference to 
+    // the javax.tv.media.MediaSelectControl for this 
+    // player and remove the audio component from the 
+    // set of components that are being presented by 
+    // this player.
+    Player p = (javax.media.Player) handlers[i];
+    p.stop();
+  }
+}
+</pre></div>
+<h2>Using sound effectively</h2>
+<p>One thing to remember when using sound in an application is to use
+it well. Digital TV applications may be used in environments where
+there are other distractions and where audio cues may not get heard,
+and so sound design may play an important part in the usability of your
+application. Use of sounds should fit with the overall style of the
+application, and should take account of the environment in which the
+application is normally used. A useful introduction to sound design is
+available from Boxes And Arrows: "<a href="http://www.boxesandarrows.com/archives/why_is_that_thing_beeping_a_sound_design_primer.php">Why Is That Thing Beeping? A Sound Design Primer</a>"</p>
+  </div>
+
+  <div class="clear-block">
+    <div class="meta">
+        </div>
+
+      </div>
+
+</div>
+          </div> 
+          <div id="footer">Copyright © Steven Morris 2002-2010.  All Rights Reserved</div>
+      </div> <!-- /#content, /#contentwrapper -->
+
+      
+    </div> <!-- /container -->
+  </div>
+<!-- /layout -->
+
+</div></div>
+</div><div class="bb"><div></div></div>
+</div>
+
+    <div id="overlay" style="display: none;"></div>      <div id="lightbox" style="display: none;">        <div style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);" id="outerImageContainer"><div id="modalContainer" style="padding: 10px; display: none;"></div><div id="frameContainer" style="padding: 10px; display: none;"></div><div id="imageContainer" style="padding: 10px; display: none;"><img id="lightboxImage"><div id="hoverNav"><a class="force_show_nav" style="padding-top: 10px;" id="prevLink" href="#"></a><a class="force_show_nav" style="padding-top: 10px;" id="nextLink" href="#"></a></div></div><div id="loading"><a href="#" id="loadingLink"></a></div></div>        <div style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);" id="imageDataContainer" class="clearfix">          <div id="imageData"><div id="frameHoverNav"><a style="padding-top: 10px;" id="framePrevLink" href="#"></a><a style="padding-top: 10px;" id="frameNextLink" href="#"></a></div><div id="imageDetails"><span id="caption"></span><span id="numberDisplay"></span></div><div id="bottomNav"><a style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);" id="bottomNavClose" href="#"></a><a id="bottomNavZoom" href="#"></a><a id="bottomNavZoomOut" href="#"></a><a id="lightshowPause" href="#" style="display: none;"></a><a id="lightshowPlay" href="#" style="display: none;"></a></div></div>        </div>      </div></body></html>

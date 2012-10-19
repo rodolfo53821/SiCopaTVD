@@ -1,0 +1,2144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0069)http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html -->
+<HTML dir=ltr><HEAD><TITLE>Exemplo completo de xlet - Java Free.org</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="Exemplo completo de xlet - Java Free_org_arquivos/thickbox.css" 
+type=text/css rel=stylesheet>
+<SCRIPT language=javascript>
+	var i18nWait = 'Aguarde';
+	var topicId = "863170";
+	var favoriteTopic = "0";
+	var varWatchTopic = "0";
+	var layerName = "spanLoadingPosts";
+	var imageNameAndPath = "";
+	var imageRolling = "http://images.javafree.com.br/forum/themes/jb2/images/loading.gif";
+	var imageDone = "http://images.javafree.com.br/forum/themes/jb2/images/done.gif";
+	var messageDeleteFavorite = "Excluir dos Favoritos";
+	var messageAddFavorite = "Adicionar aos Favoritos";
+	
+	varMessageWatchTopicDelete = "Parar de acompanhar";
+	varMessageWatchTopicAdd = "Acompanhar tópico";	
+</SCRIPT>
+
+<SCRIPT language=javascript>
+// Variaveis de configuracao
+var DEaff="parjavafree";	// Affiliate
+var DEchan="";		// Canal quando existe
+var DEsubc="outros";	// Subcanal capa ou outros.
+var Expble=1;		// Alterar para 0 se não houver 240 pixels de espaço abaixo do 468x60 até o final da pagina
+var DEcmpng=1;		// Alterar para 1 se participa de qualquer campanha vendida pelo UOL "cmpng"
+var DEGroup=7;		// Grupo de afinidade "group"
+// Fim da configuracao 
+
+
+/* NAO ALTERAR DAQUI PARA BAIXO, apenas remova os comentarios se precisar.
+A linha abaixo deve obrigatoriamente ficar fora da função o valor de 
+"DErand" nao pode ser diferente para os banners de uma mesma pagina */
+d=document; var DEt=new Date(); DEt=DEt.getTime(); DErand=Math.floor(DEt*1000*Math.random());
+
+// Verifica tipo de conexao do usuario
+var DEconn=d.body; DEconn.style.behavior='url(#default#clientCaps)'; DEconn=(DEconn.connectionType=='lan')?1:0;
+
+// Verifica resolucao de tela
+var scw=0,sch=0; if(screen.height){scw=screen.width;sch=screen.height;}
+
+// Funcao que exibe o banner
+function DEshow(ad,pos){
+	d.write('<scr'+'ipt language="JavaScript1.1" src="http://bn.uol.com.br/js.ng/site=par&chan='+DEchan+'&subchan='+DEsubc+'&affiliate='+DEaff+'&size='+ad+'&page='+pos+'&conntype='+DEconn+'&expble='+Expble+'&reso='+scw+'x'+sch+'&cmpng='+DEcmpng+'&group='+DEGroup+'&tile='+DErand+'?"></scr'+'ipt>');
+}
+
+</SCRIPT>
+
+<STYLE>.clear {
+	CLEAR: both
+}
+#content {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FLOAT: left; PADDING-BOTTOM: 40px; WIDTH: 100%; PADDING-TOP: 15px
+}
+#content P {
+	FONT-SIZE: 1.5em; MARGIN: -8px 0px 15px; LINE-HEIGHT: 1.7em
+}
+#content OL {
+	FONT-SIZE: 1.5em; MARGIN: 0px 0px 0px 20px; LINE-HEIGHT: 1.7em
+}
+#content UL {
+	FONT-SIZE: 1.5em; MARGIN: 0px 0px 0px 20px; LINE-HEIGHT: 1.7em
+}
+#content OL OL {
+	FONT-SIZE: 1em
+}
+#content UL UL {
+	FONT-SIZE: 1em
+}
+#content OL LI {
+	LIST-STYLE-TYPE: decimal
+}
+#content .post_nav {
+	WIDTH: 13em
+}
+#content .entry {
+	MARGIN-BOTTOM: 30px; PADDING-BOTTOM: 10px; BORDER-BOTTOM: #dbdbdb 1px solid
+}
+#content .single_entry {
+	PADDING-BOTTOM: 10px
+}
+#content .entry_meta UL {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FONT-SIZE: 1em; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1em; PADDING-TOP: 0px
+}
+#content .single_meta LI {
+	DISPLAY: inline; PADDING-LEFT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#content .single_author {
+	FLOAT: left; MARGIN-LEFT: 10px; WIDTH: 200px
+}
+#content #comments {
+	PADDING-RIGHT: 30px; BORDER-TOP: #dde0e0 1px solid; PADDING-LEFT: 30px; BACKGROUND: #f1f3f3; PADDING-BOTTOM: 30px; PADDING-TOP: 30px; BORDER-BOTTOM: #dde0e0 1px solid
+}
+#content #comments OL.comment_list {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 100%; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1; PADDING-TOP: 0px
+}
+#content #comments OL.comment_list LI {
+	LIST-STYLE-TYPE: none
+}
+#content #comments .comment_author {
+	FLOAT: left; MARGIN-BOTTOM: 30px; WIDTH: 100px; PADDING-TOP: 1px
+}
+#content #comments .comment_author P {
+	MARGIN-TOP: 10px; FONT-SIZE: 1.3em; MARGIN-BOTTOM: 0px; COLOR: #5f6565; LINE-HEIGHT: 1em
+}
+#content #comments .single_comment {
+	BORDER-RIGHT: #e0e5e5 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #e0e5e5 1px solid; PADDING-LEFT: 20px; BACKGROUND: #fff; FLOAT: right; MARGIN-BOTTOM: 30px; PADDING-BOTTOM: 10px; BORDER-LEFT: #e0e5e5 1px solid; WIDTH: 83%; PADDING-TOP: 10px; BORDER-BOTTOM: #e0e5e5 1px solid; POSITION: relative
+}
+#content .comment_list {
+	PADDING-BOTTOM: 40px
+}
+#content .comment_arrow {
+	LEFT: -32px; POSITION: absolute; TOP: 10px
+}
+#content #comments .single_comment P {
+	FONT-SIZE: 1.3em; MARGIN-BOTTOM: 10px; LINE-HEIGHT: 1.5em; TEXT-ALIGN: left
+}
+#content #comments .comment_author SPAN {
+	
+}
+#content .aligncenter {
+	DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+#content DIV.aligncenter {
+	DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+#content .alignleft {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 20px; PADDING-TOP: 10px
+}
+#content .alignright {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; FLOAT: right; PADDING-BOTTOM: 20px; PADDING-TOP: 10px
+}
+.codeprettyprint {
+	BORDER-BOTTOM: #dbdbdb 1px solid
+}
+BLOCKQUOTE {
+	PADDING-LEFT: 20px; MARGIN: 15px 30px 0px 10px; BORDER-LEFT: #dddddd 5px solid
+}
+SMALL {
+	COLOR: #777777
+}
+#sidebar UL UL LI {
+	COLOR: #777777
+}
+#sidebar UL OL LI {
+	COLOR: #777777
+}
+.nocomments {
+	COLOR: #777777
+}
+.postmetadata {
+	COLOR: #777777
+}
+BLOCKQUOTE {
+	COLOR: #777777
+}
+STRIKE {
+	COLOR: #777777
+}
+.term {
+	TEXT-ALIGN: left
+}
+.definition {
+	TEXT-ALIGN: left
+}
+.linksRel {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: large; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+</STYLE>
+
+<SCRIPT 
+type=text/javascript>
+window.google_analytics_uacct = "UA-634369-10";
+</SCRIPT>
+
+<SCRIPT src="Exemplo completo de xlet - Java Free_org_arquivos/forum.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="Exemplo completo de xlet - Java Free_org_arquivos/RemoteFunctions.js"></SCRIPT>
+
+<SCRIPT 
+src="Exemplo completo de xlet - Java Free_org_arquivos/engine.js"></SCRIPT>
+
+<SCRIPT src="Exemplo completo de xlet - Java Free_org_arquivos/jquery-1.3.1.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="Exemplo completo de xlet - Java Free_org_arquivos/jquery.corner.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="" type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="Exemplo completo de xlet - Java Free_org_arquivos/thickbox-compressed.js" 
+type=text/javascript></SCRIPT>
+<LINK 
+href="Exemplo completo de xlet - Java Free_org_arquivos/SyntaxHighlighter.css" 
+type=text/css rel=stylesheet><LINK 
+href="Exemplo completo de xlet - Java Free_org_arquivos/css2.css" type=text/css 
+rel=stylesheet><LINK href="http://javafree.uol.com.br/home/images/mini.gif" 
+type=image/x-icon rel="shortcut icon"><LINK title="JF News" 
+href="http://feeds2.feedburner.com/JavaFreeorg" type=application/rss+xml 
+rel=alternate>
+<SCRIPT>
+	function customSearch(){
+		var word = document.getElementById("customWord").value;
+		var url = 'http://javafree.uol.com.br/customSearch.action?q='+word+'&sa=Pesquisar&cx=009402207869349156211%3Ahkaoxgram6a&cof=FORID%3A10#1030';
+		document.location.href=url
+	}
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+    // test auto-ready logic - call corner before DOM is ready
+	$('#readyTest').corner();
+    $('#submenu').corner("bottom");
+	$('#abs').corner("bottom");
+	$('#cantoDireito').corner();
+</SCRIPT>
+
+<SCRIPT src="Exemplo completo de xlet - Java Free_org_arquivos/bpv1.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.5512" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
+<H1 id=banner><A id=backnav href="http://javafree.uol.com.br/index"><IMG 
+src="Exemplo completo de xlet - Java Free_org_arquivos/jfforum.png" 
+border=0></A></H1>
+<H2 id=submenu>
+<DIV id=cantoDireito>&nbsp; 
+<FORM id=cse-search-box action=/javafree/customSearch.jbb>&nbsp;&nbsp;&nbsp; 
+<INPUT type=hidden value=partner-pub-9439984557405450:f7zor0-i5vx name=cx> 
+<INPUT type=hidden value=FORID:10 name=cof> <INPUT type=hidden value=ISO-8859-1 
+name=ie> <INPUT size=31 name=q> <INPUT type=submit value=Pesquisar name=sa> 
+&nbsp;&nbsp;&nbsp; </FORM>
+<SCRIPT src="Exemplo completo de xlet - Java Free_org_arquivos/brand.htm" 
+type=text/javascript></SCRIPT>
+</DIV>Seja bem vindo ao Fórum do JavaFree.org <BR>Aqui você irá encontrar 
+respostas para TUDO o que você precisa sobre java.<BR>Deseja participar? <A 
+class=nobg href="http://javafree.uol.com.br/new_member.jbb">Crie sua conta</A> 
+ou efetue <A class=nobg href="http://javafree.uol.com.br/login.jbb">seu 
+login</A> <BR><BR><A href="http://javafree.uol.com.br/index">&nbsp; ÍNDICE 
+&nbsp;</A> | <A href="http://javafree.uol.com.br/">&nbsp; NOTÍCIAS &nbsp;</A> | 
+<A href="http://javafree.uol.com.br/artigos/">&nbsp; TUTORIAIS &nbsp;</A> | <A 
+href="http://javafree.uol.com.br/spy.jbb">&nbsp; AO VIVO &nbsp;</A> | <A 
+href="http://javafree.uol.com.br/recentTopics.jbb?message=recent">&nbsp; 
+RECENTES &nbsp;</A> | <A href="http://javafree.uol.com.br/inbox.jbb">&nbsp; MPs 
+&nbsp;</A> | <A href="http://javafree.uol.com.br/login.jbb">&nbsp; LOGIN 
+&nbsp;</A> | <A href="http://javafree.uol.com.br/new_member.jbb">&nbsp; 
+REGISTRE-SE &nbsp;</A> </H2>
+<DIV id=abs><A href="http://www.caelum.com.br/" target=_blank><IMG 
+src="Exemplo completo de xlet - Java Free_org_arquivos/caelum.gif" border=0></A> 
+</DIV><A name=top></A>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR align=middle bgColor=#ffffff>
+    <TD class=mainbody colSpan=2>
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=bottom align=left><SPAN class=nav><A class=topictitle 
+            href="http://javafree.uol.com.br/index">Índice do fórum</A> &gt; <A 
+            class=topictitle 
+            href="http://javafree.uol.com.br/f-10-JME-Dispositivos-Moveis.html">JME 
+            - Dispositivos Móveis</A> </SPAN><SPAN class=nav><BR><BR><A 
+            class=maintitle 
+            href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html">Exemplo 
+            completo de xlet</A> </SPAN></TD>
+          <TD class=gensmall vAlign=bottom align=right>
+            <P align=right><B>Ir à página <B>1 , </B><A 
+            href="http://javafree.uol.com.br/viewtopic.jbb?t=863170&amp;page=2">2</A>&nbsp; 
+            <A 
+            href="http://javafree.uol.com.br/viewtopic.jbb?t=863170&amp;page=2">Próximo</A> 
+            - <A 
+            href="http://javafree.uol.com.br/viewtopic.jbb?t=863170&amp;page=2">&gt;&gt;</A> 
+            </B></P></TD></TR></TBODY></TABLE><!-- INÍCIO FÓRUM --><A name=top>
+      <TABLE cellSpacing=2 cellPadding=2 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=bottom noWrap align=left><SPAN class=nav><A 
+            href="http://javafree.uol.com.br/new_topic.jbb?topic.forum.id=10"><IMG 
+            alt="Novo tópico" 
+            src="Exemplo completo de xlet - Java Free_org_arquivos/post.gif" 
+            align=middle border=0></A>&nbsp;&nbsp;&nbsp; <A 
+            href="http://javafree.uol.com.br/reply.jbb?post.topic.id=863170&amp;post.topic.forum.id=10&amp;page=1"><IMG 
+            alt="Responder Mensagem" 
+            src="Exemplo completo de xlet - Java Free_org_arquivos/reply.gif" 
+            align=middle border=0></A> </SPAN></TD>
+          <TD vAlign=center align=left width="50%"></TD>
+          <TD vAlign=center align=right width="50%"></TD></TR></TBODY></TABLE>
+      <DIV id=HOTWordsTxt name="HOTWordsTxt">
+      <DIV id=wrapper>
+      <DIV id=content>
+      <DIV id=comments><!-- ROBOT ANUNCIANTE GOOGLE USERS NAO LOGADOS -->
+      <OL class=comment_list>
+        <LI id=comment-0>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/whosonline.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B>Anunciante</B><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/comment_arrow.png" 
+        width=32> 
+        <P><IFRAME name=IFrameName 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/CAKDYX1I.htm" 
+        frameBorder=no width=730 scrolling=no height=91></IFRAME></P></DIV><BR 
+        class=clear></LI></OL><!--  //ROBOT ANUNCIANTE -->
+      <OL class=comment_list><A name=135959>
+        <LI id=comment-1>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#135959"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(135959,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Olá a todos.<BR>Me chamo vinicius e estudo 
+        no cefet-pb.<BR>este foi o exemplo de xlet que eu fiz para usar em um 
+        artigo científico.<BR>é uma aplicação que simula uma enquete em 
+        programas de auditório onde o telespectador pode votar e acompanhar os 
+        resultados da votação. tudo simulado claro.o feito mesmo no xlet foi a 
+        parte gráfica. para rodar utilizei o xletview.<BR>como dá pra ver pelas 
+        imagens em anexo ele redimensiona o vídeo para mostrar o menu na parte 
+        direita. o vídeo usado eu codifiquei no formato H.263 usando o mencoder 
+        (do mplayer) e não no formato cinepack que é o único formato que quando 
+        eu pesquisei na internet sobre os formatos de vídeos falava que o 
+        xletview aceitava. mas na verdade se vc for na em 
+        xletview-0.3.6/JMF2.1.1/doc/formats.html ele indica vários formatos que 
+        o JMF que o xletview trabalha aceita. o tamanho do vídeo usando o 
+        formato H.263 fica muito menor do que usando o formato 
+        cinepack.<BR>espero ter sido claro. <IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_smile.gif"><BR>qualquer 
+        dúvida perguntem aqui que eu tento esclarecer melhor.<BR>espero que nao 
+        usem esse exemplo nos seus trabalhos, mas sim que ele ajude nos estudos 
+        e aprendizados. eu penei muito pra conseguir desenvolver esse 
+        xlet.<BR>abraços <BR><BR><BR><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/10180829819731E12-imagem4.JPG" 
+              target=_blank>imagem4.JPG</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;70 KB</TD></TR></TBODY></TABLE><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/1018082981973E12-imagem2.JPG" 
+              target=_blank>imagem2.JPG</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;60 KB</TD></TR></TBODY></TABLE><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/10180829819731E12-xlet.gz" 
+              target=_blank>xlet.gz</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;35 KB</TD></TR></TBODY></TABLE><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/1018082981973E12-imagem.JPG" 
+              target=_blank>imagem.JPG</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;61 KB</TD></TR></TBODY></TABLE><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/10180829819731E12-imagem3.JPG" 
+              target=_blank>imagem3.JPG</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;81 KB</TD></TR></TBODY></TABLE></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136184>
+        <LI id=comment-2>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18800">Rafael 
+        Adami</A></B><BR><FONT class=offline size=1>Offline</FONT> <BR><FONT 
+        size=1>Posts: 25</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136184"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136184,'Rafael%20Adami',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>olá!!!! gostaria de saber como vc fez para 
+        tocar um video junto com a aplicaçao???? queria tentar tocar um video 
+        que estivesse salvo no micro!!!!<BR><BR>grato!!! </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136186>
+        <LI id=comment-3>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/10189022859298E12-javafree.jpg" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=9860">TriTonE</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        1566</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136186"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136186,'TriTonE',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Cara... muito legal essa sua atitude de 
+        compartilhar algo tão interessante com a comunidade. Parabéns!! <IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_biggrin.gif"><BR><BR>[]s 
+        <BR>_________________<BR><B>Daniel F. Martins</B><BR><A 
+        href="http://www.destaquenet.com/" target=_new>Website</A>, <A 
+        href="http://weblog.destaquenet.com/" target=_new>Blog</A><BR><BR><I>"In 
+        JavaDoc we trust."</I> </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136187>
+        <LI id=comment-4>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136187"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136187,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>bem, rafael, a maneira que eu usei foi 
+        codificar o vídeo para o formato h263 que é um codec lido pela jmf 
+        2.1.1, que a implementação do mhp do xletview usa. para codificar o 
+        vídeo para esse formato eu usei o mencoder do mplayer. tem para windows 
+        e para linux. depois que eu tenho o video compactado em h263 eu 
+        configuro no xletview para usá-lo através do arquivo 
+        config/channels.xml.<BR>lá tem um tag que eu configuro 
+        assim:<BR>&lt;CHANNEL&gt;<BR><BR>&lt;NAME&gt;0&lt;/NAME&gt;<BR><BR>&lt;MEDIA&gt;/home/vinicius/videos/meuvideo.avi&lt;/MEDIA&gt;<BR><BR>&lt;/CHANNEL&gt;<BR>onde 
+        em &lt;MEDIA&gt; eu aponto o caminho completo para o meu vídeo.<BR><BR>o 
+        mplayer pode ser baixado em <A href="http://www.mplayerhq.hu/" 
+        target=_blank>http://www.mplayerhq.hu/</A> <BR>e o comando para 
+        codificar o video é:<BR>~$ mencoder videoqualquer.mpg -o meuvideo.avi 
+        -ovc lavc -lavcopts vcodec=h263:vbitrate=100<BR><BR>esperto ter ajudado 
+        </P>
+        <P></P></DIV><BR class=clear></LI></OL><!-- ROBOT ANUNCIANTE GOOGLE USERS NAO LOGADOS -->
+      <OL class=comment_list>
+        <LI id=comment-0>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/whosonline.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B>Anunciante</B><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/comment_arrow.png" 
+        width=32> 
+        <P>
+        <SCRIPT type=text/javascript><!--
+						google_ad_client = "pub-9439984557405450";
+						/* 728x90, criado 02/06/08 */
+						google_ad_slot = "1984420004";
+						google_ad_width = 728;
+						google_ad_height = 90;
+						//-->
+						</SCRIPT>
+
+        <SCRIPT 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/show_ads.js" 
+        type=text/javascript>
+						</SCRIPT>
+        </P></DIV><BR class=clear></LI></OL><!--  //ROBOT ANUNCIANTE -->
+      <OL class=comment_list><A name=136188>
+        <LI id=comment-5>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136188"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136188,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>valeu tritone. poxa eu tava pensando: deu 
+        tanto trabalho pra fazer essa gota e ficar aqui parado. eu compartilhar, 
+        mas espero que nao chegue um e pegue do jeito que ta ai pronto e use num 
+        trabalho seu, mas sim que tente entender o programa e usar as ideias 
+        dele. eu sei que foi trabalhoso achar detalhes como redimensionar video, 
+        usar botoes graficos com cantos arredondados. sao essas pequenas coisas 
+        que eu acho que pode interessar a quem mexe com xlets, principalmente se 
+        simulando em um pc. </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136245>
+        <LI id=comment-6>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18800">Rafael 
+        Adami</A></B><BR><FONT class=offline size=1>Offline</FONT> <BR><FONT 
+        size=1>Posts: 25</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136245"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136245,'Rafael%20Adami',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>to tentando fazer tocar o video, fiz do 
+        jeito que esta no forum, mas nao ta dando certo, tenho um video em h263, 
+        configurei o channel.xml, segue 
+        abaixo:<BR><BR>&lt;CHANNEL&gt;<BR>&lt;NAME&gt;0&lt;/NAME&gt;<BR>&lt;MEDIA&gt;C:\Users\linear\Desktop\Documents\RafaelAdami 
+        (PROJETO53)\cp-10fps-QCIF-20Kbps&lt;/MEDIA&gt;<BR>&lt;/CHANNEL&gt;<BR><BR>em 
+        algum momento eu preciso chamar esse channel.xml na aplicação 
+        java???<BR><BR>grato!!! </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136249>
+        <LI id=comment-7>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136249"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136249,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>nao precisa chamar nada. o xletview é quem 
+        se encarrega de fazer isso. o channels.xml é só um arquivo de 
+        configuracao. esse cp-10fps-QCIF-20Kbps é o nome do vídeo? ou é o nome 
+        da pasta que tá o vídeo? se o for o nome da pasta, vc precisa ainda por 
+        o nome do video, nao esqueca disso.<BR>faz assim, executa o xletview 
+        pela linha de comando (usando o java -jar xletview.jar) e cola aqui a 
+        saída que ele gerou, pode ser que tenha o erro e nos ajude a 
+        solucionar.<BR>vamo resolver! : ) </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136385>
+        <LI id=comment-8>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18800">Rafael 
+        Adami</A></B><BR><FONT class=offline size=1>Offline</FONT> <BR><FONT 
+        size=1>Posts: 25</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136385"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136385,'Rafael%20Adami',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>esse é o nome do video!!!!<BR><BR>estou 
+        mandando a imagem pra vc ver!!!!!<BR><BR>grato <BR><BR><BR><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/10181671645915E12-xletview.jpg" 
+              target=_blank>xletview.jpg</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;73 KB</TD></TR></TBODY></TABLE></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136400>
+        <LI id=comment-9>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136400"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136400,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>rafael, o que vc precisa mandar é a saída 
+        do prompt de comando, que é onde tem a stack trace contendo o erro. pq é 
+        pra lá que o emulador manda os erros e infos. </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136436>
+        <LI id=comment-10>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18800">Rafael 
+        Adami</A></B><BR><FONT class=offline size=1>Offline</FONT> <BR><FONT 
+        size=1>Posts: 25</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136436"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136436,'Rafael%20Adami',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>esta ai!!!!!!<BR><BR>grato <BR><BR><BR><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/10181760640054E12-prompt.jpg" 
+              target=_blank>prompt.jpg</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;63 KB</TD></TR></TBODY></TABLE></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136444>
+        <LI id=comment-11>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136444"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136444,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>seguinte: achei na net esse 
+        cp-10fps-QCIF-20Kbps que é um arquivo de 26 KB. não parece ser um vídeo. 
+        tentei roda-lo no mplayer e nao deu certo. configurei ele pro xletview 
+        como te mostrei e tambem deu o mesmo resultado que o teu. o negocio é tu 
+        ter um video realmente em h263. uma maneira é usando o mplayer pra 
+        codificar como eu te disse. ou procurar algum outro codificador h263. em 
+        anexo vai um exemplo de vídeo que eu baixei do youtube e transformei em 
+        h263 usando o mencoder. <BR><BR>o comando foi: $ mencoder video.flv -o 
+        meuvideo.avi -ovc lavc -lavcopts vcodec=h263:vbitrate=100 -vf 
+        scale=352:288<BR><BR>eu testei o video no xletview e funcionou 
+        perfeitamente.<BR><BR><BR><BR><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/10181771643778E12-meuvideo.avi" 
+              target=_blank>meuvideo.avi</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;240 KB</TD></TR></TBODY></TABLE></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136448>
+        <LI id=comment-12>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18800">Rafael 
+        Adami</A></B><BR><FONT class=offline size=1>Offline</FONT> <BR><FONT 
+        size=1>Posts: 25</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136448"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136448,'Rafael%20Adami',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>cara, nao deu certo nao!!!!<BR>surgiu um 
+        erro estranho!!!<BR><BR>to enviando o arquivo<BR><BR>grato 
+        <BR><BR><BR><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/10181785270429E12-erro.bmp" 
+              target=_blank>erro.bmp</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;659 KB</TD></TR></TBODY></TABLE></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136457>
+        <LI id=comment-13>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136457"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136457,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>qual a versão do seu xletview? é a 0.3.6? 
+        ou alguma anterior? a 0.3.6 é a atual. e dentro da pasta raiz do 
+        xletview (essa sua pasta Xlet) existe um diretório chamado JMF2.1.1 que 
+        é api pra tocar vídeos usada. e é ela responsável por decodificar um 
+        vídeo h263. tanto que se vc abrir o arquivo JMF2.1.1/lib/jmf.jar num 
+        compactador de arquivos e acessar a pasta com/ibm/media/codec/video vc 
+        vai ver que existe um pacote h263. eu confirmei isso aqui. vê aí qual é 
+        a versão do teu JMF.<BR>: ) </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136465>
+        <LI id=comment-14>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18800">Rafael 
+        Adami</A></B><BR><FONT class=offline size=1>Offline</FONT> <BR><FONT 
+        size=1>Posts: 25</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136465"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136465,'Rafael%20Adami',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>o meu tem tudo isso que tu 
+        falou!!!!<BR><BR>to mandando o arquivo channel.xml pra vc 
+        ver!!!!<BR><BR>&lt;?xml version="1.0" 
+        encoding="ISO-8859-1"?&gt;<BR>&lt;CHANNELS&gt;<BR>&lt;CHANNEL&gt;<BR>&lt;NAME&gt;0&lt;/NAME&gt;<BR>&lt;MEDIA&gt;E:/meuvideo.avi&lt;/MEDIA&gt;<BR>&lt;/CHANNEL&gt;<BR>&lt;/CHANNELS&gt;<BR><BR>desculpa 
+        se estou t atormentando!!!!! mas o trem nao quer funcionar 
+        mesmo!!!<BR><BR>grato </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136477>
+        <LI id=comment-15>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136477"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136477,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>a solução então é utilizar um outro codec 
+        aceitado pelo pelo jmf (pelo xletview conseqüentemente) chamado cinepak. 
+        existe uma ferramenta de conversão entre formatos de vídeos para o 
+        formato cinepak chamado RAD Video Tools. use esse ferramenta para 
+        converter seus vídeos para esse formato e então usar no xletview. a 
+        desvantagem dele com relação ao formato h263 é o tamanho do vídeo, que 
+        fica muiiiito maior! mas tá valendo para testes.<BR>agora vai! hehe </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136566>
+        <LI id=comment-16>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18800">Rafael 
+        Adami</A></B><BR><FONT class=offline size=1>Offline</FONT> <BR><FONT 
+        size=1>Posts: 25</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136566"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136566,'Rafael%20Adami',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>deu certo cara!!!!!!!! valew mesmo!!!!! 
+        muito obrigado!!!!!<BR>falow </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136567>
+        <LI id=comment-17>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18800">Rafael 
+        Adami</A></B><BR><FONT class=offline size=1>Offline</FONT> <BR><FONT 
+        size=1>Posts: 25</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136567"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136567,'Rafael%20Adami',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>cara, vc sabe alguma coisa sobre TV digital 
+        para celular!!!!! desenvolvimento de aplicaçoes pra isto???<BR><BR>grato 
+        </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=136573>
+        <LI id=comment-18>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#136573"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(136573,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>sei nada bixo!<BR>sei nem por onde vai! 
+        hehe<BR>deu certo com o cinepak foi? </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137159>
+        <LI id=comment-19>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18808">LENNYN 
+        OBREDOR</A></B><BR><FONT class=offline size=1>Offline</FONT> <BR><FONT 
+        size=1>Posts: 1</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137159"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137159,'LENNYN%20OBREDOR',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>me alegra conocer personas como 
+        usted...<BR><BR><BR><BR>me interesa mucho el ejemplo de "xlet", pero 
+        tengo un inconveniente al momento de compilar... que herramientas debo 
+        tener instalado en mi pc para ejecutarlo... 
+        <BR>_________________<BR>hola compañeros...<BR><BR>que interantes es 
+        conocer cada dia personas nuevas...<BR><BR>creo que encontre el sitio 
+        ideal para la investigacion de mi tesis de grado...<BR><BR>soy 
+        estuduante de ingenieria de sistemas, en colombia. <BR><BR>Quisiera 
+        aprender como crear aplicaciones en Xlet. me interesaria mucho saber de 
+        este tema....<BR><BR>cuidence...<BR><BR>me disculpan por no entender 
+        mucho <BR><BR>SALU2 </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137162>
+        <LI id=comment-20>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=12450">Israel</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        12</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137162"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137162,'Israel',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Quando clico no botao vermelho, como pede a 
+        primeira tela da Xlet, eu tenho esse erro.<BR><BR><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100>video resized using source[x=0, y=0, width=720, height=576], destination[x=0, y=
+0, width=580, height=450], xScale=0.0, yScale=0.0
+Exception in thread "AWT-EventQueue-0" java.lang.RuntimeException: java.io.IOExc
+eption: invalid constant type: 104
+&nbsp; &nbsp; &nbsp; &nbsp; at javassist.CtClassType.getClassFile2(CtClassType.java:89)
+&nbsp; &nbsp; &nbsp; &nbsp; at javassist.CtClassType.replaceClassName(CtClassType.java:165)
+&nbsp; &nbsp; &nbsp; &nbsp; at net.beiker.xletview.classloader.XletClassLoader.findClass(Unknown Sou
+rce)
+&nbsp; &nbsp; &nbsp; &nbsp; at net.beiker.xletview.classloader.XletClassLoader.loadClass(Unknown Sou
+rce)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+&nbsp; &nbsp; &nbsp; &nbsp; at JovensTalentosXlet.keyPressed(JovensTalentosXlet.java:103)
+&nbsp; &nbsp; &nbsp; &nbsp; at org.dvb.event.EventManager.fireUserEvent(Unknown Source)
+&nbsp; &nbsp; &nbsp; &nbsp; at net.beiker.xletview.event.EventManager.fireEvents(Unknown Source)
+&nbsp; &nbsp; &nbsp; &nbsp; at net.beiker.xletview.event.EventManager.fireRemoteEvent(Unknown Source
+)
+&nbsp; &nbsp; &nbsp; &nbsp; at net.beiker.xletview.remotecontrol.RemoteControl.fireEvent(Unknown Sou
+rce)
+&nbsp; &nbsp; &nbsp; &nbsp; at net.beiker.xletview.remotecontrol.RemoteControl.keyPressed(Unknown So
+urce)
+&nbsp; &nbsp; &nbsp; &nbsp; at net.beiker.xletview.ui.KeyButton.fireKeyEvent(Unknown Source)
+&nbsp; &nbsp; &nbsp; &nbsp; at net.beiker.xletview.ui.KeyButton.mousePressed(Unknown Source)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.Component.processMouseEvent(Component.java:5485)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.Component.processEvent(Component.java:5253)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.Container.processEvent(Container.java:1966)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.Component.dispatchEventImpl(Component.java:3955)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.Container.dispatchEventImpl(Container.java:2024)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.Component.dispatchEvent(Component.java:3803)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4212
+)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.LightweightDispatcher.processMouseEvent(Container.java:3889)
+
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.LightweightDispatcher.dispatchEvent(Container.java:3822)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.Container.dispatchEventImpl(Container.java:2010)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.Window.dispatchEventImpl(Window.java:1778)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.Component.dispatchEvent(Component.java:3803)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.EventQueue.dispatchEvent(EventQueue.java:463)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchTh
+read.java:242)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThre
+ad.java:163)
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:157)
+
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:149)
+
+&nbsp; &nbsp; &nbsp; &nbsp; at java.awt.EventDispatchThread.run(EventDispatchThread.java:110)
+</TEXTAREA><!-- [/ -code- ] --><BR><BR>Outra problema eh q o xletview 
+        nao esta carregando as imagens de fundo da aplicação. Algam tem alguma 
+        idéia?<BR><BR>Please </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137170>
+        <LI id=comment-21>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=19047">botons</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        5</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137170"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137170,'botons',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Olá pessoal,<BR><BR>To com uma dificuladade 
+        aqui, estou tentando rodar esse exemplo de Xlet mas o pacote 
+        java.media.Player não está sendo reconhecido.<BR><BR>Alguem pode ajudar? 
+        </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137177>
+        <LI id=comment-22>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137177"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137177,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>olá LENNYN OBREDOR. que bom saber!<BR>para 
+        executar esse xlet você precisa ter Java e o xleTView, que é um emulador 
+        de xlets.<BR>o xletview pode ser encontrador aqui: <A 
+        href="http://xletview.sourceforge.net/" 
+        target=_blank>http://xletview.sourceforge.net/</A><BR>para executar o 
+        xletview basta extrair ele para alguma pasta e executar o xletview.jar 
+        ou pela linha de comando usar: java -jar xletview.jar.<BR>não é difícil 
+        de usar o xletview, facilmente você configura um xlet para rodar nele. 
+        procure um pouco na internet.<BR>espero ter ajudado<BR></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137178>
+        <LI id=comment-23>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137178"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137178,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Olá Israel, em relação ao erro pode ser 
+        alguma má configuração do xletview, pode ser até que o 
+        config/remove_control.xml tenha sido modificado aí. não sei. tenta 
+        executar num xletview zerado.<BR>e com relação às imagens não aparecerem 
+        deve ser por causa dos caminhos até as imagens. <BR>vê se o caminho 
+        indicado nos fontes estão realmente apontando para as imagens aí no seu 
+        pc.<BR>avisa depois se conseguiu ou não! </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137179>
+        <LI id=comment-24>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137179"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137179,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>bem botons, se estiver dando falta pelo 
+        javax.media.Player esse é uma classe do JMF. cola o erro aí completo que 
+        fica melhor de entender. falou </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137217>
+        <LI id=comment-25>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=12450">Israel</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        12</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137217"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137217,'Israel',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Vlw cara. Agora funcionou!<BR><BR>Abraço 
+        </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137240>
+        <LI id=comment-26>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=19047">botons</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        5</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137240"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137240,'botons',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Caro parcimonioso,<BR><BR>Eu to usando o 
+        eclipse e o erro é no import do pacote java.media.<BR>No caso ele não 
+        esta conseguindo resolver o pacote, é como se não existisse.<BR>É 
+        estranho pois já vi que existe esse pacote na api.<BR>Coloquei uma 
+        imagem em anexo para exepmlificar.<BR><BR>Valeu <BR><BR><BR><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/10183065648606E12-java_media_Player.JPG" 
+              target=_blank>java_media_Player.JPG</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;61 KB</TD></TR></TBODY></TABLE></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137242>
+        <LI id=comment-27>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137242"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137242,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>seguinte botons, você precisa importar as 
+        bibliotecas do JMF pro seu projeto então.<BR>esses .jar se encontram em 
+        xletview-0.3.6/JMF2.1.1/lib<BR>espero que agora dê certo<BR><BR>falou 
+        </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=137341>
+        <LI id=comment-28>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=19047">botons</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        5</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#137341"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(137341,'botons',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Valeu parcimonioso,<BR><BR>Deu certissimo, 
+        obrigado. </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138000>
+        <LI id=comment-29>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=19047">botons</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        5</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#138000"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138000,'botons',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Parciomonioso,<BR><BR>To com o seguinte 
+        problema:<BR>Tá tudo funcoinando bem, mas eu queria redimensionar o 
+        video para metade da altura e largura e posicionar o video no canto 
+        inferior direito, no entanto nunca consigo deslocar o video. O XletView 
+        redimenciona a cena mas deixa o video cortado. Só parece ser possível 
+        redimensionar no sentido do ponto 0,0 da tela. Não sei se deu pra 
+        entender, mas segue o meu codigo.<BR><BR><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100>public void resize(Rectangle origem, Rectangle destino) { 
+&nbsp; &nbsp;&nbsp; &nbsp;//origem = new Rectangle(0, 0, 720, 576);
+&nbsp; &nbsp;&nbsp; &nbsp;//destino = new Rectangle(360, 288, 720, 576);
+&nbsp; &nbsp;&nbsp; &nbsp;AWTVideoSize size = new AWTVideoSize(origem, destino);
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;ServiceContextFactory serviceContextFactory = null;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;xjavax.tv.service.selection.ServiceContext serviceContext = null;
+&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;try {
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;serviceContextFactory = ServiceContextFactory.getInstance();&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;serviceContext = serviceContextFactory.getServiceContext(this.contexto);&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;} catch (Exception ex) {&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;ex.printStackTrace();&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;}
+&nbsp; &nbsp;&nbsp; &nbsp;if (serviceContext != null) {&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;ServiceContentHandler[] serviceContentHandler = serviceContext.getServiceContentHandlers();&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Player player = null;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if (serviceContentHandler.length &gt; 0) {&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;player = (Player)serviceContentHandler[0];
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;} 
+&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if (player != null) {&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;AWTVideoSizeControl awtVideoSizeControl = (AWTVideoSizeControl) player.getControl("javax.tv.media.AWTVideoSizeControl");&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;awtVideoSizeControl.setSize(size); 
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;System.out.println("video resized using " + size);
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; &nbsp;}
+&nbsp; &nbsp;}
+</TEXTAREA><!-- [/ -code- ] --> </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138001>
+        <LI id=comment-30>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#138001"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138001,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>opa botons,<BR>de acordo com o proprio 
+        Martin Sveden, criador do xleTView:<BR><BR>It's a bug in xletview. If 
+        you use an image instead of a video as background it should work. This 
+        bug is fixed for the next version. Sorry for the 
+        inconvenience.<BR><BR>isso tá nesse post:<BR><A 
+        href="http://forum.java.sun.com/thread.jspa?threadID=629531" 
+        target=_blank>http://forum.java.sun.com/thread.jspa?threadID=629531</A><BR><BR>o 
+        post é de 2005.<BR><BR>pode ser que no cvs do xletview tenha uma versão 
+        corrigida disso. </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138008>
+        <LI id=comment-31>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=19047">botons</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        5</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#138008"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138008,'botons',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Poxa parcimonioso, valeu 
+        mesmo!<BR><BR>Talvez eu ficasse perdendo mais algumas horas arrancando 
+        os cabelos se você não falasse...hehehehe.<BR>Se num tem jeito, num tem 
+        <IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_razz.gif"><BR><BR>Obrigado! 
+        </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138351>
+        <LI id=comment-32>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=10904">brunohansen</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#138351"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138351,'brunohansen',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Parcimonioso parabéns pela sua iniciativa 
+        vou começar a estudar seu exemplo agora....<BR><BR>E eu que tava 
+        procurando como transitar entre botoes </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138365>
+        <LI id=comment-33>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=10904">brunohansen</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#138365"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138365,'brunohansen',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Olá Pessoal,<BR><BR>Estou com algumas 
+        dúvidas.<BR><BR>Componentes HAVI:<BR>Estou tomando uma surra para 
+        utilizá-los! Não consegui nenhuma documentação, JAVADOC, nada... Eu nem 
+        baixar consegui, estou utilizando os componentes HAVI que vem junto com 
+        XLET VIEW. Será que eu posso utilizar esses componentes no meu TCC? 
+        Alguém sabe onde eu consigo alguma documentação ou JAVADOC sobre 
+        componentes HAVI?<BR><BR>Canal de retorno:<BR>Neste assunto estou 
+        viajando e contando com a minha criatividade. <BR>Desde o início eu 
+        achei (e ainda acho) que desenvolver software para TV Digital é como 
+        desenvolver qualquer tipo de software, só que com uma camada de 
+        apresentação diferente (DVB-HTML, XLET etc.). <BR>Na minha aplicação eu 
+        queria fornecer uma camada de apresentação para a TV Digital onde o 
+        Telespectador interagiria e uma outra camada de apresentação utilizando 
+        cliente rico (Swing) para administração da aplicação. Para isto eu 
+        estava pensando em colocar a aplicação para rodar em um servidor e 
+        distribuir somente a camada de apresentação para os SET-TOP-BOX. De 
+        alguma forma a camada de apresentação se comunicaria com a aplicação que 
+        esta rodando no servidor, isto poderia acontecer através do canal de 
+        retorno?<BR>Estava lendo uma revista Mundo Java antiga que contém uma 
+        matéria sobre TV Digital escrita por: Carlos Eduardo Batista que 
+        trabalha em projetos no LAVID. Nesta matéria ele escreveu que ITU fez 
+        uma série de recomendações entre elas a J.202 recomenda bibliotecas 
+        JAVA. Nesta lista aparece a JAVA.RMI, então eu pensei será que eu posso 
+        construir meu canal de retorno com RMI?<BR><BR>Vídeo ao vivo:<BR>Como eu 
+        configuro o GINGA ou o XLET VIEW para exibir vídeo ao vivo? Tem como eu 
+        fazer com que pelo menos ele ouça uma porta UDP?<BR>Tanto o GINGA quanto 
+        o XLET VIEW utiliza o JMF para exibir vídeo. Eu já tive o prazer (Ou 
+        desprazer ainda não sei ao certo) de utilizar um pouco o JMF e tive 
+        problemas em exibir vídeo que não é puramente H.263. Este para mim é um 
+        problema grande, pois no mercado só encontramos câmeras que fornecem 
+        vídeo MPG em formatos não puramente H.263. <BR><BR>Open GEM<BR>Não 
+        consigo me registrar no site para baixar o Open GEM. Alguém ta tendo 
+        este mesmo problema?<BR><BR>Se eu viajei muito me desconsiderem ainda 
+        estou iniciando! <IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_wink.gif"> 
+        <BR></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138377>
+        <LI id=comment-34>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=18733">parcimonioso</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#138377"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138377,'parcimonioso',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>opa bruno! é isso aí, vamos 
+        estudar!<BR><BR>javadoc do havi vc encontra aqui: <A 
+        href="http://www.interactivetvweb.org/resources/links.shtml" 
+        target=_blank>http://www.interactivetvweb.org/resources/links.shtml</A><BR><BR>por 
+        sinal, esse interactiveweb.org é muitooo bom site, aconselho a ler o 
+        máximo que puder daí.<BR><BR><BR>realmente vc pode fazer assim com o 
+        canal de retorno, mas lembre-se que o set-top-box também faz 
+        processamento, então se for uma aplicação local, não há necessidade de 
+        processá-la remotamente. procura na net sobre tipos de aplicações para 
+        tv digital, que ajuda a clarear essa idéia.<BR><BR>sobre fazer isso no 
+        seu tcc, eu não se num ambiente simulado, utilizando o xletview, que 
+        implementa apenas 40% do mhp, não sei se é possível usar canal de 
+        retorno.quem sabe se com o ginga não dá pra fazer<BR><BR>eu simulei isso 
+        no meu projeto.<BR><BR>e video ao vivo, talvez haja como, se vc usar um 
+        servidor RTP para transimitir o vídeo. <BR>como fazer isso os meninos 
+        desse site <A 
+        href="http://www.agoravirtual.net/wiki/index.php?title=TV_Digital" 
+        target=_blank>http://www.agoravirtual.net/wiki/index.php?title=TV_Digital</A><BR>tentaram, 
+        voce pode tentar entrar em contato com eles e saber alguma 
+        coisa.<BR><BR>espero ter ajudado, bons estudos! </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138436>
+        <LI id=comment-35>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=10904">brunohansen</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        19</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#138436"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138436,'brunohansen',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>parcimonioso:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV><BR>javadoc do havi vc encontra aqui: <A 
+          href="http://www.interactivetvweb.org/resources/links.shtml" 
+          target=_blank>http://www.interactivetvweb.org/resources/links.shtml</A><BR><BR>por 
+          sinal, esse interactiveweb.org é muitooo bom site, aconselho a ler o 
+          máximo que puder daí.<BR></DIV></DIV></DIV></BLOCKQUOTE>
+        <P><BR><BR>Valews esse javadoc vai me ajudar muito!<BR>Depois vou dar 
+        uma olhada com calma nesse site.<BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>parcimonioso:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV><BR>realmente vc pode fazer assim com o canal de retorno, mas 
+          lembre-se que o set-top-box também faz processamento, então se for uma 
+          aplicação local, não há necessidade de processá-la remotamente. 
+          procura na net sobre tipos de aplicações para tv digital, que ajuda a 
+          clarear essa idéia.<BR></DIV></DIV></DIV></BLOCKQUOTE>
+        <P><BR><BR>Infelizmente minha aplicação só faz sentido em STBs com canal 
+        de retorno.<BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>parcimonioso:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV><BR>sobre fazer isso no seu tcc, eu não se num ambiente simulado, 
+          utilizando o xletview, que implementa apenas 40% do mhp, não sei se é 
+          possível usar canal de retorno.quem sabe se com o ginga não dá pra 
+          fazer<BR><BR>eu simulei isso no meu 
+        projeto.<BR></DIV></DIV></DIV></BLOCKQUOTE>
+        <P><BR><BR>Estou me informando com a galera do GINGA.<BR><BR>A Resposta 
+        foi: <BR><BR>É possível sim a utilização do canal de retorno da forma 
+        que você deseja mas lembro a você que nem todos os STBs necessariamente 
+        terão o canal de retorno disponível a todo momento.<BR><BR>Quanto ao 
+        Java RMI, fico te devendo a resposta, mas acho complicado que o seu 
+        servidor consiga chamar métodos nos clientes, o contrário me parece mais 
+        provável. <BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>parcimonioso:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV><BR>e video ao vivo, talvez haja como, se vc usar um servidor RTP 
+          para transimitir o vídeo. <BR>como fazer isso os meninos desse site <A 
+          href="http://www.agoravirtual.net/wiki/index.php?title=TV_Digital" 
+          target=_blank>http://www.agoravirtual.net/wiki/index.php?title=TV_Digital</A><BR>tentaram, 
+          voce pode tentar entrar em contato com eles e saber alguma 
+          coisa.<BR></DIV></DIV></DIV></BLOCKQUOTE>
+        <P><BR><BR>Vou ver com eles!<BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>parcimonioso:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV><BR>espero ter ajudado, bons estudos! 
+        </DIV></DIV></DIV></BLOCKQUOTE>
+        <P><BR><BR>Ajudou! E muito!<BR><BR>Hoje estou focando meus estudos em 
+        XLet, pois utilizar RMI seria mais que demais e também pelo fato deu 
+        poder roda-lo em quase todos emuladores.<BR><BR>K para nós buguento 
+        aquele tal de XLet View!<BR><BR>Olha o bug no NavigableHelper<BR><!-- [ -code- ] --><TEXTAREA class=java:nocontrols:nogutter id=code name=code rows=15 cols=100> public void setFocusTraversal(HNavigable up, HNavigable down, HNavigable left, HNavigable right){
+setMove(KeyEvent.VK_UP , up);
+setMove(KeyEvent.VK_DOWN , down);
+setMove(KeyEvent.VK_LEFT , left);
+setMove([b]KeyEvent.VK_RIGHT[/b], [b]up[/b]);
+} 
+</TEXTAREA><!-- [/ -code- ] --><BR><BR>Estou pensando em desenvolver 
+        algo que facilite a criação de Interfaces Gráficas utilizando 
+        componentes HAVI possibilitando fazer Drag em janelas, fechar janelas, 
+        obter help contextual. O que vcs acham?<BR><BR>[]s </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138860>
+        <LI id=comment-36>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=19373">thatiana.alipio</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        1</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#138860"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138860,'thatiana.alipio',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Olá parcimonioso, primeiramente parabéns 
+        pela sua iniciativa.<BR><BR>Eu fiz o download de suas classes para 
+        estudo e tentei executá-la no XletView. Foi indicado para que eu 
+        clicasse no botão vermelho para incio, porém ocorreu um o erro que segue 
+        em anexo. <BR><BR>Como estou começando a mecher agora com isso, não 
+        tenho muito conhecimento sobre o assunto, erros, etc.<BR>Gostaria que vc 
+        me desse um help..<BR><BR>Ah, uma outra coisa, você falou sobre vídeo e 
+        tudo mais. O vídeo que foi utilizado para esse seu Xlet está disponível 
+        em algum lugar? <BR><BR><BR><BR>
+        <TABLE borderColor=#ffffff cellSpacing=2 cellPadding=2 width="39%" 
+        border=1>
+          <TBODY>
+          <TR>
+            <TD width="32%"><B>Baixar:</B></TD>
+            <TD width="68%">&nbsp;<A 
+              href="http://uploads.javafree.com.br/files/10186107136494E12-imagem.JPG" 
+              target=_blank>imagem.JPG</A></TD></TR>
+          <TR>
+            <TD><B>Tamanho:</B></TD>
+            <TD>&nbsp;140 KB</TD></TR></TBODY></TABLE></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=138862>
+        <LI id=comment-37>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/10216358050022E12-brenno.jpg" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=9735">brennohayden</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        179</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#138862"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(138862,'brennohayden',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>tem alguem empresa contratando para 
+        trabalhar com havi?<BR>trabalhei em um projeto implementado havi 
+        ?<BR><BR><BR>vlw <BR>_________________<BR>Brenno 
+        Hayden<BR>http://www.brennovisk.com<BR></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=139423>
+        <LI id=comment-38>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=19509">danilofeltrini</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        4</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#139423"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(139423,'danilofeltrini',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Pessoal, estou fazendo um trabalho 
+        científico (TCC) para minha faculdade.<BR><BR>Preciso fazer uma 
+        aplicação que classifique o perfil do usuário.<BR><BR>Preciso trabalhar 
+        com o famoso EPG (Guia Eletrônico de Programas).<BR><BR>Alguem saberia 
+        como funciona mais a fundo isso?<BR><BR>Basicamente minha aplicação 
+        teria que fazer o seguinte:<BR>por exemplo, caso o usuário veja um canal 
+        que esteja passando futebol por mais de 30 minutos, eu armazeno em uma 
+        base (XML) que ele viu futebol por mais de 30 
+        minutos.<BR><BR>Posteriormente, caso ele esteja vendo qualquer outro 
+        programa e esteja passando futebol em outro canal, é exibido uma dica 
+        para o usuário, dizendo que está passando futebol no canal 
+        X.<BR><BR>Resumindo, sugestões de programação.<BR><BR>Alguem tem uma luz 
+        no final do túnel?<BR><BR>Desde já, muito obrigado pessoal!<BR><BR>Um 
+        abraço,<BR>Danilo Feltrini </P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=139427>
+        <LI id=comment-39>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/10216358050022E12-brenno.jpg" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=9735">brennohayden</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        179</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#139427"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(139427,'brennohayden',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR></P>
+        <BLOCKQUOTE>
+          <DIV class=term><B>danilofeltrini:</B></DIV>
+          <DIV class=definition>
+          <DIV>
+          <DIV>Pessoal, estou fazendo um trabalho científico (TCC) para minha 
+          faculdade.<BR><BR>Preciso fazer uma aplicação que classifique o perfil 
+          do usuário.<BR><BR>Preciso trabalhar com o famoso EPG (Guia Eletrônico 
+          de Programas).<BR><BR>Alguem saberia como funciona mais a fundo 
+          isso?<BR><BR>Basicamente minha aplicação teria que fazer o 
+          seguinte:<BR>por exemplo, caso o usuário veja um canal que esteja 
+          passando futebol por mais de 30 minutos, eu armazeno em uma base (XML) 
+          que ele viu futebol por mais de 30 minutos.<BR><BR>Posteriormente, 
+          caso ele esteja vendo qualquer outro programa e esteja passando 
+          futebol em outro canal, é exibido uma dica para o usuário, dizendo que 
+          está passando futebol no canal X.<BR><BR>Resumindo, sugestões de 
+          programação.<BR><BR>Alguem tem uma luz no final do túnel?<BR><BR>Desde 
+          já, muito obrigado pessoal!<BR><BR>Um abraço,<BR>Danilo Feltrini 
+          </DIV></DIV></DIV></BLOCKQUOTE>
+        <P><BR><BR>vc ja pesquisou alguma coisa ?<BR><BR>ja tera que juntar o 
+        javatv + jmf! <BR>_________________<BR>Brenno 
+        Hayden<BR>http://www.brennovisk.com<BR></P>
+        <P></P></DIV><BR class=clear></LI></OL>
+      <OL class=comment_list><A name=139728><A name=lastPost>
+        <LI id=comment-40>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/nopic.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B><A 
+        href="http://javafree.uol.com.br/viewprofile.jbb?u=19509">danilofeltrini</A></B><BR><FONT 
+        class=offline size=1>Offline</FONT> <BR><FONT size=1>Posts: 
+        4</FONT><BR></P></DIV>
+        <DIV class=single_comment><IMG class=comment_arrow height=31 
+        alt="Comment Arrow" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\comment_arrow(1).png" 
+        width=32> 
+        <P><A 
+        href="http://javafree.uol.com.br/topic-863170-Exemplo-completo-de-xlet.html?page=1#139728"><IMG 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_minipost.gif" 
+        border=0></A> <B><FONT size=1>Publicado em: 10/04/2009 
+        05:18:44</FONT></B> <!-- toolbar de controles do post --><SPAN 
+        style="FLOAT: right"><A 
+        href="javascript:quoteMsg(139728,'danilofeltrini',%20'1');"><IMG 
+        title="Responder com citação" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/icon_quote.gif" 
+        border=0></A> </SPAN><BR><BR>Então, já pesquisei sim.<BR><BR>Mas 
+        infelizmente não entendi quase nada sobre EPG.<BR><BR>Pelo pouco que eu 
+        entendi, penso que o EPG seria mandado através de um data stream, tem 
+        uma classe no JavaTV que tem um esquema de ProgramSchedule e etc...o que 
+        eu não imagino é como mandar isso, ou seja, emular um servidor que envie 
+        o EPG para meu aplicativo.<BR><BR>Alguem tem alguma 
+        luz??<BR><BR><BR>Obrigado! </P>
+        <P></P></DIV><BR class=clear></LI></OL><!-- Topicos Relacionados -->
+      <OL class=comment_list>
+        <LI id=comment-0>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/reload.gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B>Relacionados</B><BR></P></DIV>
+        <DIV class=single_comment>
+        <P><B>Displaytag</B><BR><A 
+        href="http://javafree.uol.com.br/topic-858092-Displaytag.html">http://javafree.uol.com.br/topic-858092-Displaytag.html</A> 
+        <BR><BR><B>Problemas com o xletview</B><BR><A 
+        href="http://javafree.uol.com.br/topic-874682-Problemas-com-o-xletview.html">http://javafree.uol.com.br/topic-874682-Problemas-com-o-xletview.html</A> 
+        <BR><BR><B>JAVA TV, o retorno</B><BR><A 
+        href="http://javafree.uol.com.br/topic-848383-JAVA-TV-o-retorno.html">http://javafree.uol.com.br/topic-848383-JAVA-TV-o-retorno.html</A> 
+        <BR><BR><B>org.dvb.internet? conexão com a internet?</B><BR><A 
+        href="http://javafree.uol.com.br/topic-861397-orgdvbinternet-conexao-com-a-internet.html">http://javafree.uol.com.br/topic-861397-orgdvbinternet-conexao-com-a-internet.html</A> 
+        <BR><BR><B>Java TV x JMF</B><BR><A 
+        href="http://javafree.uol.com.br/topic-863703-Java-TV-x-JMF.html">http://javafree.uol.com.br/topic-863703-Java-TV-x-JMF.html</A> 
+        <BR><BR><B>Browser feito com XLET</B><BR><A 
+        href="http://javafree.uol.com.br/topic-861586-Browser-feito-com-XLET.html">http://javafree.uol.com.br/topic-861586-Browser-feito-com-XLET.html</A> 
+        <BR><BR><B>java tv</B><BR><A 
+        href="http://javafree.uol.com.br/topic-863186-java-tv.html">http://javafree.uol.com.br/topic-863186-java-tv.html</A> 
+        <BR><BR><B>posso fazer isso no java tv??</B><BR><A 
+        href="http://javafree.uol.com.br/topic-870132-posso-fazer-isso-no-java-tv.html">http://javafree.uol.com.br/topic-870132-posso-fazer-isso-no-java-tv.html</A> 
+        <BR><BR><B>JAVATV exemplo mostrado no tutorial daqui do forum</B><BR><A 
+        href="http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html">http://javafree.uol.com.br/topic-861001-JAVATV-exemplo-mostrado-no-tutorial-daqui-do-forum.html</A> 
+        <BR><BR></P></DIV><BR class=clear></LI></OL><!--  //Topicos Relacionados --><!-- ROBOT ANUNCIANTE -->
+      <OL class=comment_list>
+        <LI id=comment-0>
+        <DIV class=comment_author><IMG class="avatar avatar-80 photo" 
+        src="C:\Documents and Settings\BRASIL\Desktop\Exemplo completo de xlet - Java Free_org_arquivos\whosonline(1).gif" 
+        border=0><BR><BR>
+        <P><A name=46400></A><B>Anunciante</B><BR></P></DIV>
+        <DIV class=single_comment>
+        <P>
+        <DIV style="MARGIN-BOTTOM: -20px"><A 
+        href="http://www.submarino.com.br/">Submarino.com.br</A></DIV>
+        <DIV>
+        <SCRIPT language=JavaScript1.1 
+        src="Exemplo completo de xlet - Java Free_org_arquivos/get_banner.htm" 
+        type=text/javascript></SCRIPT>
+        </DIV>
+        <P></P></DIV><BR class=clear></LI></OL><!--  //ROBOT ANUNCIANTE --><BR 
+      class=clear></DIV><BR></DIV></DIV><!-- end content --></DIV><BR 
+      class=clear>
+      <DIV></DIV>
+      <TABLE cellSpacing=2 cellPadding=2 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=bottom noWrap align=left><SPAN class=nav><A 
+            href="http://javafree.uol.com.br/new_topic.jbb?topic.forum.idForum=10"><IMG 
+            alt="Novo tópico" 
+            src="Exemplo completo de xlet - Java Free_org_arquivos/post.gif" 
+            align=middle border=0></A>&nbsp;&nbsp;&nbsp; <A 
+            href="http://javafree.uol.com.br/reply.jbb?post.topic.idTopic=863170&amp;post.topic.forum.idForum=10&amp;page=1"><IMG 
+            alt="Responder Mensagem" 
+            src="Exemplo completo de xlet - Java Free_org_arquivos/reply.gif" 
+            align=middle border=0></A> </SPAN></TD>
+          <TD vAlign=center align=left width="50%"><SPAN 
+            class=nav>&nbsp;&nbsp;&nbsp; <A class=topictitle 
+            href="http://javafree.uol.com.br/index">Índice do fórum</A> -&gt; <A 
+            class=topictitle 
+            href="http://javafree.uol.com.br/f-10-JME-Dispositivos-Moveis.html">JME 
+            - Dispositivos Móveis </A></SPAN></TD>
+          <TD vAlign=center align=right 
+      width="50%"></TD></TR></TBODY></TABLE><BR><BR>
+      <TABLE cellSpacing=2 cellPadding=2 width="100%" align=center border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=bottom noWrap align=right><SPAN class=gensmall><B>Ir à 
+            página <B>1 , </B><A 
+            href="http://javafree.uol.com.br/viewtopic.jbb?t=863170&amp;page=2">2</A>&nbsp; 
+            <A 
+            href="http://javafree.uol.com.br/viewtopic.jbb?t=863170&amp;page=2">Próximo</A> 
+            - <A 
+            href="http://javafree.uol.com.br/viewtopic.jbb?t=863170&amp;page=2">&gt;&gt;</A> 
+            </B></SPAN></TD></TR></TBODY></TABLE><A name=#quick></A>
+      <DIV id=footer>
+      <DIV class=footer-contents>
+      <DIV class=footer-contents2>
+      <DL>
+        <DT class=gensmall>O que é o JavaFree? 
+        <DD>O JavaFree é uma comunidade virtual java sem fins lucrativos fundada 
+        em 19 de março de 2003. O objetivo principal é ajudar a desenvolver o 
+        Java e o Software Livre nos países de língua portuguesa com artigos, 
+        tutoriais, entrevistas, ofertas de empregos e um grande 
+        fórum.<BR><BR>contato: info@javafree.org<BR><BR><A 
+        href="http://javafree.uol.com.br/sobre.jbb">para saber mais...</A> 
+      </DD></DL>
+      <DL>
+        <DT class=gensmall>Últimos Empregos 
+        <DD>
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7586" 
+        target=_blank rel="external nofollow">Rs - analista para qualidade 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7584" 
+        target=_blank rel="external nofollow">Rs - programador web</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7583" 
+        target=_blank rel="external nofollow">Pr - estagiário</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7580" 
+        target=_blank rel="external nofollow">Rj - analista ccna - suporte 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7579" 
+        target=_blank rel="external nofollow">Sp - analista ccna - suporte 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7578" 
+        target=_blank rel="external nofollow">Rj - analista ccna - suporte 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7577" 
+        target=_blank rel="external nofollow">Pr - analista ccna - suporte 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7576" 
+        target=_blank rel="external nofollow">Pr - analista de testes pleno 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7575" 
+        target=_blank rel="external nofollow">Pr - gerente de configuração 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7574" 
+        target=_blank rel="external nofollow">Rj - analista de sistemas - j 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7573" 
+        target=_blank rel="external nofollow">Pr - técnico de informática j 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7572" 
+        target=_blank rel="external nofollow">Pr - assistente comercial</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7571" 
+        target=_blank rel="external nofollow">Pr - gerente de contas pleno 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7570" 
+        target=_blank rel="external nofollow">Pr - gerente de contas - aces 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.empregonaweb.com/empresa/vaga.action?id=7392" 
+        target=_blank rel="external nofollow">Pr - analista de sistemas ora 
+        ..</A> </LI></DD></DL>
+      <DL>
+        <DT class=gensmall>Últimos Posts em Blogs 
+        <DD>
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201686&amp;Quick-Review-Windows-Mobile-65.html" 
+        target=_blank rel="external nofollow">Quick review ? windows mobile 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201673&amp;SMS-e-sucesso-entre-as-pessoas-mais-velhas.html" 
+        target=_blank rel="external nofollow">Sms é sucesso entre as pessoa 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201652&amp;SCJP-Plus-BETA.html" 
+        target=_blank rel="external nofollow">Scjp plus beta</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201650&amp;O-Java-vai-muito-bem-obrigado.html" 
+        target=_blank rel="external nofollow">O java vai muito bem, obrigado</A> 
+
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201629&amp;FeedBurner.html" 
+        target=_blank rel="external nofollow">Feedburner</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201625&amp;Android-SDK-21-liberado-para-download.html" 
+        target=_blank rel="external nofollow">Android sdk 2.1 liberado para 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201618&amp;Gerando-um-arquivo-JKS.html" 
+        target=_blank rel="external nofollow">Gerando um arquivo jks</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201583&amp;Oracle-divulga-correcoes-de-seguranca-para-banco-de-dados.html" 
+        target=_blank rel="external nofollow">Oracle divulga correções de s 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201565&amp;HttpModule-no-IIS6-Eletronic-Billing-com-Log4Net.html" 
+        target=_blank rel="external nofollow">Httpmodule no iis6, eletronic 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201558&amp;Outro-review-do-Nexus-One-Android-21.html" 
+        target=_blank rel="external nofollow">Outro review do nexus one - a 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201548&amp;Botao-no-Eclipse-nao-funciona.html" 
+        target=_blank rel="external nofollow">Botão no eclipse não funciona</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201515&amp;My-DeveloperWorks-Como-e-a-vida-para-um-desenvolvedora-Java-no-Brasil.html" 
+        target=_blank rel="external nofollow">My developerworks: como é a v 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201463&amp;Aprenda-JAVA-em-Uberlandia-ultima-turma-com-precos-da-tabela-de-2009.html" 
+        target=_blank rel="external nofollow">Aprenda java em uberlândia! ú 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201413&amp;Ruby-on-Rails-101-Encurtador-de-URLs-=-Novo-Blog.html" 
+        target=_blank rel="external nofollow">Ruby on rails 101 ? encurtado 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://www.infoblogs.com.br/view.action?contentId=201383&amp;Adobe-Flex-recursos-para-iniciantes.html" 
+        target=_blank rel="external nofollow">Adobe flex - recursos para in 
+        ..</A> </LI></DD></DL>
+      <DL>
+        <DT class=gensmall>Futebol 
+        <DD>
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29702&amp;Cativar-e-desprezar-e-so-comecar.html" 
+        target=_blank rel="external nofollow">Cativar e desprezar, é só com 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29701&amp;Alguem-sabe-por-onde-andam-os-militares.html" 
+        target=_blank rel="external nofollow">"alguém sabe por onde andam o 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29700&amp;Uma-estrutura-necessaria-aos-arbitros.html" 
+        target=_blank rel="external nofollow">Uma estrutura necessária aos 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29699&amp;Campeonato-Catarinense-2010-e-lancado-oficialmente.html" 
+        target=_blank rel="external nofollow">Campeonato catarinense 2010 é 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29698&amp;Visita-ao-Beira-Rio.html" 
+        target=_blank rel="external nofollow">Visita ao beira rio</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29697&amp;Comandando-a-gurizada.html" 
+        target=_blank rel="external nofollow">Comandando a gurizada</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29696&amp;BURGUeS-E-COVARDE.html" 
+        target=_blank rel="external nofollow">Burguês e covarde</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29695&amp;Golaco-Ronaldinho-Gaucho-Barcelona-x-Villareal-2006.html" 
+        target=_blank rel="external nofollow">Golaço ronaldinho gaúcho (bar 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29694&amp;Som-na-caixa-manguaca-Volume-47.html" 
+        target=_blank rel="external nofollow">Som na caixa, manguaça! - vol 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29693&amp;Duplo-FAIL-em-corrida.html" 
+        target=_blank rel="external nofollow">Duplo fail em corrida</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29692&amp;A-volta-de-Presidente-Prudente-pela-porta-dos-fundos.html" 
+        target=_blank rel="external nofollow">A volta de presidente prudent 
+        ..</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29691&amp;Mais-um-pouco-e-a-bola-rola.html" 
+        target=_blank rel="external nofollow">Mais um pouco e a bola rola</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29690&amp;HISToRIA-O-Gremio-de-2004.html" 
+        target=_blank rel="external nofollow">História - o grêmio de 2004.</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29689&amp;QUEM-NaO-PAGA-NaO-CHORA.html" 
+        target=_blank rel="external nofollow">Quem não paga não chora???</A> 
+        <LI class=gensmall><A 
+        href="http://bomdeblog.com.br/view.action?contentId=29688&amp;Queria-ser-mais-otimista.html" 
+        target=_blank rel="external nofollow">Queria ser mais otimista</A> 
+        </LI></DD></DL></DIV></DIV><BR style="CLEAR: both"></DIV>
+      <SCRIPT 
+      src="Exemplo completo de xlet - Java Free_org_arquivos/shCore15.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT 
+      src="Exemplo completo de xlet - Java Free_org_arquivos/shBrushJava15.js" 
+      type=text/javascript></SCRIPT>
+
+      <SCRIPT type=text/javascript>
+<!--
+dp.sh.ClipboardSwf = 'http://javafree.uol.com.br/home/css/syntax/clipboard.swf';
+dp.sh.HighlightAll('code');
+-->
+</SCRIPT>
+<!-- FIM FÓRUM -->
+      <SCRIPT type=text/javascript>
+			setTimeout("window.location.reload();",500000);
+		</SCRIPT>
+
+  <TR>
+    <TD 
+    background="Exemplo completo de xlet - Java Free_org_arquivos/_fadebot.gif" 
+    colSpan=2 height=16>&nbsp;</TD></TR>
+  <TR>
+    <TD background="Exemplo completo de xlet - Java Free_org_arquivos/_c_bg.gif" 
+    height=30>
+      <DIV id=footer2><SPAN><A href="http://www.javabb.org/" 
+      target=_blank>Powered by JavaBB 0.99</A></SPAN> </DIV></TD>
+    <TD vAlign=center align=right 
+    background="Exemplo completo de xlet - Java Free_org_arquivos/_c_bg.gif"><A 
+      href="http://whos.amung.us/stats/44l90veu934o/" target=_blank 
+      rel=noflow><IMG 
+      src="Exemplo completo de xlet - Java Free_org_arquivos/wau-widget.png" 
+      border=0></A> </TD></TR></TBODY></TABLE><!-- twitter follow badge by go2web20 -->
+<SCRIPT src="Exemplo completo de xlet - Java Free_org_arquivos/badge.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript charset=utf-8><!--
+tfb.account = 'javafree';
+tfb.label = 'follow-us';
+tfb.color = '#35ccff';
+tfb.side = 'r';
+tfb.top = 220;
+tfb.showbadge();
+--></SCRIPT>
+<!-- end of twitter follow badge -->
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+try {
+var pageTracker = _gat._getTracker("UA-634369-10");
+pageTracker._trackPageview();
+} catch(err) {}</SCRIPT>
+</BODY></HTML>

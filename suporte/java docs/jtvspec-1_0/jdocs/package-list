@@ -1,0 +1,13 @@
+javax.tv.carousel
+javax.tv.graphics
+javax.tv.locator
+javax.tv.media
+javax.tv.media.protocol
+javax.tv.net
+javax.tv.service
+javax.tv.service.guide
+javax.tv.service.navigation
+javax.tv.service.selection
+javax.tv.service.transport
+javax.tv.util
+javax.tv.xlet

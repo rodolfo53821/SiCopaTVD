@@ -1,0 +1,21 @@
+.pt_BR .icon_new_topic IMG {
+	BACKGROUND-IMAGE: url(../images/pt_BR/post.gif); WIDTH: 93px; HEIGHT: 25px
+}
+.pt_BR .icon_reply IMG {
+	BACKGROUND-IMAGE: url(../images/pt_BR/reply.gif); WIDTH: 93px; HEIGHT: 25px
+}
+.pt_BR .icon_reply_locked IMG {
+	BACKGROUND-IMAGE: url(../images/pt_BR/reply_locked.gif); WIDTH: 93px; HEIGHT: 25px
+}
+.pt_BR .icon_quote IMG {
+	BACKGROUND-IMAGE: url(../images/pt_BR/icon_quote.gif); WIDTH: 59px; HEIGHT: 18px
+}
+.pt_BR .icon_edit IMG {
+	BACKGROUND-IMAGE: url(../images/pt_BR/icon_edit.gif); WIDTH: 59px; HEIGHT: 18px
+}
+.pt_BR .icon_profile IMG {
+	BACKGROUND-IMAGE: url(../images/pt_BR/icon_profile.gif); WIDTH: 59px; HEIGHT: 18px
+}
+.pt_BR .icon_pm IMG {
+	BACKGROUND-IMAGE: url(../images/pt_BR/icon_pm.gif); WIDTH: 59px; HEIGHT: 18px
+}

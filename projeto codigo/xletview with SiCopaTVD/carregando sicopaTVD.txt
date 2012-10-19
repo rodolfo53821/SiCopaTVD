@@ -1,0 +1,8 @@
+A xlet SiCopaTVD esta com o caminho referenciando o caminho 
+onde a mesma foi editada. Para carrega-la é precisa redefinir o 
+caminho para onde o emulador foi descompactado.
+
+Rode o xletview por linha de comando no prompt
+Va em Application->Mannages applications...->
+Escolha o SicopaTVD- Xlet e no campo path a direita defina o path da 
+pasta bin de sicopatvd(que esta dentro da pasta do emulador) 

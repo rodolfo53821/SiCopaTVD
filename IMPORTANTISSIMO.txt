@@ -1,0 +1,11 @@
+Esta pasta é referente a todo conteudo desenvolvido no projeto final de 
+Rodolfo da Costa Ladeira.
+
+O conteudo da mesma vai desde o projeto em si com suas imagens até o suporte pra o desenvolvimento do mesmo
+Interessate notar que na pasta suporte tem a pasta java docs que contem javadocs que nao vem junto ao plugin
+na versao 1.0 e que sao extremamente dificeis de serem encontradas, sendo muito uteis na programação.
+Existe uma versao do Relatorio Final em relatorio e proposta->relatorio final-> RelatorioRodolfoCosta.pdf(esta versao pode sofre ainda pequenas alterações)
+Qualquer duvida sobre alguma situaçao ou tecnologia encontrada no projeto use o email de contato.
+Para troca de experiencias utilize por favor tambem o email de contato
+
+Email de contato rodolfo53821@hotmail.com
